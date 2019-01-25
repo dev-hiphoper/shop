@@ -51,6 +51,18 @@ $(document).ready(function(){
 			if( $this.closest('button').is('[data-type=inputreset]') ){//input 리셋하기
 				$this.closest('button').prev('input').val('');
 			}
+			if( $this.closest('a').is('[data-type=thumbnail]') ){//상품 상세 이미지
+				e.preventDefault();
+				$this.closest('a').closest('.thumbnails').find('.active').removeClass('active');
+				$('img[data-type="visual"]').attr('src',$this.closest('a').attr('href'));
+				$this.closest('a').addClass('active');
+			}
+		},
+		change:function(e){
+			var $this = $(e.target);
+			if( $this.is('select.tc_3_h') ){//셀렉트 박스 컬러 변경
+				$this.addClass('tc_3');
+			}
 		},
 		mouseover:function(e){
 			var $this = $(e.target);
