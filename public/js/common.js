@@ -34,6 +34,16 @@ var likeBtnFn = function(obj){//좋아요버튼
 		var $this = $(obj);
 		$this.closest('.group').find('.item').removeClass('view');
 		$this.closest('.item').addClass('view');
+	},
+	setNumber = function(type,obj){
+		var t = obj.closest('.input_number').find('.text_number'),
+			n = t.val()*1;
+		if(type == 'plus'){
+			t.val(n+1);
+		}
+		if(type == 'minus' && n>1){
+			t.val(n-1);
+		}
 	};
 $(document).ready(function(){
 	$(window).on({
@@ -56,6 +66,12 @@ $(document).ready(function(){
 				$this.closest('a').closest('.thumbnails').find('.active').removeClass('active');
 				$('img[data-type="visual"]').attr('src',$this.closest('a').attr('href'));
 				$this.closest('a').addClass('active');
+			}
+			if( $this.is('[data-type=plus]') ){//input 숫자 더하기
+				setNumber('plus',$this);
+			}
+			if( $this.is('[data-type=minus]') ){//input 숫자 빼기
+				setNumber('minus',$this);
 			}
 		},
 		change:function(e){
