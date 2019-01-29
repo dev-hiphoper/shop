@@ -79,6 +79,12 @@ $(document).ready(function(){
 			if( $this.is('select.tc_3_h') ){//셀렉트 박스 컬러 변경
 				$this.addClass('tc_3');
 			}
+			if( $this.is('input[data-type=checkAll]') ){//테이블 체크박스 전체 선택
+				var checkboxs = $this.closest('table').find('tbody input[type=checkbox]:not(:disabled)');
+				checkboxs.each(function(e){
+					$(this).prop('checked',$this.prop('checked'))
+				})
+			}
 		},
 		mouseover:function(e){
 			var $this = $(e.target);
