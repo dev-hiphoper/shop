@@ -44,6 +44,11 @@ var likeBtnFn = function(obj){//좋아요버튼
 		if(type == 'minus' && n>1){
 			t.val(n-1);
 		}
+	},
+	numberMaxlength = function(obj){
+		if (obj.value.length > obj.maxLength){
+			obj.value = obj.value.slice(0, obj.maxLength);
+		}
 	};
 $(document).ready(function(){
 	$(window).on({
@@ -116,6 +121,15 @@ $(document).ready(function(){
 				var max = $this.attr('maxlength')*1,
 					count = $this.val().length;
 				$this.next('.count').find('span').text(count);
+			}
+			if( $this.is('[type=number][maxlength]') ){//number maxlength 제한
+				numberMaxlength($this[0]);
+			}
+		},
+		keydown:function(e){
+			var $this = $(e.target);
+			if( $this.is('[type=number][maxlength]') ){//number maxlength 제한
+				numberMaxlength($this[0]);
 			}
 		},
 		resize:function(e){

@@ -93,7 +93,10 @@ textarea.tc_3:focus:-ms-input-placeholder{color:#333;}
 textarea.tc_3:focus::placeholder{color:#333;}
 .tc_3,
 .tc_3_h:hover,
-.tc_3_h:focus{color:#333!important;}
+.tc_3_h:focus,
+.order_form .sel_payment input:checked + label,
+.order_form .sel_payment input:focus + label,
+.order_form .sel_payment input:focus + label{color:#333!important;}
 .tit_page{display:block;font-size:26px;line-height:36px;}
 .tit_page,.tit_h1{font-weight:700}
 .tit_h1{font-size:22px;line-height:30px}
@@ -154,23 +157,29 @@ input::placeholder{color:#bbb;}
 .input_checkbox label:before,
 .input_number [class^=btn_],
 .table_st th,
-.table_st td{border-color:#d0d0d0}
+.table_st td,
+.table_st.v tr:last-child th,
+.table_st.v tr:last-child td{border-color:#d0d0d0}
 .lc_1,
 .dark[class*="btn_"],
 .lnb .list_lnb{border-color:#111;}
 .lc_3,
 .pages em.link,
-.input_text input:hover,
-.input_text input:focus,
+.input_text input:not([readonly]):hover,
+.input_text input:not([readonly]):focus,
 .input_textarea textarea:hover,
 .input_textarea textarea:focus,
 .list_tab .active a,
 .slides.black .slick-arrow:after,
-.table_st{border-color:#333;}
+.table_st,
+.order_form .sel_payment input:checked + label,
+.order_form .sel_payment input:focus + label{border-color:#333;}
 .input_select:before{border-color:#333 transparent transparent transparent;}
 .lc_5,
 .text_link:after{border-color:#555;}
-.lc_e{border-color:#eee;}
+.lc_e,
+.table_st.v th,
+.table_st.v td{border-color:#eee;}
 .lc_d{border-color:#ddd;}
 .lc_f,
 .lnb.white .list_lnb,
@@ -204,7 +213,6 @@ input::placeholder{color:#bbb;}
 
 [class*="btn_"]{display:inline-block;vertical-align:top;border-width:1px;}
 .bg_def,
-.bg_f7,
 .wrap_board .item.view{background-color:#f7f7f7;}
 .bg_1,
 .dark[class*="btn_"],
@@ -253,7 +261,8 @@ input::placeholder{color:#bbb;}
 [class*="btn_"],
 .list_product >li,
 .pages .link,
-.slides .slick-dots li{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flexbox;display:-o-inline-flex;display:inline-flex;}
+.slides .slick-dots li,
+.dis_f .dis_if[class*=input_]{display:-webkit-inline-flex;display:-moz-inline-flex;display:-ms-inline-flexbox;display:-o-inline-flex;display:inline-flex;}
 
 .fw_wrap,
 .list_product{-webkit-flex-wrap:wrap;-moz-flex-wrap:wrap;-ms-flex-wrap:wrap;-o-flex-wrap:wrap;flex-wrap:wrap;}
@@ -288,7 +297,8 @@ button.text_link:after{bottom:0;}
 
 .btn_share,
 .btn_like,
-.btn_reply{position:relative;border:0;padding:0!important;margin:0!important;width:50px;height:42px;min-width:50px;}
+.btn_reply,
+.btn_info{position:relative;border:0;padding:0!important;margin:0!important;width:50px;height:42px;min-width:50px;}
 .btn_like:hover,
 .btn_like:focus,
 .btn_reply:hover,
@@ -314,6 +324,8 @@ button.text_link:after{bottom:0;}
 .btn_like.small.selected:before{background-position:-56px 0;}
 .btn_share{min-width:32px;width:32px;height:32px;}
 .btn_share:before{width:22px;height:22px;background-position:-204px 0;}
+.btn_info{width:34px;height:34px;min-width:34px;}
+.btn_info:before{width:24px;height:24px;background-position:-54px -24px;}
 
 .btn_arr{position:relative;border:0;padding:0;margin:0!important;width:40px;height:40px;min-width:40px;}
 .btn_arr:before{width:6px;height:12px;background-position:-96px 0;}
@@ -530,7 +542,8 @@ button.text_link:after{bottom:0;}
 .input_radio input:checked + label:after{display:block;}
 
 .input_checkbox input:focus + label:before,
-.input_radio input:focus + label:before{-webkit-box-shadow:0 0 3px 2px #3b98fc;-moz-box-shadow:0 0 3px 2px #3b98fc;box-shadow:0 0 3px 2px #3b98fc;}
+.input_radio input:focus + label:before,
+.order_form .sel_payment input:focus + label{-webkit-box-shadow:0 0 3px 2px #3b98fc;-moz-box-shadow:0 0 3px 2px #3b98fc;box-shadow:0 0 3px 2px #3b98fc;}
 
 .input_checkbox label:before{border-radius:2px;}
 .input_checkbox label:after{left:5px;top:6px;width:12px;height:10px;background-position:-118px -34px;opacity:.1}
@@ -876,7 +889,7 @@ background-size:cover;}
 .site_main.magazine .street_list .list_product.mini .out{left:20px;}
 
 .site_main.cart{padding:56px 0 120px;}
-.site_main.cart .site_step{text-align:center;margin-bottom:48px;}
+.site_main.cart .site_step{text-align:center;margin:0 auto 48px;}
 
 .table_st{width:100%;border-width:2px 0 0;}
 .table_st th,
@@ -892,7 +905,7 @@ background-size:cover;}
 .table_st .btn_coupon{border-width:0;width:85px;height:34px;padding-left:5px;line-height:36px;text-decoration:underline;}
 .table_st .btn_coupon:after{right:5px;}
 .table_st .list_product.small >li{padding-right:0;}
-.table_st.v th{padding:0 20px;text-align:left;}
+.table_st.v th{padding:0 0 0 20px;text-align:left;}
 .table_st.v td{min-height:40px;padding:16px 20px;}
 
 .cert_cont{}
@@ -920,9 +933,11 @@ background-size:cover;}
 .cert_cont .banner >a:hover .info,
 .cert_cont .banner >a:focus .info{text-decoration:underline;}
 
+.order_form .order_info{width:calc(100% - 360px);padding-right:40px;}
+.order_form .order_payment{width:320px;-webkit-transform:translateY(0) translateZ(0);-ms-transform:translateY(0) translateZ(0);-o-transform:translateY(0) translateZ(0);transform:translateY(0) translateZ(0);}
 .order_form .tit{position:relative;margin-bottom:11px;font-size:22px;line-height:36px;font-weight:700;}
 .order_form .tit:after{width:19px;height:1px;left:auto;right:0;}
-.order_form .list_product.small .name{white-space:normal;overflow:visible;}
+.order_form .list_product.small .name{white-space:normal;overflow:visible;width:100%;}
 .order_form .list_product.small >li{min-width:auto;}
 .order_form .table_st .coupon .num{margin-left:10px;}
 .order_form .table_st .coupon li:only-child{height:40px;line-height:40px;}
@@ -930,9 +945,91 @@ background-size:cover;}
 .order_form .table_st .mileage .input_text{width:120px;}
 .order_form .table_st .mileage .input_text input{min-width:120px;width:120px;padding-right:15px;text-align:right;}
 .order_form .table_st .mileage p{margin-left:15px;}
+.order_form .table_st .phone .input_select,
+.order_form .table_st .phone .input_text,
+.order_form .table_st .phone .input_text input{width:90px;min-width:90px;}
+.order_form .table_st .phone .input_text input,
+.order_form .table_st .address .input_text input[readonly]{padding-right:15px;}
+.order_form .table_st .address .input_text input[readonly],
+.order_form .table_st .name,
+.order_form .table_st .name input{width:150px;min-width:150px;}
+.order_form .table_st .address div{margin-top:6px;}
+.order_form .table_st .address div .input_text input{width:337px!important;min-width:337px!important;}
+.order_form .table_st .addr_select .input_radio{margin-right:40px;}
+.order_form .check_default{margin-top:16px;}
+.order_form .item{width:100%;}
+.order_form .item.payment .tit{float:left;}
+.order_form .item.payment .btn_info{float:left;}
+.order_form .sel_payment{clear:both;position:relative;}
+.order_form .sel_payment input{position:absolute;left:50%;top:50%;z-index:-1;}
+.order_form .sel_payment label{position:relative;float:left;width:calc(20% + .8px);height:140px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-weight:500;text-align:center;border-width:1px;margin-left:-1px}
+.order_form .sel_payment label:before{margin-top:-12px;}
+.order_form .sel_payment label span{white-space:nowrap;margin-top:24px;}
+.order_form .sel_payment input:checked + label,
+.order_form .sel_payment input:focus + label{z-index:1;border-width:2px;}
+.order_form .sel_payment input:checked + label:before,
+.order_form .sel_payment input:focus + label:before{opacity:1;}
+.order_form .sel_payment .card:before{width:40px;height:28px;background-position:0 -94px;opacity:.4;}
+.order_form .sel_payment .deposit:before{width:42px;height:36px;background-position:-44px -94px;opacity:.4;}
+.order_form .sel_payment .transfer:before{width:38px;height:38px;background-position:-90px -94px;opacity:.4;}
+.order_form .sel_payment .sumsung:before{width:120px;height:18px;background-position:0 -136px;}
+.order_form .sel_payment .payco:before{width:82px;height:18px;background-position:-132px -94px;}
+.order_form .sel_payment input:checked + .sumsung:before,
+.order_form .sel_payment input:focus + .sumsung:before{background-position:-124px -136px;}
+.order_form .sel_payment input:checked + .payco:before,
+.order_form .sel_payment input:focus + .payco:before{background-position:-218px -94px;}
+.order_form .soldout >.tit{border-width:0 0 1px;margin-bottom:0;padding-bottom:6px;font-size:18px;font-weight:500;}
+.order_form .soldout >.how{border-width:0 0 1px;padding:20px 16px;}
+.order_form .soldout >.how .input_select{width:460px;}
+.order_form .soldout >.account{border-width:0 0 1px;}
+.order_form .soldout >.account dt,
+.order_form .soldout >.account label{font-size:13px;line-height:40px;}
+.order_form .soldout >.account dt,
+.order_form .soldout >.account dd{float:left;padding:16px 0;}
+.order_form .soldout >.account .input_text,
+.order_form .soldout >.account .input_text input,
+.order_form .soldout >.account .input_select{min-width:120px;width:120px;}
+.order_form .soldout >.account dt{padding-left:20px;width:100px;}
+.order_form .soldout >.account dd{margin-right:15px;}
+.order_form .soldout >.account label,
+.order_form .soldout >.account [class^=.input_]{float:left;}
+.order_form .soldout >.account label{margin-right:15px;}
+.order_form .soldout >.account dd:last-child .input_text,
+.order_form .soldout >.account dd:last-child .input_text input{width:242px;min-width:242px;}
+.order_form .order_info >.item + .item{margin-top:53px;}
+.order_form .order_info >.item.soldout{margin-top:33px;}
+.order_form .summary{border-width:2px;padding:30px 30px 28px;}
+.order_form .summary dt,
+.order_form .summary dd{float:left;line-height:32px;}
+.order_form .summary dt{width:90px;}
+.order_form .summary dd{width:166px;text-align:right;font-size:18px;}
+.order_form .summary .order{font-weight:700;}
+.order_form .summary .total{line-height:40px;margin-top:23px;}
+.order_form .summary dt.total{font-weight:500;}
+.order_form .summary dd.total{font-size:30px;font-weight:700;}
+.order_form .agree{width:100%;}
+.order_form .agree li:first-child{border-width:0 0 1px;}
+.order_form .agree li{position:relative;padding:20px 0;}
+.order_form .agree li:last-child label{width:190px;height:auto;padding-top:1px;line-height:22px;}
+.order_form .agree li .btn_detail{left:auto;right:0;}
+.order_form .btn_order{width:100%;margin-top:16px;}
 
-.order_info{width:calc(100% - 360px);padding-right:40px;}
-.order_payment{width:320px;}
+.cert_cont .complete{}
+.cert_cont .complete .comp_info{margin:0 auto 120px;width:800px}
+.cert_cont .complete .comp_info .desc{text-align:center;margin-bottom:54px;}
+.cert_cont .complete .comp_info .desc strong{display:block;margin-bottom:14px;font-size:26px;line-height:36px;font-weight:700;}
+.cert_cont .complete .comp_info .detail{padding:31px 60px 33px;margin-bottom:40px;}
+.cert_cont .complete .comp_info .detail dt{float:left;width:130px;}
+.cert_cont .complete .comp_info .detail dd{float:right;width:518px;}
+.cert_cont .complete .comp_info .detail dt,
+.cert_cont .complete .comp_info .detail dd{margin-top:6px;font-size:16px;}
+.cert_cont .complete .comp_info .detail dt.line2{line-height:24px}
+.cert_cont .complete .comp_info .detail dd.line2{line-height:48px;}
+.cert_cont .complete .comp_info .btns a{float:left;width:calc(50% - 6px);}
+.cert_cont .complete .comp_info .btns a + a{margin-left:12px;}
+.cert_cont .complete .table_st{margin-bottom:40px;}
+.cert_cont .complete .calc{margin-bottom:0;}
+
 
 
 @media all and (min-width:1600px){
@@ -957,8 +1054,8 @@ background-size:cover;}
 	.viewdetail .imgs{width:660px;}
 	.viewdetail .imgs .visual{width:660px;height:660px;}
 	.viewdetail .imgs .thumbnails a{width:72px;height:72px;}
-	.site_main.magazine .list >li >.link >.desc{-webkit-line-clamp:7;max-height:154px;}
-	.site_main.magazine .list .medium{height:540px;}
+	.site_main.magazine .magazine_list .list >li >.link >.desc{-webkit-line-clamp:6;max-height:132px;}
+	.site_main.magazine .magazine_list .list .medium{height:580px;}
 	.site_main.magazine .tv_list .list .lager >.img{height:529px;}
 	.site_main.magazine .tv_list .list .medium{height:221px;padding-left:341px;}
 	.site_main.magazine .tv_list .list .medium >.img{width:309px;height:221px;}
@@ -985,7 +1082,7 @@ background-size:cover;}
 	.wrap_brandissue .list_brand .item{width:594px;}
 	.wrap_brandissue .list_brand .item + .item{margin-left:19px;}
 	.slides.seasonissue .item a{height:361px;}
-	.site_main.magazine .list .medium{height:620px;}
+	.site_main.magazine .magazine_list .list .medium{height:660px;}
 	.site_main.magazine .tv_list .list .lager >.img{height:643px;}
 	.site_main.magazine .tv_list .list .medium{height:264px;padding-left:402px;}
 	.site_main.magazine .tv_list .list .medium >.img{width:370px;height:264px;}
