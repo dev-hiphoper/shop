@@ -1014,7 +1014,6 @@ background-size:cover;}
 .order_form .agree li .btn_detail{left:auto;right:0;}
 .order_form .btn_order{width:100%;margin-top:16px;}
 
-.cert_cont .complete{}
 .cert_cont .complete .comp_info{margin:0 auto 120px;width:800px}
 .cert_cont .complete .comp_info .desc{text-align:center;margin-bottom:54px;}
 .cert_cont .complete .comp_info .desc strong{display:block;margin-bottom:14px;font-size:26px;line-height:36px;font-weight:700;}
@@ -1029,6 +1028,8 @@ background-size:cover;}
 .cert_cont .complete .comp_info .btns a + a{margin-left:12px;}
 .cert_cont .complete .table_st{margin-bottom:40px;}
 .cert_cont .complete .calc{margin-bottom:0;}
+
+.site_main.join .inner{margin:0 auto;}
 
 
 
