@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>힙합퍼</title>
+	<title>작업중_힙합퍼</title>
 	<link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
 	<link rel="stylesheet" href="./css/common.css">
@@ -20,9 +20,9 @@
 	<header class="site_header layout_full lc_def">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
-			<nav class="gnb dis_f jc_c">
+			<nav class="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
-				<ul class="tc_3">
+				<ul class="dis_f jc_c ai_c tc_3">
 					<li class="dis_if"><a href="">NEW</a></li>
 					<li class="dis_if"><a href="">BRANDS</a></li>
 					<li class="dis_if"><a href="">CLOTHING</a></li>
@@ -208,37 +208,6 @@
 		</div>
 	</footer>
 	<script src="./js/common.js"></script>
-	<script>
-		var setScroll = function(e){
-				var $op = $('#orderPayment'),
-					ot = $op.offset().top;
-				$op.data('ot',ot);
-			},
-			orderPaymentScroll = function(e){
-				var $op = $('#orderPayment'),
-					$oi = $('#orderInfo'),
-					ot = $op.data('ot'),
-					h = $op.height(),
-					val = 0;
-				if(ot < $(window).scrollTop()){
-					val = $(window).scrollTop() - ot;
-				}else{
-					val = 0;
-				};
-				if(val > $oi.height() - h){
-					val = $oi.height() - h;
-				}
-				$op.css({
-					'transform':'translateY('+val+'px) translateZ(0)'
-				});
-			};
-		$(window).on({
-			scroll:orderPaymentScroll,
-			load:function(e){
-				setScroll();
-				orderPaymentScroll();
-			}
-		})
-	</script>
+	<script></script>
 </body>
 </html>
