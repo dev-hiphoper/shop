@@ -56,6 +56,22 @@ var likeBtnFn = function(obj){//좋아요버튼
 		if (obj.value.length > obj.maxLength){
 			obj.value = obj.value.slice(0, obj.maxLength);
 		}
+	},
+	openLayer = function(event,obj,focus){
+		var checkObject = typeof obj == 'object',
+			$tar = checkObject?$($(obj).attr('href')):$(obj),
+			$focus = $(focus);
+		if(checkObject && $(obj).is('a')){
+			event.preventDefault();
+		}
+		$tar.removeClass('hide').find('.btn_close').on('click',function(e){
+			closeLayer($tar,$focus,$(this));
+		}).focus();
+	},
+	closeLayer = function(tar,focus,btn){
+		btn.off('click');
+		tar.addClass('hide');
+		focus.focus();
 	};
 $(window).on({
 	click:function(e){
@@ -91,10 +107,28 @@ $(window).on({
 			$this.addClass('tc_3');
 		}
 		if( $this.is('input[data-type=checkAll]') ){//테이블 체크박스 전체 선택
-			var checkboxs = $this.closest('table').find('tbody input[type=checkbox]:not(:disabled)');
+			var checkboxs = $this.closest('table').find('tbody input[type=checkbox]');
 			checkboxs.each(function(e){
 				$(this).prop('checked',$this.prop('checked'))
 			})
+		}
+		if( $this.is('select[data-type=changeEmail]') ){//이메일 바꾸기
+			var input = $('input[data-type=inputEmail]');
+			input.prop('value',$this.val());
+		}
+		if( $this.is('input[type=checkbox][data-type=joinCheckAll]') ){//회원가입 약관 전체체크
+			var check = $('input[type=checkbox][data-type=joinCheck]');
+			check.prop('checked',$this.prop('checked'))
+		}
+		if( $this.is('input[type=checkbox][data-type=joinCheck]') ){//회원가입 약관 체크시 전체약관 체크
+			var a = $('input[type=checkbox][data-type=joinCheck]').length,
+				b = $('input[type=checkbox][data-type=joinCheck]:checked').length,
+				all = $('input[type=checkbox][data-type=joinCheckAll]');
+			if(a == b){
+				all.prop('checked',true)
+			}else{
+				all.prop('checked',false)
+			}
 		}
 	},
 	mouseover:function(e){

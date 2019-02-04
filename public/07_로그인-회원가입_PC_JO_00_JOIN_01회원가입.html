@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>작업중_힙합퍼</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>힙합퍼</title>
 	<link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
 	<link rel="stylesheet" href="./css/common.css">
@@ -44,158 +45,200 @@
 			</div>
 		</div>
 	</header>
-	<main class="site_main join layout_full">
-		<div class="inner miw1180">
-			<h2 class="tit tc_1">회원가입</h2>
-			<table class="table_st v">
-				<colgroup>
-					<col style="width:100px">
-					<col>
-					<col style="width:100px">
-					<col>
-				</colgroup>
-				<tbody>
-					<tr>
-						<th>아이디</th>
-						<td colspan="3">
-							<span class="input_text clear">
-								<input type="text" class="lc_def tc_3" placeholder="영문 또는 숫자 조합, 6자 이상">
-								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-							</span>
-							<button type="button" class="btn_check fix">중복확인</button>
-						</td>
-					</tr>
-					<tr>
-						<th>비밀번호</th>
-						<td>
-							<span class="input_text passsword clear">
-								<input type="password" class="lc_def tc_3" placeholder="영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상">
-								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-							</span>
-						</td>
-						<th>비밀번호확인</th>
-						<td>
-							<span class="input_text passsword clear">
-								<input type="password" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요.">
-								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-							</span>
-						</td>
-					</tr>
-					<tr>
-						<th>본인인증</th>
-						<td colspan="3">
-							<button type="button" class="btn_ dark">휴대폰 인증</button>
-							<button type="button" class="btn_check dark">아이핀(I-PIN) 인증</button>
-						</td>
-					</tr>
-					<tr>
-						<th>이름</th>
-						<td>
-							<span class="input_text clear">
-								<input type="text" class="lc_def tc_3">
-								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-							</span>
-						</td>
-						<th>닉네임</th>
-						<td>
-							<span class="input_text clear">
-								<input type="text" class="lc_def tc_3">
-								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-							</span>
-							<button type="button" class="btn_check fix">중복확인</button>
-						</td>
-					</tr>
-					<tr>
-						<th>휴대전화</th>
-						<td colspan="3">
-							<div class="phone">
-								<span class="input_select lc_def tc_b">
-									<select name="" id="" class="tc_3_h tc_3">
-										<option value="" selected>010</option>
-										<option value="">011</option>
-										<option value="">016</option>
-										<option value="">017</option>
-										<option value="">018</option>
-										<option value="">019</option>
-									</select>
-								</span>
-								<span class="input_text clear">
-									<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*">
+	<main class="site_main join miw1180">
+		<h2 class="tit tc_1">회원가입</h2>
+		<form action="">
+			<fieldset>
+				<legend>회원가입 입력폼</legend>
+				<table class="table_st v">
+					<colgroup>
+						<col style="width:100px">
+						<col>
+						<col style="width:100px">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>아이디</th>
+							<td colspan="3">
+								<span class="input_text id clear">
+									<input type="text" class="lc_def tc_3" placeholder="영문 또는 숫자 조합, 6자 이상" minlength="6" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								</span>
-								<span class="input_text clear">
-									<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*">
+								<button type="button" class="btn_check fix">중복확인</button>
+							</td>
+						</tr>
+						<tr>
+							<th>비밀번호</th>
+							<td>
+								<span class="input_text password clear">
+									<input type="password" class="lc_def tc_3" placeholder="영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th>이메일</th>
-						<td colspan="3">
-							<div class="email">
-								<span class="input_text clear">
-									<input type="text" class="lc_def tc_3">
+							</td>
+							<th>비밀번호확인</th>
+							<td>
+								<span class="input_text password clear">
+									<input type="password" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								</span>
-								<span class="text">@</span>
-								<span class="input_text clear">
-									<input type="text" class="lc_def tc_3">
+							</td>
+						</tr>
+						<tr>
+							<th>본인인증</th>
+							<td colspan="3">
+								<button type="button" class="btn_ dark">휴대폰 인증</button>
+								<button type="button" class="btn_check dark">아이핀(I-PIN) 인증</button>
+							</td>
+						</tr>
+						<tr>
+							<th>이름</th>
+							<td>
+								<span class="input_text name clear">
+									<input type="text" class="lc_def tc_3" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								</span>
-								<span class="input_select lc_def tc_b">
-									<select name="" id="" class="tc_3_h tc_3">
-										<option disabled selected>선택해주세요</option>
-										<option value="">naver.com</option>
-										<option value="">daum.net</option>
-										<option value="">gmail.com</option>
-									</select>
+							</td>
+							<th>닉네임</th>
+							<td>
+								<span class="input_text name clear">
+									<input type="text" class="lc_def tc_3" required>
+									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th>생년월일</th>
-						<td colspan="3">
-							<div class="birthday">
-								<span class="input_select lc_def tc_b">
-									<select name="" id="" class="tc_3_h tc_3">
-										<option value="">1979</option>
-										<option value="" selected>1980</option>
-										<option value="">1981</option>
-									</select>
-								</span>
-								<span class="input_select lc_def tc_b">
-									<select name="" id="" class="tc_3_h tc_3">
-										<option value="">01</option>
-										<option value="">02</option>
-									</select>
-								</span>
-								<span class="input_select lc_def tc_b">
-									<select name="" id="" class="tc_3_h tc_3">
-										<option value="">01</option>
-										<option value="">02</option>
-									</select>
-								</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<th>성별</th>
-						<td colspan="3">
-							<div class="sex">
-								<span class="input_radio">
-									<input type="radio" name="joinSex" id="joinSex1"><label for="joinSex1" class="tc_3">남</label>
-								</span>
-								<span class="input_radio">
-									<input type="radio" name="joinSex" id="joinSex2"><label for="joinSex2" class="tc_3">여</label>
-								</span>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+								<button type="button" class="btn_check fix">중복확인</button>
+							</td>
+						</tr>
+						<tr>
+							<th>휴대전화</th>
+							<td colspan="3">
+								<div class="phone">
+									<span class="input_select lc_def tc_b">
+										<select name="" id="carrier" class="tc_3_h tc_3" required>
+											<option value="" selected>010</option>
+											<option value="">011</option>
+											<option value="">016</option>
+											<option value="">017</option>
+											<option value="">018</option>
+											<option value="">019</option>
+										</select>
+									</span>
+									<span class="input_text clear">
+										<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*" required>
+										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									</span>
+									<span class="input_text clear">
+										<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*" required>
+										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td colspan="3">
+								<div class="email dis_f ai_c">
+									<span class="input_text clear">
+										<input type="text" class="lc_def tc_3" required>
+										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									</span>
+									<span class="text">@</span>
+									<span class="input_text clear">
+										<input type="text" class="lc_def tc_3" data-type="inputEmail" required>
+										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									</span>
+									<span class="input_select lc_def tc_b">
+										<select name="" id="emailList" class="tc_3_h tc_3" data-type="changeEmail">
+											<option value="" selected>직접입력</option>
+											<option value="naver.com">naver.com</option>
+											<option value="daum.net">daum.net</option>
+											<option value="gmail.com">gmail.com</option>
+										</select>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>생년월일</th>
+							<td colspan="3">
+								<div class="birthday dis_f ai_c">
+									<span class="input_select lc_def tc_b">
+										<select name="" id="birYear" class="tc_3_h tc_3" required>
+											<option disabled selected>년도</option>
+											<option value="">1979</option>
+											<option value="">1980</option>
+											<option value="">1981</option>
+										</select>
+									</span>
+									<span class="input_select lc_def tc_b">
+										<select name="" id="birMonth" class="tc_3_h tc_3" required>
+											<option disabled selected>월</option>
+											<option value="">01</option>
+											<option value="">02</option>
+										</select>
+									</span>
+									<span class="input_select lc_def tc_b">
+										<select name="" id="birDay" class="tc_3_h tc_3" required>
+											<option disabled selected>일</option>
+											<option value="">01</option>
+											<option value="">02</option>
+										</select>
+									</span>
+									<p class="desc tc_8">생일 정보 및 성별 입력 시 생일 축하 쿠폰을 받을 수 있습니다.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td colspan="3">
+								<div class="sex">
+									<span class="input_radio">
+										<input type="radio" name="joinSex" id="joinSex1"><label for="joinSex1" class="tc_3">남</label>
+									</span>
+									<span class="input_radio">
+										<input type="radio" name="joinSex" id="joinSex2"><label for="joinSex2" class="tc_3">여</label>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="checkboxs lc_def">
+					<span class="input_checkbox large">
+						<input type="checkbox" name="" id="checkAll" data-type="joinCheckAll"><label for="checkAll" class="tc_3 spr_after">전체동의</label>
+					</span>
+					<div class="clear dis_f fw_wrap">
+						<div class="item">
+							<span class="input_checkbox">
+								<input type="checkbox" name="" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용약관(필수)</label>
+							</span>
+							<a href="" class="text_link tc_3">자세히보기</a>
+						</div>
+						<div class="item">
+							<span class="input_checkbox">
+								<input type="checkbox" name="" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인정보 수집 및 이용(필수)</label>
+							</span>
+							<a href="" class="text_link tc_3">자세히보기</a>
+						</div>
+						<div class="item">
+							<span class="input_checkbox">
+								<input type="checkbox" name="" id="check3" data-type="joinCheck"><label for="check3" class="tc_3 spr_after">이메일 수신 동의</label>
+							</span>
+						</div>
+						<div class="item">
+							<span class="input_checkbox">
+								<input type="checkbox" name="" id="check4" data-type="joinCheck"><label for="check4" class="tc_3 spr_after">SMS 수신동의</label>
+							</span>
+						</div>
+						<div class="item">
+							<span class="input_checkbox">
+								<input type="checkbox" name="" id="check5" data-type="joinCheck"><label for="check5" class="tc_3 spr_after">마케팅 정보 수집 활용 동의</label>
+							</span>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn_join dark large">가입하기</button>
+			</fieldset>
+		</form>
 	</main>
 	<footer class="site_footer layout_full lc_d">
 		<div class="inner miw1180">
