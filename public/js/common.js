@@ -60,18 +60,54 @@ var likeBtnFn = function(obj){//좋아요버튼
 	openLayer = function(event,obj,focus){
 		var checkObject = typeof obj == 'object',
 			$tar = checkObject?$($(obj).attr('href')):$(obj),
-			$focus = $(focus);
+			$tar = $tar.closest('.dim_layer').is('div')?$tar.closest('.dim_layer'):$tar;
+			$focus = checkObject?$(obj):$(focus),
+			closeID = $tar.hasClass('dim_layer')?$tar.find('.wrap_layer').attr('id'):$tar.attr('id');
 		if(checkObject && $(obj).is('a')){
 			event.preventDefault();
 		}
-		$tar.removeClass('hide').find('.btn_close').on('click',function(e){
-			closeLayer($tar,$focus,$(this));
-		}).focus();
+		$tar.data('focus',$focus);
+		if($tar.hasClass('alert_layer')){
+			if(event){
+				$tar.find('.btn_cancel').on('click',function(e){
+					$tar.data('off',$(this));
+					closeLayer('#'+closeID);
+				});
+			}
+			$tar.removeClass('hide').find('.btn_confirm').focus();
+		}else{
+			$tar.removeClass('hide').find('.btn_close').on('click',function(e){
+				$tar.data('off',$(this));
+				closeLayer('#'+closeID);
+			}).focus();
+			function layerResize(){
+				var a = $tar.find('.wrap_layer').outerHeight()+100,
+					b = $(window).height();
+				if( a>b ){
+					$tar.addClass('scroll');
+				}else{
+					$tar.removeClass('scroll');
+				}
+			}
+			if($tar.hasClass('dim_layer')){
+				layerResize();
+				$(window).on('resize.dimLayer',layerResize);
+			}
+		}
 	},
-	closeLayer = function(tar,focus,btn){
-		btn.off('click');
-		tar.addClass('hide');
-		focus.focus();
+	closeLayer = function(tar){
+		var $tar = $(tar).closest('.dim_layer').is('div')?$(tar).closest('.dim_layer'):$(tar);
+		$tar.addClass('hide');
+		if($tar.data('off')){
+			$tar.data('off').off('click');
+		};
+		if($tar.data('focus')){
+			$tar.data('focus').focus();
+		};
+		if($tar.hasClass('dim_layer')){
+			$tar.removeClass('scroll');
+			$(window).off('resize.dimLayer');
+		}
 	};
 $(window).on({
 	click:function(e){
@@ -99,6 +135,10 @@ $(window).on({
 		}
 		if( $this.is('[data-type=minus]') ){//input 숫자 빼기
 			setNumber('minus',$this);
+		}
+		if( $this.is('a[data-type=tooltip]') ){//툴팁 보이기
+			e.preventDefault();
+			$($this.attr('href')).removeClass('hide');
 		}
 	},
 	change:function(e){
@@ -131,16 +171,19 @@ $(window).on({
 			}
 		}
 	},
-	mouseover:function(e){
+	mouseenter:function(e){
 		var $this = $(e.target);
 		if( $this.closest('button').is('[data-type*=qnaview]') ){//qna 버튼 오버 줄표시
 			$this.closest('button').prev().addClass('over')
 		}
 	},
-	mouseout:function(e){
+	mouseleave:function(e){
 		var $this = $(e.target);
 		if( $this.closest('button').is('[data-type*=qnaview]') ){//qna 버튼 오버 줄표시
 			$this.closest('button').prev().removeClass('over')
+		}
+		if( $this.is('a[data-type=tooltip]') ){//툴팁 가리기
+			$($this.attr('href')).addClass('hide');
 		}
 	},
 	focusin:function(e){
