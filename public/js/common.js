@@ -62,9 +62,10 @@ var likeBtnFn = function(obj){//좋아요버튼
 			$tar = checkObject?$($(obj).attr('href')):$(obj),
 			$tar = $tar.closest('.dim_layer').is('div')?$tar.closest('.dim_layer'):$tar;
 			$focus = checkObject?$(obj):$(focus),
-			closeID = $tar.hasClass('dim_layer')?$tar.find('.wrap_layer').attr('id'):$tar.attr('id');
+			closeID = $tar.hasClass('dim_layer')?$tar.find('.wrap_layer').attr('id'):$tar.attr('id'),
+			evt = event;
 		if(checkObject && $(obj).is('a')){
-			event.preventDefault();
+			evt.preventDefault();
 		}
 		$tar.data('focus',$focus);
 		if($tar.hasClass('alert_layer')){
@@ -93,7 +94,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 				layerResize();
 				$(window).on('resize.dimLayer',layerResize);
 			}
-		}
+		};
 	},
 	closeLayer = function(tar){
 		var $tar = $(tar).closest('.dim_layer').is('div')?$(tar).closest('.dim_layer'):$(tar);
@@ -107,6 +108,25 @@ var likeBtnFn = function(obj){//좋아요버튼
 		if($tar.hasClass('dim_layer')){
 			$tar.removeClass('scroll');
 			$(window).off('resize.dimLayer');
+		}
+	},
+	showAlert = function(name,message,type,callback){
+		var btns = type==0?'<button type="button" class="btn_cancel lc_cont tc_8">취소</button><button type="button" class="btn_confirm lc_cont">확인</button>':'<button type="button" class="btn_confirm lc_cont">확인</button>',
+			code = '<div class="alert_layer lc_b pos_center hide" id="'+name+'"><p class="message tc_3">'+message+'</p><div class="btns lc_cont clear">'+btns+'</div></div>';
+		$('body').append(code);
+		var $alert = $('#'+name),
+			btnCancel = $alert.find('.btn_cancel'),
+			btnConfirm = $alert.find('.btn_confirm');
+		openLayer(window.event,'#'+name);
+		if(callback){
+			window[callback].call(null,btnCancel,btnConfirm,'#'+name);
+		}else{
+			btnCancel.on('click',function(e){
+				closeLayer('#'+name);
+			});
+			btnConfirm.on('click',function(e){
+				closeLayer('#'+name);
+			});
 		}
 	};
 $(window).on({
@@ -136,9 +156,26 @@ $(window).on({
 		if( $this.is('[data-type=minus]') ){//input 숫자 빼기
 			setNumber('minus',$this);
 		}
-		if( $this.is('a[data-type=tooltip]') ){//툴팁 보이기
+		if( $this.is('a[data-type=tooltip]') ){//툴팁
 			e.preventDefault();
-			$($this.attr('href')).removeClass('hide');
+			var $tar = $($this.attr('href'));
+			if($tar.hasClass('hide')){//툴팁 보이기
+				$tar.removeClass('hide').on('mouseleave',function(e){//툴팁 가리기
+					$tar.addClass('hide').off('mouseleave');
+				});
+			}else{//툴팁 가리기
+				$tar.addClass('hide');
+			}
+		}
+		if( $this.is('button[data-type=copyButton]') ){//카피버튼
+			var tar = $('input[data-type=copyTarget]');
+			tar.select();
+			var successful = document.execCommand('copy');
+			if(successful){
+				showAlert('copyResult','주소가 복사 되었습니다.',1);
+			}else{
+				showAlert('copyResult','주소 복사에 실패했습니다.',1);
+			}
 		}
 	},
 	change:function(e){
@@ -181,9 +218,6 @@ $(window).on({
 		var $this = $(e.target);
 		if( $this.closest('button').is('[data-type*=qnaview]') ){//qna 버튼 오버 줄표시
 			$this.closest('button').prev().removeClass('over')
-		}
-		if( $this.is('a[data-type=tooltip]') ){//툴팁 가리기
-			$($this.attr('href')).addClass('hide');
 		}
 	},
 	focusin:function(e){

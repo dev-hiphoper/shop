@@ -19,10 +19,9 @@
 		<li><a href="#tempLayer2" onclick="openLayer(event,this)">링크 - 딤드(넓이 960px) 레이어열기</a></li>
 		<li><button type="button" onclick="openLayer(event,'#tempLayer3',this)">버튼 - 딤드(넓이 640px) 레이어열기</button></li>
 		<li><a href="#tempLayer3" onclick="openLayer(event,this)">링크 - 딤드(넓이 640px) 레이어열기</a></li>
-		<li><button type="button" onclick="openLayer(event,'#tempLayer4',this)">버튼 - 알럿 레이어 열기(확인취소)</button></li>
-		<li><a href="#tempLayer4" onclick="openLayer(event,this)">링크 - 알럿 레이어 열기(확인취소)</a></li>
-		<li><button type="button" onclick="openLayer(event,'#tempLayer5',this)">버튼 - 알럿 레이어 열기(확인)</button></li>
-		<li><a href="#tempLayer5" onclick="openLayer(event,this)">링크 - 알럿 레이어 열기(확인)</a></li>
+		<!-- showAlert('알럿이름','알럿내용',타입(0은 취소,확인 / 1은 확인),'콜백함수이름') 콜백함수는 하단 스크립트 참고, 콜백 함수가 없다면 확인 취소 버튼 클릭시 레이어 닫힘 -->
+		<li><button type="button" onclick="showAlert('tempLayer4','입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.',0,'alertCallback')">버튼 - 알럿 레이어 열기(취소확인)</button></li>
+		<li><button type="button" onclick="showAlert('tempLayer5','입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.',1)">버튼 - 알럿 레이어 열기(확인)</button></li>		
 		<li>
 			<div style="position:relative;margin-left:100px;width:50px;height:22px;">
 				<a href="#tempLayer6" data-type="tooltip" style="width:50px;height:22px;">툴팁보기</a>
@@ -32,7 +31,7 @@
 			</div>
 		</li>
 	</ul>
-	<div class="alert_layer lc_b pos_center hide" id="tempLayer5">
+	<!-- <div class="alert_layer lc_b pos_center hide" id="tempLayer5">
 		<p class="message tc_3">입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.</p>
 		<div class="btns lc_cont clear">
 			<button type="button" class="btn_confirm lc_cont" onclick="closeLayer('#tempLayer5');">확인</button>
@@ -44,7 +43,7 @@
 			<button type="button" class="btn_cancel lc_cont tc_8" onclick="closeLayer('#tempLayer4');">취소</button>
 			<button type="button" class="btn_confirm lc_cont" onclick="closeLayer('#tempLayer4');">확인</button>
 		</div>
-	</div>
+	</div> -->
 	<div class="dim_layer w640 hide">
 		<div class="wrap_layer lc_b" id="tempLayer3">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
@@ -1232,9 +1231,25 @@
 	<script>
 		//openLayer(window.event,'#tempLayer1');//바로 레이어 팝업을 여는 경우
 		//openLayer(window.event,'#tempLayer4');//바로 레이어 팝업을 여는 경우
-		var likeCallback = function(e){//좋아요 콜백
-				console.log('this는 좋아요 버튼',this);
-			}
+		//showAlert('tempLayer4','입력하신 아이디 혹은 비밀번호가 올바르지 않습니다.',0,'alertCallback'); //알럿열기
+		//showAlert('tempLayer5','복사되었습니다.',1,'alertCallback2'); //알럿열기
+		function likeCallback(e){//좋아요 콜백
+			console.log('this는 좋아요 버튼',this);
+		};
+		function alertCallback(btnCancel,btnConfirm,id){//팝업 콜백 함수
+			btnCancel.off('click');//취소 버튼에 닫기 기능만 있을 경우엔 필요 없음, 수동으로 다른 기능을 넣을 때는 기존의 클릭 이벤트를 제거.
+			btnCancel.on('click',function(e){
+				closeLayer(id)//닫기 버튼에 닫기 기능 추가
+			});
+			btnConfirm.on('click',function(e){
+				closeLayer(id)//확인 버튼에 닫기 기능 추가
+			});
+		}
+		function alertCallback2(btnCancel,btnConfirm,id){//팝업 콜백 함수/ 취소 버튼이 없는 경우에도 btnCancel은 코드에 포함되어야 함
+			btnConfirm.on('click',function(e){
+				closeLayer(id)//확인 버튼에 닫기 기능 추가
+			});
+		}
 	</script>
 </body>
 </html>

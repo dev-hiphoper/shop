@@ -45,7 +45,7 @@
 			</div>
 		</div>
 	</header>
-	<main class="site_main view miw1280">
+	<main class="site_main view miw1180">
 		<section class="viewdetail clear">
 			<h3 class="s_out">상품상세정보</h3>
 			<div class="imgs">
@@ -68,7 +68,7 @@
 				<h1 class="name tc_3">ML183UCAMT018 베이직 헤비 스웨트 크루넥 (화이트)</h1>
 				<dl class="price clear">
 					<dt class="origin">정상가</dt>
-					<dd><del class="origin tc_b">69,000</del></dd>
+					<dd class="dis_f ai_c"><del class="origin dis_if tc_b">69,000</del> <strong class="now tc_3">51,800</strong></dd>
 					<dt class="final">혜택가</dt>
 					<dd>
 						<span class="sale tc_poi">5%</span>
@@ -77,7 +77,18 @@
 					</dd>
 				</dl>
 				<div class="share">
-					<button type="button" class="btn_share spr_before"><span class="s_out">공유하기</span></button>
+					<div class="wrap_share dis_if">
+						<a href="#shareLayer" class="btn_share spr_before" data-type="tooltip"><span class="s_out">공유하기</span></a>
+						<div class="tootip_layer tooltip_share lc_b hide" id="shareLayer">
+							<ul class="share_list clear">
+								<li><button type="button" class="fb spr_before">FACEBOOK</button></li>
+								<li><button type="button" class="ig spr_before">INSTAGRAM</button></li>
+								<li><button type="button" class="kt spr_before">KAKAO TALK</button></li>
+								<li><button type="button" class="blog spr_before">BLOG</button></li>
+							</ul>
+							<div class="copy_url lc_cont clear"><input type="text" value="http://www.hiphoper.com/shop/item.php?it_id=KA645745" class="url tc_8 bg_f7" data-type="copyTarget" readonly><button type="button" class="btn_copy tc_8 bg_f lc_cont" data-type="copyButton">URL복사</button></div>
+						</div>
+					</div>
 					<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_3">153</span></button>
 					<a href="" class="btn_reply spr_before"><span class="s_out">댓글수 : </span><span class="count tc_3">153</span></a>
 				</div>
@@ -95,17 +106,24 @@
 					<dt class="benefits">추가혜택</dt>
 					<dd>
 						<div class="slides" id="benefits">
-							<div class="item">
-								<strong>PAYCO 결제시 2,000원 할인</strong>
-								1만원이상 생애 첫 결제시, 2천원 할인(전 카드사)
+							<div class="item clear">
+								<p>
+									<strong>2019년 1월 신용카드 무이자 행사</strong>
+									5만원이상 신용카드 결제 고객
+								</p>
+								<a href="#benefitsDetail" class="btn_show small" onclick="openLayer(event,this)">상세보기</a>
 							</div>
-							<div class="item">
-								<strong>카카오페이 결제시 5,000원 할인</strong>
-								전 카드사
+							<div class="item clear">
+								<p>
+									<strong>카카오페이 결제시 5,000원 할인</strong>
+									전 카드사
+								</p>
 							</div>
-							<div class="item">
-								<strong>삼성페이 결제시 1,000원 할인</strong>
-								1천원 할인(전 카드사)
+							<div class="item clear">
+								<p>
+									<strong>삼성페이 결제시 1,000원 할인</strong>
+									1천원 할인(전 카드사)
+								</p>
 							</div>
 						</div>
 					</dd>
@@ -125,7 +143,7 @@
 							<option disabled selected>선택해주세요</option>
 							<option value="">블랙</option>
 							<option value="">화이트</option>
-							<option value="">레드</option>
+							<option disabled value="">레드(일시품절)</option>
 							<option value="">그레이</option>
 						</select>
 					</span>
@@ -133,10 +151,212 @@
 					<button type="button" class="btn_buy dark large">BUY NOW</button>
 				</div>
 				<ul class="links tc_8">
-					<li><a href="">상품정보고시</a></li>
-					<li><a href="">사이즈표</a></li>
-					<li><a href="">배송정보</a><span class="flag tag tc_8">해외배송</span></li>
+					<li><a href="#productInfo" onclick="openLayer(event,this)">상품정보고시</a></li>
+					<li><a href="#productSize" onclick="openLayer(event,this)">사이즈표</a></li>
+					<li><a href="#productDelivery" onclick="openLayer(event,this)">배송정보</a><span class="flag tag tc_8">해외배송</span></li>
 				</ul>
+				<div class="etc_info">
+					<div class="wrap_layer lc_b hide" id="productInfo">
+						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+						<header class="layer_tit tc_3 lc_def">상품정보고시</header>
+						<main class="layer_cont">
+							<table class="product_info lc_3">
+								<colgroup>
+									<col style="width:120px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="lc_def">상품코드</th>
+										<td class="tc_3 lc_def">YH224686</td>
+									</tr>
+									<tr>
+										<th class="lc_def">제품소재</th>
+										<td class="tc_3 lc_def">면 100%</td>
+									</tr>
+									<tr>
+										<th class="lc_def">색상</th>
+										<td class="tc_3 lc_def">multi</td>
+									</tr>
+									<tr>
+										<th class="lc_def">사이즈</th>
+										<td class="tc_3 lc_def">M, L</td>
+									</tr>
+									<tr>
+										<th class="lc_def">제조자</th>
+										<td class="tc_3 lc_def">와이에이치컴퍼니</td>
+									</tr>
+									<tr>
+										<th class="lc_def">제조국가</th>
+										<td class="tc_3 lc_def">대한민국</td>
+									</tr>
+									<tr>
+										<th class="lc_def">제조년월</th>
+										<td class="tc_3 lc_def">2018.08</td>
+									</tr>
+									<tr>
+										<th class="lc_def">세탁방법 및 취급시 주의사항</th>
+										<td class="tc_3 lc_def">손세탁 가능</td>
+									</tr>
+									<tr>
+										<th class="lc_def">품질보증기준</th>
+										<td class="tc_3 lc_def">상품페이지 참고</td>
+									</tr>
+									<tr>
+										<th class="lc_def">A/S 책임자와 전화번호</th>
+										<td class="tc_3 lc_def">힙합퍼 고객센터 1599-7616</td>
+									</tr>
+								</tbody>
+							</table>
+						</main>
+					</div>
+					<div class="wrap_layer lc_b hide" id="productSize">
+						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+						<header class="layer_tit tc_3 lc_def">사이즈표</header>
+						<main class="layer_cont">
+							<div class="product_size">
+								<strong class="tit tc_3">의류 상의</strong>
+								<table class="lc_3">
+									<colgroup>
+										<col style="width:20%">
+										<col style="width:20%">
+										<col style="width:20%">
+										<col style="width:20%">
+										<col style="width:20%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="lc_def">사이즈명(cm)</th>
+											<th class="lc_def">어깨</th>
+											<th class="lc_def">가슴</th>
+											<th class="lc_def">팔</th>
+											<th class="lc_def">총장</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="lc_cont tc_3">XS</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+										<tr>
+											<td class="lc_cont tc_3">S</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+										<tr>
+											<td class="lc_cont tc_3">M</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+										<tr>
+											<td class="lc_cont tc_3">L</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="product_size">
+								<strong class="tit tc_3">의류 하의</strong>
+								<table class="lc_3">
+									<colgroup>
+										<col style="width:20%">
+										<col style="width:20%">
+										<col style="width:20%">
+										<col style="width:20%">
+										<col style="width:20%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="lc_def">사이즈명(cm)</th>
+											<th class="lc_def">어깨</th>
+											<th class="lc_def">가슴</th>
+											<th class="lc_def">팔</th>
+											<th class="lc_def">총장</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="lc_cont tc_3">XS</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+										<tr>
+											<td class="lc_cont tc_3">S</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+										<tr>
+											<td class="lc_cont tc_3">M</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+										<tr>
+											<td class="lc_cont tc_3">L</td>
+											<td class="lc_cont tc_3">32</td>
+											<td class="lc_cont tc_3">54</td>
+											<td class="lc_cont tc_3">71</td>
+											<td class="lc_cont tc_3">60</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</main>
+					</div>
+					<div class="wrap_layer lc_b hide" id="productDelivery">
+						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+						<header class="layer_tit tc_3 lc_def">배송정보</header>
+						<main class="layer_cont">
+							<table class="product_delivery lc_3">
+								<colgroup>
+									<col style="width:120px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="lc_cont">배송정보</th>
+										<td class="lc_cont tc_3">
+											<ul class="dot_list">
+												<li>무료배송</li>
+												<li>00원 이상 주문 시 무료배송, 00원 미만 00원의 배송비가 추가 됩니다.</li>
+												<li>제주도를 포함한 도서산간 지역 추가 배송비 00원 입금 시 상품 발송 가능합니다.</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th class="lc_cont">교환/환불/AS안내</th>
+										<td class="lc_cont tc_3">
+											<ul class="dot_list">
+												<li>상품 수령일로부터 7일 이내 반품/환불 가능합니다.</li>
+												<li>단순변심 반품의 경우 왕복배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.</li>
+												<li>상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.</li>
+												<li>출고 이후 환불요청 시 상품 회수 후 처리됩니다.</li>
+												<li>주문제작상품/카메라/밀봉포장상품 등은 변심에 따른 반품/환불이 불가합니다.</li>
+												<li>일부 완제품으로 수입된 상품의 경우 A/S가 불가합니다.</li>
+												<li>특정브랜드의 상품설명에 별도로 기입된 교환/환불/AS 기준이 우선합니다.</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</main>
+					</div>
+				</div>
 				<div class="associated">
 					<strong class="tit tc_3">ASSOCIATED CONTENTS</strong>
 					<div class="slides" id="associated">
@@ -416,7 +636,7 @@
 				<div class="item lc_cont">
 					<dl class="info">
 						<dt class="s_out">상태</dt>
-						<dd class="flag no tc_b"><span class="s_out">미답변</span></dd>
+						<dd class="flag no kor tc_b"><span class="s_out">답변대기</span></dd>
 						<dt class="s_out">구분</dt>
 						<dd class="category tc_b">상품문의</dd>
 						<dt class="s_out">작성자</dt>
@@ -436,7 +656,7 @@
 				<div class="item lc_cont">
 					<dl class="info">
 						<dt class="s_out">상태</dt>
-						<dd class="flag no tc_b"><span class="s_out">미답변</span></dd>
+						<dd class="flag no kor tc_b"><span class="s_out">답변대기</span></dd>
 						<dt class="s_out">구분</dt>
 						<dd class="category tc_b">상품문의</dd>
 						<dt class="s_out">작성자</dt>
@@ -467,7 +687,7 @@
 				<div class="item lc_cont">
 					<dl class="info">
 						<dt class="s_out">상태</dt>
-						<dd class="flag yes tc_3"><span class="s_out">답변완료</span></dd>
+						<dd class="flag yes kor tc_3"><span class="s_out">답변완료</span></dd>
 						<dt class="s_out">구분</dt>
 						<dd class="category tc_b">상품문의</dd>
 						<dt class="s_out">작성자</dt>
@@ -505,7 +725,7 @@
 				<div class="item lc_cont">
 					<dl class="info">
 						<dt class="s_out">상태</dt>
-						<dd class="flag yes tc_3"><span class="s_out">답변완료</span></dd>
+						<dd class="flag yes kor tc_3"><span class="s_out">답변완료</span></dd>
 						<dt class="s_out">구분</dt>
 						<dd class="category tc_b">재입고문의</dd>
 						<dt class="s_out">작성자</dt>
@@ -565,6 +785,64 @@
 			개인정보관리책임 : 정병윤 CPO(<a href="mailto:MARKETING@HIPHOPER.COM">MARKETING@HIPHOPER.COM</a>)    입점문의 : 안효창 CBO(<a href="mailto:DIRECTOR@HIPHOPER.COM">DIRECTOR@HIPHOPER.COM</a>)</address>
 		</div>
 	</footer>
+	<!-- 혜택 상세보기 레이어 -->
+	<div class="dim_layer w640 hide">
+		<div class="wrap_layer lc_b" id="benefitsDetail">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">본문으로 돌아가기</span></button>
+			<header class="layer_tit tc_3 lc_def">2019년 1월 신용카드 무이자 행사</header>
+			<main class="layer_cont">
+				<p>어느덧 2019년 새해가 밝았습니다.<br>
+				황금돼지처럼 반짝반짝 빛나는 한 해의 시작을 응원하며 신용카드 무이자 이벤트를 준비했습니다!<br>
+				1월 쇼핑에 도움을 드리고자 '19년 1월 신용카드 무이자 행사' 소식을 전해 드립니다.<br>
+				구매 시 많은 이용 부탁드립니다.​<br>
+				※ 대상 : 5만원 이상 신용카드 결제 고객</p>
+				<ul class="benefit_card dis_f lc_cont fw_wrap bg_e5_a">
+					<li class="lc_cont">
+						<strong class="tc_3">신한카드</strong>
+						<p>5만원 이상 결제시 : 2~6개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">하나카드</strong>
+						<p>5만원 이상 결제시 : 2~3개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">하나카드 (외환)</strong>
+						<p>5만원 이상 결제시 : 2~3개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">현대카드</strong>
+						<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">KB국민카드</strong>
+						<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">삼성카드</strong>
+						<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">BC카드</strong>
+						<p>전체 무이자 : 2~5개월 무이자</p>
+					</li>
+					<li class="lc_cont">
+						<strong class="tc_3">NH농협카드</strong>
+						<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+					</li>
+				</ul>
+				<div class="benefit_notice lc_cont">
+					<strong class="tit tc_3">유의 사항</strong>
+					<ul class="dot_list">
+						<li>공공기관 및 오프라인 제외</li>
+						<li>법인/개인 사업자 기업카드/선불/하이브리드/은행계열 카드 제외</li>
+						<li>결제창에 '무'표시가 되어 있어도 제외카드는 무이자 할부 미적용</li>
+						<li>직가맹점, 상점부담 무이자 가맹점,특별제휴가맹점,전용가맹점 제외</li>
+						<li>무이자건은 포인트/마일리지/할인서비스 등 다른 혜택과 중복 미적용</li>
+					</ul>
+				</div>
+			</main>
+		</div>	
+	</div>
 	<script src="./js/common.js"></script>
 	<script>
 		$('#benefits').slick({
@@ -582,6 +860,9 @@
 			prevArrow:'<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button>',
 			nextArrow:'<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>'
 		});
+		function likeCallback(e){//좋아요 콜백
+			console.log('this는 좋아요 버튼',this);
+		};
 
 		/*$('.slides').slick({
 			dots:true,
