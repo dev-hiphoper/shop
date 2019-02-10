@@ -250,6 +250,9 @@ input::placeholder{color:#bbb;}
 .dot_list li:before{background-color:#555;}
 .bg_d,
 .wrap_board .sort li + li:before{background-color:#ddd;}
+.bg_e,
+.bg_e_a:after,
+.bg_e_b:before{background-color:#eee;}
 .bg_e5,
 .bg_e5_a:after,
 .site_main.product .func li:first-child:after,
@@ -1395,10 +1398,46 @@ background-size:cover;}
 .on_reply .writer .type_icon{position:absolute;left:0;top:0;zoom:1;-ms-zoom:1;margin:0;}
 .on_reply .writer .nic{line-height:26px;font-size:14px;}
 
-.site_main.brand_exclusive{padding-bottom:120px;}
+.site_main.brand_exclusive,
+.site_main.brand_best{padding-bottom:120px;}
 .site_main.brand_exclusive >.layout_full{margin-bottom:92px;}
+.site_main.brand_best >.layout_full{margin-bottom:88px;}
+.site_main.brand_best .wrap_listproduct >.tit{font-size:25px;margin-bottom:9px;}
+.site_main.brand_best .wrap_listproduct + .wrap_listproduct{margin-top:110px;}
 
 
+.brand_top2{margin-bottom:40px;}
+.brand_top2 li{float:left;position:relative;width:calc(50% - 10px);}
+.brand_top2 li + li{margin-left:20px;}
+.brand_top2 .info{position:absolute;left:20px;top:20px;bottom:20px;width:240px;background-color:#fff;}
+.brand_top2 .info img{width:auto;max-width:none;height:96px;}
+.brand_top2 .inner >a{display:block;}
+.brand_top2 .name,
+.best_list .name{display:block;text-align:center;line-height:22px;}
+.brand_top2 .eng,
+.best_list .eng{margin-top:16px;font-size:18px;}
+.brand_top2 .kor,
+.best_list .kor{font-size:14px;}
+.brand_top2 .like{position:absolute;left:20px;top:70.6051873199%;width:240px;}
+.brand_top2 .btn_like{margin:21.875% auto 0!important;display:none;}
+
+.best_list{position:relative;}
+.best_list:before,
+.best_list >ul:after,
+.best_list >ul:before{content:'';width:1px;height:100%;position:absolute;top:0;}
+.best_list:before{left:25%;}
+.best_list >ul:before{left:50%;}
+.best_list >ul:after{left:75%;}
+.best_list li{float:left;width:25%;}
+.best_list li a{float:left;position:relative;width:100%;height:120px;padding:36px 0 0 150px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.best_list li img{height:auto;width:80px;left:40px!important;}
+.best_list .name{text-align:left;}
+.best_list .eng{margin-top:3px;font-weight:500;}
+
+
+@media all and (min-width:1500px){
+	.brand_top2 .btn_like{display:block!important;}
+}
 
 @media all and (min-width:1600px){
 	.list_product .name{white-space:nowrap;max-height:22px;display:block;}
