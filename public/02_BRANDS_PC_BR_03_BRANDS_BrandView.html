@@ -50,21 +50,18 @@
 			<div class="inner">
 				<div class="slides brand_view black">
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
-								<div class="inner dis_if ai_c fw_wrap">
-									<em class="brand">MUAHMUAH</em>
-									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
-									<p class="desc tc_3">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </p>
-								</div>
-							</div>
-						</a>
+						<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
+						<div class="info pos_center v">
+							<strong class="name eng tc_1">Verynineflux</strong>
+							<em class="name kor tc_1">베리나인플럭스</em>
+							<p class="desc tc_3">반복되고 지쳐있는 삶을 바꾸고 싶어하는 이 시대의 모든 사람들에게 항상 새로운 변화를 추구합니다.</p>
+							<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153000"><span class="s_out">좋아요수 : </span><span class="count tc_3">153,000</span></button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</article>
-		<section class="lnb_with_list miw1180 clear">
+		<section class="lnb_with_cont miw1180 clear">
 			<nav class="lnb" id="lnb">
 				<h2 class="tit_lnb">CATEGORY</h2>
 				<ul class="list_lnb clear">
@@ -89,7 +86,7 @@
 					<a href="" class="link tc_3">LOOK BOOK</a>
 				</div>
 			</nav>
-			<div class="list">
+			<div class="cont">
 				<h3 class="s_out">상품목록</h3>
 				<ul class="func tc_3">
 					<li><button type="button" class="sort">신상품 순</button></li>
@@ -318,6 +315,10 @@
 		</div>
 	</footer>
 	<script src="./js/common.js"></script>
-	<script></script>
+	<script>
+		function likeCallback(e){//좋아요 콜백
+			console.log('this는 좋아요 버튼',this);
+		};
+	</script>
 </body>
 </html>
