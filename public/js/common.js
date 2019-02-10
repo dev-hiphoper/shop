@@ -237,7 +237,7 @@ $(window).on({
 		if( $this.is('textarea[data-type=countlength]') ){//textarea 글자수 세기
 			var max = $this.attr('maxlength')*1,
 				count = $this.val().length;
-			$this.next('.count').find('span').text(count);
+			$this.closest('div').find('[data-type=showlength]').text(count);
 		}
 		if( $this.is('[type=number][maxlength]') ){//number maxlength 제한
 			numberMaxlength($this[0]);
