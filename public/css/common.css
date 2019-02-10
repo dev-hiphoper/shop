@@ -476,6 +476,7 @@ button.text_link:before{bottom:0;}
 .miw1180{min-width:1180px!important;max-width:1820px;padding:0 50px;margin:0 auto;}
 .wrap_listproduct{margin:0 auto;}
 .wrap_listproduct >.inner >.tit,
+.wrap_listproduct >.tit,
 .wrap_brandissue >.tit,
 .wrap_seasonissue >.tit{display:block;margin:0 auto 10px;font-size:30px;line-height:38px;font-weight:700;}
 .wrap_listproduct .btn_more{display:block;margin:0 auto;}
@@ -1393,6 +1394,9 @@ background-size:cover;}
 .on_reply .writer{float:left;position:relative;padding-left:38px;margin-bottom:0;}
 .on_reply .writer .type_icon{position:absolute;left:0;top:0;zoom:1;-ms-zoom:1;margin:0;}
 .on_reply .writer .nic{line-height:26px;font-size:14px;}
+
+.site_main.brand_exclusive{padding-bottom:120px;}
+.site_main.brand_exclusive >.layout_full{margin-bottom:92px;}
 
 
 
