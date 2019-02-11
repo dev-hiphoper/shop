@@ -1335,6 +1335,7 @@ background-size:cover;}
 
 .site_main.brand_view{padding-bottom:120px;}
 .slides.brand_view{margin-bottom:0;}
+.slides.brand_view >.item{width:1280px;margin:0 auto;position:relative;}
 .slides.brand_view .info{left:120px;height:480px;}
 .slides.brand_view .name{display:block;}
 .slides.brand_view .eng{font-size:68px;line-height:58px;font-weight:700;text-transform:uppercase;word-break:break-word;margin-top:56px;}
