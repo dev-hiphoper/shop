@@ -53,18 +53,22 @@
 		<form action="" class="wrap_login">
 			<fieldset>
 				<legend>로그인 정보 입력</legend>
-				<span class="input_text large clear">
+				<span class="input_text large clear" id="userID">
 					<input type="text" class="lc_def tc_3" placeholder="아이디" required>
 					<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+					<p class="error tc_poi">아이디를 입력해주세요.</p>
+					<p class="error tc_poi hide" id="errorNoid">없는 아이디입니다.</p>
 				</span>
 				<span class="input_text large clear">
-					<input type="password" class="lc_def tc_3" placeholder="비밀번호" required>
+					<input type="password" class="lc_def tc_3" placeholder="비밀번호" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 					<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+					<p class="error tc_poi">비밀번호를 입력해주세요.</p>
+					<p class="error tc_poi hide">비밀번호가 틀립니다.</p>
 				</span>
 				<span class="input_checkbox">
 					<input type="checkbox" name="checkbox1" id="loginKeep"><label for="loginKeep" class="tc_3 spr_after">로그인 상태 유지</label>
 				</span>
-				<button type="submit" class="btn_login dark large">LOGIN</button>
+				<button type="submit" class="btn_login dark large" onclick="submitSample(event)">LOGIN</button>
 			</fieldset>
 		</form>
 	</main>
@@ -79,6 +83,26 @@
 		</div>
 	</footer>
 	<script src="./js/common.js"></script>
-	<script></script>
+	<script>
+		function submitSample(event){
+			event.preventDefault();
+			event.stopPropagation();//submit막기
+			var $this = $(event.target),
+				$form = $($this.prop('form')),
+				$required = $form.find('[required]');//필수값들
+			$form.find('.error:not(p)').removeClass('error');//기존의 애러메세지 숨기기
+			$required.each(function(index, el) {
+				showValidate(el);//기본 필수 값들이 입력이 없는 경우를 체크해서 오류 메세지 보여주기
+			});
+			/* 이외의 특수한 경우는 개발 붙이면서 진행 ex)인증,아이디중복,닉네임중복 */
+		}
+		/* 이외의 경우 예시 */
+		/*function temp(){
+			addErr( $('#userID input') );//에러메세지 활성화
+			$('#userID').find('.error').addClass('hide');//기존에러메세지 숨김
+			$('#errorNoid').removeClass('hide');//없는 아이디 메세지 보이기
+		}
+		temp();*/
+	</script>
 </body>
 </html>

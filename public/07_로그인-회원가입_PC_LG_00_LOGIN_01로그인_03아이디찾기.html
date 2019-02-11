@@ -62,12 +62,13 @@
 							<input type="radio" name="findIdOption" id="findIdOptionMail"><label for="findIdOptionMail" class="tc_3">이메일로 인증</label>
 						</span>
 					</div>
-					<span class="input_text large clear">
+					<span class="input_text large clear"><!-- 애러일 경우 class에 error 추가 -->
 						<input type="text" class="lc_def tc_3" placeholder="이름" required>
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+						<p class="error tc_poi">이름을 입력해주세요.</p>
 					</span>
 					<div class="cert clear" id="inputNumber">
-						<div class="phone lc_def">
+						<div class="phone lc_def"><!-- 애러일 경우 class에 error 추가 -->
 							<span class="input_select lc_def tc_b">
 								<select name="" id="carrier" class="tc_3_h tc_3" required>
 									<option value="010" selected>010</option>
@@ -77,27 +78,30 @@
 									<option value="">018</option>
 									<option value="">019</option>
 								</select>
+								<p class="error tc_poi">전화번호를 입력해주세요.</p>
 							</span>
 							<span class="input_text clear">
-								<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*" required>
+								<input type="number" class="lc_def tc_3" minlength="3" maxlength="4" pattern="[0-9]*" required>
 							</span>
 							<span class="input_text clear">
-								<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*" required>
+								<input type="number" class="lc_def tc_3" minlength="4" maxlength="4" pattern="[0-9]*" required>
 							</span>
 						</div>
 						<button type="button" class="btn_cert large" onclick="setCertNum()">인증번호</button>
 					</div>
 					<div class="cert clear hide" id="inputMail">
-						<span class="input_text email clear">
+						<span class="input_text email clear"><!-- 애러일 경우 class에 error 추가 -->
 							<input type="email" class="lc_def tc_3" placeholder="이메일" disabled required>
 							<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+							<p class="error tc_poi">이메일을 입력해주세요.</p>
 						</span>
 						<button type="button" class="btn_cert large" onclick="setCertNum()">인증번호</button>
 					</div>
 					<div class="cert_num lc_def clear">
-						<span class="input_text clear">
+						<span class="input_text clear"><!-- 애러일 경우 class에 error 추가 -->
 							<input type="number" id="certNumber" class="lc_def tc_3" pattern="[0-9]*" maxlength="6" placeholder="인증번호" required disabled>
 							<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+							<p class="error tc_poi">인증번호를 입력해주세요.</p>
 						</span>
 						<div class="time"><span class="s_out">남은시간</span><span id="certTime" class="tc_3">03:00</span></div>
 					</div>

@@ -47,7 +47,7 @@
 	</header>
 	<main class="site_main join miw1180">
 		<h2 class="tit tc_1">회원가입</h2>
-		<form action="">
+		<form action="" id="joinForm">
 			<fieldset>
 				<legend>회원가입 입력폼</legend>
 				<table class="table_st v">
@@ -61,9 +61,11 @@
 						<tr>
 							<th>아이디</th>
 							<td colspan="3">
-								<span class="input_text id clear">
+								<span class="input_text id clear"><!-- 애러일 경우 class에 error 추가 -->
 									<input type="text" class="lc_def tc_3" placeholder="영문 또는 숫자 조합, 6자 이상" minlength="6" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									<p class="error tc_poi">아이디를 입력해주세요.</p>
+									<p class="error tc_poi hide">아이디가 중복됩니다.</p>
 								</span>
 								<button type="button" class="btn_check fix">중복확인</button>
 							</td>
@@ -71,39 +73,50 @@
 						<tr>
 							<th>비밀번호</th>
 							<td>
-								<span class="input_text password clear">
+								<span class="input_text password clear"><!-- 애러일 경우 class에 error 추가 -->
 									<input type="password" class="lc_def tc_3" placeholder="영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									<p class="error tc_poi">비밀번호 규칙을 확인해주세요.</p>
 								</span>
 							</td>
 							<th>비밀번호확인</th>
 							<td>
-								<span class="input_text password clear">
-									<input type="password" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
+								<span class="input_text password clear"><!-- 애러일 경우 class에 error 추가 -->
+									<input type="password" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요." required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									<p class="error tc_poi">비밀번호가 맞지 않습니다.</p>
 								</span>
 							</td>
 						</tr>
 						<tr>
 							<th>본인인증</th>
 							<td colspan="3">
-								<button type="button" class="btn_ dark">휴대폰 인증</button>
-								<button type="button" class="btn_check dark">아이핀(I-PIN) 인증</button>
+								<div class="cert"><!-- 애러일 경우 class에 error 추가 -->
+									<button type="button" class="btn_ dark">휴대폰 인증</button>
+									<button type="button" class="btn_check dark">아이핀(I-PIN) 인증</button>
+									<input type="hidden" name="" value="" required><!-- 본인 인증이 완료 되면 value에 값 넣기 -->
+									<p class="error tc_poi">본인인증을 해주세요.</p>
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<th>이름</th>
 							<td>
-								<span class="input_text name clear">
+								<span class="input_text name clear"><!-- 애러일 경우 class에 error 추가 -->
 									<input type="text" class="lc_def tc_3" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									<p class="error tc_poi">이름을 입력해주세요.</p>
 								</span>
 							</td>
 							<th>닉네임</th>
 							<td>
-								<span class="input_text name clear">
+								<span class="input_text name clear"><!-- 애러일 경우 class에 error 추가 -->
 									<input type="text" class="lc_def tc_3" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									<input type="hidden" name="" value="" required><!-- 사용가능한 닉네임이면 value에 값 넣기 -->
+									<p class="error tc_poi">닉네임을 입력해주세요.</p><!-- 필요 없으면 hide 추가 -->
+									<p class="error tc_poi hide">닉네임 중복확인을 해주세요.</p><!-- 중복확인을 안햇을 경우  hide 제거 -->
+									<p class="error tc_poi hide">닉네임이 중복 됩니다.</p><!-- 중복일 경우 hide 제거 -->
 								</span>
 								<button type="button" class="btn_check fix">중복확인</button>
 							</td>
@@ -111,23 +124,24 @@
 						<tr>
 							<th>휴대전화</th>
 							<td colspan="3">
-								<div class="phone dis_f">
+								<div class="phone dis_f"><!-- 애러일 경우 class에 error 추가 -->
 									<span class="input_select lc_def tc_b">
 										<select name="" id="carrier" class="tc_3_h tc_3" required>
-											<option value="" selected>010</option>
-											<option value="">011</option>
-											<option value="">016</option>
-											<option value="">017</option>
-											<option value="">018</option>
-											<option value="">019</option>
+											<option value="010" selected>010</option>
+											<option value="011">011</option>
+											<option value="016">016</option>
+											<option value="017">017</option>
+											<option value="018">018</option>
+											<option value="019">019</option>
 										</select>
+										<p class="error tc_poi">휴대전화 번호를 입력해주세요.</p>
 									</span>
 									<span class="input_text clear">
-										<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*" required>
+										<input type="number" class="lc_def tc_3" minlength="3" maxlength="4" pattern="[0-9]*" required>
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									</span>
 									<span class="input_text clear">
-										<input type="number" class="lc_def tc_3" maxlength="4" pattern="[0-9]*" required>
+										<input type="number" class="lc_def tc_3" minlength="4" maxlength="4" pattern="[0-9]*" required>
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									</span>
 								</div>
@@ -136,10 +150,11 @@
 						<tr>
 							<th>이메일</th>
 							<td colspan="3">
-								<div class="email dis_f ai_c">
+								<div class="email dis_f ai_c"><!-- 애러일 경우 class에 error 추가 -->
 									<span class="input_text clear">
 										<input type="text" class="lc_def tc_3" required>
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+										<p class="error tc_poi">이메일을 입력해주세요.</p>
 									</span>
 									<span class="text">@</span>
 									<span class="input_text clear">
@@ -160,27 +175,28 @@
 						<tr>
 							<th>생년월일</th>
 							<td colspan="3">
-								<div class="birthday dis_f ai_c">
+								<div class="birthday dis_f ai_c"><!-- 애러일 경우 class에 error 추가 -->
 									<span class="input_select lc_def tc_b">
 										<select name="" id="birYear" class="tc_3_h tc_3" required>
 											<option disabled selected>년도</option>
-											<option value="">1979</option>
-											<option value="">1980</option>
-											<option value="">1981</option>
+											<option value="1979">1979</option>
+											<option value="1980">1980</option>
+											<option value="1981">1981</option>
 										</select>
+										<p class="error tc_poi">생년월일을 입력해주세요.</p>
 									</span>
 									<span class="input_select lc_def tc_b">
 										<select name="" id="birMonth" class="tc_3_h tc_3" required>
 											<option disabled selected>월</option>
-											<option value="">01</option>
-											<option value="">02</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
 										</select>
 									</span>
 									<span class="input_select lc_def tc_b">
 										<select name="" id="birDay" class="tc_3_h tc_3" required>
 											<option disabled selected>일</option>
-											<option value="">01</option>
-											<option value="">02</option>
+											<option value="01">01</option>
+											<option value="02">02</option>
 										</select>
 									</span>
 									<p class="desc tc_8">생일 정보 및 성별 입력 시 생일 축하 쿠폰을 받을 수 있습니다.</p>
@@ -190,9 +206,10 @@
 						<tr>
 							<th>성별</th>
 							<td colspan="3">
-								<div class="sex dis_f ai_c">
+								<div class="sex dis_f ai_c"><!-- 애러일 경우 class에 error 추가 -->
 									<span class="input_radio">
-										<input type="radio" name="joinSex" id="joinSex1"><label for="joinSex1" class="tc_3">남</label>
+										<input type="radio" name="joinSex" id="joinSex1" required><label for="joinSex1" class="tc_3">남</label>
+										<p class="error tc_poi">성별을 입력해주세요.</p>
 									</span>
 									<span class="input_radio">
 										<input type="radio" name="joinSex" id="joinSex2"><label for="joinSex2" class="tc_3">여</label>
@@ -208,14 +225,16 @@
 					</span>
 					<div class="clear dis_f fw_wrap">
 						<div class="item">
-							<span class="input_checkbox">
+							<span class="input_checkbox"><!-- 애러일 경우 class에 error 추가 -->
 								<input type="checkbox" name="" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용약관(필수)</label>
+								<p class="error tc_poi">필수항목입니다.</p>
 							</span>
 							<a href="" class="text_link tc_3">자세히보기</a>
 						</div>
 						<div class="item">
-							<span class="input_checkbox">
+							<span class="input_checkbox"><!-- 애러일 경우 class에 error 추가 -->
 								<input type="checkbox" name="" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인정보 수집 및 이용(필수)</label>
+								<p class="error tc_poi">필수항목입니다.</p>
 							</span>
 							<a href="" class="text_link tc_3">자세히보기</a>
 						</div>
@@ -236,7 +255,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn_join dark large">가입하기</button>
+				<button type="submit" class="btn_join dark large" onclick="submitSample(event)">가입하기</button>
 			</fieldset>
 		</form>
 	</main>
@@ -251,6 +270,19 @@
 		</div>
 	</footer>
 	<script src="./js/common.js"></script>
-	<script></script>
+	<script>
+		function submitSample(event){
+			event.preventDefault();
+			event.stopPropagation();//submit막기
+			var $this = $(event.target),
+				$form = $($this.prop('form')),
+				$required = $form.find('[required]');//필수값들
+			$form.find('.error:not(p)').removeClass('error');//기존의 애러메세지 숨기기
+			$required.each(function(index, el) {
+				showValidate(el);//기본 필수 값들이 입력이 없는 경우를 체크해서 오류 메세지 보여주기
+			});
+			/* 이외의 특수한 경우는 개발 붙이면서 진행 ex)인증,아이디중복,닉네임중복 */
+		}
+	</script>
 </body>
 </html>

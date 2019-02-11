@@ -55,13 +55,15 @@
 			<form action="" class="wrap_login">
 				<fieldset>
 					<legend>신규 비밀번호 입력</legend>
-					<span class="input_text large clear">
+					<span class="input_text large clear"><!-- 애러일 경우 class에 error 추가 -->
 						<input type="password" class="lc_def tc_3" placeholder="비밀번호(영문+특수문자 혹은 숫자 포함 6자리 이상)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+						<p class="error tc_poi">비밀번호를 입력해주세요.</p>
 					</span>
-					<span class="input_text large clear">
+					<span class="input_text large clear"><!-- 애러일 경우 class에 error 추가 -->
 						<input type="password" class="lc_def tc_3" placeholder="비밀번호" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+						<p class="error tc_poi">비밀번호가 일치하지 않습니다.</p>
 					</span>
 					<button type="submit" class="btn_login dark large">비밀번호 변경</button>
 				</fieldset>
