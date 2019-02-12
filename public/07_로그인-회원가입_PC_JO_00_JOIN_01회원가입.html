@@ -255,7 +255,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn_join dark large" onclick="submitSample(event)">가입하기</button>
+				<button type="submit" class="btn_join dark large">가입하기</button>
 			</fieldset>
 		</form>
 	</main>
@@ -271,18 +271,18 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		function submitSample(event){
-			event.preventDefault();
-			event.stopPropagation();//submit막기
-			var $this = $(event.target),
-				$form = $($this.prop('form')),
-				$required = $form.find('[required]');//필수값들
-			$form.find('.error:not(p)').removeClass('error');//기존의 애러메세지 숨기기
-			$required.each(function(index, el) {
-				showValidate(el);//기본 필수 값들이 입력이 없는 경우를 체크해서 오류 메세지 보여주기
-			});
-			/* 이외의 특수한 경우는 개발 붙이면서 진행 ex)인증,아이디중복,닉네임중복 */
-		}
+		// function submitSample(event){
+		// 	event.preventDefault();
+		// 	event.stopPropagation();//submit막기
+		// 	var $this = $(event.target),
+		// 		$form = $($this.prop('form')),
+		// 		$required = $form.find('[required]');//필수값들
+		// 	$form.find('.error:not(p)').removeClass('error');//기존의 애러메세지 숨기기
+		// 	$required.each(function(index, el) {
+		// 		showValidate(el);//기본 필수 값들이 입력이 없는 경우를 체크해서 오류 메세지 보여주기
+		// 	});
+		// 	/* 이외의 특수한 경우는 개발 붙이면서 진행 ex)인증,아이디중복,닉네임중복 */
+		// }
 	</script>
 </body>
 </html>

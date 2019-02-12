@@ -180,7 +180,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 			e.preventDefault();
 			addErr($(this));
 		});
-		obj.reportValidity();		
+		obj.reportValidity();
 	};
 $(window).on({
 	click:function(e){
@@ -263,6 +263,19 @@ $(window).on({
 				all.prop('checked',false)
 			}
 		}
+		if( $this.is('[type=file]') && $this.closest('span').is('.input_file') ){//file
+			$this.closest('.error').removeClass('error');
+			if($this.is('[data-max-size]')){
+				var max = $this.attr('data-max-size') * 1;
+				if( Math.floor($this[0].files[0].size/1000000) > max ){
+					addErr($this);
+					$this.val('');
+					return false;
+				}
+			}
+			var input = $this.prev('.name');
+			input.val($this[0].files[0].name);
+		}
 	},
 	mouseenter:function(e){
 		var $this = $(e.target);
@@ -314,10 +327,20 @@ $(window).on({
 })
 $(document).ready(function(){
 	if($.browser.msie){$('html').addClass('ie')};
-	$('form').submit(function(e){
-		var $this = $(this);
-		alert('aa');
-	})
+	if ( !HTMLFormElement.prototype.reportValidity ) {
+		HTMLFormElement.prototype.reportValidity = function() {
+			var submitButtons = this.querySelectorAll( "button, input[type=submit]" );
+
+			for ( var i = 0; i < submitButtons.length; i++ ) {
+				// Filter out <button type="button">, as querySelectorAll can't
+				// handle :not filtering
+				if ( submitButtons[ i ].type === "submit" ) {
+					submitButtons[ i ].click();
+					return;
+				}
+			}
+		}
+	}
 });
 
 
