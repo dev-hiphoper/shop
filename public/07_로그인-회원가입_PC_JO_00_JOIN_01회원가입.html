@@ -61,72 +61,64 @@
 						<tr>
 							<th>아이디</th>
 							<td colspan="3">
-								<span class="input_text id clear"><!-- 애러일 경우 class에 error 추가 -->
-									<input type="text" class="lc_def tc_3" placeholder="영문 또는 숫자 조합, 6자 이상" minlength="6" required>
+								<span class="input_text id clear">
+									<input type="text" name="userid" class="lc_def tc_3" placeholder="영문 또는 숫자 조합, 6자 이상" pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,})$" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-									<p class="error tc_poi">아이디를 입력해주세요.</p>
-									<p class="error tc_poi hide">아이디가 중복됩니다.</p>
+									<input type="hidden" name="useridcheck" value=""><!-- 사용가능 한 경우 같은 아이디 입력, 아닐 경우 value 값 없음 -->
 								</span>
-								<button type="button" class="btn_check fix">중복확인</button>
+								<button type="button" class="btn_check fix" onclick="useridCheck()">중복확인</button>
 							</td>
 						</tr>
 						<tr>
 							<th>비밀번호</th>
 							<td>
-								<span class="input_text password clear"><!-- 애러일 경우 class에 error 추가 -->
-									<input type="password" class="lc_def tc_3" placeholder="영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
+								<span class="input_text password clear">
+									<input type="password" name="userpw" id="userpw" class="lc_def tc_3" placeholder="영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{6,}" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-									<p class="error tc_poi">비밀번호 규칙을 확인해주세요.</p>
 								</span>
 							</td>
 							<th>비밀번호확인</th>
 							<td>
-								<span class="input_text password clear"><!-- 애러일 경우 class에 error 추가 -->
-									<input type="password" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요." required>
+								<span class="input_text password clear">
+									<input type="password" name="userpwconfirm" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요." required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-									<p class="error tc_poi">비밀번호가 맞지 않습니다.</p>
 								</span>
 							</td>
 						</tr>
 						<tr>
 							<th>본인인증</th>
 							<td colspan="3">
-								<div class="cert"><!-- 애러일 경우 class에 error 추가 -->
+								<div class="cert">
 									<button type="button" class="btn_ dark">휴대폰 인증</button>
 									<button type="button" class="btn_check dark">아이핀(I-PIN) 인증</button>
-									<input type="hidden" name="" value="" required><!-- 본인 인증이 완료 되면 value에 값 넣기 -->
-									<p class="error tc_poi">본인인증을 해주세요.</p>
+									<input type="input" name="certcheck" id="certcheck" class="s_out" required><!-- 인증이 완료 된 경우 value 값 입력 -->
 								</div>
 							</td>
 						</tr>
 						<tr>
 							<th>이름</th>
 							<td>
-								<span class="input_text name clear"><!-- 애러일 경우 class에 error 추가 -->
-									<input type="text" class="lc_def tc_3" required>
+								<span class="input_text name clear">
+									<input type="text" name="username" class="lc_def tc_3" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-									<p class="error tc_poi">이름을 입력해주세요.</p>
 								</span>
 							</td>
 							<th>닉네임</th>
 							<td>
-								<span class="input_text name clear"><!-- 애러일 경우 class에 error 추가 -->
-									<input type="text" class="lc_def tc_3" required>
+								<span class="input_text name clear">
+									<input type="text" name="usernicname" class="lc_def tc_3" required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-									<input type="hidden" name="" value="" required><!-- 사용가능한 닉네임이면 value에 값 넣기 -->
-									<p class="error tc_poi">닉네임을 입력해주세요.</p><!-- 필요 없으면 hide 추가 -->
-									<p class="error tc_poi hide">닉네임 중복확인을 해주세요.</p><!-- 중복확인을 안햇을 경우  hide 제거 -->
-									<p class="error tc_poi hide">닉네임이 중복 됩니다.</p><!-- 중복일 경우 hide 제거 -->
+									<input type="hidden" name="usernicnamecheck" value="닉네임"><!-- 사용가능 한 경우 같은 닉네임 입력, 아닐 경우 value 값 없음 -->
 								</span>
-								<button type="button" class="btn_check fix">중복확인</button>
+								<button type="button" class="btn_check fix" onclick="usernicnameCheck()">중복확인</button>
 							</td>
 						</tr>
 						<tr>
 							<th>휴대전화</th>
 							<td colspan="3">
-								<div class="phone dis_f"><!-- 애러일 경우 class에 error 추가 -->
+								<div class="phone dis_f">
 									<span class="input_select lc_def tc_b">
-										<select name="" id="carrier" class="tc_3_h tc_3" required>
+										<select name="phonecarrier" id="carrier" class="tc_3_h tc_3" required>
 											<option value="010" selected>010</option>
 											<option value="011">011</option>
 											<option value="016">016</option>
@@ -134,14 +126,13 @@
 											<option value="018">018</option>
 											<option value="019">019</option>
 										</select>
-										<p class="error tc_poi">휴대전화 번호를 입력해주세요.</p>
 									</span>
 									<span class="input_text clear">
-										<input type="number" class="lc_def tc_3" minlength="3" maxlength="4" pattern="[0-9]*" required>
+										<input type="number" name="phonenumber1" class="lc_def tc_3" minlength="3" maxlength="4" pattern="[0-9]*" required>
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									</span>
 									<span class="input_text clear">
-										<input type="number" class="lc_def tc_3" minlength="4" maxlength="4" pattern="[0-9]*" required>
+										<input type="number" name="phonenumber2" class="lc_def tc_3" minlength="4" maxlength="4" pattern="[0-9]*" required>
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									</span>
 								</div>
@@ -150,19 +141,18 @@
 						<tr>
 							<th>이메일</th>
 							<td colspan="3">
-								<div class="email dis_f ai_c"><!-- 애러일 경우 class에 error 추가 -->
+								<div class="email dis_f ai_c">
 									<span class="input_text clear">
-										<input type="text" class="lc_def tc_3" required>
+										<input type="text" name="useremail1" class="lc_def tc_3" required>
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-										<p class="error tc_poi">이메일을 입력해주세요.</p>
 									</span>
 									<span class="text">@</span>
 									<span class="input_text clear">
-										<input type="text" class="lc_def tc_3" data-type="inputEmail" required>
+										<input type="text" name="useremail2" class="lc_def tc_3" data-type="inputEmail" required pattern="^[a-zA-Z0-9_-]+\.+[a-zA-Z]{1,}">
 										<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									</span>
 									<span class="input_select lc_def tc_b">
-										<select name="" id="emailList" class="tc_3_h tc_3" data-type="changeEmail">
+										<select name="useremaillist" id="emailList" class="tc_3_h tc_3" data-type="changeEmail">
 											<option value="" selected>직접입력</option>
 											<option value="naver.com">naver.com</option>
 											<option value="daum.net">daum.net</option>
@@ -175,25 +165,24 @@
 						<tr>
 							<th>생년월일</th>
 							<td colspan="3">
-								<div class="birthday dis_f ai_c"><!-- 애러일 경우 class에 error 추가 -->
+								<div class="birthday dis_f ai_c">
 									<span class="input_select lc_def tc_b">
-										<select name="" id="birYear" class="tc_3_h tc_3" required>
+										<select name="biryear" id="birYear" class="tc_3_h tc_3" required>
 											<option disabled selected>년도</option>
 											<option value="1979">1979</option>
 											<option value="1980">1980</option>
 											<option value="1981">1981</option>
 										</select>
-										<p class="error tc_poi">생년월일을 입력해주세요.</p>
 									</span>
 									<span class="input_select lc_def tc_b">
-										<select name="" id="birMonth" class="tc_3_h tc_3" required>
+										<select name="birmonth" id="birMonth" class="tc_3_h tc_3" required>
 											<option disabled selected>월</option>
 											<option value="01">01</option>
 											<option value="02">02</option>
 										</select>
 									</span>
 									<span class="input_select lc_def tc_b">
-										<select name="" id="birDay" class="tc_3_h tc_3" required>
+										<select name="birday" id="birDay" class="tc_3_h tc_3" required>
 											<option disabled selected>일</option>
 											<option value="01">01</option>
 											<option value="02">02</option>
@@ -206,13 +195,13 @@
 						<tr>
 							<th>성별</th>
 							<td colspan="3">
-								<div class="sex dis_f ai_c"><!-- 애러일 경우 class에 error 추가 -->
+								<div class="sex dis_f ai_c">
 									<span class="input_radio">
-										<input type="radio" name="joinSex" id="joinSex1" required><label for="joinSex1" class="tc_3">남</label>
+										<input type="radio" name="usersex" id="joinSex1" required><label for="joinSex1" class="tc_3">남</label>
 										<p class="error tc_poi">성별을 입력해주세요.</p>
 									</span>
 									<span class="input_radio">
-										<input type="radio" name="joinSex" id="joinSex2"><label for="joinSex2" class="tc_3">여</label>
+										<input type="radio" name="usersex" id="joinSex2"><label for="joinSex2" class="tc_3">여</label>
 									</span>
 								</div>
 							</td>
@@ -221,36 +210,34 @@
 				</table>
 				<div class="checkboxs lc_def">
 					<span class="input_checkbox large">
-						<input type="checkbox" name="" id="checkAll" data-type="joinCheckAll"><label for="checkAll" class="tc_3 spr_after">전체동의</label>
+						<input type="checkbox" name="checkall" id="checkAll" data-type="joinCheckAll"><label for="checkAll" class="tc_3 spr_after">전체동의</label>
 					</span>
 					<div class="clear dis_f fw_wrap">
 						<div class="item">
-							<span class="input_checkbox"><!-- 애러일 경우 class에 error 추가 -->
-								<input type="checkbox" name="" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용약관(필수)</label>
-								<p class="error tc_poi">필수항목입니다.</p>
-							</span>
-							<a href="" class="text_link tc_3">자세히보기</a>
-						</div>
-						<div class="item">
-							<span class="input_checkbox"><!-- 애러일 경우 class에 error 추가 -->
-								<input type="checkbox" name="" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인정보 수집 및 이용(필수)</label>
-								<p class="error tc_poi">필수항목입니다.</p>
+							<span class="input_checkbox">
+								<input type="checkbox" name="checkterms" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용약관(필수)</label>
 							</span>
 							<a href="" class="text_link tc_3">자세히보기</a>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
-								<input type="checkbox" name="" id="check3" data-type="joinCheck"><label for="check3" class="tc_3 spr_after">이메일 수신 동의</label>
+								<input type="checkbox" name="checkprivacy" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인정보 수집 및 이용(필수)</label>
+							</span>
+							<a href="" class="text_link tc_3">자세히보기</a>
+						</div>
+						<div class="item">
+							<span class="input_checkbox">
+								<input type="checkbox" name="checkemail" id="check3" data-type="joinCheck"><label for="check3" class="tc_3 spr_after">이메일 수신 동의</label>
 							</span>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
-								<input type="checkbox" name="" id="check4" data-type="joinCheck"><label for="check4" class="tc_3 spr_after">SMS 수신동의</label>
+								<input type="checkbox" name="checksms" id="check4" data-type="joinCheck"><label for="check4" class="tc_3 spr_after">SMS 수신동의</label>
 							</span>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
-								<input type="checkbox" name="" id="check5" data-type="joinCheck"><label for="check5" class="tc_3 spr_after">마케팅 정보 수집 활용 동의</label>
+								<input type="checkbox" name="checkmarketing" id="check5" data-type="joinCheck"><label for="check5" class="tc_3 spr_after">마케팅 정보 수집 활용 동의</label>
 							</span>
 						</div>
 					</div>
@@ -271,18 +258,111 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		// function submitSample(event){
-		// 	event.preventDefault();
-		// 	event.stopPropagation();//submit막기
-		// 	var $this = $(event.target),
-		// 		$form = $($this.prop('form')),
-		// 		$required = $form.find('[required]');//필수값들
-		// 	$form.find('.error:not(p)').removeClass('error');//기존의 애러메세지 숨기기
-		// 	$required.each(function(index, el) {
-		// 		showValidate(el);//기본 필수 값들이 입력이 없는 경우를 체크해서 오류 메세지 보여주기
-		// 	});
-		// 	/* 이외의 특수한 경우는 개발 붙이면서 진행 ex)인증,아이디중복,닉네임중복 */
-		// }
+		function useridCheck(){
+			var id = $('[name=userid]'),
+				check = $('[name=useridcheck]'),
+				result = true;//중복결과 사용 가능하면 true가 되도록 해주세요.
+			if(result){
+				check.val(id.val());
+				if(id.valid()){
+					showAlert('useridcheck','사용가능한 아이디입니다.',1);
+				}
+			}
+		};
+		function usernicnameCheck(){
+			var id = $('[name=usernicname]'),
+				check = $('[name=usernicnamecheck]'),
+				result = true;//중복결과 사용 가능하면 true가 되도록 해주세요.
+			if(result){
+				check.val(id.val());
+				if(id.valid()){
+					showAlert('usernicnamecheck','사용가능한 닉네임입니다.',1);
+				}
+			}
+		};
+		/* 유효성 체크 관련은 https://jqueryvalidation.org 참고 */
+		$('#joinForm').validate({
+			submitHandler:function(form){
+				alert('유효성 체크 완료');
+				//form.submit();
+			},
+			rules:{
+				userid:{
+					equalTo:'input[name=useridcheck]'
+				},
+				userpwconfirm:{
+					equalTo:'input[name=userpw]'
+				},
+				usernicname:{
+					equalTo:'input[name=usernicnamecheck]'
+				}
+			},
+			messages:{
+				userid:{
+					required:'아이디를 입력해주세요.',
+					pattern:'영문 또는 숫자 조합, 6자 이상으로 입력해주세요.',
+					equalTo:'중복확인을 해주세요.'
+				},
+				userpw:{
+					required:"비밀번호를 입력해주세요.",
+					pattern:'영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상으로 입력해주세요.'
+				},
+				userpwconfirm:{
+					required:'비밀번호를 한번 더 입력해주세요.',
+					equalTo:'비밀번호가 일치하지 않습니다.'
+				},
+				certcheck:{
+					required:'본인인증을 해주세요.'
+				},
+				username:{
+					required:'이름을 입력해주세요.'
+				},
+				usernicname:{
+					required:'닉네임을 입력해주세요.',
+					equalTo:'중복확인을 해주세요.'
+				},
+				phonecarrier:{
+					required:'휴대전화 번호를 입력해주세요.'
+				},
+				phonenumber1:{
+					required:'휴대전화 번호를 입력해주세요.',
+					minlength:'휴대전화 번호를 입력해주세요.',
+					maxlength:'휴대전화 번호를 입력해주세요.',
+					pattern:'휴대전화 번호를 입력해주세요.'
+				},
+				phonenumber2:{
+					required:'휴대전화 번호를 입력해주세요.',
+					minlength:'휴대전화 번호를 입력해주세요.',
+					maxlength:'휴대전화 번호를 입력해주세요.',
+					pattern:'휴대전화 번호를 입력해주세요.'
+				},
+				useremail1:{
+					required:'이메일을 입력해주세요.'
+				},
+				useremail2:{
+					required:'메일을 입력해주세요.',
+					pattern:'메일을 입력해주세요.'
+				},
+				biryear:{
+					required:'생년월일을 입력해주세요.'
+				},
+				birmonth:{
+					required:'생년월일을 입력해주세요.'
+				},
+				birday:{
+					required:'생년월일을 입력해주세요.'
+				},
+				usersex:{
+					required:'성별을 입력해주세요.'
+				},
+				checkterms:{
+					required:'필수항목입니다.'
+				},
+				checkprivacy:{
+					required:'필수항목입니다.'
+				}
+			}
+		});
 	</script>
 </body>
 </html>

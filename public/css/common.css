@@ -214,7 +214,7 @@ input::placeholder{color:#bbb;}
 .error .input_file input,
 .error .input_file label,
 .input_file.error input,
-.input_file.error label{border-color:#f32323;}
+.input_file.error label{border-color:#f32323!important;}
 
 [class*="btn_"],
 [class*="lc_"],
@@ -689,7 +689,7 @@ td .site_main.join .cert.error{margin-bottom:20px;}
 .dim_layer.w640 .wrap_layer{width:640px;}
 .dim_layer.w640 .wrap_layer .layer_cont{max-height:278px;}
 
-.alert_layer{border-width:1px;border-radius:6px;background-color:#fff;box-shadow:0 10px 25px 0 rgba(0,0,0,.1);width:320px;z-index:99;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.alert_layer{border-width:1px;border-radius:6px;background-color:#fff;box-shadow:0 10px 25px 0 rgba(0,0,0,.1);width:320px;z-index:102;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 .alert_layer .message{text-align:center;padding:48px 40px;}
 .alert_layer .btns{border-width:1px 0 0;}
 .alert_layer .btns [class*=btn_]{float:left;width:50%;height:38px;border-width:0;}
@@ -1197,6 +1197,25 @@ background-size:cover;}
 .site_main.join .cert{position:relative;}
 .site_main.join .cert .error{display:none;}
 .site_main.join .cert.error .error{display:block;}
+.site_main.join .cert .s_out{border:0;outline:0;opacity:0}
+
+.site_main.login .phone >.error + .error p.error,
+.site_main.join .phone >.error + .error p.error,
+.qnq_write .phone >.error + .error p.error,
+.site_main.join .email >.error + .text + .error p.error,
+.qnq_write .email >.error + .text + .error p.error,
+.site_main.join .birthday >.error + .error p.error{display:none!important;}
+.site_main.join .phone .input_text:nth-child(2) p.error,
+.qnq_write .phone:nth-child(2) p.error,
+.site_main.join .birthday .input_select:nth-child(2) p.error{left:-96px}
+.site_main.join .phone .input_text:nth-child(3) p.error,
+.qnq_write .phone:nth-child(3) p.error,
+.site_main.join .birthday .input_select:nth-child(3) p.error{left:-192px}
+.site_main.join .email >.input_text:nth-child(3) p.error,
+.qnq_write .email >.input_text:nth-child(3) p.error{left:-280px;}
+.site_main.login .phone .input_text:nth-child(2) p.error{left:-107px}
+.site_main.login .phone .input_text:nth-child(3) p.error{left:-207px}
+
 
 .join_complete{text-align:center;padding:38px 0 54px;}
 .join_complete >strong{display:block;font-size:26px;line-height:36px;font-weight:700;margin-bottom:14px;}

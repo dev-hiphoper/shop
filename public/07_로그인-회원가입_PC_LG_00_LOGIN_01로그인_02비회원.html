@@ -52,18 +52,16 @@
 				<li class="dis_if active"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">비회원</a></li>
 			</ul>
 			<div class="non lc_def"><a href="" class="btn_buy dark large">비회원으로 구매하기</a></div>
-			<form action="">
+			<form action="" id="nonMembersForm">
 				<fieldset>
 					<legend>비회원 배송 정보 입력</legend>
-					<span class="input_text large clear"><!-- 애러일 경우 class에 error 추가 -->
-						<input type="text" class="lc_def tc_3" placeholder="주문번호" required>
+					<span class="input_text large clear">
+						<input type="text" name="number" class="lc_def tc_3" placeholder="주문번호" required>
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-						<p class="error tc_poi">주문번호를 입력해주세요.</p>
 					</span>
-					<span class="input_text large clear"><!-- 애러일 경우 class에 error 추가 -->
-						<input type="text" class="lc_def tc_3" placeholder="이름" required>
+					<span class="input_text large clear">
+						<input type="text" name="name" class="lc_def tc_3" placeholder="이름" required>
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
-						<p class="error tc_poi">이름을 입력해주세요.</p>
 					</span>
 					<button type="submit" class="btn_login dark large">비회원 주문 배송 조회</button>
 				</fieldset>
@@ -87,18 +85,20 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		// function submitSample(event){
-		// 	event.preventDefault();
-		// 	event.stopPropagation();//submit막기
-		// 	var $this = $(event.target),
-		// 		$form = $($this.prop('form')),
-		// 		$required = $form.find('[required]');//필수값들
-		// 	$form.find('.error:not(p)').removeClass('error');//기존의 애러메세지 숨기기
-		// 	$required.each(function(index, el) {
-		// 		showValidate(el);//기본 필수 값들이 입력이 없는 경우를 체크해서 오류 메세지 보여주기
-		// 	});
-		// 	/* 이외의 특수한 경우는 개발 붙이면서 진행 ex)인증,아이디중복,닉네임중복 */
-		// }
+		$('#nonMembersForm').validate({
+			submitHandler:function(form){
+				alert('유효성 체크 완료');
+				//form.submit();
+			},
+			messages:{
+				number:{
+					required:'주문번호를 입력해주세요.'
+				},
+				name:{
+					required:'이름을 입력해주세요.'
+				}
+			}
+		});
 	</script>
 </body>
 </html>

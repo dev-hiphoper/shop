@@ -1,3 +1,54 @@
+$.validator.setDefaults({
+	debug:false,//디버깅 용도에만 활성
+	errorClass:'err',
+	errorElement:'p',
+	// onkeyup:false,
+	// onfocusout:false,
+	// onclick:false,
+	errorPlacement:function(error,element){
+		error.removeClass('err').addClass('error tc_poi');
+		element.removeClass('err');
+		var $wraper = element.closest('[class^=input_]');
+		if(element.is('#certcheck')){
+			$wraper = element.closest('.cert');
+		}
+		$wraper.find('p.error').remove();
+		$wraper.addClass('error').append(error);
+		if(element.is('[name^=phone]')){
+			element.closest('div.phone').addClass('error');
+		}
+		if(element.is('[name^=useremail]')){
+			element.closest('div.email').addClass('error');
+		}
+		if(element.is('[name^=bir]')){
+			element.closest('div.birthday').addClass('error');
+		}
+		if(element.is('[name=usersex]')){
+			element.closest('div.sex').addClass('error');
+		}
+	},
+	success: function(label,element) {
+		var $wraper = $(element).closest('[class^=input_]');
+		if($(element).is('#certcheck')){
+			$wraper = $(element).closest('.cert');
+		}
+		label.remove();
+		$(element).removeClass('valid');
+		$wraper.removeClass('error');
+		if($(element).closest('div.phone').hasClass('error') && $(element).closest('div.phone').find('p.error').length == 0){
+			$(element).closest('div.phone').removeClass('error');
+		}
+		if($(element).closest('div.email').hasClass('error') && $(element).closest('div.email').find('p.error').length == 0){
+			$(element).closest('div.email').removeClass('error');
+		}
+		if($(element).closest('div.birthday').hasClass('error') && $(element).closest('div.birthday').find('p.error').length == 0){
+			$(element).closest('div.birthday').removeClass('error');
+		}
+		if($(element).closest('div.sex').hasClass('error') && $(element).closest('div.sex').find('p.error').length == 0){
+			$(element).closest('div.sex').removeClass('error');
+		}
+	}
+});
 var likeBtnFn = function(obj){//좋아요버튼
 		var $this = obj,
 			count = $this.attr('data-count')*1,
@@ -60,7 +111,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 	openLayer = function(event,obj,focus){
 		var checkObject = typeof obj == 'object',
 			$tar = checkObject?$($(obj).attr('href')):$(obj),
-			$tar = $tar.closest('.dim_layer').is('div')?$tar.closest('.dim_layer'):$tar;
+			$tar = $tar.closest('.dim_layer').is('div:not(.alert)')?$tar.closest('.dim_layer'):$tar;
 			$focus = checkObject?$(obj):$(focus),
 			closeID = $tar.hasClass('dim_layer')?$tar.find('.wrap_layer').attr('id'):$tar.attr('id'),
 			evt = event;
@@ -109,10 +160,13 @@ var likeBtnFn = function(obj){//좋아요버튼
 			$tar.removeClass('scroll');
 			$(window).off('resize.dimLayer');
 		}
+		if($tar.hasClass('alert')){
+			$tar.remove();
+		}
 	},
 	showAlert = function(name,message,type,callback){
 		var btns = type==0?'<button type="button" class="btn_cancel lc_cont tc_8">취소</button><button type="button" class="btn_confirm lc_cont">확인</button>':'<button type="button" class="btn_confirm lc_cont">확인</button>',
-			code = '<div class="alert_layer lc_b pos_center hide" id="'+name+'"><p class="message tc_3">'+message+'</p><div class="btns lc_cont clear">'+btns+'</div></div>';
+			code = '<div class="dim_layer alert"><div class="alert_layer lc_b pos_center hide" id="'+name+'"><p class="message tc_3">'+message+'</p><div class="btns lc_cont clear">'+btns+'</div></div></div>';
 		$('body').append(code);
 		var $alert = $('#'+name),
 			btnCancel = $alert.find('.btn_cancel'),
@@ -230,9 +284,6 @@ $(window).on({
 				showAlert('copyResult','주소 복사에 실패했습니다.',1);
 			}
 		}
-		/*if( $this.is('button[type=submit]') && $this.closest('form').length == 1 ){//form submit
-			validateFn(e,$this.closest('form'));
-		}*/
 	},
 	change:function(e){
 		var $this = $(e.target);
@@ -248,6 +299,10 @@ $(window).on({
 		if( $this.is('select[data-type=changeEmail]') ){//이메일 바꾸기
 			var input = $('input[data-type=inputEmail]');
 			input.prop('value',$this.val());
+			input.focus();
+			if($this[0].selectedIndex != 0){
+				$this.focus();	
+			}
 		}
 		if( $this.is('input[type=checkbox][data-type=joinCheckAll]') ){//회원가입 약관 전체체크
 			var check = $('input[type=checkbox][data-type=joinCheck]');
@@ -276,6 +331,10 @@ $(window).on({
 			var input = $this.prev('.name');
 			input.val($this[0].files[0].name);
 		}
+		if( $this.is('[type=checkbox][required]') ){
+			$this.blur().focus();
+		}
+		
 	},
 	mouseenter:function(e){
 		var $this = $(e.target);
@@ -327,20 +386,6 @@ $(window).on({
 })
 $(document).ready(function(){
 	if($.browser.msie){$('html').addClass('ie')};
-	if ( !HTMLFormElement.prototype.reportValidity ) {
-		HTMLFormElement.prototype.reportValidity = function() {
-			var submitButtons = this.querySelectorAll( "button, input[type=submit]" );
-
-			for ( var i = 0; i < submitButtons.length; i++ ) {
-				// Filter out <button type="button">, as querySelectorAll can't
-				// handle :not filtering
-				if ( submitButtons[ i ].type === "submit" ) {
-					submitButtons[ i ].click();
-					return;
-				}
-			}
-		}
-	}
 });
 
 
