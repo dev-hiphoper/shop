@@ -46,7 +46,7 @@
 		</div>
 	</header>
 	<main class="site_main join miw1180">
-		<h2 class="tit tc_1">회원가입</h2>
+		<h2 class="tit tc_1">회원 가입</h2>
 		<form action="" id="joinForm">
 			<fieldset>
 				<legend>회원가입 입력폼</legend>
@@ -66,7 +66,7 @@
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									<input type="hidden" name="useridcheck" value=""><!-- 사용가능 한 경우 같은 아이디 입력, 아닐 경우 value 값 없음 -->
 								</span>
-								<button type="button" class="btn_check fix" onclick="useridCheck()">중복확인</button>
+								<button type="button" class="btn_check fix" onclick="useridCheck()" style="padding: 0 20px">중복 확인</button>
 							</td>
 						</tr>
 						<tr>
@@ -80,13 +80,13 @@
 							<th>비밀번호확인</th>
 							<td>
 								<span class="input_text password clear">
-									<input type="password" name="userpwconfirm" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해주세요." required>
+									<input type="password" name="userpwconfirm" class="lc_def tc_3" placeholder="비밀번호를 다시 한번 입력해 주세요." required>
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								</span>
 							</td>
 						</tr>
 						<tr>
-							<th>본인인증</th>
+							<th>본인 인증</th>
 							<td colspan="3">
 								<div class="cert">
 									<button type="button" class="btn_ dark">휴대폰 인증</button>
@@ -110,7 +110,7 @@
 									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 									<input type="hidden" name="usernicnamecheck" value="닉네임"><!-- 사용가능 한 경우 같은 닉네임 입력, 아닐 경우 value 값 없음 -->
 								</span>
-								<button type="button" class="btn_check fix" onclick="usernicnameCheck()">중복확인</button>
+								<button type="button" class="btn_check fix" onclick="usernicnameCheck()" style="padding: 0 20px">중복 확인</button>
 							</td>
 						</tr>
 						<tr>
@@ -210,20 +210,20 @@
 				</table>
 				<div class="checkboxs lc_def">
 					<span class="input_checkbox large">
-						<input type="checkbox" name="checkall" id="checkAll" data-type="joinCheckAll"><label for="checkAll" class="tc_3 spr_after">전체동의</label>
+						<input type="checkbox" name="checkall" id="checkAll" data-type="joinCheckAll"><label for="checkAll" class="tc_3 spr_after">전체 동의</label>
 					</span>
 					<div class="clear dis_f fw_wrap">
 						<div class="item">
 							<span class="input_checkbox">
 								<input type="checkbox" name="checkterms" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용약관(필수)</label>
 							</span>
-							<a href="" class="text_link tc_3">자세히보기</a>
+							<a href="" class="text_link tc_3">자세히 보기</a>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
 								<input type="checkbox" name="checkprivacy" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인정보 수집 및 이용(필수)</label>
 							</span>
-							<a href="" class="text_link tc_3">자세히보기</a>
+							<a href="" class="text_link tc_3">자세히 보기</a>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
@@ -242,7 +242,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn_join dark large">가입하기</button>
+				<button type="submit" class="btn_join dark large">가입</button>
 			</fieldset>
 		</form>
 	</main>
@@ -299,61 +299,61 @@
 			},
 			messages:{
 				userid:{
-					required:'아이디를 입력해주세요.',
-					pattern:'영문 또는 숫자 조합, 6자 이상으로 입력해주세요.',
+					required:'아이디를 입력해 주세요.',
+					pattern:'영문 또는 숫자 조합, 6자 이상으로 입력해 주세요.',
 					equalTo:'중복확인을 해주세요.'
 				},
 				userpw:{
-					required:"비밀번호를 입력해주세요.",
-					pattern:'영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상으로 입력해주세요.'
+					required:"비밀번호를 입력해 주세요.",
+					pattern:'영문 대소문자+특수문자 혹은 숫자 포함 6자리 이상으로 입력해 주세요.'
 				},
 				userpwconfirm:{
-					required:'비밀번호를 한번 더 입력해주세요.',
+					required:'비밀번호를 한번 더 입력해 주세요.',
 					equalTo:'비밀번호가 일치하지 않습니다.'
 				},
 				certcheck:{
 					required:'본인인증을 해주세요.'
 				},
 				username:{
-					required:'이름을 입력해주세요.'
+					required:'이름을 입력해 주세요.'
 				},
 				usernicname:{
-					required:'닉네임을 입력해주세요.',
+					required:'닉네임을 입력해 주세요.',
 					equalTo:'중복확인을 해주세요.'
 				},
 				phonecarrier:{
-					required:'휴대전화 번호를 입력해주세요.'
+					required:'휴대전화 번호를 입력해 주세요.'
 				},
 				phonenumber1:{
-					required:'휴대전화 번호를 입력해주세요.',
-					minlength:'휴대전화 번호를 입력해주세요.',
-					maxlength:'휴대전화 번호를 입력해주세요.',
-					pattern:'휴대전화 번호를 입력해주세요.'
+					required:'휴대전화 번호를 입력해 주세요.',
+					minlength:'휴대전화 번호를 입력해 주세요.',
+					maxlength:'휴대전화 번호를 입력해 주세요.',
+					pattern:'휴대전화 번호를 입력해 주세요.'
 				},
 				phonenumber2:{
-					required:'휴대전화 번호를 입력해주세요.',
-					minlength:'휴대전화 번호를 입력해주세요.',
-					maxlength:'휴대전화 번호를 입력해주세요.',
-					pattern:'휴대전화 번호를 입력해주세요.'
+					required:'휴대전화 번호를 입력해 주세요.',
+					minlength:'휴대전화 번호를 입력해 주세요.',
+					maxlength:'휴대전화 번호를 입력해 주세요.',
+					pattern:'휴대전화 번호를 입력해 주세요.'
 				},
 				useremail1:{
-					required:'이메일을 입력해주세요.'
+					required:'이메일을 입력해 주세요.'
 				},
 				useremail2:{
-					required:'메일을 입력해주세요.',
-					pattern:'메일을 입력해주세요.'
+					required:'메일을 입력해 주세요.',
+					pattern:'메일을 입력해 주세요.'
 				},
 				biryear:{
-					required:'생년월일을 입력해주세요.'
+					required:'생년월일을 입력해 주세요.'
 				},
 				birmonth:{
-					required:'생년월일을 입력해주세요.'
+					required:'생년월일을 입력해 주세요.'
 				},
 				birday:{
-					required:'생년월일을 입력해주세요.'
+					required:'생년월일을 입력해 주세요.'
 				},
 				usersex:{
-					required:'성별을 입력해주세요.'
+					required:'성별을 입력해 주세요.'
 				},
 				checkterms:{
 					required:'필수항목입니다.'
