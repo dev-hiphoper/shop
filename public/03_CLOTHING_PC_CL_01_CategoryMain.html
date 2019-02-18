@@ -46,13 +46,12 @@
 		</div>
 	</header>
 	<main class="site_main category">
-		<article class="layout_full" style="background-color:#cdcbcc">
+		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
-				<div class="slides category next_lnb black">
+				<div class="slides next_lnb black">
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
 									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
@@ -62,9 +61,8 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
 									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
@@ -74,9 +72,8 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
 									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
@@ -227,7 +224,7 @@
 						</div>
 					</li>
 				</ul>
-				<button type="button" class="btn_more large">더보기</button>
+				<button type="button" class="btn_more large">더 보기</button>
 			</div>
 		</section>
 		<section class="wrap_listproduct miw1180">
@@ -901,7 +898,7 @@
 							</div>
 						</li>
 					</ul>
-					<button type="button" class="btn_more large">더보기</button>
+					<button type="button" class="btn_more large">더 보기</button>
 				</div>
 			</article>
 		</section>
@@ -920,12 +917,17 @@
 	<script>
 		$('.slides').slick({
 			dots:true,
+			dotsClass:'slick-dots pos_center h dis_f',
+			//arrows:false,
 			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
-			pauseOnDotsHover:true,
-			dotsClass:'slick-dots pos_center h dis_f'
+			pauseOnDotsHover:true
+		}).each(function(i,el){
+			if( el.slick.slideCount <= 1 ){
+				$(el).slick('unslick');
+			}
 		});
 	</script>
 </body>

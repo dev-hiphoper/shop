@@ -46,13 +46,12 @@
 		</div>
 	</header>
 	<main class="site_main brand_exclusive">
-		<article class="layout_full" style="background-color:#cdcbcc">
+		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
-				<div class="slides brand next_lnb black">
+				<div class="slides next_lnb black">
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
 									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
@@ -62,9 +61,8 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
 									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
@@ -74,9 +72,8 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="">
-							<img src="./img/temp_CategoryMain.jpg" alt="임시 이미지">
-							<div class="info pos_center v dis_f set_transition">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
 									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
@@ -91,7 +88,7 @@
 					<ul class="list_lnb clear">
 						<li><a href="" class="tc_poi">EXCLUSIVE</a></li>
 						<li><a href="">BEST</a></li>
-						<li><a href="">LOOK BOOK</a></li>
+						<li><a href="">LOOKBOOK</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -863,12 +860,17 @@
 	<script>
 		$('.slides').slick({
 			dots:true,
+			dotsClass:'slick-dots pos_center h dis_f',
+			//arrows:false,
 			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
-			pauseOnDotsHover:true,
-			dotsClass:'slick-dots pos_center h dis_f'
+			pauseOnDotsHover:true
+		}).each(function(i,el){
+			if( el.slick.slideCount <= 1 ){
+				$(el).slick('unslick');
+			}
 		});
 		function likeCallback(e){//좋아요 콜백
 			console.log('this는 좋아요 버튼',this);

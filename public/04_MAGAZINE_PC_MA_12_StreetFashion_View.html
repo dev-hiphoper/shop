@@ -81,8 +81,8 @@
 							<div class="copy_url lc_cont clear"><input type="text" value="http://www.hiphoper.com/shop/item.php?it_id=KA645745" class="url tc_8 bg_f7" data-type="copyTarget" readonly=""><button type="button" class="btn_copy tc_8 bg_f lc_cont" data-type="copyButton">URL복사</button></div>
 						</div>
 					</div>
-					<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_3">153</span></button>
-					<a href="#reply" class="btn_reply spr_before"><span class="s_out">댓글수 : </span><span class="count tc_3">153</span></a>
+					<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153</span></button>
+					<a href="#reply" class="btn_reply spr_before"><span class="s_out">댓글수 : </span><span class="count pos_center h tc_3">153</span></a>
 				</div>
 				<div class="magazine_street">
 					<div class="main_view">
@@ -98,22 +98,10 @@
 							<dd class="tc_3"><a href="" class="text_link tc_3">인스타그램</a></dd>
 						</dl>
 					</div>
-					<ul class="related_list lc_cont clear">
+					<ul class="related_list length3 lc_cont clear">
 						<li>
 							<div class="detail"><img src="./img/temp_street4.jpg" alt=""></div>
 							<ul class="list_product mini vertical">
-								<li>
-									<div class="link">
-										<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
-										<a href="" class="brand ellipsis tc_3">베이직 MAJESTIC</a>
-										<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
-										<div class="price small tc_3">
-											<span class="sale tc_poi">5%</span>
-											<strong class="now tc_3">51,800</strong>
-											<del class="origin tc_b">69,000</del>
-										</div>
-									</div>
-								</li>
 								<li>
 									<div class="link">
 										<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
@@ -143,6 +131,11 @@
 										</div>
 									</div>
 								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="detail"><img src="./img/temp_street4.jpg" alt=""></div>
+							<ul class="list_product mini vertical">
 								<li>
 									<div class="link">
 										<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
@@ -172,9 +165,9 @@
 					<a href="" class="flag tag tc_8">콜린캐퍼닉</a>
 				</div>
 			</section>
-			<a href="" class="btn_golist dark large fix">목록으로</a>
+			<a href="" class="btn_golist dark large fix">목록</a>
 			<section class="magazine_like street_list">
-				<h3 class="tit tc_3">YOU MAY LIKE</h3>
+				<h3 class="tit tc_3">연관 콘텐츠</h3>
 				<ul class="magazine_thum_list clear">
 					<li>
 						<a href="" class="img"><img src="./img/temp_street2.jpg" alt="임시이미지" class="pos_center"></a>
@@ -237,10 +230,10 @@
 								<button type="button" class="btn_share spr_before ig"><span class="s_out">인스타그램</span></button>
 							</div>
 							<div class="input_textarea">
-								<textarea class="lc_def tc_3" name="" id="" placeholder="로그인 후 작성 가능합니다. 유형을 선택하여 로그인 해주세요." maxlength="300" data-type="countlength"></textarea>
-								<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300 byte</p>
+								<textarea class="lc_def tc_3" name="" id="" placeholder="로그인 후 작성 가능합니다. 유형을 선택하여 로그인해 주세요." maxlength="300" data-type="countlength"></textarea>
+								<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300자</p>
 							</div>
-							<button type="submit" class="btn_write fix tc_3">댓글등록</button>
+							<button type="submit" class="btn_write fix tc_3">댓글 등록</button>
 						</div>
 					</fieldset>	
 				</form>
@@ -256,7 +249,7 @@
 							<pre class="cont tc_5">오오 미래의 캐퍼닉의 평가가 기대되는 1인입니다 ㅎㅎㅎ 2038년에 그 결과를 힙합에 매거진에서 볼 수 있겠죠? 평가 절하되었던 그들의  삶이 이렇게 회자 된것 만으로 도 가치 있는 삶인듯 하네요. 모르던 사람, 알게된 사람</pre>
 							<em class="date tc_8">2018.12.11</em>
 							<div class="func clear">
-								<button type="button" class="showform text_link tc_8" onclick="openReply(this)">댓글달기</button>
+								<button type="button" class="showform text_link tc_8" onclick="openReply(this)"><span class="s_out">댓글</span></button>
 							</div>
 							<div class="on_reply hide">
 								<div class="type lc_def clear">
@@ -275,9 +268,9 @@
 										<legend>댓글 입력 폼</legend>
 										<div class="input_textarea">
 											<textarea class="lc_def tc_3" name="" id="" placeholder="댓글을 입력해 주세요." maxlength="300" data-type="countlength"></textarea>
-											<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300 byte</p>
+											<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300자</p>
 										</div>
-										<button type="button" class="btn_write fix tc_3">댓글등록</button>
+										<button type="button" class="btn_write fix tc_3">댓글 등록</button>
 									</fieldset>
 								</form>
 							</div>
@@ -291,10 +284,10 @@
 							<pre class="cont tc_5">오오 미래의 캐퍼닉의 평가가 기대되는 1인입니다 ㅎㅎㅎ 2038년에 그 결과를 힙합에 매거진에서 볼 수 있겠죠? 평가 절하되었던 그들의  삶이 이렇게 회자 된것 만으로 도 가치 있는 삶인듯 하네요. 모르던 사람, 알게된 사람</pre>
 							<em class="date tc_8">2018.12.11</em>
 							<div class="func clear">
-								<button type="button" class="showform text_link tc_8 close" onclick="openReply(this)">댓글달기</button>
+								<button type="button" class="showform text_link tc_8 close" onclick="openReply(this)"><span class="s_out">댓글</span></button>
 								<span class="writer_menu">
-									<button type="button" class="showform text_link tc_5">수정하기</button>
-									<button type="button" class="showform text_link tc_5">삭제하기</button>
+									<button type="button" class="showform text_link tc_5">수정</button>
+									<button type="button" class="showform text_link tc_5">삭제</button>
 								</span>
 							</div>
 							<div class="on_reply">
@@ -314,9 +307,9 @@
 										<legend>댓글 입력 폼</legend>
 										<div class="input_textarea">
 											<textarea class="lc_def tc_3" name="" id="" placeholder="댓글을 입력해 주세요." maxlength="300" data-type="countlength"></textarea>
-											<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300 byte</p>
+											<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300자</p>
 										</div>
-										<button type="button" class="btn_write fix tc_3">댓글등록</button>
+										<button type="button" class="btn_write fix tc_3">댓글 등록</button>
 									</fieldset>
 								</form>
 							</div>
@@ -330,10 +323,10 @@
 							<pre class="cont tc_5">오오 미래의 캐퍼닉의 평가가 기대되는 1인입니다 ㅎㅎㅎ 2038년에 그 결과를 힙합에 매거진에서 볼 수 있겠죠? 평가 절하되었던 그들의  삶이 이렇게 회자 된것 만으로 도 가치 있는 삶인듯 하네요. 모르던 사람, 알게된 사람</pre>
 							<em class="date tc_8">2018.12.11</em>
 							<div class="func clear">
-								<button type="button" class="showform text_link tc_8" onclick="openReply(this)">댓글달기</button>
+								<button type="button" class="showform text_link tc_8" onclick="openReply(this)"><span class="s_out">댓글</span></button>
 								<span class="writer_menu">
-									<button type="button" class="showform text_link tc_5">수정하기</button>
-									<button type="button" class="showform text_link tc_5">삭제하기</button>
+									<button type="button" class="showform text_link tc_5">수정</button>
+									<button type="button" class="showform text_link tc_5">삭제</button>
 								</span>
 							</div>
 							<div class="on_reply hide">
@@ -353,9 +346,9 @@
 										<legend>댓글 입력 폼</legend>
 										<div class="input_textarea">
 											<textarea class="lc_def tc_3" name="" id="" placeholder="댓글을 입력해 주세요." maxlength="300" data-type="countlength"></textarea>
-											<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300 byte</p>
+											<p class="count tc_8"><span class="" data-type="showlength">0</span> / 300자</p>
 										</div>
-										<button type="button" class="btn_write fix tc_3">댓글등록</button>
+										<button type="button" class="btn_write fix tc_3">댓글 등록</button>
 									</fieldset>
 								</form>
 							</div>
@@ -422,6 +415,14 @@
 				$(el).slick('unslick');
 			}
 		});
+		function openReply(obj){//댓글열기닫기
+			var $this = $(obj);
+			if( $this.hasClass('close') ){
+				$this.removeClass('close').closest('.func').next('.on_reply').addClass('hide');
+			}else{
+				$this.addClass('close').closest('.func').next('.on_reply').removeClass('hide');
+			}
+		}
 	</script>
 </body>
 </html>
