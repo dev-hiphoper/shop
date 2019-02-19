@@ -47,6 +47,24 @@
 	</header>
 	<main class="site_main help">
 		<div class="miw1180">
+			<form action="">
+				<fieldset class="search_form lc_3 clear">
+					<legend>검색하기</legend>
+					<span class="input_select lc_def tc_3">
+						<select name="" id="" class="tc_3_h">
+							<option value="" selected>전체</option>
+							<option value="">FAQ</option>
+							<option value="">Q&amp;A</option>
+							<option value="">NOTICE</option>
+						</select>
+					</span>
+					<span class="input_text large clear">
+						<input type="text" class="lc_def tc_3" placeholder="검색어를 입력해 주세요.">
+						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+					</span>
+					<button type="submit" class="btn_search spr_before pos_center_before"><span class="s_out">검색하기</span></button>
+				</fieldset>
+			</form>
 			<div class="help_list">
 				<ul class="list_tab dis_f length3">
 					<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">FAQ (30)</a></li>
@@ -55,13 +73,22 @@
 				</ul>
 				<section class="wrap_board notice">
 					<h2 class="s_out">NOTICE</h2>
+					<ul class="sort dis_f">
+						<li class="dis_if"><button type="button" class="tc_3">ALL</button></li>
+						<li class="dis_if"><button type="button">상품 문의</button></li>
+						<li class="dis_if"><button type="button">주문/배송 문의</button></li>
+						<li class="dis_if"><button type="button">교환/환불 문의</button></li>
+						<li class="dis_if"><button type="button">회원 문의</button></li>
+						<li class="dis_if"><button type="button">사이트 이용 문의</button></li>
+						<li class="dis_if"><button type="button">기타 문의</button></li>
+					</ul>
 					<ul class="group lc_cont">
 						<li class="item lc_cont"><!-- 열릴때는 class에 view 추가 -->
 							<dl class="info">
 								<dt class="s_out">게시글번호</dt>
 								<dd class="number">11502</dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">배송지연안내</dd>
+								<dd class="category tc_b">배송 공지</dd>
 								<dt class="s_out">작성일</dt>
 								<dd class="date tc_5">2018.12.11</dd>
 							</dl>
@@ -86,7 +113,7 @@
 								<dt class="s_out">게시글번호</dt>
 								<dd class="number">11502</dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">상품문의</dd>
+								<dd class="category tc_b">배송 공지</dd>
 								<dt class="s_out">작성일</dt>
 								<dd class="date tc_5">2018.12.11</dd>
 							</dl>
@@ -111,7 +138,182 @@
 								<dt class="s_out">게시글번호</dt>
 								<dd class="number">11502</dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">상품문의</dd>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">공지제목 : </span>
+								<div class="cont clear">
+									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
+									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans">
+								<span class="s_out">공지내용 : </span>
+								<p>안녕하세요. 힙합퍼 몽벨입니다.<br>
+								고객님께서 주문하신 상품 오늘 출고완료됐습니다.<br>
+								오래 기다려 주셔서 감사합니다.<br>
+								오늘도 즐거운 하루 되십시요. 고맙습니다.</p>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">배송 공지</dd>
 								<dt class="s_out">작성일</dt>
 								<dd class="date tc_5">2018.12.11</dd>
 							</dl>

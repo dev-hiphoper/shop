@@ -48,9 +48,10 @@
 	<main class="site_main main">
 		<div class="main_items dis_f">
 			<div class="half">
-				<a href="" class="main_video">
+				<a href="" class="main_video tc_3">
 					<div class="img spr_after pos_center_after"><img src="./img/temp_main1.jpg" alt=""></div>
-					<strong class="tit tc_3">OFF White Converse Chuck Taylor Review</strong>
+					<strong class="tit">OFF White Converse Chuck Taylor Review</strong>
+					<p class="desc">다시 만난 오프 화이트 X캔버스, 힙합퍼에서 최초로 진행한 리뷰를 만나보세요!</p>
 				</a>
 			</div>
 			<div class="half main_release">
@@ -89,6 +90,10 @@
 						</a>
 					</div>
 				</div>
+				<style>
+					#slideRelease .slick-track{width:500%!important;}/* slideRelease의 item의 갯수 x 2 + 1 의 00% */
+					#slideRelease .slick-track .item{width:calc(100% / 5)!important;}/* slideRelease의 item의 갯수 x 2 + 1 */
+				</style>
 			</div>
 		</div>
 		<div class="main_items dis_f">
@@ -496,46 +501,32 @@
 				</ul>
 			</div>
 		</div>
-		<div class="slides seasonissue">
+		<div class="slides seasonissue main_banner">
 			<div class="item clear">
 				<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
 					<div class="info tc_3">
-						<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-						<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
+						<strong class="tit">champion</strong>
+						<p class="desc">입점기념 단독 15% 할인</p>
 					</div>
 				</a>
 				<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
 					<div class="info tc_3">
-						<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-						<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
+						<strong class="tit">Stereo vinyls</strong>
+						<p class="desc">입점기념 단독 15% 할인</p>
 					</div>
 				</a>
 			</div>
 			<div class="item clear">
 				<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
 					<div class="info tc_3">
-						<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-						<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
+						<strong class="tit">champion</strong>
+						<p class="desc">입점기념 단독 15% 할인</p>
 					</div>
 				</a>
 				<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
 					<div class="info tc_3">
-						<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-						<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
-					</div>
-				</a>
-			</div>
-			<div class="item clear">
-				<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
-					<div class="info tc_3">
-						<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-						<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
-					</div>
-				</a>
-				<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
-					<div class="info tc_3">
-						<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-						<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
+						<strong class="tit">Stereo vinyls</strong>
+						<p class="desc">입점기념 단독 15% 할인</p>
 					</div>
 				</a>
 			</div>
@@ -683,14 +674,15 @@
 			autoplay:true,
 			autoplaySpeed:5000,
 			pauseOnDotsHover:true,
-			dotsClass:'slick-dots pos_center h dis_f'
+			dotsClass:'slick-dots pos_center h dis_f',
+			draggable:false
 		}).each(function(index, el){
 			if( $(el)[0].slick.slideCount == 1 ){
 				$(el).slick('unslick');
 			}
 		});
 		$('#slideRelease').slick('slickSetOption',{
-			'arrows':false
+			arrows:false
 		},true);
 	</script>
 </body>

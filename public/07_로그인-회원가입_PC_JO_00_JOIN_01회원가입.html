@@ -153,7 +153,8 @@
 									</span>
 									<span class="input_select lc_def tc_b">
 										<select name="useremaillist" id="emailList" class="tc_3_h tc_3" data-type="changeEmail">
-											<option value="" selected>직접입력</option>
+											<option disabled selected>선택</option>
+											<option value="">직접입력</option>
 											<option value="naver.com">naver.com</option>
 											<option value="daum.net">daum.net</option>
 											<option value="gmail.com">gmail.com</option>
@@ -198,7 +199,6 @@
 								<div class="sex dis_f ai_c">
 									<span class="input_radio">
 										<input type="radio" name="usersex" id="joinSex1" required><label for="joinSex1" class="tc_3">남</label>
-										<p class="error tc_poi">성별을 입력해주세요.</p>
 									</span>
 									<span class="input_radio">
 										<input type="radio" name="usersex" id="joinSex2"><label for="joinSex2" class="tc_3">여</label>
@@ -215,13 +215,13 @@
 					<div class="clear dis_f fw_wrap">
 						<div class="item">
 							<span class="input_checkbox">
-								<input type="checkbox" name="checkterms" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용약관(필수)</label>
+								<input type="checkbox" name="checkterms" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용 약관(필수)</label>
 							</span>
 							<a href="" class="text_link tc_3">자세히 보기</a>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
-								<input type="checkbox" name="checkprivacy" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인정보 수집 및 이용(필수)</label>
+								<input type="checkbox" name="checkprivacy" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인 정보 수집 및 이용(필수)</label>
 							</span>
 							<a href="" class="text_link tc_3">자세히 보기</a>
 						</div>
@@ -242,7 +242,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn_join dark large">가입</button>
+				<button type="submit" class="btn_join dark large" lang="ko">가입</button>
 			</fieldset>
 		</form>
 	</main>

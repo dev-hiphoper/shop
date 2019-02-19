@@ -300,7 +300,7 @@ $(window).on({
 			var input = $('input[data-type=inputEmail]');
 			input.prop('value',$this.val());
 			input.focus();
-			if($this[0].selectedIndex != 0){
+			if($this[0].selectedIndex != 1){
 				$this.focus();	
 			}
 		}

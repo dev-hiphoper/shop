@@ -59,7 +59,7 @@
 						</select>
 					</span>
 					<span class="input_text large clear">
-						<input type="text" class="lc_def tc_3" placeholder="검색어를 입력하세요.">
+						<input type="text" class="lc_def tc_3" placeholder="검색어를 입력해 주세요.">
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 					</span>
 					<button type="submit" class="btn_search spr_before pos_center_before"><span class="s_out">검색하기</span></button>
@@ -73,6 +73,15 @@
 				</ul>
 				<section class="wrap_board qna">
 					<h2 class="s_out">Q&amp;A</h2>
+					<ul class="sort dis_f">
+						<li class="dis_if"><button type="button" class="tc_3">ALL</button></li>
+						<li class="dis_if"><button type="button">상품 문의</button></li>
+						<li class="dis_if"><button type="button">주문/배송 문의</button></li>
+						<li class="dis_if"><button type="button">교환/환불 문의</button></li>
+						<li class="dis_if"><button type="button">회원 문의</button></li>
+						<li class="dis_if"><button type="button">사이트 이용 문의</button></li>
+						<li class="dis_if"><button type="button">기타 문의</button></li>
+					</ul>
 					<ul class="group lc_cont">
 						<li class="item lc_cont"><!-- 열릴때는 class에 view 추가 -->
 							<dl class="info">
@@ -81,7 +90,7 @@
 								<dt class="s_out">상태</dt>
 								<dd class="flag new"><span class="s_out">새글</span></dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">상품문의</dd>
+								<dd class="category tc_b">상품 문의</dd>
 								<dt class="s_out">작성자</dt>
 								<dd class="writer tc_5">yj2****</dd>
 								<dt class="s_out">작성일</dt>
@@ -114,7 +123,7 @@
 								<dt class="s_out">상태</dt>
 								<dd class="flag yes kor tc_3"><span class="s_out">답변완료</span></dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">상품문의</dd>
+								<dd class="category tc_b">상품 문의</dd>
 								<dt class="s_out">작성자</dt>
 								<dd class="writer tc_5">yj2****</dd>
 								<dt class="s_out">작성일</dt>
@@ -143,7 +152,7 @@
 								<dt class="s_out">상태</dt>
 								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">상품문의</dd>
+								<dd class="category tc_b">상품 문의</dd>
 								<dt class="s_out">작성자</dt>
 								<dd class="writer tc_5">yj2****</dd>
 								<dt class="s_out">작성일</dt>
@@ -165,7 +174,7 @@
 								<dt class="s_out">상태</dt>
 								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
 								<dt class="s_out">구분</dt>
-								<dd class="category tc_b">상품문의</dd>
+								<dd class="category tc_b">상품 문의</dd>
 								<dt class="s_out">작성자</dt>
 								<dd class="writer tc_5">ehs978***</dd>
 								<dt class="s_out">작성일</dt>
@@ -174,7 +183,7 @@
 							<div class="que tc_5 clear">
 								<span class="s_out">문의내용 : </span>
 								<div class="cont clear">
-									<p class="secret spr_after">비밀글 입니다.</p>
+									<p class="secret spr_after">비밀글입니다.</p>
 									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
 									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
 								</div>
@@ -184,7 +193,217 @@
 									<fieldset>
 										<legend>비밀번호 입력</legend>
 										<span class="input_text clear">
-											<input type="password" class="lc_def tc_3" placeholder="글 작성시 등록한 비밀번호">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
+											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+										</span>
+										<button type="button" class="btn_confirm bg_f">확인</button>
+									</fieldset>
+								</form>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">상태</dt>
+								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">상품 문의</dd>
+								<dt class="s_out">작성자</dt>
+								<dd class="writer tc_5">ehs978***</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">문의내용 : </span>
+								<div class="cont clear">
+									<p class="secret spr_after">비밀글입니다.</p>
+									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans secret">
+								<form action="">
+									<fieldset>
+										<legend>비밀번호 입력</legend>
+										<span class="input_text clear">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
+											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+										</span>
+										<button type="button" class="btn_confirm bg_f">확인</button>
+									</fieldset>
+								</form>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">상태</dt>
+								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">상품 문의</dd>
+								<dt class="s_out">작성자</dt>
+								<dd class="writer tc_5">ehs978***</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">문의내용 : </span>
+								<div class="cont clear">
+									<p class="secret spr_after">비밀글입니다.</p>
+									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans secret">
+								<form action="">
+									<fieldset>
+										<legend>비밀번호 입력</legend>
+										<span class="input_text clear">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
+											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+										</span>
+										<button type="button" class="btn_confirm bg_f">확인</button>
+									</fieldset>
+								</form>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">상태</dt>
+								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">상품 문의</dd>
+								<dt class="s_out">작성자</dt>
+								<dd class="writer tc_5">ehs978***</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">문의내용 : </span>
+								<div class="cont clear">
+									<p class="secret spr_after">비밀글입니다.</p>
+									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans secret">
+								<form action="">
+									<fieldset>
+										<legend>비밀번호 입력</legend>
+										<span class="input_text clear">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
+											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+										</span>
+										<button type="button" class="btn_confirm bg_f">확인</button>
+									</fieldset>
+								</form>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">상태</dt>
+								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">상품 문의</dd>
+								<dt class="s_out">작성자</dt>
+								<dd class="writer tc_5">ehs978***</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">문의내용 : </span>
+								<div class="cont clear">
+									<p class="secret spr_after">비밀글입니다.</p>
+									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans secret">
+								<form action="">
+									<fieldset>
+										<legend>비밀번호 입력</legend>
+										<span class="input_text clear">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
+											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+										</span>
+										<button type="button" class="btn_confirm bg_f">확인</button>
+									</fieldset>
+								</form>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">상태</dt>
+								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">상품 문의</dd>
+								<dt class="s_out">작성자</dt>
+								<dd class="writer tc_5">ehs978***</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">문의내용 : </span>
+								<div class="cont clear">
+									<p class="secret spr_after">비밀글입니다.</p>
+									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans secret">
+								<form action="">
+									<fieldset>
+										<legend>비밀번호 입력</legend>
+										<span class="input_text clear">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
+											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+										</span>
+										<button type="button" class="btn_confirm bg_f">확인</button>
+									</fieldset>
+								</form>
+							</div>
+						</li>
+						<li class="item lc_cont">
+							<dl class="info">
+								<dt class="s_out">게시글번호</dt>
+								<dd class="number">11502</dd>
+								<dt class="s_out">상태</dt>
+								<dd class="flag kor no tc_b"><span class="s_out">답변대기</span></dd>
+								<dt class="s_out">구분</dt>
+								<dd class="category tc_b">상품 문의</dd>
+								<dt class="s_out">작성자</dt>
+								<dd class="writer tc_5">ehs978***</dd>
+								<dt class="s_out">작성일</dt>
+								<dd class="date tc_5">2018.12.11</dd>
+							</dl>
+							<div class="que tc_5 clear">
+								<span class="s_out">문의내용 : </span>
+								<div class="cont clear">
+									<p class="secret spr_after">비밀글입니다.</p>
+									<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
+									<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
+								</div>
+							</div>
+							<div class="ans secret">
+								<form action="">
+									<fieldset>
+										<legend>비밀번호 입력</legend>
+										<span class="input_text clear">
+											<input type="password" class="lc_def tc_3" placeholder="글 작성 시 등록한 비밀번호">
 											<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 											<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
 										</span>
