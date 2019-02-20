@@ -218,14 +218,14 @@
 								<input type="checkbox" name="checkterms" id="check1" required data-type="joinCheck"><label for="check1" class="tc_3 spr_after">이용 약관(필수)</label>
 							</span>
 							<!-- <a href="" class="text_link tc_3">자세히 보기</a> -->
-							<a href="#benefitsDetail" class="text_link tc_3" onclick="openLayer(event,'#tempLayer2_1',this)">자세히 보기</a>
+							<a href="#popup1" class="text_link tc_3" onclick="openLayer(event,this)">자세히 보기</a>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
 								<input type="checkbox" name="checkprivacy" id="check2" required data-type="joinCheck"><label for="check2" class="tc_3 spr_after">개인 정보 수집 및 이용(필수)</label>
 							</span>
 							<!-- <a href="" class="text_link tc_3">자세히 보기</a> -->
-							<a href="#benefitsDetail" class="text_link tc_3" onclick="openLayer(event,'#tempLayer2_2',this)">자세히 보기</a>
+							<a href="#popup2" class="text_link tc_3" onclick="openLayer(event,this)">자세히 보기</a>
 						</div>
 						<div class="item">
 							<span class="input_checkbox">
@@ -258,12 +258,12 @@
 			개인정보관리책임 : 정병윤 CPO(<a href="mailto:MARKETING@HIPHOPER.COM">MARKETING@HIPHOPER.COM</a>)    입점문의 : 안효창 CBO(<a href="mailto:DIRECTOR@HIPHOPER.COM">DIRECTOR@HIPHOPER.COM</a>)</address>
 		</div>
 	</footer>
-	<!-- 이옹약관 -->
-	<div class="dim_layer hide popup1">
-		<div class="wrap_layer lc_b" id="tempLayer2_1">
+	<!-- 이용약관 -->
+	<div class="dim_layer hide">
+		<div class="wrap_layer lc_b" id="popup1">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-			<header class="layer_tit tc_3 lc_def">이용 약관</header>
-			<main class="layer_cont">
+			<div class="layer_tit tc_3 lc_def">이용 약관</div>
+			<div class="layer_cont">
 				<p>서비스 이용약관</br></br>
 
 					전자상거래(인터넷사이버몰) 표준약관</br></br>
@@ -508,15 +508,15 @@
 					
 						② “몰”과 이용자 간에 제기된 전자상거래 소송에는 한국법을 적용합니다.</br></br>
 				</p>
-			</main>
-		</div>	
+			</div>
+		</div>
 	</div>
 	<!-- 개인 정보 수집 및 이용(필수) -->
-	<div class="dim_layer hide popup2">
-		<div class="wrap_layer lc_b" id="tempLayer2_2">
+	<div class="dim_layer hide">
+		<div class="wrap_layer lc_b" id="popup2">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-			<header class="layer_tit tc_3 lc_def">개인 정보 수집 및 이용</header>
-			<main class="layer_cont">
+			<div class="layer_tit tc_3 lc_def">개인 정보 수집 및 이용</div>
+			<div class="layer_cont">
 				<p>개인정보처리방침 </br>
 
 					1. 개인정보의 처리 목적  </br>
@@ -640,8 +640,8 @@
 					9. 비인가자에 대한 출입 통제</br>
 					개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</br></br>
 				</p>
-			</main>
-		</div>	
+			</div>
+		</div>
 	</div>
 	<script src="./js/common.js"></script>
 	<script>

@@ -235,6 +235,13 @@ var likeBtnFn = function(obj){//좋아요버튼
 			addErr($(this));
 		});
 		obj.reportValidity();
+	},
+	expandSummary = function(obj){
+		if($(obj).closest('.mypage_summary').hasClass('mini')){
+			$(obj).closest('.mypage_summary').removeClass('mini')
+		}else{
+			$(obj).closest('.mypage_summary').addClass('mini')
+		}
 	};
 $(window).on({
 	click:function(e){
