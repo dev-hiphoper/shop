@@ -165,8 +165,8 @@ var likeBtnFn = function(obj){//좋아요버튼
 		}
 	},
 	showAlert = function(name,message,type,callback){
-		var btns = type==0?'<button type="button" class="btn_cancel lc_cont tc_8">취소</button><button type="button" class="btn_confirm lc_cont">확인</button>':'<button type="button" class="btn_confirm lc_cont">확인</button>',
-			code = '<div class="dim_layer alert"><div class="alert_layer lc_b pos_center hide" id="'+name+'"><p class="message tc_3">'+message+'</p><div class="btns lc_cont clear">'+btns+'</div></div></div>';
+		var btns = type==0?'<button type="button" class="btn_cancel lc_e5 tc_8">취소</button><button type="button" class="btn_confirm lc_e5">확인</button>':'<button type="button" class="btn_confirm lc_e5">확인</button>',
+			code = '<div class="dim_layer alert"><div class="alert_layer lc_b pos_center hide" id="'+name+'"><p class="message tc_3">'+message+'</p><div class="btns lc_e5 clear">'+btns+'</div></div></div>';
 		$('body').append(code);
 		var $alert = $('#'+name),
 			btnCancel = $alert.find('.btn_cancel'),
@@ -272,6 +272,7 @@ $(window).on({
 		}
 		if( $this.is('a[data-type=tooltip]') ){//툴팁
 			e.preventDefault();
+			$('.tootip_layer').addClass('hide');
 			var $tar = $($this.attr('href'));
 			if($tar.hasClass('hide')){//툴팁 보이기
 				$tar.removeClass('hide').on('mouseleave',function(e){//툴팁 가리기
