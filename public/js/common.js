@@ -301,7 +301,7 @@ $(window).on({
 			$this.addClass('tc_3');
 		}
 		if( $this.is('input[data-type=checkAll]') ){//테이블 체크박스 전체 선택
-			var checkboxs = $this.closest('table').find('tbody input[type=checkbox]');
+			var checkboxs = $this.closest('table').find('tbody input[type=checkbox]:not([disabled])');
 			checkboxs.each(function(e){
 				$(this).prop('checked',$this.prop('checked'))
 			})
