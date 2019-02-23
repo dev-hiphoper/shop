@@ -1846,8 +1846,10 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .my_info:after,
 .my_info dt:nth-of-type(3),
 .my_info dd:nth-of-type(3){left:66.6%!important;}
-.my_info .mileage{display:inline-block;width:18px;height:18px;vertical-align:text-bottom}
-.my_info .mileage:after{width:18px;height:18px;background-position:-234px 0;}
+.my_info .mileage,
+.my_order_payment .info .btn_tooltip{display:inline-block;width:18px;height:18px;vertical-align:text-bottom}
+.my_info .mileage:after,
+.my_order_payment .info .btn_tooltip:before{width:18px;height:18px;background-position:-234px 0;}
 
 .order_info{font-size:13px;line-height:18px;margin-bottom:-6px;}
 .order_info dt{padding:0 8px 0 20px;}
@@ -2117,10 +2119,47 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 
 .info_step{margin-top:54px;}
 .info_step >.tit{font-size:22px;line-height:36px;font-weight:700;margin-bottom:11px;}
-
 .myorder_list .noresult{border-width:1px 0;height:254px;margin-top:46px;}
-
 .order_detail_view th.lc_3{border-width:0 0 2px 0;}
+.my_order_payment,
+.my_order_shipping{margin-top:53px;}
+.my_order_payment >.tit,
+.my_order_shipping >.tit{font-size:22px;line-height:36px;font-weight:700;margin-bottom:11px;}
+.my_order_payment .info{border-width:0 0 1px;height:60px;padding-left:39px;}
+.my_order_payment .info dt:after{content:'\00a0:\00a0'}
+.my_order_payment .info dt:before{width:1px;height:14px;left:24px;margin-top:-1px;}
+.my_order_payment .info dt:nth-of-type(2){padding-left:50px;position:relative;}
+.my_order_payment .info .wrap_tooltip{display:inline-block;position:relative;width:18px;height:18px;vertical-align:text-bottom;}
+.my_order_payment .info .btn_tooltip{position:relative;padding:0;min-width:18px;border:0;}
+.my_order_payment .detail{position:relative;height:150px;}
+.my_order_payment .detail dt,
+.my_order_payment .detail dd{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);width:calc(20% - 12px);text-align:center;}
+.my_order_payment .detail dt{margin-top:16px;}
+.my_order_payment .detail dd{font-size:25px;font-weight:700;margin-top:-12px;}
+.my_order_payment .detail dt:nth-of-type(1),
+.my_order_payment .detail dd:nth-of-type(1){left:0;}
+.my_order_payment .detail dt:nth-of-type(2),
+.my_order_payment .detail dd:nth-of-type(2){left:calc(20% + 3px);}
+.my_order_payment .detail dt:nth-of-type(3),
+.my_order_payment .detail dd:nth-of-type(3){left:calc(40% + 6px);}
+.my_order_payment .detail dt:nth-of-type(4),
+.my_order_payment .detail dd:nth-of-type(4){left:calc(60% + 9px);}
+.my_order_payment .detail dt:nth-of-type(5),
+.my_order_payment .detail dd:nth-of-type(5){left:calc(80% + 12px);}
+.my_order_payment .detail dt:before{width:15px;height:1px;margin-top:-15px;left:-15px;}
+.my_order_payment .detail dt.billing:before{margin-top:-13px;}
+.my_order_payment .detail dt.billing:after{width:15px;height:1px;margin-top:-18px;left:-15px;}
+.my_order_payment .detail dt.add:after{width:1px;height:15px;margin-top:-15px;left:-8px}
+.my_order_shipping .item{-webkit-flex:1 1 0;-moz-flex:1 1 0;-ms-flex:1 1 0;-o-flex:1 1 0;flex:1 1 0;padding:24px 40px 26px;}
+.my_order_shipping .item:first-child{border-width:0 1px 0 0;}
+.my_order_shipping .item:last-child{border-width:0 0 0 1px;}
+.my_order_shipping .item .tit{font-size:18px;line-height:36px;font-weight:700;display:block;margin-bottom:4px;}
+.my_order_shipping .info{line-height:26px;}
+.my_order_shipping .info dt{width:70px;}
+.my_order_shipping .info dd{width:calc(100% - 70px);}
+.my_order_shipping .message{line-height:22px;margin-top:9px;padding-bottom:2px;}
+.my_order_shipping + .btns{margin-top:40px;}
+.my_order_shipping + .btns .btn_link + .btn_link{margin-left:12px;}
 
 @media all and (min-width:1500px){
 	.brand_top2 .btn_like{display:block!important;}

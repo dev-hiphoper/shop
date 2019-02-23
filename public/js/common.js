@@ -281,6 +281,8 @@ $(window).on({
 			}else{//툴팁 가리기
 				$tar.addClass('hide');
 			}
+		}else{
+			$('.tootip_layer').addClass('hide');
 		}
 		if( $this.is('button[data-type=copyButton]') ){//카피버튼
 			var tar = $('input[data-type=copyTarget]');
