@@ -345,6 +345,7 @@ a[class*="btn_"]{text-align:center;line-height:40px;}
 
 .jc_s{-ms-flex-pack:start;justify-content:flex-start;}
 .jc_e{-ms-flex-pack:end;justify-content:flex-end;}
+.ac_s{align-content:flex-start;}
 
 .fd_c{-ms-flex-direction:column;flex-direction:column}
 
@@ -462,6 +463,8 @@ button.text_link:before{bottom:0;}
 .list_product .option ul{margin-right:8px;}
 .list_product .option .edit,
 .list_product .option .alram{height:22px;line-height:22px;text-decoration:underline;margin-right:8px;}
+.list_product .option .change{display:block;}
+.list_product .option .change:before{width:16px;height:10px;background-position:-218px -116px;vertical-align:baseline;margin-right:8px;}
 .list_product .set_pos{position:absolute;right:0;top:0;width:0;padding-top:100%;}
 .list_product .set_pos .out{bottom:0!important;right:0!important;top:auto!important;}
 .list_product .set_pos .func{white-space:nowrap!important;right:0!important;bottom:-32px!important;top:auto!important;}
@@ -1179,11 +1182,16 @@ background-size:cover;}
 .order_form .sel_payment input:focus + label{z-index:1;border-width:2px;}
 .order_form .sel_payment input:checked + label:before,
 .order_form .sel_payment input:focus + label:before{opacity:1;}
-.order_form .sel_payment .card:before{width:40px;height:28px;background-position:0 -94px}
-.order_form .sel_payment .deposit:before{width:42px;height:36px;background-position:-44px -94px}
-.order_form .sel_payment .transfer:before{width:38px;height:38px;background-position:-90px -94px}
-.order_form .sel_payment .sumsung:before{width:120px;height:18px;background-position:0 -136px;}
-.order_form .sel_payment .payco:before{width:82px;height:18px;background-position:-132px -94px;}
+.order_form .sel_payment .card:before,
+.return_summary .method.card:before{width:40px;height:28px;background-position:0 -94px}
+.order_form .sel_payment .deposit:before,
+.return_summary .method.deposit:before{width:42px;height:36px;background-position:-44px -94px}
+.order_form .sel_payment .transfer:before,
+.return_summary .method.transfer:before{width:38px;height:38px;background-position:-90px -94px}
+.order_form .sel_payment .sumsung:before,
+.return_summary .method.sumsung:before{width:120px;height:18px;background-position:0 -136px;}
+.order_form .sel_payment .payco:before,
+.return_summary .method.payco:before{width:82px;height:18px;background-position:-132px -94px;}
 .order_form .soldout >.tit{border-width:0 0 1px;margin-bottom:0;padding-bottom:6px;font-size:18px;font-weight:500;}
 .order_form .soldout >.how{border-width:0 0 1px;padding:20px 16px;}
 .order_form .soldout >.how .input_select{width:460px;}
@@ -1867,9 +1875,9 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .order_info .eng{font-size:14px;}
 .order_detail{border-width:1px 0 0}
 .order_detail th{visibility:hidden;padding:0;height:0;min-height:0;}
-.order_detail th:nth-child(1){width:auto;}
+/*.order_detail th:nth-child(1){width:auto;}
 .order_detail th:nth-child(2){width:150px;}
-.order_detail th:nth-child(3){width:350px;}
+.order_detail th:nth-child(3){width:350px;}*/
 
 .order_state .state{font-size:18px;line-height:25px;display:block;margin-bottom:6px;}
 .order_state .desc{font-size:14px;line-height:22px}
@@ -2136,14 +2144,15 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .step_notice .dot_list li:before{top:10px;}
 
 .info_step{margin-top:54px;}
-.info_step >.tit{font-size:22px;line-height:36px;font-weight:700;margin-bottom:11px;}
 .myorder_list .noresult{border-width:1px 0;height:254px;margin-top:46px;}
 .order_detail_view th.lc_3{border-width:0 0 2px 0;}
 .my_order_payment,
 .my_order_shipping{margin-top:53px;}
 .my_order_payment >.tit,
 .my_order_shipping >.tit,
-.order_return_info >.tit{font-size:22px;line-height:36px;font-weight:700;margin-bottom:11px;display:block;}
+.order_return_info >.tit,
+.info_step >.tit,
+.return_summary .tit{font-size:22px;line-height:36px;font-weight:700;margin-bottom:11px;display:block;}
 .my_order_payment .info{border-width:0 0 1px;height:60px;padding-left:39px;}
 .my_order_payment .info dt:after{content:'\00a0:\00a0'}
 .my_order_payment .info dt:before{width:1px;height:14px;left:24px;margin-top:-1px;}
@@ -2220,6 +2229,26 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .order_return_info .dot_list li + li{margin-top:3px;}
 .order_detail_view .btns{margin-top:40px;}
 .order_detail_view .btns [class^=btn_]{width:181px;padding-right:0;padding-left:0;}
+.order_detail_view .return_fee{padding-left:40px;height:80px;line-height:22px;margin-top:40px;}
+
+.return_summary{margin-top:54px;}
+.return_summary .item{-webkit-flex:1 1 0;-moz-flex:1 1 0;-ms-flex:1 1 0;-o-flex:1 1 0;flex:1 1 0;}
+.return_summary .item:first-child{padding-right:10px;}
+.return_summary .item:last-child{padding-left:10px;}
+.return_summary .tit,
+.return_summary .box{width:100%;}
+.return_summary .box{height:calc(100% - 47px);position:relative;padding:39px 39px 39px 199px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.return_summary dt,
+.return_summary dd{width:50%;line-height:32px;}
+.return_summary dd{text-align:right;font-size:18px;}
+.return_summary .box .lc_e5{border-width:1px 0 0;margin-top:9px;padding-top:16px;}
+.return_summary .subtotal,
+.return_summary dt.total{font-weight:500;}
+.return_summary dd.total{font-weight:700;font-size:30px;}
+.return_summary .total{line-height:40px;}
+.return_summary .method{position:absolute;left:39px;top:47px;text-align:left;font-size:16px;line-height:24px;font-weight:500;padding-top:57px;height:80px;width:120px}
+.return_summary .method:before{margin-top:-49px;}
+.return_summary .method em{display:block;font-size:14px;font-weight:400;}
 
 
 @media all and (min-width:1500px){
