@@ -272,7 +272,6 @@ $(window).on({
 		}
 		if( $this.is('a[data-type=tooltip]') ){//툴팁
 			e.preventDefault();
-			$('.tootip_layer').addClass('hide');
 			var $tar = $($this.attr('href'));
 			if($tar.hasClass('hide')){//툴팁 보이기
 				$tar.removeClass('hide').on('mouseleave',function(e){//툴팁 가리기

@@ -187,6 +187,7 @@ input::placeholder{color:#bbb;}
 .order_form .sel_payment input:checked + label,
 .order_form .sel_payment input:focus + label,
 .my_orders .order_detail th.lc_3{border-color:#333;}
+.lc_3_i{border-color:#333!important;}
 .input_select:before{border-color:#333 transparent transparent transparent;}
 .input_select.disabled:before{border-color:#bbb transparent transparent transparent;}
 .lc_5,
@@ -255,6 +256,7 @@ input[class*="lc_"],
 .bg_def,
 .bg_f7,
 .wrap_board .item.view{background-color:#f7f7f7;}
+.bg_a7{background-color:#a7a7a7;}
 .bg_1,
 .dark[class*="btn_"],
 .flag.new,
@@ -345,7 +347,8 @@ a[class*="btn_"]{text-align:center;line-height:40px;}
 
 .jc_s{-ms-flex-pack:start;justify-content:flex-start;}
 .jc_e{-ms-flex-pack:end;justify-content:flex-end;}
-.ac_s{align-content:flex-start;}
+.ac_s{-ms-align-content:flex-start;align-content:flex-start;}
+.as_s{-ms-align-self:flex-start;align-self:flex-start;}
 
 .fd_c{-ms-flex-direction:column;flex-direction:column}
 
@@ -1324,9 +1327,12 @@ p.error{color:#f32323!important;}
 .wrap_login .sns li button{display:block;height:36px;line-height:37px;padding-left:36px;}
 /*.wrap_login .sns li button:hover,
 .wrap_login .sns li button:focus{text-decoration:underline;}*/
-.wrap_login .sns li button:before{width:26px;height:26px;}
-.wrap_login .sns li .fb:before{background-position:-234px -30px;}
-.wrap_login .sns li .ig:before{background-position:-260px 0;}
+.wrap_login .sns li button:before,
+.connect_sns button:before{width:26px;height:26px;}
+.wrap_login .sns li .fb:before,
+.connect_sns .fb:before{background-position:-234px -30px;}
+.wrap_login .sns li .ig:before,
+.connect_sns .ig:before{background-position:-260px 0;}
 .wrap_login .non{border-width:0 0 1px;padding-bottom:40px;margin-bottom:40px;}
 .wrap_login .non .btn_buy{width:100%;}
 .wrap_login .wrap_radio{text-align:center;margin-bottom:40px;}
@@ -1655,7 +1661,8 @@ p.error{color:#f32323!important;}
 .qnq_write .table_st{border-width:1px 0 0;margin-top:60px;}
 .qnq_write .table_st + .btn_write,
 .qnq_write .item + .btn_write{margin:40px auto 0;display:block;}
-.qnq_write td .text{height:40px;line-height:40px;}
+.qnq_write td .text,
+.editmyinfo td .text{height:40px;line-height:40px;}
 .qnq_write .title .input_text input{width:630px;}
 .qnq_write .title .input_checkbox{width:110px;overflow:visible;margin:0 0 0 3px;}
 .qnq_write .title .input_checkbox label{width:auto}
@@ -1852,20 +1859,28 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .my_info{border-width:2px 0;position:relative;height:280px;margin-top:38px;}
 .my_info:before,
 .my_info:after{width:1px;height:160px;}
-.my_info dd,
-.my_info dt{text-align:center;width:33.3%;}
-.my_info dd{font-size:50px;line-height:52px;font-weight:700;margin-top:-17px;}
-.my_info dt{font-size:14px;line-height:18px;margin-top:27px;}
+.my_info >dd,
+.my_info >dt{text-align:center;width:33.3%;}
+.my_info >dd{font-size:50px;line-height:52px;font-weight:700;margin-top:-17px;}
+.my_info >dt{font-size:14px;line-height:18px;margin-top:27px;}
 .my_info:before,
-.my_info dt:nth-of-type(2),
-.my_info dd:nth-of-type(2){left:33.3%!important;}
+.my_info >dt:nth-of-type(2),
+.my_info >dd:nth-of-type(2){left:33.3%!important;}
 .my_info:after,
-.my_info dt:nth-of-type(3),
-.my_info dd:nth-of-type(3){left:66.6%!important;}
+.my_info >dt:nth-of-type(3),
+.my_info >dd:nth-of-type(3){left:66.6%!important;}
 .my_info .mileage,
 .my_order_payment .info .btn_tooltip{display:inline-block;width:18px;height:18px;vertical-align:text-bottom}
 .my_info .mileage:after,
 .my_order_payment .info .btn_tooltip:before{width:18px;height:18px;background-position:-234px 0;}
+.my_info .wrap_tooltip{display:inline-block;position:relative;vertical-align:text-bottom;}
+.my_info .wrap_tooltip .mileage{vertical-align:top}
+.my_info .mileage_tooltip{top:23px;}
+.my_info .mileage_tooltip dt,
+.my_info .mileage_tooltip dd{width:50%;line-height:22px;}
+.my_info .mileage_tooltip dt{float:left;text-align:left;}
+.my_info .mileage_tooltip dd{float:right;text-align:right;font-size:15px;}
+.my_info .mileage_tooltip .lc_e5{border-width:0 0 1px;padding-bottom:6px;margin-bottom:13px;}
 
 .order_info{font-size:13px;line-height:18px;margin-bottom:-6px;}
 .order_info dt{padding:0 8px 0 20px;}
@@ -2249,7 +2264,104 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .return_summary .method{position:absolute;left:39px;top:47px;text-align:left;font-size:16px;line-height:24px;font-weight:500;padding-top:57px;height:80px;width:120px}
 .return_summary .method:before{margin-top:-49px;}
 .return_summary .method em{display:block;font-size:14px;font-weight:400;}
-
+.cont_mypage.benefits{position:relative;}
+.cont_mypage.benefits .info_step{margin-top:114px;}
+.cont_mypage.benefits .my_info{margin-top:0;}
+.cont_mypage.benefits .step_list{padding:0;height:232px;}
+.cont_mypage.benefits .step_list li{padding:0 15px;}
+.cont_mypage.benefits .step_list .tit{font-size:30px;margin-bottom:12px;}
+.cont_mypage.benefits .step_list p,
+.cont_mypage.benefits .step_list em{display:block;}
+.cont_mypage.benefits .step_list em{margin-bottom:7px;}
+.cont_mypage.benefits .box_notice{margin-top:120px;padding:35px 39px 31px 39px;}
+.cont_mypage.benefits .box_notice li{margin-top:0;line-height:26px;}
+.cont_mypage.benefits .box_notice li:before{top:10px}
+.cont_mypage.benefits .offlinecupon{position:absolute;right:0;top:3px;}
+.membership_history{border-width:0;}
+.membership_history td{text-align:center;font-size:15px;}
+.membership_history td em{display:block;}
+.membership_history + .pages{margin-top:30px;}
+.membership_history.mileage td a:hover,
+.membership_history.mileage td a:focus{text-decoration:underline;}
+.offlinecupon_layer .input_text{float:left;width:calc(100% - 106px);}
+.offlinecupon_layer .input_text input{width:100%;}
+.offlinecupon_layer .btn_register{float:right;width:100px;}
+.offlinecupon_layer .wrap_layer .layer_tit{margin-bottom:40px;}
+.offlinecupon_layer .dot_list{margin-top:37px;}
+.cont_mypage.pwreconfirm .box{border-width:1px 0;margin-bottom:40px;}
+.cont_mypage.pwreconfirm >.desc{margin-bottom:39px;}
+.cont_mypage.pwreconfirm dl{height:120px;}
+.cont_mypage.pwreconfirm dt,
+.cont_mypage.pwreconfirm dd{line-height:40px;}
+.cont_mypage.pwreconfirm dt{font-size:13px;margin-right:20px;}
+.cont_mypage.pwreconfirm dd:nth-of-type(1){min-width:180px}
+.cont_mypage.pwreconfirm dt:nth-of-type(2){margin-left:40px;}
+.cont_mypage.pwreconfirm dd{font-size:15px;}
+.cont_mypage.pwreconfirm [class^=btn_]{width:193px;}
+.mypage.join{max-width:1820px;}
+.editmyinfo th{vertical-align:top;padding-top:16px!important;line-height:40px;white-space:nowrap;}
+.editmyinfo .profile .btn_select,
+.editmyinfo .btn_check{width:104px;}
+.editmyinfo .introduction input,
+.editmyinfo .change_pass input{width:370px!important;}
+.editmyinfo .change_pass dt{width:100px;height:40px;line-height:40px;font-size:13px;}
+.editmyinfo .change_pass dd{width:calc(100% - 100px);}
+.editmyinfo .change_pass dd + dt + dd,
+.editmyinfo .change_pass dt + dd + dt{margin-top:6px;}
+.editmyinfo .change_pass .btn_change{width:130px;}
+.editmyinfo .address div+div{margin-top:6px;}
+.editmyinfo .address .zipcode input{width:150px;}
+.editmyinfo .address .address input{width:377px;}
+.editmyinfo .address .btn_check,
+.editmyinfo .address .address + .address{margin-left:6px;}
+.editmyinfo .address + .btn_check{width:141px;text-align:left;padding-left:24px;}
+.editmyinfo .address + .btn_check:after{content:'';width:9px;height:9px;border-width:1px 1px 0 0;display:inline-block;border-style:solid;-webkit-transform:rotateZ(135deg);-ms-transform:rotateZ(135deg);-o-transform:rotateZ(135deg);transform:rotateZ(135deg);margin:0 0 5px 11px;}
+.editmyinfo .address + .btn_check.show:after{-webkit-transform:rotateZ(-45deg);-ms-transform:rotateZ(-45deg);-o-transform:rotateZ(-45deg);transform:rotateZ(-45deg);margin-bottom:-5px;}
+.editmyinfo .sex + .desc{margin-top:11px;}
+.connect_sns .btn_sns{border-width:0;padding:0 0 0 36px;}
+.connect_sns .btn_sns + .btn_sns{margin-left:40px;}
+.editmyinfo .btns{position:relative;margin-top:40px;}
+.editmyinfo .btns [class^=btn_]{width:135px;}
+.editmyinfo .btns .site_out{position:absolute;right:0;top:0;width:35%}
+.editmyinfo .btns .site_out .btn_out{width:163px;padding-right:0;padding-left:0;}
+.editmyinfo .btns .site_out .desc{margin-bottom:0;padding-right:10px;text-align:right;line-height:18px;}
+.address_list{max-width:907px;}
+.address_list .top{position:relative;margin-top:40px;margin-bottom:14px;}
+.address_list .top .input_checkbox{position:absolute;margin:0;width:100px}
+.address_list .top .input_checkbox label{width:auto;padding-left:30px;text-indent:0;}
+.address_list .top .btn_ + .btn_{margin-left:4px;}
+.address_list td .input_checkbox{margin-right:10px;}
+.address_list td .detail{-webkit-flex:1 1 0;-moz-flex:1 1 0;-ms-flex:1 1 0;-o-flex:1 1 0;flex:1 1 0;width:calc(100% - 120px);}
+.address_list td .flag{font-size:12px;width:65px;height:19px;white-space:nowrap;margin-left:12px;}
+.address_list >.desc{font-size:13px;margin-top:12px;}
+.address_layer .wrap_layer .layer_tit{margin-bottom:0;}
+.dim_layer.address_layer .wrap_layer .layer_cont{max-height:none}
+.address_layer dl,
+.address_layer dt.lc_e,
+.address_layer dd.lc_e{border-width:0 0 1px}
+.address_layer dt,
+.address_layer dd{padding-top:16px;padding-bottom:16px;}
+.address_layer dt{width:120px;line-height:40px;font-size:13px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding-left:18px;}
+.address_layer dd{width:calc(100% - 120px);}
+.address_layer .phone .input_select,
+.address_layer .phone .input_text input{width:90px;min-width:90px;}
+.address_layer .phone .input_text input{padding-right:15px;}
+.address_layer .phone .input_text{margin-left:6px;}
+.address_layer .name .input_text input{width:150px;min-width:150px;}
+.address_layer .addr .input_text input{width:377px;min-width:377px;}
+.address_layer .addr .input_text.zipcode{margin-right:6px;}
+.address_layer .addr .input_text.zipcode input{width:150px;min-width:150px;}
+.address_layer .addr >div + div{margin-top:6px;}
+.address_layer .btns{margin-top:30px;}
+.cont_mypage .siteout{border-width:2px 0 0;padding-top:37px;}
+.cont_mypage .siteout .info{margin-bottom:52px;}
+.cont_mypage .siteout .info p{margin-bottom:5px;}
+.cont_mypage .siteout .info li{line-height:26px;margin-top:0;}
+.cont_mypage .siteout .info li:before{top:10px}
+.cont_mypage .siteout .box{border-width:1px 0;height:120px;}
+.cont_mypage .siteout .box label{margin-right:20px;}
+.cont_mypage .siteout .btns{margin-top:40px;}
+.cont_mypage .siteout .btns [class^=btn_]{width:190px;}
 
 @media all and (min-width:1500px){
 	.brand_top2 .btn_like{display:block!important;}
