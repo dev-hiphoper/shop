@@ -2125,6 +2125,15 @@ a.out_pic:focus >.info >.desc{text-decoration:underline;}
 .step_list .btn_tooltip{border-width:0;width:18px;height:18px;min-width:18px;padding:0;}
 .step_list .btn_tooltip:before{width:18px;height:18px;background-position:-196px -116px;}
 .step_list .step_tooltip{text-align:left;}
+.step_list.return li:nth-child(1):before{width:46px;height:54px;background-position:-124px -144px;}
+.step_list.return li:nth-child(2):before{width:46px;height:54px;background-position:-174px -144px;}
+.step_notice{border-width:0 1px 1px;padding:38px 37px 32px;}
+.step_notice >.tit{font-size:18px;font-weight:500;display:block;margin-bottom:7px;}
+.step_notice .dot_list{padding:0 2px;}
+.step_notice .dot_list + .tit{margin-top:30px;}
+.step_notice .dot_list li{line-height:26px;}
+.step_notice .dot_list li + li{margin-top:0;}
+.step_notice .dot_list li:before{top:10px;}
 
 .info_step{margin-top:54px;}
 .info_step >.tit{font-size:22px;line-height:36px;font-weight:700;margin-bottom:11px;}
