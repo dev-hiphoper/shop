@@ -119,6 +119,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 			evt.preventDefault();
 		}
 		$tar.data('focus',$focus);
+		$('body').css('overflow','hidden');
 		if($tar.hasClass('alert_layer')){
 			if(event){
 				$tar.find('.btn_cancel').on('click',function(e){
@@ -141,7 +142,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 					$tar.removeClass('scroll');
 				}
 			}
-			if($tar.hasClass('dim_layer')){
+			if($tar.is('.dim_layer:not(.search_layer)')){
 				layerResize();
 				$(window).on('resize.dimLayer',layerResize);
 			}
@@ -163,6 +164,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 		if($tar.hasClass('alert')){
 			$tar.remove();
 		}
+		$('body').removeAttr('style');
 	},
 	showAlert = function(name,message,type,callback){
 		var btns = type==0?'<button type="button" class="btn_cancel lc_e5 tc_8">취소</button><button type="button" class="btn_confirm lc_e5">확인</button>':'<button type="button" class="btn_confirm lc_e5">확인</button>',
@@ -310,7 +312,7 @@ $(window).on({
 			input.prop('value',$this.val());
 			input.focus();
 			if($this[0].selectedIndex != 1){
-				$this.focus();	
+				$this.focus();
 			}
 		}
 		if( $this.is('input[type=checkbox][data-type=joinCheckAll]') ){//회원가입 약관 전체체크
@@ -343,7 +345,7 @@ $(window).on({
 		if( $this.is('[type=checkbox][required]') ){
 			$this.blur().focus();
 		}
-		
+
 	},
 	mouseenter:function(e){
 		var $this = $(e.target);
