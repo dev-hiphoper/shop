@@ -1845,6 +1845,34 @@ a.out_pic:focus>.info>.brand,a.out_pic:focus>.info>.desc,a.out_pic:hover>.info>.
 .feedview_replywrite textarea{display:block;width:100%;height:22px}
 .feedview_layer .myfeed_select_slide{padding:0 40px}
 .feedview_layer .myfeed_select_slide .slick-list{padding-top:32px;padding-bottom:32px}
+.site_main.privacy{padding-top: 59px;padding-bottom: 112px;}
+.site_main.privacy>.tit{font-size: 26px;line-height:30px;border-width: 0 0 2px;font-weight: 700;padding-bottom: 15px;margin-bottom: 37px;}
+.site_main.privacy>.desc{border-width: 0 0 1px;padding-bottom: 34px;}
+.privacy_list{padding: 25px 0 0;}
+.privacy_list>li .desc{line-height: 26px;}
+.privacy_list>li + li{margin-top: 24px;}
+.privacy_list>li>.tit{font-size: 18px;line-height: 36px;font-weight: 500;}
+ol.privacy_list>li:nth-child(1)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(1):before{content:'1.\00a0'}
+ol.privacy_list>li:nth-child(2)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(2):before{content:'2.\00a0'}
+ol.privacy_list>li:nth-child(3)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(3):before{content:'3.\00a0'}
+ol.privacy_list>li:nth-child(4)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(4):before{content:'4.\00a0'}
+ol.privacy_list>li:nth-child(5)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(5):before{content:'5.\00a0'}
+ol.privacy_list>li:nth-child(6)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(6):before{content:'6.\00a0'}
+ol.privacy_list>li:nth-child(7)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(7):before{content:'7.\00a0'}
+ol.privacy_list>li:nth-child(8)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(8):before{content:'8.\00a0'}
+ol.privacy_list>li:nth-child(9)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(9):before{content:'9.\00a0'}
+ol.privacy_list>li:nth-child(10)>.tit:before,
+.privacy_list>li ol.desc>li:nth-child(10):before{content:'10.\00a0'}
+.privacy_list>li .desh_list>li:before{content:'-\00a0'}
 @media all and (min-width:1500px){
 .brand_top2 .btn_like{display:block!important}
 }
