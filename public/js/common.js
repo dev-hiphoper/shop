@@ -247,6 +247,17 @@ var likeBtnFn = function(obj){//좋아요버튼
 	},
 	autolineFn = function(obj){
 		obj.height(22).height(obj[0].scrollHeight);
+	},
+	noticeLayer = function(id,index){
+		var $tar = $('#'+id);
+		$tar.css({
+			'top':$('#gnb').offset().top+119,
+			'z-index':200+index
+		}).removeClass('hide').find('.btn_close').on('click',function(e){
+			$(this).off('click');
+			$tar.addClass('hide');
+		});
+		
 	};
 $(window).on({
 	click:function(e){
@@ -297,6 +308,35 @@ $(window).on({
 			}else{
 				showAlert('copyResult','주소 복사에 실패했습니다.',1);
 			}
+		}
+		if( !$this.closest('div').hasClass('alram_layer') && !$this.closest('a').hasClass('alram') ){
+			$('#alramLayer').addClass('hide');
+		}
+		if( !$this.closest('div').hasClass('cart_layer') && !$this.closest('a').hasClass('cart') ){
+			$('#cartLayer').addClass('hide');
+		}
+		if( $this.closest('a').hasClass('alram') ){
+			if( $this.closest('a').is('[href=#alramLayer]') ){
+				e.preventDefault();
+				if(!$('#alramLayer').hasClass('hide')){
+					$('#alramLayer').addClass('hide');
+				}else{
+					$('#alramLayer').removeClass('hide');
+				}
+			}
+		}
+		if( $this.closest('a').hasClass('cart') ){
+			if( $this.closest('a').is('[href=#cartLayer]') ){
+				e.preventDefault();
+				if(!$('#cartLayer').hasClass('hide')){
+					$('#cartLayer').addClass('hide');
+				}else{
+					$('#cartLayer').removeClass('hide');
+				}
+			}
+		}
+		if( $this.closest('#timeattack').hasClass('timeattack') && $this.closest('div').hasClass('before') ){
+			$('#timeattack').addClass('hide');
 		}
 	},
 	change:function(e){
@@ -355,11 +395,27 @@ $(window).on({
 		if( $this.closest('button').is('[data-type*=qnaview]') ){//qna 버튼 오버 줄표시
 			$this.closest('button').prev().addClass('over')
 		}
+		if( $this.is('li') || $this.is('a') && $this.closest('nav').hasClass('gnb') ){
+			$('#allmenu').removeClass('hide');
+			$('.alram_layer,.cart_layer').addClass('hide');
+		}
+		if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
+			$('#allmenu').addClass('hide');
+		}
+		if( $this.closest('#timeattack').hasClass('timeattack') && $this.closest('div').hasClass('desc') ){
+			$('#timeattack').find('.before').addClass('hide').end().find('.after').removeClass('hide').find('.btn_close').on('click',function(e){
+				$(this).off('click');
+				$('#timeattack').find('.after').addClass('hide').end().find('.before').removeClass('hide');
+			})
+		}
 	},
 	mouseleave:function(e){
 		var $this = $(e.target);
 		if( $this.closest('button').is('[data-type*=qnaview]') ){//qna 버튼 오버 줄표시
 			$this.closest('button').prev().removeClass('over')
+		}
+		if( $this.closest('.gnb').length==0 && $this.closest('.allmenu').length==0 ){
+			$('#allmenu').addClass('hide');
 		}
 	},
 	focusin:function(e){
@@ -369,6 +425,9 @@ $(window).on({
 		}
 		if( $this.closest('ul').hasClass('allfeed_list') ){
 			$this.closest('li').addClass('hover');
+		}
+		if( $this.closest('.allmenu').length>0 ){
+			$('#allmenu').removeClass('hide');
 		}
 	},
 	focusout:function(e){
