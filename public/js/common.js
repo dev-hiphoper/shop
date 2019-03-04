@@ -338,6 +338,32 @@ $(window).on({
 		if( $this.closest('#timeattack').hasClass('timeattack') && $this.closest('div').hasClass('before') ){
 			$('#timeattack').addClass('hide');
 		}
+		if( $this.is('button[data-type=openfilter]') ){
+			var $fl = $('#filterLayer');
+			if($fl.hasClass('hide')){
+				$fl.removeClass('hide');
+				$this.addClass('close');
+			}else{
+				$fl.addClass('hide');
+				$this.removeClass('close');
+			}
+		}else{
+			if( $this.closest('#filterLayer').length ==0 ){
+				var $fl = $('#filterLayer');
+				$fl.addClass('hide');
+				$('.func .filter.close').removeClass('close');
+			}
+		}
+		if( $this.closest('button').is('[data-type=opensort]') ){
+			var $sl = $('#sortLayer');
+			if($sl.hasClass('hide')){
+				$sl.removeClass('hide');
+			}else{
+				$sl.addClass('hide');
+			}
+		}else{
+			$('#sortLayer').addClass('hide');
+		}
 	},
 	change:function(e){
 		var $this = $(e.target);
@@ -388,7 +414,6 @@ $(window).on({
 		if( $this.is('[type=checkbox][required]') ){
 			$this.blur().focus();
 		}
-
 	},
 	mouseenter:function(e){
 		var $this = $(e.target);
