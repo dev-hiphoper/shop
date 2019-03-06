@@ -257,6 +257,19 @@
 						<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
 					</div>
 				</div>
+				<div class="ans secret">
+					<form action="">
+						<fieldset>
+							<legend>비밀번호 입력</legend>
+							<span class="input_text clear">
+								<input type="password" class="lc_d0 tc_3" placeholder="글 작성 시 등록한 비밀번호">
+								<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+								<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+							</span>
+							<button type="button" class="btn_confirm bg_f">확인</button>
+						</fieldset>
+					</form>
+				</div>
 			</div>
 			<div class="item lc_e5">
 				<dl class="info">
@@ -284,8 +297,8 @@
 						<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
 					</div>
 					<div class="admin">
-						<button type="button" class="text_link">수정하기</button>
-						<button type="button" class="text_link">삭제하기</button>
+						<button type="button" class="text_link">수정</button>
+						<button type="button" class="text_link">삭제</button>
 					</div>
 				</div>
 			</div>
@@ -315,8 +328,8 @@
 						<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
 					</div>
 					<div class="admin">
-						<button type="button" class="text_link">수정하기</button>
-						<button type="button" class="text_link">삭제하기</button>
+						<button type="button" class="text_link">수정</button>
+						<button type="button" class="text_link">삭제</button>
 					</div>
 				</div>
 				<div class="ans">
@@ -377,7 +390,7 @@
 			<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
 			<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 		</div>
-		<a href="" class="btn_write dark large">Q&amp;A쓰기</a>
+		<a href="" class="btn_write dark large">Q&amp;A작성</a>
 	</section>
 	<hr>
 	<ul class="list_product mini vertical">
@@ -432,11 +445,7 @@
 				</div>
 				<div class="option dis_f tc_8 ai_e">
 					<ul>
-						<li>L / BROWN</li>
-						<li>M / BROWN</li>
-						<li>M / BROWN</li>
-						<li>M / BROWN</li>
-						<li>M / BROWN</li>
+						<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
 					</ul>
 					<a href="" class="edit">수정</a>
 					<button type="button" class="alram">재입고알림신청</button>

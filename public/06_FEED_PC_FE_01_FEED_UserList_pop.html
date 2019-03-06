@@ -60,7 +60,7 @@
 								<li>
 									<a href="" class="dis_f ai_c">
 										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>매스노운 MASSNOUN 후리스 SL로 상품이 재입고 재입고 재입고 재입고 재입고 되었습니다.</p>
+										<p><span class="ellipsis">매스노운 MASSNOUN 후리스 SL로 샘플텍스트</span> 상품이 재입고 되었습니다.</p>
 									</a>
 								</li>
 								<li>
@@ -72,37 +72,7 @@
 								<li>
 									<a href="" class="dis_f ai_c">
 										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>매스노운 MASSNOUN 후리스 SL로 상품이 재입고 재입고 재입고 재입고 재입고 되었습니다.</p>
-									</a>
-								</li>
-								<li>
-									<a href="" class="dis_f ai_c">
-										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>yunsojin_04935님이 게시물을 좋아합니다.</p>
-									</a>
-								</li>
-								<li>
-									<a href="" class="dis_f ai_c">
-										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>chxxilee님이 댓글을 남겼습니다.</p>
-									</a>
-								</li>
-								<li>
-									<a href="" class="dis_f ai_c">
-										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>매스노운 MASSNOUN 후리스 SL로 상품이 재입고 재입고 재입고 재입고 재입고 되었습니다.</p>
-									</a>
-								</li>
-								<li>
-									<a href="" class="dis_f ai_c">
-										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>chxxilee님이 댓글을 남겼습니다.</p>
-									</a>
-								</li>
-								<li>
-									<a href="" class="dis_f ai_c">
-										<div class="img"><img src="./img/temp1.jpg" alt="프로필이미지" class="pos_center"></div>
-										<p>매스노운 MASSNOUN 후리스 SL로 상품이 재입고 재입고 재입고 재입고 재입고 되었습니다.</p>
+										<p><span class="ellipsis">매스노운 MASSNOUN 후리스 SL로 샘플텍스트</span> 상품이 재입고 되었습니다.</p>
 									</a>
 								</li>
 							</ul>
@@ -217,9 +187,6 @@
 		<article class="mypage_summary bg_3 tc_f clear">
 			<div class="profile">
 				<div class="img"><img src="img/temp_CategoryMain3.jpg" alt="임시이미지" class="pos_center"></div>
-				<div class="input_file spr_after pos_center_after">
-					<input type="file" accept="image/x-png,image/gif,image/jpeg">
-				</div>
 				<dl class="info clear">
 					<dt class="s_out">닉네임/아이디</dt>
 					<dd class="id">날자똥파리 <em>(abc0123)</em></dd>
@@ -651,7 +618,20 @@
 		<div class="wrap_layer lc_b" id="feedView">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
 			<div class="clear">
-				<div class="feedview_img"><img src="./img/temp_feed.jpg" alt=""></div>
+				<!-- <div class="feedview_img"><img src="./img/temp_feed.jpg" alt=""></div> -->
+				<div class="feedview_img">
+					<div class="slides feedview_slides" id="feedviewSlides">
+						<div class="item">
+							<img src="./img/temp_feed.jpg" alt="">
+						</div>
+						<div class="item">
+							<img src="./img/temp_feed.jpg" alt="">
+						</div>
+						<div class="item">
+							<img src="./img/temp_feed.jpg" alt="">
+						</div>
+					</div>
+				</div>
 				<div class="feedview_cont myfeed_list">
 					<div class="profile dis_f ai_c lc_e">
 						<div class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></div>
@@ -703,7 +683,7 @@
 						<fieldset>
 							<legend>피드에 댓글 작성하기</legend>
 							<textarea name="" id="" placeholder="댓글 입력" data-type="autoheight"></textarea>
-							<button type="submit" class="btn_submit">댓글 저장</button>
+							<button type="submit" class="btn_submit hide">댓글 저장</button>
 						</fieldset>
 					</form>
 				</div>
@@ -837,6 +817,36 @@
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v lc_b_a"><span class="s_out">다음</span></button>',
 			infinite:false
 		});
+
+		var $feedviewSlides = $('#feedviewSlides');
+		$('#feedviewSlides').on('init',function(slick){
+			var $this = $(slick);
+			$($this[0].target).append('<div class="navi" />');
+		}).slick({
+			dots:false,
+			infinite:false,
+			prevArrow:'<button type="button" class="slick-prev lc_f_a pos_center_after pos_center v"><span class="s_out">이전</span></button>',
+			nextArrow:'<button type="button" class="slick-next lc_f_a pos_center_after pos_center v"><span class="s_out">다음</span></button>',
+			// autoplay:true,
+			// autoplaySpeed:5000,
+			// pauseOnDotsHover:true,
+			// dotsClass:'slick-dots pos_center h dis_f',
+			draggable:false
+		});
+		if( $('#feedviewSlides').slick('getSlick').slideCount > 1 ){
+			var slick = $('#feedviewSlides').slick('getSlick'),
+				navi = $('#feedviewSlides').find('.navi');
+			navi.append('<p class="length tc_f">1 / '+slick.$slides.length+'</p>');
+			navi.append(slick.$nextArrow);
+			navi.append(slick.$prevArrow);
+			$('#feedviewSlides').on('afterChange',function(e,slick,currentSlide){
+				console.log(slick.$slider.find('.navi .length'));
+				slick.$slider.find('.navi .length').html(currentSlide+1 + ' / ' + slick.$slides.length);
+			})
+		}else{
+			$('#feedviewSlides').slick('unslick').find('.navi').remove();
+
+		};
 	</script>
 </body>
 </html>
