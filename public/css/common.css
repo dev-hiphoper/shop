@@ -13,7 +13,7 @@ button,input[type=email],input[type=number],input[type=number]::-webkit-inner-sp
 button,textarea{border:0}
 textarea{resize:none;padding:0}
 button{padding:0;background-color:rgba(0,0,0,0);border-radius:0;cursor:pointer}
-a{text-decoration:none;color:inherit}
+a{text-decoration:none!important;color:inherit}
 h1,h2,h3,h4,h5,strong,th{font-weight:400}
 address,em{font-style:normal}
 fieldset{border:0;border-radius:0}
@@ -106,7 +106,7 @@ input::placeholder{color:#bbb}
 .desc_small,.desc_sub{line-height:21px}
 .desc_sub{font-size:13px}
 .desc_small{font-size:12px}
-.input_checkbox label:before,.input_number [class^=btn_],.input_radio label:before,.input_radio_check label:before,.lc_d0,.table_st td,.table_st th,.table_st.lc_d0{border-color:#d0d0d0}
+.input_checkbox label:before,.input_number [class^=btn_],.input_radio label:before,.input_radio_check label:before,.lc_d0,.table_st td,.table_st th,.table_st.lc_d0,[class^=btn_].lc_d0{border-color:#d0d0d0}
 .dark[class*=btn_],.lc_1{border-color:#111}
 .input_text input:not([readonly]):focus,.input_text input:not([readonly]):hover,.input_textarea textarea:focus,.input_textarea textarea:hover,.lc_3,.lc_3_a:after,.lc_3_b:before,.list_tab .active a,.list_tab .active>strong,.my_orders .order_detail th.lc_3,.order_form .sel_payment input:checked+label,.order_form .sel_payment input:focus+label,.pages em.link,.slides.black .slick-arrow:after,.table_st{border-color:#333}
 .lc_3_i{border-color:#333!important}
@@ -120,7 +120,7 @@ input::placeholder{color:#bbb}
 .input_radio_check .lc_f_b:before,.feedview_slides .lc_f_a:after{border-color:#fff!important}
 .btn_coupon,.flag.tag,.input_select.lc_d0.disabled,.lc_e5,.lc_e5[class*=btn_],.lc_e5_b:before{border-color:#e5e5e5}
 .lc_poi{border-color:#ff4e25}
-.lc_b,.lc_b_a:after,.site_step>span:after,[class*=btn_]{border-color:#bbb}
+.lc_b,.lc_b_a:after,.lc_b_b:before,.site_step>span:after,[class*=btn_]{border-color:#bbb}
 .lc_0{border-color:#000}
 .cert .phone.error,.error .input_checkbox label:before,.error .input_file input,.error .input_file label,.error .input_radio label:before,.error .input_select,.error .input_text input,.error textarea,.input_file.error input,.input_file.error label,.input_select.error,.input_text.error input,.lc_err{border-color:#f32323!important}
 .btn_coupon,.flag.tag,.input_checkbox label:before,.input_radio label:before,.input_radio_check label:before,.input_select[class*=lc_],.pages em.link,.site_step>span:after,.slides .slick-arrow:after,.table_st,.table_st td,.table_st th,.text_link:before,[class*=btn_],[class*=lc_],input[class*=lc_]{border-style:solid;border-width:1px}
@@ -146,7 +146,7 @@ input::placeholder{color:#bbb}
 [class*=btn_]{min-width:76px;padding:0 26px;height:40px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:14px}
 a[class*=btn_]{text-align:center;line-height:41px}
 .fix[class*=btn_]{width:100px;padding:0!important}
-[class*=btn_]:focus,[class*=btn_]:hover{text-decoration:underline}
+/*[class*=btn_]:focus,[class*=btn_]:hover{text-decoration:underline}*/
 .btns.dis_f.jc_c [class*=btn_]+[class*=btn_]{margin-left:12px}
 .dis_f,.list_product,.pages{display:-ms-flexbox;display:flex}
 .dis_f .dis_if[class*=input_],.dis_if,.list_product>li,.pages .link,.slide_main_release .item .info .brand,.slide_main_release .item .info .desc,.slides .slick-dots li,[class*=btn_]{display:-ms-inline-flexbox;display:inline-flex}
@@ -170,12 +170,10 @@ a[class*=btn_]{text-align:center;line-height:41px}
 .large[class*=btn_]+.large[class*=btn_]{margin-left:8px}
 .small[class*=btn_]+.small[class*=btn_]{margin-left:0}
 .text_link{position:relative;display:inline-block;vertical-align:top;text-align:center}
-.text_link:focus,.text_link:hover{text-decoration:none}
 .text_link:before{content:'';position:absolute;left:0;bottom:13.6363636364%;width:100%;height:0;border-width:1px 0 0;font-size:0;line-height:0}
 button.text_link:before{bottom:0}
 .text_link+.text_link{margin-left:16px}
 .btn_info,.btn_like,.btn_reply,.btn_share{position:relative;border:0;padding:0!important;margin:0!important;height:42px;min-width:50px}
-.btn_coupon:focus,.btn_coupon:hover,.btn_like:focus,.btn_like:hover,.btn_reply:focus,.btn_reply:hover{text-decoration:none}
 .btn_like .count,.btn_reply .count{display:block;text-align:center;font-size:15px;line-height:15px;font-weight:400;white-space:nowrap;outline:0;top:30px}
 .btn_like:before,.btn_reply:before{position:absolute;left:50%;width:24px;height:20px}
 .btn_like:before{background-position:0 0}
@@ -321,7 +319,6 @@ button.text_link:before{bottom:0}
 .wrap_board .info .writer{right:95px}
 .wrap_board .que{position:relative;padding:49px 220px 17px 120px}
 .wrap_board .que p{overflow:hidden;float:left;font-size:14px;line-height:22px;height:22px}
-.wrap_board .que p.over{text-decoration:underline}
 .wrap_board .que .cont{position:relative;float:left}
 .wrap_board .que .view{position:absolute;left:0;top:0;font-size:14px;line-height:22px;height:22px;width:100%}
 .wrap_board .que .admin{clear:both;padding-top:9px;display:none}
@@ -392,7 +389,6 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .input_file .name{width:390px;height:40px;padding:0 15px;line-height:40px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .input_file input[type=file]{position:absolute;width:100%;height:100%;left:0;top:0;cursor:pointer;background-color:#fff;opacity:0}
 .input_file label{margin-left:2px}
-.input_file input[type=file]:focus+label,.input_file input[type=file]:hover+label{text-decoration:underline}
 .list_tab{width:100%;position:relative}
 .list_tab:after{content:'';position:absolute;width:100%;height:2px;left:0;bottom:0;z-index:1}
 .list_tab a,.list_tab li>strong{width:100%;height:58px;padding:0 24px;border-width:1px 1px 0;font-size:16px;line-height:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-weight:500}
@@ -579,7 +575,8 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .site_main.view{padding:60px 50px 130px;margin:0 auto;min-width:1280px;max-width:1360px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .viewdetail{padding-bottom:54px}
 .viewdetail .imgs{float:left;width:calc(100% - 600px)}
-.viewdetail .imgs .visual{margin-bottom:20px;width:100%;height:0;padding-top:100%;position:relative}
+.viewdetail .imgs .visual{margin-bottom:20px}
+.viewdetail .imgs .visual a{display:block;width:100%;height:0;padding-top:100%;position:relative}
 .viewdetail .imgs .thumbnails a img,.viewdetail .imgs .visual img{height:100%;width:auto}
 .viewdetail .imgs .thumbnails a{position:relative;float:left;width:calc(12.5% - 10.5px);height:0;padding-top:10.6896551724%;opacity:.2}
 .viewdetail .imgs .thumbnails a.active{opacity:1}
@@ -609,13 +606,20 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .viewdetail .info .price .benefits:first-child,.viewdetail .info .price .benefits:first-child+dd{margin-top:0}
 .viewdetail .info .price .item strong{display:block;font-size:16px}
 .viewdetail .info .price .item .btn_show,.viewdetail .info .price .item p{float:left}
-.viewdetail .info .price .item .btn_show{width:100px;height:40px;font-size:14px;line-height:40px;margin:2px 0 0 18px}
+.viewdetail .info .price .item .btn_show{width:100px;height:40px;font-size:14px;line-height:39px;margin:2px 0 0 18px}
 .viewdetail .info .price .slides{margin-bottom:0}
 .viewdetail .info .options{margin-top:42px}
 .viewdetail .info .options .input_select{display:block;margin-bottom:12px}
-.viewdetail .info .options [class*=btn_]{width:calc(50% - 3px);margin:0}
-.viewdetail .info .options .btn_add{float:left}
-.viewdetail .info .options .btn_buy{float:right}
+.viewdetail .info .option_cale{margin-top:-12px;}
+.viewdetail .info .option_cale >p{height:80px;}
+.viewdetail .info .option_cale >p strong{font-size:30px;font-weight:700;margin-left:20px;}
+.viewdetail .info .option_list li{border-width:0 0 1px;height:64px;position:relative;}
+.viewdetail .info .option_list li p{margin-right:auto;padding-left:16px;font-size:15px;}
+.viewdetail .info .option_list .btn_del{width:21px;height:21px;border-radius:50%;min-width:21px;border-width:1px!important;padding:0;margin-left:20px;}
+.viewdetail .info .option_list .btn_del:before{width:10px;height:10px;background-position:-118px -20px;}
+.viewdetail .info .btns [class*=btn_]{width:calc(50% - 3px);margin:0}
+.viewdetail .info .btns .btn_add{float:left}
+.viewdetail .info .btns .btn_buy{float:right}
 .viewdetail .info .links{float:right;margin-top:12px}
 .viewdetail .info .links li{float:left;height:19px;line-height:19px;font-size:13px;position:relative}
 .viewdetail .info .links li+li:before{content:'';width:1px;height:14px;position:absolute;top:50%}
@@ -641,7 +645,6 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .maylike li{float:left;width:calc(20% - 16px)}
 .maylike li+li{margin-left:20px}
 .maylike li a{position:relative;display:block}
-.maylike li a:focus,.maylike li a:hover{text-decoration:none}
 .maylike li a:focus .info,.maylike li a:hover .info{opacity:1}
 .maylike li img{vertical-align:top}
 .maylike .info{position:absolute;left:0;top:0;width:100%;height:calc(100% - 31px);background-color:rgba(255,255,255,.9);font-size:15px;line-height:22px;opacity:0;-webkit-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity;transition-duration:.2s}
@@ -1142,7 +1145,7 @@ p.error{color:#f32323!important}
 .best_list .eng,.brand_top2 .eng{margin-top:16px;font-size:18px}
 .best_list .kor,.brand_top2 .kor{font-size:14px}
 .brand_top2 .like{position:absolute;left:20px;top:70.6051873199%;width:240px}
-.brand_top2 .btn_like{margin:21.875% auto 0!important;display:none}
+.brand_top2 .btn_like{margin:21.875% auto 0!important;height:45px;display:none}
 .best_list{position:relative}
 .best_list:before,.best_list>ul:after,.best_list>ul:before{content:'';width:1px;height:100%;position:absolute;top:0}
 .best_list:before{left:25%}
@@ -1265,7 +1268,7 @@ p.error{color:#f32323!important}
 .event_sort.sort{margin-bottom:37px}
 .event_sort.sort button{font-size:15px}
 .event_list{padding-top:60px;overflow:hidden}
-.event_list .list_product .set_pos{padding-top:calc(100% - 27px)}
+.event_list .list_product .set_pos{padding-top:calc(100% - 27px);}
 .event_list .list_product .flag{height:27px;line-height:27px;font-size:13px;font-weight:700;padding:0 8px}
 .event_list .list_product .flag+.flag{margin-left:0}
 .event_list .list_product .date{font-size:13px}
@@ -2048,7 +2051,23 @@ ol.privacy_list>li:nth-child(10)>.tit:before,.privacy_list>li ol.desc>li:nth-chi
 .feedview_slides .navi .slick-next{right:7px;}
 .feedview_slides .navi .slick-prev:after{left:6px;}
 .feedview_slides .navi .slick-next:after{left:3px;}
-
+.dim_layer .largeview_layer{position:absolute!important;left:0!important;top:0!important;right:0;bottom:0;width:auto;-webkit-transform:none;-ms-transform:none;-o-transform:none;transform:none;padding:0;margin:0!important;}
+.dim_layer .largeview_layer>.btn_close{right:15px;top:15px;}
+.largeview_slide{width:82px;margin:0 0 0 25px;padding:74px 0;z-index:2}
+.largeview_slide .item,
+.largeview_slide .slick-slide{width:82px;height:72px!important;border-width:0!important;margin:6px 0;opacity:.2}
+.largeview_slide .slick-disabled{opacity:.4}
+.largeview_slide .active{opacity:1}
+.largeview_slide .btn_thum{display:block;border-width:0;padding:0;width:72px!important;height:72px!important;min-width:72px!important;margin:0 auto;}
+.largeview_slide .btn_arr{width:72px;height:58px;left:5px;}
+.largeview_slide .btn_arr:after{width:12px;height:12px;border-width:1px 1px 0 0;transform-origin:center;margin-left:-5px;}
+.largeview_slide .btn_arr.prev{top:16px;}
+.largeview_slide .btn_arr.prev:after{-webkit-transform:rotateZ(-45deg);-ms-transform:rotateZ(-45deg);-o-transform:rotateZ(-45deg);transform:rotateZ(-45deg);margin-top:-2px;}
+.largeview_slide .btn_arr.next{bottom:16px;}
+.largeview_slide .btn_arr.next:after{-webkit-transform:rotateZ(135deg);-ms-transform:rotateZ(135deg);-o-transform:rotateZ(135deg);transform:rotateZ(135deg);margin-top:-11px;}
+.largeview_view{position:absolute;left:0;top:0;bottom:0;right:0;padding:80px 0;text-align:center;}
+.largeview_view img{height:100%;width:auto;max-width:none;}
+#bagMess{top:830px;}
 @media all and (min-width:1500px){
 .brand_top2 .btn_like{display:block!important}
 }

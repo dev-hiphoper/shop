@@ -188,17 +188,15 @@
 			<h3 class="s_out">상품상세정보</h3>
 			<div class="imgs">
 				<div class="visual">
-					<img src="./img/temp_productview.jpg" alt="임시이미지" data-type="visual" class="pos_center">
+					<a href="#largeviewLayer" class="custom_cursor" data-type="largeviewlayer"><img src="./img/temp_productview.jpg" alt="임시이미지" data-type="visual" class="pos_center"></a>
 				</div>
 				<div class="thumbnails clear">
 					<a href="./img/temp_productview.jpg" class="active" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
+					<a href="./img/temp_feed.jpg" data-type="thumbnail"><img src="./img/temp_feed.jpg" alt="임시이미지" class="pos_center"></a>
+					<a href="./img/temp_magazine1.jpg" data-type="thumbnail"><img src="./img/temp_magazine1.jpg" alt="임시이미지" class="pos_center"></a>
 					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
-					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
-					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
-					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
-					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
-					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
-					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
+					<a href="./img/temp_feed.jpg" data-type="thumbnail"><img src="./img/temp_feed.jpg" alt="임시이미지" class="pos_center"></a>
+					<a href="./img/temp_magazine1.jpg" data-type="thumbnail"><img src="./img/temp_magazine1.jpg" alt="임시이미지" class="pos_center"></a>
 				</div>
 			</div>
 			<div class="info">
@@ -285,7 +283,32 @@
 							<option value="">그레이</option>
 						</select>
 					</span>
-					<button type="button" class="btn_add large">ADD TO BAG</button>
+				</div>
+				<div class="option_cale">
+					<ul class="option_list">
+						<li class="dis_f ai_c jc_e lc_e5">
+							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+							<span class="input_number clear">
+								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+							</span>
+							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+						</li>
+						<li class="dis_f ai_c jc_e lc_e5">
+							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+							<span class="input_number clear">
+								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+							</span>
+							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+						</li>
+					</ul>
+					<p class="tc_3 dis_f ai_c jc_e">총 상품 금액 <strong>113,400</strong></p>
+				</div>
+				<div class="btns clear">
+					<button type="button" class="btn_add large" onclick="openLayer(this,'#bagMess');">ADD TO BAG</button>
 					<button type="button" class="btn_buy dark large">BUY NOW</button>
 				</div>
 				<ul class="links tc_8">
@@ -296,8 +319,8 @@
 				<div class="etc_info">
 					<div class="wrap_layer lc_b hide" id="productInfo">
 						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-						<header class="layer_tit tc_3 lc_d0">상품정보고시</header>
-						<main class="layer_cont">
+						<div class="layer_tit tc_3 lc_d0">상품정보고시</div>
+						<div class="layer_cont">
 							<table class="product_info lc_3">
 								<colgroup>
 									<col style="width:120px">
@@ -346,7 +369,7 @@
 									</tr>
 								</tbody>
 							</table>
-						</main>
+						</div>
 					</div>
 					<div class="wrap_layer lc_b hide" id="productSize">
 						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
@@ -458,8 +481,8 @@
 					</div>
 					<div class="wrap_layer lc_b hide" id="productDelivery">
 						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-						<header class="layer_tit tc_3 lc_d0">배송정보</header>
-						<main class="layer_cont">
+						<div class="layer_tit tc_3 lc_d0">배송정보</div>
+						<div class="layer_cont">
 							<table class="product_delivery lc_3">
 								<colgroup>
 									<col style="width:120px">
@@ -492,7 +515,7 @@
 									</tr>
 								</tbody>
 							</table>
-						</main>
+						</div>
 					</div>
 				</div>
 				<div class="associated">
@@ -526,11 +549,14 @@
 				</div>
 			</div>
 		</section>
+		<!-- 배너 한개일 경우 -->
 		<div class="banner_view clear">
 			<a href=""><img src="./img/temp_banner_view.jpg" alt="임시이미지"></a>
-			<!-- 두개일 경우
+		</div>
+		<!-- 배너 두개일 경우 -->
+		<div class="banner_view clear">
 			<a href=""><img src="./img/temp_banner_view1.jpg" alt="임시이미지"></a>
-			<a href=""><img src="./img/temp_banner_view2.jpg" alt="임시이미지"></a> -->
+			<a href=""><img src="./img/temp_banner_view2.jpg" alt="임시이미지"></a>
 		</div>
 		<section class="maylike">
 			<h3 class="tit tc_3">연관 콘텐츠</h3>
@@ -941,8 +967,8 @@
 	<div class="dim_layer w640 hide">
 		<div class="wrap_layer lc_b" id="benefitsDetail">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">본문으로 돌아가기</span></button>
-			<header class="layer_tit tc_3 lc_d0">2019년 1월 신용카드 무이자 행사</header>
-			<main class="layer_cont">
+			<div class="layer_tit tc_3 lc_d0">2019년 1월 신용카드 무이자 행사</div>
+			<div class="layer_cont">
 				<p>어느덧 2019년 새해가 밝았습니다.<br>
 				황금돼지처럼 반짝반짝 빛나는 한 해의 시작을 응원하며 신용카드 무이자 이벤트를 준비했습니다!<br>
 				1월 쇼핑에 도움을 드리고자 '19년 1월 신용카드 무이자 행사' 소식을 전해 드립니다.<br>
@@ -992,8 +1018,47 @@
 						<li>무이자건은 포인트/마일리지/할인서비스 등 다른 혜택과 중복 미적용</li>
 					</ul>
 				</div>
-			</main>
+			</div>
 		</div>	
+	</div>
+	<!-- 이미지 확대 보기 레이어 -->
+	<div class="dim_layer hide">
+		<div class="wrap_layer largeview_layer lc_b" id="largeviewLayer">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">본문으로 돌아가기</span></button>
+			<div class="largeview_cont">
+				<div class="slides largeview_slide" id="largeviewThum">
+					<div class="item">
+						<a href="./img/temp_productview.jpg" class="btn_thum" data-type="largeviewthum"><img src="./img/temp_productview.jpg" alt="임시이미지"></a>
+					</div>
+					<div class="item">
+						<a href="./img/temp_feed.jpg" class="btn_thum" data-type="largeviewthum"><img src="./img/temp_feed.jpg" alt="임시이미지"></a>
+					</div>
+					<div class="item">
+						<a href="./img/temp_magazine1.jpg" class="btn_thum" data-type="largeviewthum"><img src="./img/temp_magazine1.jpg" alt="임시이미지"></a>
+					</div>
+					<div class="item">
+						<a href="./img/temp_productview.jpg" class="btn_thum" data-type="largeviewthum"><img src="./img/temp_productview.jpg" alt="임시이미지"></a>
+					</div>
+					<div class="item">
+						<a href="./img/temp_feed.jpg" class="btn_thum" data-type="largeviewthum"><img src="./img/temp_feed.jpg" alt="임시이미지"></a>
+					</div>
+					<div class="item">
+						<a href="./img/temp_magazine1.jpg" class="btn_thum" data-type="largeviewthum"><img src="./img/temp_magazine1.jpg" alt="임시이미지"></a>
+					</div>
+				</div>
+				<div class="largeview_view">
+					<img src="" alt="" id="largeviewView">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 쇼핑백에 담김 팝업 -->
+	<div class="alert_layer lc_b pos_center hide" id="bagMess">
+		<p class="message tc_3">쇼핑백에 2개의 상품이 담겼습니다.</p>
+		<div class="btns lc_e5 clear">
+			<button type="button" class="btn_cancel lc_e5 tc_8" onclick="closeLayer('#bagMess');">취소</button>
+			<a href="" class="btn_confirm lc_e5">쇼핑백으로 이동</a>
+		</div>
 	</div>
 	<script src="./js/common.js"></script>
 	<script>
@@ -1012,9 +1077,56 @@
 			prevArrow:'<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button>',
 			nextArrow:'<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>'
 		});
+		$('#largeviewThum').slick({
+			dots:false,
+			infinite:false,
+			slidesToShow:4,
+			slidesToScroll:4,
+			vertical:true,
+			arrows:true,
+			prevArrow:'<button type="button" class="btn_arr prev lc_b_a pos_center_after"><span class="s_out">이전</span></button>',
+			nextArrow:'<button type="button" class="btn_arr next lc_b_a pos_center_after"><span class="s_out">다음</span></button>'
+		});
+		var slick = $('#largeviewThum').slick('getSlick');
+		$(slick.$slides[0]).addClass('active');
+		$('#largeviewView').attr('src',$(slick.$slides[0]).find('>a').attr('href'));
+
+		$(window).on('click.largeview',function(e){
+			var $this = $(e.target);
+			if( $this.closest('a').is('[data-type=thumbnail]') ){//상품 상세 이미지
+				e.preventDefault();
+				$this.closest('a').closest('.thumbnails').find('.active').removeClass('active');
+				$('img[data-type="visual"]').attr('src',$this.closest('a').attr('href'));
+				$this.closest('a').addClass('active');
+			}
+			if( $this.closest('a').is('[data-type=largeviewthum]') ){
+				e.preventDefault();
+				$(slick.$slides).removeClass('active');
+				$this.closest('.item').addClass('active');
+				$('#largeviewView').attr('src',$this.closest('a').attr('href'));
+				$('[data-type="thumbnail"]').eq($this.closest('.item').index()).trigger('click');
+			}
+			if( $this.closest('a')[0] ){
+				if( $this.closest('a').is('[data-type=largeviewlayer]') ){
+					e.preventDefault();
+					openLayer(e,$this.closest('a')[0]);
+					var slickTar = $('#largeviewThum'),
+						i = $this.closest('.imgs').find('.thumbnails .active').index();
+					slickTar.slick('reinit');
+					$(slick.$slides).removeClass('active');
+					slickTar.slick('slickGoTo',i);
+					$(slick.$slides[i]).addClass('active').find('>a').trigger('click');
+				}
+			}
+		});
+
+
 		function likeCallback(e){//좋아요 콜백
 			console.log('this는 좋아요 버튼',this);
 		};
+		$(document).ready(function(){
+			$('.custom_cursor').changeCursor('img/img_cursor.png',12,12,1);
+		});
 
 		/*$('.slides').slick({
 			dots:true,

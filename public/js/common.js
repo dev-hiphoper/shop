@@ -166,7 +166,7 @@ var likeBtnFn = function(obj){//좋아요버튼
 					$tar.removeClass('scroll');
 				}
 			}
-			if($tar.is('.dim_layer:not(.search_layer)')){
+			if($tar.is('.dim_layer:not(.search_layer)') ){
 				layerResize();
 				$(window).on('resize.dimLayer',layerResize);
 			}
@@ -300,12 +300,6 @@ $(window).on({
 		}
 		if( $this.closest('button').is('[data-type=inputreset]') ){//input 리셋하기
 			$this.closest('button').prev('input').val('').focus();
-		}
-		if( $this.closest('a').is('[data-type=thumbnail]') ){//상품 상세 이미지
-			e.preventDefault();
-			$this.closest('a').closest('.thumbnails').find('.active').removeClass('active');
-			$('img[data-type="visual"]').attr('src',$this.closest('a').attr('href'));
-			$this.closest('a').addClass('active');
 		}
 		if( $this.is('[data-type=plus]') ){//input 숫자 더하기
 			setNumber('plus',$this);
@@ -476,7 +470,6 @@ $(window).on({
 		if( $this.closest('.wrap_layer').is('#alramLayer')){
 			$('#alramLayer').addClass('hide');
 		}
-
 		
 	},
 	focusin:function(e){
