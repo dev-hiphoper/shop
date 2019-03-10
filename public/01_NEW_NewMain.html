@@ -26,9 +26,9 @@
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
-					<li class="dis_f ai_c"><a href="">NEW</a></li>
+					<li class="dis_f ai_c"><a href="" class="active">NEW</a></li>
 					<li class="dis_f ai_c"><a href="">BRANDS</a></li>
-					<li class="dis_if ai_c"><a href="" class="active">CLOTHING</a></li>
+					<li class="dis_f ai_c"><a href="">CLOTHING</a></li>
 					<li class="dis_f ai_c"><a href="">SHOES</a></li>
 					<li class="dis_f ai_c"><a href="">ACC</a></li>
 					<li class="dis_f ai_c"><a href="">LIFE</a></li>
@@ -185,117 +185,61 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main product lnb_with_cont miw1180 clear">
-		<nav class="lnb" id="lnb">
-			<h2 class="tit_lnb">CLOTHING</h2>
-			<ul class="list_lnb clear">
-				<li><a href="">티셔츠</a></li>
-				<li><a href="">맨투맨</a></li>
-				<li><a href="">후디</a></li>
-				<li><a href="">아우터</a></li>
-				<li><a href="">바지</a></li>
-				<li><a href="">니트</a></li>
-				<li><a href="">원피스/스커트</a></li>
-				<li><a href="">셔츠/블라우스</a></li>
-				<li><a href="">이너웨어</a></li>
-				<li><a href="">두줄 메뉴가 들어갈 경우<br>두줄 메뉴가 들어갈 경우</a></li>
-			</ul>
-		</nav>
-		<div class="cont">
-			<h3 class="s_out">상품목록</h3>
-			<ul class="func tc_3">
-				<li><button type="button" class="sort" data-type="opensort"><span class="s_out">정렬옵션 : </span><span class="text">신상품 순</span></button></li>
-				<li><button type="button" class="filter" data-type="openfilter">FILTER</button></li>
-			</ul>
-			<div class="sort_layer lc_b hide" id="sortLayer">
-				<!-- 리스트를 바꿔 호출한 후 sortChange() 호출 -->
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort1" onchange="sortChange()"><label for="sort1" class="tc_3">신상품 순</label>
-				</span>
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort2" onchange="sortChange()"><label for="sort2" class="tc_3">상품명 순</label>
-				</span>
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort3" onchange="sortChange()"><label for="sort3" class="tc_3">판매 많은 순</label>
-				</span>
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort4" onchange="sortChange()"><label for="sort4" class="tc_3">평점 높은 순</label>
-				</span>
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort5" onchange="sortChange()"><label for="sort5" class="tc_3">후기 많은 순</label>
-				</span>
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort6" onchange="sortChange()"><label for="sort6" class="tc_3">높은 가격 순</label>
-				</span>
-				<span class="input_radio">
-					<input type="radio" name="sort" id="sort7" onchange="sortChange()"><label for="sort7" class="tc_3">낮은 가격 순</label>
-				</span>
-			</div>
-			<div class="filter_layer lc_b hide" id="filterLayer">
-				<div class="clear select">
-					<div class="item color">
-						<strong class="tit tc_3 dis_f ai_c">컬러</strong>
-						<div class="dis_f fw_wrap">
-							<span class="select_check"><input type="checkbox" name="" id="color1" class="pos_center"><label for="color1" class="lc_d0 b spr_after pos_center_after">화이트</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color2" class="pos_center"><label for="color2" class="w spr_after pos_center_after" style="background-color:#000">블랙</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color3" class="pos_center"><label for="color3" class="w spr_after pos_center_after" style="background-color:#8d8d8e">차콜</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color4" class="pos_center"><label for="color4" class="w spr_after pos_center_after" style="background-color:#e80416">레드</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color5" class="pos_center"><label for="color5" class="w spr_after pos_center_after" style="background-color:#ff9900">오렌지</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color6" class="pos_center"><label for="color6" class="b spr_after pos_center_after" style="background-color:#ffc0cb">핑크</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color7" class="pos_center"><label for="color7" class="b spr_after pos_center_after" style="background-color:#fbea2b">레몬</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color8" class="pos_center"><label for="color8" class="w spr_after pos_center_after" style="background-color:#2aac14">그린</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color9" class="pos_center"><label for="color9" class="w spr_after pos_center_after" style="background-color:#241efc">블루</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color10" class="pos_center"><label for="color10" class="w spr_after pos_center_after" style="background-color:#000080">네이비</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color11" class="pos_center"><label for="color11" class="w spr_after pos_center_after" style="background-color:#54076e">퍼플</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color12" class="pos_center"><label for="color12" class="b spr_after pos_center_after" style="background-color:#f5f5dc">베이지</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color13" class="pos_center"><label for="color13" class="w spr_after pos_center_after" style="background-color:#531d12">브라운</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color14" class="pos_center"><label for="color14" class="w spr_after pos_center_after" style="background-color:#c0c0c0">그레이</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color15" class="pos_center"><label for="color15" class="b spr_after pos_center_after" style="background-color:#ffd700">옐로우</label></span>
-							<span class="select_check"><input type="checkbox" name="" id="color16" class="pos_center"><label for="color16" class="spr_before w spr_after pos_center_after pos_center_before">모든컬러</label></span>
-						</div>
+	<main class="site_main new">
+		<article class="layout_full top_visual" style="background-color:#cdcbcc">
+			<div class="inner">
+				<div class="slides black">
+					<div class="item">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info pos_center dis_f">
+								<div class="inner dis_if ai_c fw_wrap">
+									<em class="brand">MUAHMUAH</em>
+									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
+									<p class="desc tc_3">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </p>
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="item square">
-						<strong class="tit tc_3 dis_f ai_c">소재</strong>
-						<div class="dis_f fw_wrap">
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material1" class="pos_center"><label for="material1" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">코튼</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material2" class="pos_center"><label for="material2" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">린넨</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material3" class="pos_center"><label for="material3" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">데님</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material4" class="pos_center"><label for="material4" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">아크릴</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material5" class="pos_center"><label for="material5" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">나일론</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material6" class="pos_center"><label for="material6" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">레이온</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material7" class="pos_center"><label for="material7" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">폴리</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material8" class="pos_center"><label for="material8" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">울</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material9" class="pos_center"><label for="material9" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">캐시<br>미어</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material10" class="pos_center"><label for="material10" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">레더</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material11" class="pos_center"><label for="material11" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">스웨<br>이드</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material12" class="pos_center"><label for="material12" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">모피</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="material13" class="pos_center"><label for="material13" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">벨크로</label></span>
-						</div>
+					<div class="item">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info pos_center dis_f">
+								<div class="inner dis_if ai_c fw_wrap">
+									<em class="brand">MUAHMUAH</em>
+									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
+									<p class="desc tc_3">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </p>
+								</div>
+							</div>
+						</a>
 					</div>
-					<div class="item square">
-						<strong class="tit tc_3 dis_f ai_c">패턴</strong>
-						<div class="dis_f fw_wrap">
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern1" class="pos_center"><label for="pattern1" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">단색</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern2" class="pos_center"><label for="pattern2" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">스트라<br>이프</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern3" class="pos_center"><label for="pattern3" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">체크</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern4" class="pos_center"><label for="pattern4" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">도트</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern5" class="pos_center"><label for="pattern5" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">카모</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern6" class="pos_center"><label for="pattern6" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">애니멀</label></span>
-							<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="pattern7" class="pos_center"><label for="pattern7" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">기타</label></span>
-						</div>
+					<div class="item">
+						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+							<div class="info pos_center dis_f">
+								<div class="inner dis_if ai_c fw_wrap">
+									<em class="brand">MUAHMUAH</em>
+									<strong class="tit">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </strong>
+									<p class="desc tc_3">시즌오프 최대 50% 할인! 추가 5% 할인쿠폰 </p>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
-				<div class="btns lc_b bg_b_a pos_center_after h dis_f">
-					<button typt="button" class="btn_reset tc_8">전체 초기화</button>
-					<button typt="button" class="btn_submit tc_3">선택 적용</button>
-				</div>
 			</div>
-			<ul class="list_product">
+		</article>
+		<section class="wrap_listproduct miw1180">
+			<div class="new_tit dis_f">
+				<h3 class="tit tc_3">오늘 업데이트된 상품</h3>
+				<span class="number dis_if jc_c">
+					<span class="item tc_f bg_1">9</span>
+					<span class="item tc_f bg_1">9</span>
+					<span class="item tc_f bg_1">9</span>
+				</span>
+			</div>
+			<ul class="list_product fix5">
 				<li>
 					<div class="link">
 						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
 						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
-						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
 						<div class="set_pos"><em class="flag out">SOLD OUT</em></div>
 						<div class="price tc_3">
 							<span class="sale tc_poi">5%</span>
@@ -391,7 +335,31 @@
 					<div class="link">
 						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
 						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
-						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트) ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<span class="sale tc_poi">5%</span>
+							<strong class="now tc_3">51,800</strong>
+							<del class="origin tc_b">69,000</del>
+						</div>
+						<div class="flags clear">
+							<span class="flag tag tc_8">해외배송</span>
+							<span class="flag tag tc_8">베스트</span>
+							<span class="flag tag tc_8">쿠폰</span>
+						</div>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
 						<div class="set_pos"><em class="flag out">SOLD OUT</em></div>
 						<div class="price tc_3">
 							<span class="sale tc_poi">5%</span>
@@ -446,10 +414,22 @@
 							<strong class="now tc_3">51,800</strong>
 							<del class="origin tc_b">69,000</del>
 						</div>
-						<div class="flags clear">
-							<span class="flag tag tc_8">해외배송</span>
-							<span class="flag tag tc_8">베스트</span>
-							<span class="flag tag tc_8">쿠폰</span>
+					</div>
+					<div class="set_pos">
+						<div class="func">
+							<button type="button" class="btn_like small spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count tc_8">153</span></button>
+							<a href="" class="btn_reply small spr_before"><span class="s_out">댓글수 : </span><span class="count tc_8">153</span></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="link">
+						<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+						<a href="" class="brand ellipsis tc_3">MAJESTIC</a>
+						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
+						<div class="price tc_3">
+							<strong class="now tc_3">51,800</strong>
 						</div>
 					</div>
 					<div class="set_pos">
@@ -466,14 +446,11 @@
 						<a href="" class="name ellipsis">ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
 						<!-- <div class="set_pos"><em class="flag out">SOLD OUT</em></div> -->
 						<div class="price tc_3">
-							<span class="sale tc_poi">5%</span>
 							<strong class="now tc_3">51,800</strong>
 							<del class="origin tc_b">69,000</del>
 						</div>
 						<div class="flags clear">
 							<span class="flag tag tc_8">해외배송</span>
-							<span class="flag tag tc_8">베스트</span>
-							<span class="flag tag tc_8">쿠폰</span>
 						</div>
 					</div>
 					<div class="set_pos">
@@ -499,7 +476,7 @@
 				<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
 				<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 			</div>
-		</div>
+		</section>
 	</main>
 	<footer class="site_footer layout_full lc_d">
 		<div class="inner miw1180 clear">
@@ -527,10 +504,20 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		function sortChange(){
-			var $this = $('#sortLayer input:checked');
-			$('button[data-type=opensort] .text').html($('label[for='+$this[0].id+']').text());
-		}
+		$('.slides').slick({
+			dots:true,
+			dotsClass:'slick-dots pos_center h dis_f',
+			//arrows:false,
+			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
+			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
+			autoplay:true,
+			autoplaySpeed:5000,
+			pauseOnDotsHover:true
+		}).each(function(i,el){
+			if( el.slick.slideCount <= 1 ){
+				$(el).slick('unslick');
+			}
+		});
 	</script>
 </body>
 </html>
