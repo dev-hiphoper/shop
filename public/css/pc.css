@@ -760,6 +760,7 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .street_list .magazine_thum_list .list_product.mini .out{left:20px}
 .site_main.cart{padding:56px 0 120px}
 .site_main.cart .site_step{text-align:center;margin:0 auto 48px}
+.site_main.cart .inner.complete{padding-top:68px;}
 .table_st{width:100%;border-width:2px 0 0}
 .table_st td,
 .table_st th{border-width:0 0 1px}
