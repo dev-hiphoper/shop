@@ -216,6 +216,11 @@ input::placeholder{color:#bbb}
 .input_text.error input,
 .lc_err{border-color:#f32323!important}
 [class*=btn_]{display:inline-block;vertical-align:top}
+.error [class*=input_] .error,
+.input_text button:focus,
+.input_text button:hover,
+.input_text input:focus+button,
+.input_text input:hover+button,[class*=input_].error .error{display:block}
 .bg_def,
 .bg_f7,
 .wrap_board .item.view{background-color:#f7f7f7}

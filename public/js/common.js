@@ -419,6 +419,7 @@ $(window).on({
 				e.preventDefault();
 				if( $this.closest('.wrap_layer').length == 0 ){
 					$('#brandmenu').removeClass('hide');
+					$('#brandmenu').removeClass('hide');
 					$('.alram_layer,.cart_layer').addClass('hide');
 					$('.site_main').addClass('hide');
 				}
