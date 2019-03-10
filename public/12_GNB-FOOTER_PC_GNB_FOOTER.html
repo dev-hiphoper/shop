@@ -28,8 +28,8 @@
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
 					<li class="dis_f ai_c"><a href="">NEW</a><span class="prod_count on_m">(1,566)</span></li>
-					<li class="dis_f ai_c"><a href="">BRANDS</a><span class="prod_count on_m">(1,566)</span></li>
-					<li class="dis_f ai_c"><a href="">CLOTHING</a><span class="prod_count on_m">(1,566)</span></li>
+					<li class="dis_f ai_c"><a href="" class="brands" >BRANDS</a><span class="prod_count on_m">(1,566)</span></li>
+					<li class="dis_f ai_c"><a href="" class="clothing" >CLOTHING</a><span class="prod_count on_m">(1,566)</span></li>
 					<li class="dis_f ai_c"><a href="">SHOES</a><span class="prod_count on_m">(1,566)</span></li>
 					<li class="dis_f ai_c"><a href="">ACC</a><span class="prod_count on_m">(1,566)</span></li>
 					<li class="dis_f ai_c"><a href="">LIFE</a><span class="prod_count on_m">(1,566)</span></li>
@@ -85,7 +85,7 @@
 				</div>
 				<!-- <a href="">로그인</a>
 				<a href="">회원가입</a> -->
-				<a href="" class="search spr_before pos_center_before"><span class="s_out">검색하기</span></a>
+				<a href="" class="search spr_before pos_center_before dis_f"><span class="s_out">검색하기</span></a>
 				<div class="wrap_cart dis_if">
 					<a href="#cartLayer" class="cart spr_before"><span class="s_out">장바구니 상품 갯수 : </span><span class="length bg_poi">99</span></a>
 					<div class="wrap_layer cart_layer lc_b hide" id="cartLayer">
@@ -147,7 +147,7 @@
 			<!-- 모바일용 하단 fixed 메뉴 -->
 			<div class="bar_tabnav on_m">
 				<ul class="list_tab dis_f">
-					<li class="tab_cate on"><a href="#none" class="spr_before">카테고리</a></li>
+					<li class="tab_cate"><a href="#none" class="spr_before">카테고리</a></li>
 					<li class="tab_search"><a href="#none" class="spr_before">검색</a></li>
 					<li class="tab_home"><a href="#none" class="spr_before">홈</a></li>
 					<li class="tab_my"><a href="#none" class="spr_before">마이페이지</a></li>
@@ -161,15 +161,22 @@
 			<div class="item tc_3 lc_e5">
 				<strong class="tit">CLOTHING</strong>
 				<ul class="links">
-					<li><a href="">티셔츠</a></li>
-					<li><a href="">맨투맨</a></li>
-					<li><a href="">후디</a></li>
-					<li><a href="">아우터</a></li>
-					<li><a href="">바지/스커트</a></li>
-					<li><a href="">니트</a></li>
-					<li><a href="">원피스</a></li>
-					<li><a href="">셔츠/블라우스</a></li>
-					<li><a href="">이너웨어</a></li>
+					<li>
+						<div class="sub_menu"><a href="">티셔츠</a><span class="prod_count on_m">(1,566)</span></div>
+						<ul class="list_3depth">
+							<li><a href="#none">반팔티</a><span class="prod_count on_m">(1,566)</span></li>
+							<li><a href="#none">긴팔티</a><span class="prod_count on_m">(1,566)</span></li>
+							<li><a href="#none">민소매</a><span class="prod_count on_m">(1,566)</span></li>
+						</ul>
+					</li>
+					<li><div class="sub_menu"><a href="">맨투맨</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">후디</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">아우터</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">바지/스커트</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">니트</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">원피스</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">셔츠/블라우스</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">이너웨어</a><span class="prod_count on_m">(1,566)</span></div></li>
 				</ul>
 			</div>
 			<div class="item tc_3">
@@ -184,6 +191,14 @@
 					<li><a href="">MAGFORCE</a></li>
 				</ul>
 			</div>
+			<div class="bnr_ad on_m">
+				<a href="#none">
+					<div class="img"><img src="./img/m/@temp1.jpg" alt="시즌오프 최대 50% 할인"></div>
+				</a>
+				<a href="#none">
+					<div class="img"><img src="./img/m/@temp2.jpg" alt="시즌오프 최대 50% 할인"></div>
+				</a>
+			</div>
 			<div class="ad dis_f">
 				<a href="">
 					<div class="img"><img src="./img/temp1.jpg" alt=""></div>
@@ -194,6 +209,50 @@
 					시즌오프 최대 50% 할인
 				</a>
 			</div>
+			<button type="button" class="btn_prev"><span class="s_out">뒤로</span></button>
+		</div>
+	</div>
+	<div class="allmenu layout_full hide on_m" id="brandmenu">
+		<div class="inner dis_f">
+			<div class="item tc_3 lc_e5">
+				<strong class="tit">BRANDS</strong>
+				<ul class="links">
+					<li><div class="sub_menu"><a href="">EXCLUSIVE</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">BEST</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">LOOK BOOK</a><span class="prod_count on_m">(1,566)</span></div></li>
+				</ul>
+			</div>
+			<div class="item tc_3">
+				<strong class="tit">BRANDS ISSUE</strong>
+				<ul class="links brand">
+					<li><a href="">NIKE</a></li>
+					<li><a href="">CHAMPION</a></li>
+					<li><a href="">ROTHCO</a></li>
+					<li><a href="">KANGOL</a></li>
+					<li><a href="">ADIDAS</a></li>
+					<li><a href="">ROTHCO</a></li>
+					<li><a href="">MAGFORCE</a></li>
+				</ul>
+			</div>
+			<div class="bnr_ad on_m">
+				<a href="#none">
+					<div class="img"><img src="./img/m/@temp1.jpg" alt="시즌오프 최대 50% 할인"></div>
+				</a>
+				<a href="#none">
+					<div class="img"><img src="./img/m/@temp2.jpg" alt="시즌오프 최대 50% 할인"></div>
+				</a>
+			</div>
+			<div class="ad dis_f">
+				<a href="">
+					<div class="img"><img src="./img/temp1.jpg" alt=""></div>
+					시즌오프 최대 50% 할인
+				</a>
+				<a href="">
+					<div class="img"><img src="./img/temp1.jpg" alt=""></div>
+					시즌오프 최대 50% 할인
+				</a>
+			</div>
+			<button type="button" class="btn_prev"><span class="s_out">뒤로</span></button>
 		</div>
 	</div>
 	<main class="site_main">

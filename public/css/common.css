@@ -231,8 +231,10 @@ input::placeholder{color:#bbb}
 .bg_f,
 .input_radio label:before,
 .list_tab a,
-.list_tab li>strong{background-color:#fff}
-.bg_8{background-color:#888}
+.list_tab li>strong,
+.timeattack .slides .slick-dots .slick-active button{background-color:#fff}
+.bg_8,
+.timeattack .slides .slick-dots button{background-color:#888}
 .bg_0{background-color:#000}
 .bg_b,
 .bg_b_a:after,

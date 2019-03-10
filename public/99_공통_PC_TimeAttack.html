@@ -84,7 +84,7 @@
 				</div>
 				<!-- <a href="">로그인</a>
 				<a href="">회원가입</a> -->
-				<a href="" class="search spr_before pos_center_before"><span class="s_out">검색하기</span></a>
+				<a href="" class="search spr_before pos_center_before dis_f"><span class="s_out">검색하기</span></a>
 				<div class="wrap_cart dis_if">
 					<a href="#cartLayer" class="cart spr_before"><span class="s_out">장바구니 상품 갯수 : </span><span class="length bg_poi">99</span></a>
 					<div class="wrap_layer cart_layer lc_b hide" id="cartLayer">
@@ -823,22 +823,46 @@
 		<div class="before">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
 			<img src="./img/temp2.png" alt="">
-			<div class="desc tc_f dis_f jc_c ai_c fw_wrap ac_c">
+			<div class="desc set_transition tc_f dis_f jc_c ai_c fw_wrap ac_c">
 				<em>TIME<br>ATTACK</em>
-				<p class="txt_timeattack"></p>
+				<p class="txt_timeattack" data-time="2019/03/24 00:00:00"></p>
 			</div>
 		</div>
-		<dis class="after set_transition">
+		<div class="after set_transition">
 			<button type="button" class="btn_close lc_f lc_f_b pos_center_before"><span class="s_out">레이어줄이기</span></button>
-			<img src="./img/temp2.png" alt="" class="set_transition">
-			<div class="desc tc_f">
-				<a href="">
-					<strong>~ 50%</strong>
-					<p>가나다ABCabc가나다ABCabc가나<br>가나다ABCabc가나다ABCabc가나</p>
-					<div><p class="txt_timeattack"></p> <span>남음</span></div>
-				</a>
+			<div class="slides">
+				<div class="item">
+					<img src="./img/temp2.png" alt="" class="set_transition">
+					<div class="desc tc_f">
+						<a href="">
+							<strong>~ 10%</strong>
+							<p>가나다ABCabc가나다ABCabc가나<br>가나다ABCabc가나다ABCabc가나</p>
+							<div><p class="txt_timeattack" data-time="2019/03/24 00:00:00"></p> <span>남음</span></div>
+						</a>
+					</div>
+				</div>
+				<div class="item">
+					<img src="./img/temp2.png" alt="" class="set_transition">
+					<div class="desc tc_f">
+						<a href="">
+							<strong>~ 20%</strong>
+							<p>가나다ABCabc가나다ABCabc가나<br>가나다ABCabc가나다ABCabc가나</p>
+							<div><p class="txt_timeattack" data-time="2019/03/25 00:00:00"></p> <span>남음</span></div>
+						</a>
+					</div>
+				</div>
+				<div class="item">
+					<img src="./img/temp2.png" alt="" class="set_transition">
+					<div class="desc tc_f">
+						<a href="">
+							<strong>~ 30%</strong>
+							<p>가나다ABCabc가나다ABCabc가나<br>가나다ABCabc가나다ABCabc가나</p>
+							<div><p class="txt_timeattack" data-time="2019/03/26 00:00:00"></p> <span>남음</span></div>
+						</a>
+					</div>
+				</div>
 			</div>
-		</dis>
+		</div>
 	</div>
 	<script src="./js/common.js"></script>
 	<script>
@@ -859,18 +883,6 @@
 		$('#slideRelease').slick('slickSetOption',{
 			arrows:false
 		},true);
-		$(document).ready(function(e){
-			var time = '2019/03/10 15:21:00';
-			$('#timeattack').find('.before .txt_timeattack').countdown(time, function(event) {
-				$(this).text(
-					event.strftime('%H:%M:%S')
-				);
-			}).end().find('.after .txt_timeattack').countdown(time, function(event) {
-				$(this).text(
-					event.strftime('%D DAY %H:%M:%S')
-				);
-			});
-		});
 	</script>
 </body>
 </html>
