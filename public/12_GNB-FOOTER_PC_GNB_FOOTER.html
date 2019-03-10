@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
 	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
+	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
 	<script src="./js/plugin.js"></script>
 </head>
@@ -20,7 +22,8 @@
 	</div>
 	<header class="site_header layout_full lc_d0">
 		<div class="inner miw1180">
-			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h1 class="logo sub"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1><!-- 작은로고인 경우 sub 클래스 추가 -->
+			<h2 class="tit_sub">CLOTHING</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -141,6 +144,16 @@
 				</div>
 				<a href="" class="center spr_before"><span class="s_out">문의하기</span></a>
 			</div>
+			<!-- 모바일용 하단 fixed 메뉴 -->
+			<div class="bar_tabnav on_m">
+				<ul class="list_tab dis_f">
+					<li class="tab_cate"><a href="#none" class="spr_before">카테고리</a></li>
+					<li class="tab_search"><a href="#none" class="spr_before">검색</a></li>
+					<li class="tab_home"><a href="#none" class="spr_before">홈</a></li>
+					<li class="tab_my"><a href="#none" class="spr_before">마이페이지</a></li>
+					<li class="tab_latest"><a href="#none" class="spr_before">최근 본 상품</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 	<div class="allmenu layout_full hide" id="allmenu">
@@ -191,11 +204,12 @@
 			<div class="left">
 				<a href="tel:1599-7616" class="tel tc_3">1599-7616</a>
 				<p class="time tc_3">평일 10:00 ~ 15:00 / 점심시간 12:00 ~ 13:30 / 주말, 공휴일 휴무</p>
-				<address class="addr tc_8"><span>(주) 힙합퍼(대표이사:문인식)</span> <span>주소 : 06531 서울시 서초구 신반포로 339, 1층(잠원동, 논현빌딩)</span> <span>사업자등록번호 : 211-88-70875</span> <span>통신판매업신고번호 : 제 2018-서울서초-1992호</span><br>
-				<span>개인정보관리책임 : 정병윤 CPO(<a href="mailto:MARKETING@HIPHOPER.COM">MARKETING@HIPHOPER.COM</a>)</>  입점문의 : 안효창 CBO(<a href="mailto:DIRECTOR@HIPHOPER.COM">DIRECTOR@HIPHOPER.COM</a>)</address>
+				<address class="addr tc_8"><span class="name">(주) 힙합퍼(대표이사:문인식)</span> <span>주소 : 06531 서울시 서초구 신반포로 339, 1층(잠원동, 논현빌딩)</span> <span>사업자등록번호 : 211-88-70875</span> <span>통신판매업신고번호 : 제 2018-서울서초-1992호</span><br>
+				<span>개인정보관리책임 : 정병윤 CPO(<a href="mailto:MARKETING@HIPHOPER.COM">MARKETING@HIPHOPER.COM</a>)</span><span>입점문의 : 안효창 CBO(<a href="mailto:DIRECTOR@HIPHOPER.COM">DIRECTOR@HIPHOPER.COM</a>)</span></address>
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li>
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>

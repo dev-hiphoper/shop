@@ -289,6 +289,9 @@ var likeBtnFn = function(obj){//좋아요버튼
 $(window).on({
 	click:function(e){
 		var $this = $(e.target);
+		var ww = $(window).width();
+		var mw = 425;
+		
 		if( $this.closest('button').is('[data-type=like]') ){//좋아요버튼
 			likeBtnFn($this.closest('button'));
 		}
@@ -374,6 +377,20 @@ $(window).on({
 		if( $this.closest('a').hasClass('cart') ){
 			if( $this.closest('a').is('[href=#cartLayer]') ){
 				e.preventDefault();
+			}
+		}
+		if(ww <= mw) {
+			if( $this.closest('.wrap_cart')[0]){
+				e.preventDefault();
+				$('#cartLayer').removeClass('hide');
+				$('#alramLayer').addClass('hide');
+			}
+			if( $this.closest('.wrap_alram')[0]){
+				e.preventDefault();
+				console.log("들어옵니까?")
+				console.log(ww)
+				$('#alramLayer').removeClass('hide');
+				$('#cartLayer').addClass('hide');
 			}
 		}
 	},

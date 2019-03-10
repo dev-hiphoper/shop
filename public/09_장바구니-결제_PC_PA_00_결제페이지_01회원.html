@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
 	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
+	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
 	<script src="./js/plugin.js"></script>
 </head>
@@ -439,7 +441,7 @@
 												<span class="input_radio dis_if ai_c">
 													<input type="radio" name="addr_select" id="addrSelect2" checked><label for="addrSelect2" class="tc_3">새로 입력</label>
 												</span>
-												<button type="button" class="btn_find tc_3">최근 주소지</button>
+												<a href="#lastAddress" class="btn_find tc_3" onclick="openLayer(event,this)">최근 주소지</a>
 											</span>
 										</td>
 									</tr>
@@ -639,6 +641,68 @@
 			</div>
 		</div>
 	</footer>
+	<!-- 최근 주소지 레이어 -->
+	<div class="dim_layer w640 hide">
+		<div class="wrap_layer lastaddress_layer lc_b" id="lastAddress">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+			<div class="layer_tit tc_3 lc_d0">최근 주소지</div>
+			<div class="layer_cont">
+				<table class="lc_d0">
+					<colgroup>
+						<col style="width:43px">
+						<col>
+						<col style="width:100px">
+						<col style="width:160px">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="lc_e">
+								<span class="input_radio">
+									<input type="radio" name="lastaddress" id="radio1_1"><label for="radio1_1" class="tc_3">주소1</label>
+								</span>
+							</td>
+							<td class="lc_e">서울특별시 서초구 신반포로 339 논현빌딩 힙합퍼 1층 <em class="bg_a7 tc_f">기본배송지</em></td>
+							<td class="lc_e">홍길동</td>
+							<td class="lc_e">010-1234-5678</td>
+						</tr>
+						<tr>
+							<td class="lc_e">
+								<span class="input_radio">
+									<input type="radio" name="lastaddress" id="radio1_2"><label for="radio1_2" class="tc_3">주소1</label>
+								</span>
+							</td>
+							<td class="lc_e">서울특별시 서초구 신반포로 339 논현빌딩 힙합퍼 1층</td>
+							<td class="lc_e">홍길동</td>
+							<td class="lc_e">010-1234-5678</td>
+						</tr>
+						<tr>
+							<td class="lc_e">
+								<span class="input_radio">
+									<input type="radio" name="lastaddress" id="radio1_3"><label for="radio1_3" class="tc_3">주소1</label>
+								</span>
+							</td>
+							<td class="lc_e">서울특별시 서초구 신반포로 339 논현빌딩 힙합퍼 1층</td>
+							<td class="lc_e">홍길동</td>
+							<td class="lc_e">010-1234-5678</td>
+						</tr>
+						<tr>
+							<td class="lc_e">
+								<span class="input_radio">
+									<input type="radio" name="lastaddress" id="radio1_4"><label for="radio1_4" class="tc_3">주소1</label>
+								</span>
+							</td>
+							<td class="lc_e">서울특별시 서초구 신반포로 339 논현빌딩 힙합퍼 1층</td>
+							<td class="lc_e">홍길동</td>
+							<td class="lc_e">010-1234-5678</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btns dis_f jc_c">
+					<button type="button" class="btn_link dark">선택</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="./js/common.js"></script>
 	<script>
 		var setScroll = function(e){
