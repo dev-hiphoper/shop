@@ -33,9 +33,6 @@ input::-ms-clear{display:none}
 .set_transition{-webkit-transition-duration:.3s;-o-transition-duration:.3s;transition-duration:.3s;-webkit-transition-timing-function:cubic-bezier(.645,.045,.355,1);-o-transition-timing-function:cubic-bezier(.645,.045,.355,1);transition-timing-function:cubic-bezier(.645,.045,.355,1)}
 .clear:after{content:'';display:block;width:0;height:0;line-height:0;opacity:0;overflow:hidden;clear:both}
 .input_check label:before,
-.spr,
-.spr_after:after,
-.spr_before:before{overflow:hidden;display:inline-block;background-image:url(../img/spr.png);-webkit-background-size:300px 300px;background-size:300px 300px;background-repeat:no-repeat;text-indent:-200%;vertical-align:top}
 .pos_center_after:after,
 .pos_center_before:before,
 .spr_after:after,
