@@ -299,12 +299,13 @@
 									<td>
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h">
-												<option value="">사유 선택</option>
+												<option disabled selected>사유 선택</option>
+												<option value="">고객 변심</option>
 												<option value="">상품 정보 상이(사이즈, 컬러)</option>
 												<option value="">상품 불량</option>
-												<option value="">오 배송</option>
-												<option value="">배송 지연</option>
-												<option value="">고객 변심</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
@@ -335,12 +336,13 @@
 									<td>
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h">
-												<option value="">사유 선택</option>
+												<option disabled selected>사유 선택</option>
+												<option value="">고객 변심</option>
 												<option value="">상품 정보 상이(사이즈, 컬러)</option>
 												<option value="">상품 불량</option>
-												<option value="">오 배송</option>
-												<option value="">배송 지연</option>
-												<option value="">고객 변심</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
@@ -352,7 +354,23 @@
 							<div class="box lc_d0">
 								<dl class="info lc_d0 tc_3 dis_f ai_c">
 									<dt>환불 수단</dt>
-									<dd>현대카드</dd>
+									<dd>신용카드(현대카드)</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>실시간 계좌이체(국민은행)</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>무통장 입금(국민은행)</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>삼성페이</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>페이코</dd>
 								</dl>
 								<dl class="detail">
 									<dt>주문 금액</dt>
@@ -363,7 +381,7 @@
 									<dd class="tc_3">10,000</dd>
 									<dt class="pos_center_before v bg_3_b">마일리지 사용</dt>
 									<dd class="tc_3">2,000</dd>
-									<dt class="billing pos_center_before pos_center_after v bg_3_a bg_3_b">총 결제 금액</dt>
+									<dt class="billing pos_center_before pos_center_after v bg_3_a bg_3_b">총 환불 금액</dt>
 									<dd class="tc_3">834,300</dd>
 								</dl>
 							</div>
@@ -415,7 +433,7 @@
 													</div>
 													<div class="option dis_f tc_8 ai_e">
 														<ul>
-															<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
+															<li>상의 : M / BROWN  |  하의 : 30 / NAVY</li>
 														</ul>
 													</div>
 												</div>
@@ -436,11 +454,12 @@
 										<span class="input_select lc_d0 w180 tc_b disabled">
 											<select name="" id="" class="tc_3_h" disabled data-type="changerreason">
 												<option value="">교환 신청 안함</option>
+												<option value="">고객 변심</option>
 												<option value="">상품 정보 상이(사이즈, 컬러)</option>
 												<option value="">상품 불량</option>
-												<option value="">오 배송</option>
-												<option value="">배송 지연</option>
-												<option value="">고객 변심</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
@@ -461,7 +480,7 @@
 													</div>
 													<div class="option dis_f tc_8 ai_e">
 														<ul>
-															<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
+															<li>상의 : M / BROWN  |  하의 : 30 / NAVY</li>
 														</ul>
 													</div>
 												</div>
@@ -482,11 +501,12 @@
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h tc_3" data-type="changerreason"><!-- 이미 신청을 한 경우는 select에 tc_3 추가, 요청 했을 당시의 옵션에 selected 추 -->
 												<option value="">교환 신청 안함</option>
-												<option value="">상품 정보 상이(사이즈, 컬러)</option>
-												<option value="" selected>상품불량</option>
-												<option value="">오 배송</option>
-												<option value="">배송 지연</option>
 												<option value="">고객 변심</option>
+												<option value="">상품 정보 상이(사이즈, 컬러)</option>
+												<option value="">상품 불량</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
@@ -506,7 +526,7 @@
 													</div>
 													<div class="option dis_f tc_8 ai_e">
 														<ul>
-															<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
+															<li>상의 : M / BROWN  |  하의 : 30 / NAVY</li>
 														</ul>
 													</div>
 												</div>
@@ -541,11 +561,12 @@
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h tc_3" data-type="changerreason">
 												<option value="">교환 신청 안함</option>
-												<option value="">상품 정보 상이(사이즈, 컬러)</option>
-												<option value="">상품불량</option>
-												<option value="">오 배송</option>
-												<option value="" selected>배송 지연</option>
 												<option value="">고객 변심</option>
+												<option value="">상품 정보 상이(사이즈, 컬러)</option>
+												<option value="">상품 불량</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
@@ -566,7 +587,7 @@
 													</div>
 													<div class="option dis_f tc_8 ai_e">
 														<ul>
-															<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
+															<li>상의 : M / BROWN  |  하의 : 30 / NAVY</li>
 														</ul>
 													</div>
 												</div>
@@ -587,7 +608,7 @@
 								<span class="input_radio"><!-- 판매자 잘못일 경우 삭제 -->
 									<input type="radio" name="deliveryselect" id="delivery2"><label for="delivery2" class="tc_3">선불로 직접 반송</label>
 								</span>
-								<p class="fee lc_d0 tc_3 dis_if">교환 왕복 배송비 (택배 내 동봉) <em>5,000</em></p>
+								<p class="fee lc_d0 tc_3 dis_if">교환 편도 배송비(택배 내 동봉) <em>5,000</em></p>
 							</div>
 							<ul class="dot_list">
 								<li class="tc_3">상품불량으로 인한 교환이 아닌 경우, 재배송비 금액이 포함됩니다.</li><!-- 판매자 잘못일 경우 삭제 -->
@@ -667,18 +688,19 @@
 										<span class="input_select lc_d0 w180 tc_b disabled">
 											<select name="" id="" class="tc_3_h" disabled data-type="changerreason">
 												<option value="">반품 신청 안함</option>
+												<option value="">고객 변심</option>
 												<option value="">상품 정보 상이(사이즈, 컬러)</option>
 												<option value="">상품 불량</option>
-												<option value="">오 배송</option>
-												<option value="">배송 지연</option>
-												<option value="">고객 변심</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
 								</tr>
 								<!-- 신청힌 제품이 있는 경우 -->
 								<tr class="al_center tc_3">
-									<td><span class="input_checkbox"><input type="checkbox" name="" id="selectReturn1" data-type="requestchange" checked><label for="selectReturn1" class="tc_3 spr_after">선택하기</label></span></td>
+									<td><span class="input_checkbox"><input type="checkbox" name="" id="selectReturn2" data-type="requestchange" checked><label for="selectReturn2" class="tc_3 spr_after">선택하기</label></span></td>
 									<td class="al_left">
 										<ul class="list_product small vertical">
 											<li>
@@ -714,11 +736,60 @@
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h tc_3" data-type="changerreason">
 												<option value="">반품 신청 안함</option>
-												<option value="">상품 정보 상이(사이즈, 컬러)</option>
-												<option value="" selected>상품 불량</option>
-												<option value="">오 배송</option>
-												<option value="">배송 지연</option>
 												<option value="">고객 변심</option>
+												<option value="">상품 정보 상이(사이즈, 컬러)</option>
+												<option value="">상품 불량</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<!-- 선택 불가 -->
+								<tr class="al_center tc_3">
+									<td><span class="input_checkbox"><input type="checkbox" name="" id="selectReturn3" data-type="requestchange" disabled><label for="selectReturn3" class="tc_3 spr_after">선택하기</label></span></td>
+									<td class="al_left">
+										<ul class="list_product small vertical">
+											<li>
+												<div class="link">
+													<a href="" class="img"><img src="./img/temp1.jpg" alt="" class="pos_center"></a>
+													<span class="brand ellipsis tc_3">베이직 MAJESTIC</span>
+													<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
+													<div class="price small tc_3">
+														<strong class="now tc_3">51,800</strong>
+														<del class="origin tc_b">69,000</del>
+													</div>
+													<div class="option dis_f tc_8 ai_e">
+														<ul>
+															<li>상의 : M / BROWN  |  하의 : 30 / NAVY  |  2개</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</td>
+									<td>398,000</td>	
+									<td>
+										<div class="option dis_f ai_c">
+											<span class="input_select lc_d0 tc_b disabled">
+												<select name="" id="" class="tc_3_h tc_3" disabled>
+													<option value="">1</option>
+												</select>
+											</span>
+											<em class="price">72,000</em>
+										</div>
+									</td>
+									<td>
+										<span class="input_select lc_d0 w180 tc_b disabled">
+											<select name="" id="" class="tc_3_h tc_3" data-type="changerreason" disabled>
+												<option value="">반품 신청 안함</option>
+												<option value="">고객 변심</option>
+												<option value="">상품 정보 상이(사이즈, 컬러)</option>
+												<option value="">상품 불량</option>
+												<option value="">오배송</option>
+												<option value="">배송 지연(택배 사고 등)</option>
+												<option value="">기타</option>
 											</select>
 										</span>
 									</td>
@@ -748,7 +819,23 @@
 							<div class="box lc_d0">
 								<dl class="info lc_d0 tc_3 dis_f ai_c">
 									<dt>환불 수단</dt>
-									<dd>현대카드</dd>
+									<dd>신용카드(현대카드)</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>실시간 계좌이체(국민은행)</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>무통장 입금(국민은행)</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>삼성페이</dd>
+								</dl>
+								<dl class="info lc_d0 tc_3 dis_f ai_c">
+									<dt>환불 수단</dt>
+									<dd>페이코</dd>
 								</dl>
 								<dl class="detail">
 									<dt>주문 금액</dt>
@@ -761,7 +848,7 @@
 									<dd class="tc_3">2,000</dd>
 									<dt class="pos_center_before v bg_3_b">반품 배송비</dt>
 									<dd class="tc_3">0</dd>
-									<dt class="billing pos_center_before pos_center_after v bg_3_a bg_3_b">총 결제 금액</dt>
+									<dt class="billing pos_center_before pos_center_after v bg_3_a bg_3_b">총 환불 금액</dt>
 									<dd class="tc_3">834,300</dd>
 								</dl>
 							</div>

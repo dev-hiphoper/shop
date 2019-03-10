@@ -36,7 +36,7 @@ input::-ms-clear{display:none}
 .pos_center_after:after,
 .pos_center_before:before,
 .spr_after:after,
-.spr_before:before{content:''}
+.spr_before:before{overflow:hidden;display:inline-block;background-repeat:no-repeat;text-indent:-200%;vertical-align:top;content:''}
 .pos_center_after,
 .pos_center_before{position:relative}
 .btn_arr:before,
@@ -191,10 +191,11 @@ input::placeholder{color:#bbb}
 .feedview_slides .lc_f_a:after{border-color:#fff!important}
 .btn_coupon,
 .flag.tag,
-.input_select.lc_d0.disabled,
+.input_select.disabled,
 .lc_e5,
 .lc_e5[class*=btn_],
-.lc_e5_b:before{border-color:#e5e5e5}
+.lc_e5_b:before,
+.table_st td:first-child input[disabled]+label:before{border-color:#e5e5e5}
 .lc_poi{border-color:#ff4e25}
 .lc_b,
 .lc_b_a:after,
@@ -252,8 +253,8 @@ input::placeholder{color:#bbb}
 .bg_d5_b:before{background-color:#d5d5d5}
 .bg_f4{background-color:#f4f4f4}
 .bg_f0,
-.order_discontent select[disabled],
-.order_discontent td:first-child input[disabled]+label{background-color:#f0f0f0}
+.input_select select[disabled],
+.table_st td:first-child input[disabled]+label:before{background-color:#f0f0f0}
 .bg_5,
 .dot_list li:before{background-color:#555}
 .bg_d,
