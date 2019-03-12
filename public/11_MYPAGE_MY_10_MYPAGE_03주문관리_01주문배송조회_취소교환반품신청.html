@@ -608,7 +608,7 @@
 								<span class="input_radio"><!-- 판매자 잘못일 경우 삭제 -->
 									<input type="radio" name="deliveryselect" id="delivery2"><label for="delivery2" class="tc_3">선불로 직접 반송</label>
 								</span>
-								<p class="fee lc_d0 tc_3 dis_if">교환 편도 배송비(택배 내 동봉) <em>5,000</em></p>
+								<p class="fee lc_d0 tc_3 dis_if">교환 <span>왕복</span> <span class="hide">편도</span> 배송비(택배 내 동봉) <em>5,000</em></p>
 							</div>
 							<ul class="dot_list">
 								<li class="tc_3">상품불량으로 인한 교환이 아닌 경우, 재배송비 금액이 포함됩니다.</li><!-- 판매자 잘못일 경우 삭제 -->
@@ -927,10 +927,16 @@
 				if( $this.is('input#delivery1') || $this.is('input#deliveryReturn1')  ){
 					var list = $this.closest('.order_return_info').find('.dot_list');
 					list.find('li.tc_3').addClass('hide').eq(0).removeClass('hide');
+					$this.closest('.order_return_info').find('.fee span').each(function(i,el) {
+						$(el).toggleClass('hide');
+					});
 				}
 				if( $this.is('input#delivery2') || $this.is('input#deliveryReturn2') ){
 					var list = $this.closest('.order_return_info').find('.dot_list');
 					list.find('li.tc_3').addClass('hide').eq(1).removeClass('hide');
+					$this.closest('.order_return_info').find('.fee span').each(function(i,el) {
+						$(el).toggleClass('hide');
+					});
 				}
 			},
 			'click.discontent':function(e){

@@ -632,7 +632,8 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .viewdetail .info .option_cale{margin-top:-12px}
 .viewdetail .info .option_cale >p{height:80px}
 .viewdetail .info .option_cale >p strong{font-size:30px;font-weight:700;margin-left:20px}
-.viewdetail .info .option_list li{border-width:0 0 1px;height:64px;position:relative}
+.viewdetail .info .option_list li{border-width:0 0 1px;height:64px;position:relative;}
+.viewdetail .info .option_list li >p{-ms-flex:1}
 .viewdetail .info .option_list li p{margin-right:auto;padding-left:16px;font-size:15px}
 .viewdetail .info .option_list .btn_del{width:21px;height:21px;border-radius:50%;min-width:21px;border-width:1px!important;padding:0;margin-left:20px}
 .viewdetail .info .option_list .btn_del:before{width:10px;height:10px;background-position:-118px -20px}
@@ -660,7 +661,7 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .site_main.view .banner_view a:only-child{width:100%}
 .site_main.view .wrap_board{margin-top:112px}
 .maylike{margin-bottom:55px}
-.maylike .tit{font-size:25px;line-height:27px;font-weight:700;margin-bottom:16px}
+.maylike .tit{font-size:22px;line-height:27px;font-weight:700;margin-bottom:16px}
 .maylike li{float:left;width:calc(20% - 16px)}
 .maylike li+li{margin-left:20px}
 .maylike li a{position:relative;display:block}
@@ -819,6 +820,10 @@ td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].erro
 .cert_cont .banner a:last-child{margin-left:20px}
 .cert_cont .banner img{vertical-align:top}
 .cert_cont .banner .info{left:40px}
+.cert_cont .btn_buy{width:220px}
+.cert_cont .banner .info{bottom:34px}
+.cert_cont .banner .tit{font-size:22px;line-height:24px;margin-bottom:4px}
+.cert_cont .banner .desc{font-size:14px;line-height:22px}
 .order_form .order_info{width:calc(100% - 360px);padding-right:40px}
 .order_form .order_payment{width:320px;-webkit-transform:translateY(0) translateZ(0);-ms-transform:translateY(0) translateZ(0);-o-transform:translateY(0) translateZ(0);transform:translateY(0) translateZ(0)}
 .order_form .tit{position:relative;margin-bottom:11px;font-size:22px;line-height:36px;font-weight:700}
@@ -1168,6 +1173,7 @@ p.error{color:#f32323!important}
 .brand_find .tit.kor+.list li strong{font-size:16px}
 .brand_find .tit.kor+.list li em{font-size:16px}
 .site_main.brand_view{padding-bottom:120px}
+.site_main.brand_view .slides.brand_view .info{height:480px;left:120px;margin-left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%)}
 .slides.brand_view{margin-bottom:0}
 .slides.brand_view>.item{position:relative}
 .slides.brand_view .info{height:480px;margin-left:-270px}
@@ -1399,7 +1405,7 @@ p.error{color:#f32323!important}
 .event_sort.sort button{font-size:15px}
 .event_list{padding-top:88px;overflow:hidden}
 .event_list .list_product .tags{position:absolute;width:100%;left:0;bottom:0}
-.event_list .list_product .flag{height:27px;line-height:27px;font-size:13px;font-weight:700;padding:0 8px;-webkit-flex:0;-moz-flex:0;-ms-flex:0;-o-flex:0;flex:0}
+.event_list .list_product .flag{height:27px;line-height:27px;font-size:13px;font-weight:700;padding:0 8px;display:inline-block;}
 .event_list .list_product .flag+.flag{margin-left:0}
 .event_list .list_product .date{font-size:13px}
 .event_list .list_product .brand{font-size:15px;margin-bottom:3px}
@@ -1507,9 +1513,9 @@ p.error{color:#f32323!important}
 .my_info>dd:nth-of-type(3),
 .my_info>dt:nth-of-type(3){left:66.6%!important}
 .my_info .mileage,
-.my_order_payment .info .btn_tooltip{display:inline-block;width:18px;height:18px;vertical-align:text-bottom}
+.my_order_payment .info .btn_tooltip{display:inline-block;width:18px;height:18px;vertical-align:text-bottom;position:relative;}
 .my_info .mileage:after,
-.my_order_payment .info .btn_tooltip:before{width:18px;height:18px;background-position:-234px 0}
+.my_order_payment .info .btn_tooltip:before{width:19px;height:19px;background-position:-234px 0;left:0;top:0;-webkit-transform:none;-ms-transform:none;-o-transform:none;transform:none;}
 .my_info .wrap_tooltip{display:inline-block;position:relative;vertical-align:text-bottom}
 .my_info .wrap_tooltip .mileage{vertical-align:top}
 .my_info .mileage_tooltip{top:23px}
@@ -1797,7 +1803,7 @@ p.error{color:#f32323!important}
 .my_order_payment .info dt:after{content:'\00a0:\00a0'}
 .my_order_payment .info dt:before{width:1px;height:14px;left:24px;margin-top:-1px}
 .my_order_payment .info dt:nth-of-type(2){padding-left:50px;position:relative}
-.my_order_payment .info .wrap_tooltip{display:inline-block;position:relative;width:18px;height:18px;vertical-align:text-bottom}
+.my_order_payment .info .wrap_tooltip{display:inline-block;position:relative;width:18px;height:18px}
 .my_order_payment .info .btn_tooltip{position:relative;padding:0;min-width:18px;border:0}
 .my_order_payment .detail{position:relative;height:150px}
 .my_order_payment .detail dd,
@@ -1861,6 +1867,8 @@ p.error{color:#f32323!important}
 .order_return_info .box{height:140px}
 .order_return_info .input_radio+.input_radio{margin-left:40px}
 .order_return_info .fee{border-width:0 0 0 1px;height:20px;margin-left:40px;padding-left:40px}
+.order_return_info .fee span:before,
+.order_return_info .fee span:after{content:'\00a0'}
 .order_return_info .fee em{font-size:25px;font-weight:700;margin-left:20px}
 .order_return_info .dot_list{margin-top:17px}
 .order_return_info .dot_list li:before{top:8px}
@@ -2337,6 +2345,10 @@ ol.privacy_list>li:nth-child(10)>.tit:before,
 .table_st.fixed{table-layout:fixed}
 .table_st td:first-child input[disabled]+label:after{background-position:-226px -202px;opacity:1}
 
+.ie .my_order_payment .info dt,
+.ie .my_order_payment .info dd{line-height:18px;height:18px;}
+.ie .my_order_payment .info dd:nth-of-type(1){line-height:22px;}
+
 @media all and (-webkit-min-device-pixel-ratio:1.5){
 	.spr,
 	.spr_after:after,
@@ -2378,6 +2390,7 @@ ol.privacy_list>li:nth-child(10)>.tit:before,
 	.main_items:nth-child(2) .quarter:nth-child(2) .list_product{bottom:182px}
 	.main_items:nth-child(3) .quarter:nth-child(3){margin-top:-182px}
 	.slides.next_lnb .info{margin-left:-120px!important}
+	.site_main.brand_best .slides.brand_view .info{width:700px;margin-left:-40px!important}
 	.myfeed_list>li{width:calc(25% - 24px)}
 	.myfeed_list>li+li{margin-left:32px}
 }
