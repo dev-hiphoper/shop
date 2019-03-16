@@ -28,7 +28,7 @@ input[type=email],input[type=number],input[type=password],input[type=text]{-webk
 input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{appearance:none;-webkit-appearance:none;margin:0}
 input[type=number]{-moz-appearance:textfield}
 input::-ms-clear{display:none}
-.s_out,legend{position:absolute;width:0;height:0;line-height:0;overflow:hidden;text-indent:10rem;white-space:nowrap;color:rgba(0,0,0,0)}
+.s_out,legend{position:absolute;width:0;height:0;line-height:0;overflow:hidden;text-indent:10rem;white-space:nowrap;color:rgba(0,0,0,0);border:0;padding:0;}
 .ellipsis{text-overflow:ellipsis;overflow:hidden;display:block;white-space:nowrap}
 .set_transition{-webkit-transition-duration:.3s;-o-transition-duration:.3s;transition-duration:.3s;-webkit-transition-timing-function:cubic-bezier(.645,.045,.355,1);-o-transition-timing-function:cubic-bezier(.645,.045,.355,1);transition-timing-function:cubic-bezier(.645,.045,.355,1)}
 .clear:after{content:'';display:block;width:0;height:0;line-height:0;opacity:0;overflow:hidden;clear:both}
@@ -82,6 +82,38 @@ textarea.tc_3:focus::-webkit-input-placeholder{color:#333!important}
 textarea.tc_3:focus::-moz-placeholder{color:#333!important}
 textarea.tc_3:focus:-ms-input-placeholder{color:#333!important}
 textarea.tc_3:focus::placeholder{color:#333!important}
+.wrap_login .cert_num>.error{margin-bottom:20px}
+.wrap_login .cert>.phone p.error{bottom:-25px}
+.wrap_login .cert>.error{margin-bottom:20px}
+.wrap_login .wrap_radio+.error,
+.wrap_login .wrap_radio+.error+.error,
+.wrap_login .wrap_radio+.input_text+.error{margin-bottom:32px}
+.email.error>.error:first-child+.error p.error,
+.qnq_write .email>.error+.text+.error p.error,
+.qnq_write .phone>.error+.error p.error,
+.site_main.join .birthday>.error+.error p.error,
+.site_main.join .email>.error+.text+.error p.error,
+.site_main.join .phone>.error+.error p.error,
+.site_main.login .phone>.error+.error p.error{display:none!important}
+.qnq_write .phone:nth-child(2) p.error,
+.site_main.join .birthday .input_select:nth-child(2) p.error,
+.site_main.join .phone .input_text:nth-child(2) p.error{left:-96px}
+.qnq_write .phone:nth-child(3) p.error,
+.site_main.join .birthday .input_select:nth-child(3) p.error,
+.site_main.join .phone .input_text:nth-child(3) p.error{left:-192px}
+.qnq_write .email>.input_text:nth-child(3) p.error,
+.site_main.join .email>.input_text:nth-child(3) p.error{left:-280px}
+.site_main.login .phone .input_text:nth-child(2) p.error{left:-107px}
+.site_main.login .phone .input_text:nth-child(3) p.error{left:-207px}
+.error [class*=input_],
+.site_main.join .cert.error,[class*=input_].error{margin-bottom:20px}
+td .error [class*=input_],td .site_main.join .cert.error,td [class*=input_].error{margin-bottom:20px}
+.site_main.join .cert .error,[class*=input_] .error{position:absolute;left:0;bottom:-24px;font-size:13px;padding-left:1px;line-height:17px;display:none;white-space:nowrap}
+[class*=input_].error{position:relative}
+.desc_small,
+.desc_sub{line-height:21px}
+.desc_sub{font-size:13px}
+.desc_small{font-size:12px}
 .lnb .tit_lnb,
 .slides.black .info,
 .tc_1,
@@ -107,6 +139,9 @@ textarea.tc_3:focus::placeholder{color:#333!important}
 .slides.white .desc,
 .slides.white .info,
 .slides.white .name,
+.slides .item.white .desc,
+.slides .item.white .info,
+.slides .item.white .name,
 .tc_f .tc_1,
 .tc_f .tc_3,
 .white .btn_like .count{color:#fff!important}
@@ -308,3 +343,21 @@ input::placeholder{color:#bbb}
 .ac_c{-ms-align-content:center;align-content:center}
 .as_s{-ms-align-self:flex-start;align-self:flex-start}
 .fd_c{-ms-flex-direction:column;flex-direction:column}
+.input_select{display:inline-block;vertical-align:top;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-color:#fff}
+.input_select select{display:block;width:100%;height:38px;background-color:transparent;border-radius:0;border:0;}
+.input_textarea{display:inline-block}
+.input_textarea textarea{display:inline-block;font-size:14px;line-height:22px;vertical-align:top;background-color:transparent;overflow-x:hidden;overflow-y:auto;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;min-height:120px;width:100%}
+.input_textarea .count{text-align:right;font-size:13px;line-height:22px;margin-top:10px}
+.list_tab{width:100%;position:relative}
+.list_tab:after{content:'';position:absolute;width:100%;height:2px;left:0;bottom:0;z-index:1}
+.list_tab a,
+.list_tab li>strong{width:100%;border-width:1px 1px 0;line-height:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-weight:500}
+.list_tab li{position:relative}
+.list_tab li+li{margin-left:-1px}
+.list_tab .active{z-index:2;}
+.list_tab.length2 li{width:calc(50% + .5px)}
+.list_tab.length3 li{width:calc(33.3333333333% + .6666666667px)}
+.list_tab.length4 li{width:calc(25% + .75px)}
+.list_tab.length5 li{width:calc(20% + .8px)}
+.list_tab.length6 li{width:calc(16.6666666667% + .8333333333px)}
+.list_tab.length7 li{width:calc(14.2857142857% + .8571428571px)}

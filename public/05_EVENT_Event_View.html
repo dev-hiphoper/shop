@@ -11,6 +11,13 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.eventview{background-image:url(./img/temp_event1.jpg);}
+		@media (max-width:425px){
+			.eventview{background-image:url(./img/m/@temp6.jpg)}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -206,7 +213,8 @@
 		<div class="layout_full" style="background-color:#e4e0e1">
 			<div class="inner event_view_banner">
 				<h1 class="s_out">이벤트 제목</h1>
-				<div class="item" style="background-image:url(./img/temp_event1.jpg)"></div>
+				<!-- head 부분의 css 확인해주세요. -->
+				<div class="item eventview"></div>
 			</div>
 		</div>
 		<div class="wrap_event_view_floating" id="floating">
@@ -420,7 +428,10 @@
 		<section class="wrap_listproduct miw1180">
 			<div class="img_tit">
 				<h2 class="s_out">MTM</h2>
-				<img src="./img/temp_event2.jpg" alt="" id="mtm">
+				<div class="img" id="mtm"><!-- 모바일 UI 별도 -->
+					<img src="./img/temp_event2.jpg" alt="" class="on_w">
+					<img src="./img/m/@temp7.jpg" alt="" class="on_m">
+				</div>
 			</div>
 			<ul class="list_product fix4">
 				<li>
@@ -825,6 +836,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>
@@ -842,44 +854,46 @@
 	<script src="./js/common.js"></script>
 	<script>
 		function floatingFn(){
-			var $floating = $('#floating'),
-				$fix = $floating.find('.event_view_floating'),
-				$btns = $floating.find('.sort a'),
-				objTop = $floating.offset().top,
-				winTop = $(window).scrollTop(),
-				winLeft = $(window).scrollLeft();
-			if(objTop <= winTop){
-				$fix.addClass('fix');
-			}else{
-				$fix.removeClass('fix');
-			}
-			$btns.each(function(i,el) {
-				if($(el).data('top')*1-99<=winTop){
-					$btns.removeClass('tc_3');
-					$(el).addClass('tc_3');
+			if(!mCheck()){
+				var $floating = $('#floating'),
+					$fix = $floating.find('.event_view_floating'),
+					$btns = $floating.find('.sort a'),
+					objTop = $floating.offset().top,
+					winTop = $(window).scrollTop(),
+					winLeft = $(window).scrollLeft();
+				if(objTop <= winTop){
+					$fix.addClass('fix');
+				}else{
+					$fix.removeClass('fix');
 				}
-			});
-			if(winTop == $(document).height()-$('body').height() ){
-				$btns.removeClass('tc_3');
-				$btns.last().addClass('tc_3');
-			}
-			if($fix.hasClass('fix')){
-				$fix.css('transform','translateX(-'+winLeft+'px)');
+				$btns.each(function(i,el) {
+					if($(el).data('top')*1-99<=winTop){
+						$btns.removeClass('tc_3');
+						$(el).addClass('tc_3');
+					}
+				});
+				if(winTop == $(document).height()-$('body').height() ){
+					$btns.removeClass('tc_3');
+					$btns.last().addClass('tc_3');
+				}
+				if($fix.hasClass('fix')){
+					$fix.css('transform','translateX(-'+winLeft+'px)');
+				}
 			}
 		}
 		$(window).on({
 			'scroll.floating':floatingFn,
-			'load.floating':function(e){
-				var $tar = $('#floating .event_sort a');
-				$tar.each(function(i,el){
-					var t = $($(el).attr('href')),
-						v = t.offset().top;
-					$(el).data('top',v).on('click',function(e){
-						e.preventDefault();
-						$(window).scrollTop(v-99)
-					});
-				});
-				floatingFn();
+			'load.floating':floatingFn,
+			'click.floating':function(e){
+				var $this = $(e.target);
+				if($this.closest('#floating').hasClass('wrap_event_view_floating') && $this.is('a')){
+					e.preventDefault();
+					var t = $($this.attr('href')).closest('.wrap_listproduct'),
+						v = t.offset().top,
+						v2 = mCheck()?55:99;
+					$this.data('top',v);
+					$(window).scrollTop(v-v2);
+				}
 			}
 		})
 	</script>

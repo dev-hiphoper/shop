@@ -20,10 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header sub_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0"> <!-- 서브페이지인 경우 sub_header 클래스 추가 -->
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
-			<h2 class="tit_sub on_m">JOIN</h2>
+			<h2 class="tit_sub on_m">JOIN</h2><!-- 모바일용 노출 -->
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -191,6 +191,7 @@
 					<li><a href="">MAGFORCE</a></li>
 				</ul>
 			</div>
+			<!-- 모바일용 배너영역 -->
 			<div class="bnr_ad on_m">
 				<a href="#none">
 					<div class="img"><img src="./img/m/@temp1.jpg" alt="시즌오프 최대 50% 할인"></div>
@@ -199,6 +200,7 @@
 					<div class="img"><img src="./img/m/@temp2.jpg" alt="시즌오프 최대 50% 할인"></div>
 				</a>
 			</div>
+			<!-- // 모바일용 배너영역 -->
 			<div class="ad dis_f">
 				<a href="">
 					<div class="img"><img src="./img/temp1.jpg" alt=""></div>
@@ -212,14 +214,15 @@
 			<button type="button" class="btn_prev"><span class="s_out">뒤로</span></button>
 		</div>
 	</div>
+	<!-- 모바일용 서브메뉴 -->
 	<div class="allmenu layout_full hide on_m" id="brandmenu">
 		<div class="inner dis_f">
 			<div class="item tc_3 lc_e5">
 				<strong class="tit">BRANDS</strong>
 				<ul class="links">
-					<li><div class="sub_menu"><a href="">EXCLUSIVE</a><span class="prod_count on_m">(1,566)</span></div></li>
-					<li><div class="sub_menu"><a href="">BEST</a><span class="prod_count on_m">(1,566)</span></div></li>
-					<li><div class="sub_menu"><a href="">LOOK BOOK</a><span class="prod_count on_m">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">EXCLUSIVE</a><span class="prod_count">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">BEST</a><span class="prod_count">(1,566)</span></div></li>
+					<li><div class="sub_menu"><a href="">LOOK BOOK</a><span class="prod_count">(1,566)</span></div></li>
 				</ul>
 			</div>
 			<div class="item tc_3">
@@ -234,7 +237,7 @@
 					<li><a href="">MAGFORCE</a></li>
 				</ul>
 			</div>
-			<div class="bnr_ad on_m">
+			<div class="bnr_ad">
 				<a href="#none">
 					<div class="img"><img src="./img/m/@temp1.jpg" alt="시즌오프 최대 50% 할인"></div>
 				</a>
@@ -255,6 +258,7 @@
 			<button type="button" class="btn_prev"><span class="s_out">뒤로</span></button>
 		</div>
 	</div>
+	<!-- // 모바일용 서브메뉴 -->
 	<main class="site_main join miw1180">
 		<h2 class="tit tc_1">회원 가입</h2>
 		<form action="" id="joinForm">
@@ -466,7 +470,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
-					<li class="on_m"><a href="">HELP</a></li>
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>

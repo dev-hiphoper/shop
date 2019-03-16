@@ -11,6 +11,29 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual2{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual3{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.seasonissue1{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue2{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue3{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue4{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue5{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue6{background-image:url(./img/temp_CategoryMain4.jpg);}
+		@media (max-width:425px){
+			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual2{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual3{background-image:url(./img/m/@temp3.jpg)}
+			.seasonissue1{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue2{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue3{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue4{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue5{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue6{background-image:url(./img/m/@temp5.jpg);}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -188,9 +211,9 @@
 	<main class="site_main category">
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
-				<div class="slides next_lnb black">
-					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+				<div class="slides next_lnb">
+					<div class="item white">
+						<a href="" class="topvisual1"><!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
 							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -201,7 +224,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual2">
 							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -212,7 +235,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual3">
 							<div class="info set_transition pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -619,7 +642,8 @@
 			<div class="slides brandissue white" style="background-color:#b6c0c9">
 				<div class="item">
 					<a href="">
-						<img src="./img/temp_CategoryMain2.jpg" alt="임시 이미지">
+						<img src="./img/temp_CategoryMain2.jpg" alt="임시 이미지" class="on_w">
+						<img src="./img/m/@temp4.jpg" alt="임시 이미지" class="on_m"><!-- 모바일용 이미지 -->
 						<div class="info pos_center dis_f">
 							<div class="inner dis_if ai_c jc_c fw_wrap">
 								<strong class="brand">VOIEBIT</strong>
@@ -630,7 +654,8 @@
 				</div>
 				<div class="item">
 					<a href="">
-						<img src="./img/temp_CategoryMain2.jpg" alt="임시 이미지">
+						<img src="./img/temp_CategoryMain2.jpg" alt="임시 이미지" class="on_w">
+						<img src="./img/m/@temp4.jpg" alt="임시 이미지" class="on_m"><!-- 모바일용 이미지 -->
 						<div class="info pos_center dis_f">
 							<div class="inner dis_if ai_c jc_c fw_wrap">
 								<strong class="brand">VOIEBIT</strong>
@@ -870,46 +895,53 @@
 		</section>
 		<section class="wrap_seasonissue miw1280">
 			<h3 class="tit tc_3 miw1180">SEASON ISSUE</h3>
-			<div class="slides seasonissue">
-				<div class="item clear">
-					<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
-						<div class="info tc_3">
-							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
-							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
-						</div>
-					</a>
-					<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
-						<div class="info tc_3">
-							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
-							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
-						</div>
-					</a>
-				</div>
-				<div class="item clear">
-					<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
-						<div class="info tc_3">
-							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
-							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
-						</div>
-					</a>
-					<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+			<div class="slides seasonissue clear">
+				<div class="item">
+					<!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
+					<a href="" class="white seasonissue1">
 						<div class="info tc_3">
 							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
 							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
 						</div>
 					</a>
 				</div>
-				<div class="item clear">
-					<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+				<div class="item">
+					<a href="" class="black seasonissue2">
 						<div class="info tc_3">
-							<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-							<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
+							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
 						</div>
 					</a>
-					<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+				</div>
+				<div class="item">
+					<a href="" class="white seasonissue3">
 						<div class="info tc_3">
-							<strong class="tit">엉뚱하지만 사랑스러운 무드 와이케이</strong>
-							<p class="desc">사랑스럽고 발랄한 감성을 담은 걸즈룩을 선보입니다.</p>
+							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="" class="black seasonissue4">
+						<div class="info tc_3">
+							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="" class="white seasonissue5">
+						<div class="info tc_3">
+							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="" class="black seasonissue6">
+						<div class="info tc_3">
+							<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+							<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
 						</div>
 					</a>
 				</div>
@@ -1053,6 +1085,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>
@@ -1069,17 +1102,49 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		$('.slides').slick({
+		$('.slides:not(.seasonissue)').slick({
 			dots:true,
 			dotsClass:'slick-dots pos_center h dis_f',
-			//arrows:false,
 			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
-			pauseOnDotsHover:true
+			pauseOnDotsHover:true,
+			responsive: [
+				{
+					breakpoint: mSize,
+					settings: {
+						arrows: false
+					}
+				}
+			]
 		}).each(function(i,el){
 			if( el.slick.slideCount <= 1 ){
+				$(el).slick('unslick');
+			}
+		});
+		$('.slides.seasonissue').slick({
+			dots:true,
+			dotsClass:'slick-dots pos_center h dis_f',
+			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
+			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
+			autoplay:true,
+			autoplaySpeed:5000,
+			pauseOnDotsHover:true,
+			slidesToShow:2,
+  			slidesToScroll:2,
+			responsive: [
+				{
+					breakpoint: mSize,
+					settings: {
+						arrows: false,
+						slidesToShow:1,
+  						slidesToScroll:1
+					}
+				}
+			]
+		}).each(function(i,el){
+			if( el.slick.slideCount <= 2 ){
 				$(el).slick('unslick');
 			}
 		});

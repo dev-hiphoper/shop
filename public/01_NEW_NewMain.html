@@ -11,6 +11,17 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual2{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual3{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		@media (max-width:425px){
+			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual2{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual3{background-image:url(./img/m/@temp3.jpg)}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -190,7 +201,8 @@
 			<div class="inner">
 				<div class="slides black">
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
+						<a href="" class="topvisual1">
 							<div class="info pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -201,7 +213,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual2">
 							<div class="info pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -212,7 +224,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual3">
 							<div class="info pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -488,6 +500,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>
@@ -512,7 +525,15 @@
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
-			pauseOnDotsHover:true
+			pauseOnDotsHover:true,
+			responsive: [
+				{
+					breakpoint: mSize,
+					settings: {
+						arrows: false
+					}
+				}
+			]
 		}).each(function(i,el){
 			if( el.slick.slideCount <= 1 ){
 				$(el).slick('unslick');

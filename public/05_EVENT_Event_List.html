@@ -11,6 +11,17 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual2{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual3{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		@media (max-width:425px){
+			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual2{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual3{background-image:url(./img/m/@temp3.jpg)}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -190,7 +201,7 @@
 			<div class="inner">
 				<div class="slides black">
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual1">
 							<div class="info pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -201,7 +212,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual2">
 							<div class="info pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -212,7 +223,7 @@
 						</a>
 					</div>
 					<div class="item">
-						<a href="" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+						<a href="" class="topvisual3">
 							<div class="info pos_center dis_f">
 								<div class="inner dis_if ai_c fw_wrap">
 									<em class="brand">MUAHMUAH</em>
@@ -227,7 +238,8 @@
 		</article>
 		<section class="wrap_listproduct event_list miw1180">
 			<h3 class="s_out">이벤트 리스트</h3>
-			<ul class="sort event_sort dis_f">
+			<!-- 모바일 UI 별도 -->
+			<ul class="sort event_sort dis_f on_w">
 				<li><button type="button" class="tc_3">All</button></li>
 				<li><button type="button">Promotion</button></li>
 				<li><button type="button">Brand</button></li>
@@ -237,6 +249,18 @@
 				<li><button type="button">Life</button></li>
 				<li><button type="button">Select Shop</button></li>
 			</ul>
+			<span class="input_select event_sort_m on_m">
+				<select name="" id="" class="tc_3_h">
+					<option value="" selected="">ALL(129)</option>
+					<option value="">Promotion(129)</option>
+					<option value="">Brand(129)</option>
+					<option value="">Clothing(129)</option>
+					<option value="">Footwear(129)</option>
+					<option value="">Acc(129)</option>
+					<option value="">Life(129)</option>
+					<option value="">Select Shop(129)</option>
+				</select>
+			</span>
 			<ul class="list_product fix5">
 				<li>
 					<div class="link">
@@ -523,8 +547,14 @@
 			</div>
 		</section>
 		<div class="event_banner clear miw1180">
-			<a href="" class="item"><img src="./img/temp_banner1.jpg" alt=""></a>
-			<a href="" class="item"><img src="./img/temp_banner2.jpg" alt=""></a>
+			<a href="" class="item"><!-- 모바일 UI 별도 -->
+				<img src="./img/temp_banner1.jpg" alt="" class="on_w">
+				<img src="./img/m/@temp8.jpg" alt="" class="on_m">
+			</a>
+			<a href="" class="item"><!-- 모바일 UI 별도 -->
+				<img src="./img/temp_banner2.jpg" alt="" class="on_w">
+				<img src="./img/m/@temp9.jpg" alt="" class="on_m">
+			</a>
 		</div>
 	</main>
 	<footer class="site_footer layout_full lc_d">
@@ -537,6 +567,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>
@@ -561,7 +592,15 @@
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
-			pauseOnDotsHover:true
+			pauseOnDotsHover:true,
+			responsive: [
+				{
+					breakpoint: mSize,
+					settings: {
+						arrows: false
+					}
+				}
+			]
 		}).each(function(i,el){
 			if( el.slick.slideCount <= 1 ){
 				$(el).slick('unslick');

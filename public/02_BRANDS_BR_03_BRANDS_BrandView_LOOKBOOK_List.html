@@ -11,6 +11,13 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		@media (max-width:425px){
+			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -188,8 +195,9 @@
 	<main class="site_main brand_view">
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
-				<div class="slides brand_view black">
-					<div class="item" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+				<div class="slides brand_view">
+					<!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
+					<div class="item topvisual1"> <!-- 흰색일 경우 white -->
 						<div class="info pos_center">
 							<strong class="name eng tc_1">Verynineflux</strong>
 							<em class="name kor tc_1">베리나인플럭스</em>
@@ -287,6 +295,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>

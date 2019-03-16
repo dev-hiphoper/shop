@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0"> <!-- 서브페이지인 경우 sub_header 클래스 추가 -->
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">LOGIN</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -143,6 +144,16 @@
 				</div>
 				<a href="" class="center spr_before"><span class="s_out">문의하기</span></a>
 			</div>
+			<!-- 모바일용 하단 fixed 메뉴 -->
+			<div class="bar_tabnav on_m">
+				<ul class="list_tab dis_f">
+					<li class="tab_cate"><a href="#none" class="spr_before">카테고리</a></li>
+					<li class="tab_search"><a href="#none" class="spr_before">검색</a></li>
+					<li class="tab_home"><a href="#none" class="spr_before">홈</a></li>
+					<li class="tab_my"><a href="#none" class="spr_before">마이페이지</a></li>
+					<li class="tab_latest"><a href="#none" class="spr_before">최근 본 상품</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 	<div class="allmenu layout_full hide" id="allmenu">
@@ -187,6 +198,7 @@
 	</div>
 	<main class="site_main login miw1180">
 		<div class="wrap_login">
+			<strong class="txt_welcome tc_1 on_m">안녕하세요.<br>힙합퍼 고객님 :-)</strong>
 			<ul class="list_tab dis_f length2">
 				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">회원</a></li>
 				<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">비회원</strong></li>
@@ -223,6 +235,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>

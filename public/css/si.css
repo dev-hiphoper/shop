@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.mypage_summary {position:relative;padding:56px 0 50px;}
+.mypage_summary .profile {position:relative;padding-left:112px;}
+.mypage_summary .profile .img {position:absolute;left:15px;top:0;width:80px;height:80px;border-radius:50%;overflow:hidden}
+.mypage_summary .profile .info .id {margin-bottom:4px;font-size:18px;}
+.mypage_summary .profile .info .id em {display:none;font-size:14px;}
+.mypage_summary .profile .info .id .btn_set {width:24px;height:24px;margin-top:-3px;padding:0;border:0 none;}
+.mypage_summary .profile .info .id .btn_set:before {width:19px;height:19px;background-position:-180px 0;}
+.mypage_summary .profile .info .level {margin-bottom:14px;}
+.mypage_summary .profile .info .level a {display:none;}
+.mypage_summary .profile .info .about {margin-bottom:20px;font-weight:normal;font-size:13px;line-height:1.4}
+.mypage_summary .numbers {padding-left:112px;justify-content:normal;}
+.mypage_summary .numbers dt {margin-right:4px;}
+.mypage_summary .numbers dd {min-width:38px;}
+.mypage_summary .numbers .icon_alarm:before {width:16px;height:18px;margin-top:1px;background-position:-184px -20px;}
+.mypage_summary .func {position:absolute;top:0;right:0;}
+.mypage_summary .func .btn_set {display:none;}
+.mypage_summary .func .btn_change {border:0 none;}
+.mypage_summary .func .btn_change:before {width:18px;height:2px;background-color:#fff;}
+.mypage_summary.mini .profile .img {width:24px;height:24px;}
+
+.mypage_main .table_st, .mypage_main .table_st tbody, .mypage_main .table_st tr, .mypage_main .table_st th, .mypage_main .table_st td {display:block}
+.mypage_main .table_st th {visibility:hidden;padding:0;height:0;min-height:0;font-size:0;line-height:0;}
+.mypage_main .btn_allorders {margin-top:20px;background-color:#111;color:#fff;}
+.mypage_main .my_info {display:none;}
+.mypage_main .panel_info_m {display:flex;flex-wrap:wrap;flex-flow:row wrap;}
+.mypage_main .panel_info_m [class^=member] {flex:1 100%;position:relative;padding:26px 16px;}
+.mypage_main .panel_info_m .member_coupon, .mypage_main .panel_info_m .member_mileage {flex:1 0 50%;border-bottom:1px solid #333;}
+.mypage_main .panel_info_m .member_level {border-bottom:1px solid #e5e5e5;}
+.mypage_main .panel_info_m .member_coupon {border-right:1px solid #e5e5e5;}
+.mypage_main .panel_info_m {margin-bottom:40px;}
+.mypage_main .panel_info_m .txt_value {display:block;margin-bottom:8px;font-weight:600;font-size:34px;color:#111;text-transform:uppercase}
+.mypage_main .panel_info_m .text_link {position:absolute;top:28px;right:16px;}
+
+.mypage_main .my_orders {border-top:1px solid #e5e5e5;}
+.mypage_main .my_orders li {position:relative;}
+.mypage_main .my_orders .order_info {padding:20px 16px;font-size:12px;background-color:#f7f7f7;}
+.mypage_main .my_orders .order_info dt, .mypage_main .my_orders .order_info dd {color:#888;}
+.mypage_main .my_orders .order_info dt {margin-right:4px;padding-left:18px;}
+.mypage_main .my_orders .order_info dt:first-child {padding-left:0;}
+.mypage_main .my_orders .order_info dt:after {width:1px;height:12px;}
+.mypage_main .my_orders .order_info dd {margin-right:18px;}
+.mypage_main .my_orders .go_detail {overflow:hidden;position:absolute;top:17px;right:10px;width:30px;height:30px;font-size:0;line-height:0;text-indent:-9999px;}
+.mypage_main .my_orders .go_detail:after {display:block;width:22px;height:13px;background-position:-140px -75px;}
+
+.mypage_main .my_orders .order_detail tbody tr {position:relative;padding:58px 16px 24px;border-bottom:1px solid #e5e5e5;}
+.mypage_main .my_orders .order_detail .order_state .state  {position:absolute;top:20px;left:16px;font-weight:600;font-size:15px;}
+.mypage_main .my_orders .order_detail .order_state .desc {display:none}
+.mypage_main .my_orders .order_detail .order_state .btn_order {width:100%;height:35px;margin-top:20px;font-size:12px;border-color:#d0d0d0;}
+
+.mypage_main .my_orders .list_product .link {position:relative;}
+.mypage_main .my_orders .list_product .link .img {width:80px;height:80px;}
+.mypage_main .my_orders .list_product .link .img img {width:100%;height:auto;}
+.mypage_main .my_orders .list_product > li {border-top:1px solid #e5e5e5;}
+.mypage_main .my_orders .list_product > li:first-child {border-top:0 none;}
+.mypage_main .my_orders .list_product.small .link {height:auto;padding-left:90px;}
+
+.mypage_main .my_orders .order_price {margin-top:10px;padding-left:90px;font-weight:bold;font-size:20px;}
+
+.mypage_main .wrap_mynotice {margin-top:40px;padding:0 16px;}
+.mypage_main .wrap_mynotice .tit {font-weight:600;font-size:16px;}
+.mypage_main .mynotice_list td.maw {}
+.mypage_main .mynotice_list .link .img {position:relative;width:80px;height:80px;margin-right:20px}
+.mypage_main .mynotice_list .link .img + .desc {display:block;display:-webkit-box;width:calc(100% - 100px);-webkit-line-clamp:2;-webkit-box-orient:vertical;word-break:break-all;white-space:normal}
+.mypage_main .mynotice_list .link img {width:auto;height:80px;}
+
+

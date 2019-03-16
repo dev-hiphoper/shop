@@ -11,6 +11,17 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual2{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		.topvisual3{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+		@media (max-width:425px){
+			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual2{background-image:url(./img/m/@temp3.jpg)}
+			.topvisual3{background-image:url(./img/m/@temp3.jpg)}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -189,7 +200,7 @@
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
 				<div class="slides next_lnb brand_view black">
-					<div class="item" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+					<div class="item topvisual1">
 						<div class="info pos_center">
 							<strong class="name eng tc_1">Verynineflux</strong>
 							<em class="name kor tc_1">베리나인플럭스</em>
@@ -197,7 +208,7 @@
 							<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153000"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153,000</span></button>
 						</div>
 					</div>
-					<div class="item" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+					<div class="item white topvisual2">
 						<div class="info pos_center">
 							<strong class="name eng tc_1">Verynineflux</strong>
 							<em class="name kor tc_1">베리나인플럭스</em>
@@ -205,7 +216,7 @@
 							<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153000"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153,000</span></button>
 						</div>
 					</div>
-					<div class="item" style="background-image:url(./img/temp_CategoryMain_1920.jpg)">
+					<div class="item topvisual3">
 						<div class="info pos_center">
 							<strong class="name eng tc_1">Verynineflux</strong>
 							<em class="name kor tc_1">베리나인플럭스</em>
@@ -972,6 +983,7 @@
 			</div>
 			<div class="right">
 				<ul class="inlink tc_3 dis_f jc_e">
+					<li class="on_m"><a href="">HELP</a></li> <!-- 모바일 UI 별도 -->
 					<li><a href="">이용약관</a></li>
 					<li><a href="">개인정보 취급방침</a></li>
 				</ul>
@@ -996,7 +1008,15 @@
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
-			pauseOnDotsHover:true
+			pauseOnDotsHover:true,
+			responsive: [
+				{
+					breakpoint: mSize,
+					settings: {
+						arrows: false
+					}
+				}
+			]
 		}).each(function(i,el){
 			if( el.slick.slideCount <= 1 ){
 				$(el).slick('unslick');
