@@ -210,7 +210,7 @@ button.text_link:before{bottom:0}
 .list_product.small.vertical>li{display:block;width:100%;margin-top:20px!important}
 .list_product.mini>li{height:80px;padding-right:0}
 .list_product.mini .img{width:80px;height:80px}
-.list_product.mini .link{padding-left:100px}
+.list_product.mini .link{padding-left:100px;position:relative;}
 .list_product.mini .out{left:0}
 .list_product.lookbook .name{font-size:21px;line-height:24px;max-height:none;display:block}
 .list_product.lookbook .brand{font-size:15px;line-height:22px;font-weight:700;margin:-2px 0 2px}
@@ -1577,7 +1577,9 @@ p.error{color:#f32323!important}
 .myfeed_list .wrap_scroll{position:absolute;bottom:0;left:0;width:100%}
 .myfeed_list .list_product{padding-right:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .myfeed_list .list_product.mini.vertical>li,
-.myfeed_list .list_product.mini.vertical>li:first-child{margin-top:16px!important}
+.myfeed_list .list_product.mini.vertical>li:first-child,
+.myfeed_list .list_product.mini.vertical>.item,
+.myfeed_list .list_product.mini.vertical>.item:first-child{margin-top:16px!important}
 .myfeed_list .list_product .price .now,
 .myfeed_list .list_product .price .origin,
 .myfeed_list .list_product .price .sale{line-height:18px}
