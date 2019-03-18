@@ -11,13 +11,6 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
-	<style>
-		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
-		.eventview{background-image:url(./img/temp_event1.jpg);}
-		@media (max-width:425px){
-			.eventview{background-image:url(./img/m/@temp6.jpg)}
-		}
-	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -213,7 +206,12 @@
 		<div class="layout_full" style="background-color:#e4e0e1">
 			<div class="inner event_view_banner">
 				<h1 class="s_out">이벤트 제목</h1>
-				<!-- head 부분의 css 확인해주세요. -->
+				<style>
+					.eventview{background-image:url(./img/temp_event1.jpg);}
+					@media (max-width:425px){
+						.eventview{background-image:url(./img/m/@temp6.jpg)}
+					}
+				</style>
 				<div class="item eventview"></div>
 			</div>
 		</div>
