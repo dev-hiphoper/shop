@@ -237,16 +237,16 @@
 			</nav>
 			<div class="cont cont_mypage">
 				<h3 class="tit tc_1 on_w">주문 배송 조회</h3>
-				<form action="" class="myorder_search" style="display:none">
+				<form action="" class="myorder_search">
 					<fieldset>
 						<legend>내 주문 내역 조회</legend>
 						<h4 class="s_out">내 주문 조회</h4>
 						<div class="box lc_d0 dis_f jc_c ai_c">
-							<span class="input_checkbox">
+							<span class="input_checkbox on_w">
 								<input type="checkbox" name="checkbox1" id="range1m">
 								<label for="range1m" class="tc_3 spr_after">최근 1개월</label>
 							</span>
-							<span class="input_checkbox">
+							<span class="input_checkbox on_w">
 								<input type="checkbox" name="checkbox1" id="range3m">
 								<label for="range3m" class="tc_3 spr_after">최근 3개월</label>
 							</span>
@@ -259,7 +259,7 @@
 								<button type="button" class="btn_date spr_before" onclick="closeLayer('#calFrom');openLayer(event,'#calTo',this)"><span class="s_out">달력보기</span></button>
 								<input type="text" class="text_date tc_3" readonly value="2017.11.01">
 							</span>
-							<button type="button" class="btn_search large fix">조회</button>
+							<button type="button" class="btn_search large fix on_w">조회</button>
 						</div>
 						<p class="desc tc_8">최근 1년간의 내역을 조회 할 수 있습니다. (2017년 이후 부터 조회 가능)</p>
 						<div class="wrap_layer cal_layer lc_b form hide" id="calFrom">
@@ -749,6 +749,7 @@
 														<span class="brand ellipsis tc_3">베이직 MAJESTIC</span>
 														<a href="" class="name ellipsis">베이직 ML183UCAMTa018 베이직  헤비 스웨트 크루넥 (화이트)</a>
 														<div class="price small tc_3">
+															<span class="sale tc_poi">5%</span>
 															<strong class="now tc_3">51,800</strong>
 															<del class="origin tc_b">69,000</del>
 														</div>

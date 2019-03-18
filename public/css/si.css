@@ -27,7 +27,19 @@
 .mypage_summary .func .btn_set {display:none;}
 .mypage_summary .func .btn_change {border:0 none;}
 .mypage_summary .func .btn_change:before {width:18px;height:2px;background-color:#fff;}
+.mypage_summary.mini {padding:40px 0;}
+.mypage_summary.mini .profile {padding-left:78px;}
+.mypage_summary.mini .numbers {padding-left:78px;}
+.mypage_summary.mini .numbers dt {margin-top:1px;font-size:12px;}
+.mypage_summary.mini .numbers dd {min-width:50px;font-size:16px;}
 .mypage_summary.mini .profile .img {width:48px;height:48px;}
+.mypage_summary.mini .profile .info .id {margin:0;font-size:14px;}
+.mypage_summary.mini .profile .info .level {margin-bottom:10px;font-size:12px}
+.mypage_summary.mini .profile .info .about {display:none;}
+.mypage_summary.mini .func .btn_change{margin-left:0}
+.mypage_summary.mini .func .btn_change:after{width:2px;height:19px;background-color:#fff}
+
+
 
 .mypage .table_st, .mypage .table_st tbody, .mypage .table_st tr, .mypage .table_st th, .mypage .table_st td {display:block}
 .mypage .table_st th {visibility:hidden;padding:0;height:0;min-height:0;font-size:0;line-height:0;}

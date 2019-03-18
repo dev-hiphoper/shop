@@ -11,6 +11,23 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
+	<style>
+		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+		.seasonissue1{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue2{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue3{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue4{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue5{background-image:url(./img/temp_CategoryMain4.jpg);}
+		.seasonissue6{background-image:url(./img/temp_CategoryMain4.jpg);}
+		@media (max-width:425px){
+			.seasonissue1{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue2{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue3{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue4{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue5{background-image:url(./img/m/@temp5.jpg);}
+			.seasonissue6{background-image:url(./img/m/@temp5.jpg);}
+		}
+	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -186,7 +203,8 @@
 		</div>
 	</div>
 	<main class="site_main main">
-		<div class="main_items dis_f">
+		<!-- pc ui -->
+		<div class="main_items dis_f on_w">
 			<div class="half">
 				<a href="" class="main_video tc_1">
 					<div class="img spr_after pos_center_after"><img src="./img/temp_main1.jpg" alt=""></div>
@@ -236,10 +254,61 @@
 				</style>
 			</div>
 		</div>
+		<!-- mobile ui -->
+		<div class="on_m">
+			<div class="slides slide_main_m" id="slideM">
+				<div class="item">
+					<a href="" class="main_video">
+						<div class="img spr_after pos_center_after"><img src="./img/m/@temp10.jpg" alt=""></div>
+						<div class="info">
+							<strong class="tit">OFF White Converse Chuck Taylor Review</strong>
+							<p class="desc">다시 만난 오프 화이트 X캔버스, 힙합퍼에서 최초로 진행한 리뷰를 만나보세요!</p>
+						</div>
+					</a>
+				</div>
+				<div class="item clear">
+					<a href="">
+						<div class="img"><img src="./img/m/@temp3.jpg" alt=""></div>
+						<div class="info">
+							<strong class="tit">Urbanage</strong>
+							<p class="desc">18winter sale</p>
+						</div>
+					</a>
+				</div>
+				<div class="item clear">
+					<a href="">
+						<div class="img"><img src="./img/m/@temp3.jpg" alt=""></div>
+						<div class="info">
+							<strong class="tit">Urbanage</strong>
+							<p class="desc">18winter sale</p>
+						</div>
+					</a>
+				</div>
+				<div class="item clear">
+					<a href="">
+						<div class="img"><img src="./img/m/@temp3.jpg" alt=""></div>
+						<div class="info">
+							<strong class="tit">Urbanage</strong>
+							<p class="desc">18winter sale</p>
+						</div>
+					</a>
+				</div>
+				<div class="item clear">
+					<a href="">
+						<div class="img"><img src="./img/m/@temp3.jpg" alt=""></div>
+						<div class="info">
+							<strong class="tit">Urbanage</strong>
+							<p class="desc">18winter sale</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
 		<div class="main_items dis_f">
 			<div class="half">
 				<a href="" class="in_pic large">
-					<img src="./img/temp_main4.jpg" alt="">
+					<img src="./img/temp_main4.jpg" alt="" class="on_w">
+					<img src="./img/m/@temp11.jpg" alt="" class="on_m">
 					<div class="info dis_f fd_c tc_f">
 						<em class="brand dis_if">STREO VINYLS</em>
 						<p class="desc dis_if">입점기념 단독 15% 할인</p>
@@ -641,32 +710,53 @@
 				</ul>
 			</div>
 		</div>
-		<div class="slides seasonissue main_banner">
-			<div class="item clear">
-				<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+		<div class="slides seasonissue main_banner clear">
+			<div class="item">
+				<!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
+				<a href="" class="white seasonissue1">
 					<div class="info tc_3">
-						<strong class="tit">champion</strong>
-						<p class="desc">입점기념 단독 15% 할인</p>
+						<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+						<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
 					</div>
 				</a>
-				<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+			</div>
+			<div class="item">
+				<a href="" class="black seasonissue2">
 					<div class="info tc_3">
-						<strong class="tit">Stereo vinyls</strong>
+						<strong class="tit">champion</strong>
 						<p class="desc">입점기념 단독 15% 할인</p>
 					</div>
 				</a>
 			</div>
-			<div class="item clear">
-				<a href="" class="white" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+			<div class="item">
+				<a href="" class="white seasonissue3">
 					<div class="info tc_3">
-						<strong class="tit">champion</strong>
-						<p class="desc">입점기념 단독 15% 할인</p>
+						<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+						<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
 					</div>
 				</a>
-				<a href="" class="black" style="background-image:url(./img/temp_CategoryMain4.jpg)">
+			</div>
+			<div class="item">
+				<a href="" class="black seasonissue4">
 					<div class="info tc_3">
-						<strong class="tit">Stereo vinyls</strong>
-						<p class="desc">입점기념 단독 15% 할인</p>
+						<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+						<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="" class="white seasonissue5">
+					<div class="info tc_3">
+						<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+						<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="" class="black seasonissue6">
+					<div class="info tc_3">
+						<strong class="tit">일이삼사오육칠팔구십일이삼사오</strong>
+						<p class="desc">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</p>
 					</div>
 				</a>
 			</div>
@@ -822,23 +912,76 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		$('.slides').slick({
+		$('.slides.seasonissue').slick({
 			dots:true,
+			dotsClass:'slick-dots pos_center h dis_f',
 			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
 			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
 			autoplay:true,
 			autoplaySpeed:5000,
 			pauseOnDotsHover:true,
-			dotsClass:'slick-dots pos_center h dis_f',
-			draggable:false
-		}).each(function(index, el){
-			if( $(el)[0].slick.slideCount == 1 ){
+			slidesToShow:2,
+  			slidesToScroll:2,
+			responsive: [
+				{
+					breakpoint: mSize,
+					settings: {
+						arrows: false,
+						slidesToShow:1,
+  						slidesToScroll:1
+					}
+				}
+			]
+		}).each(function(i,el){
+			if( el.slick.slideCount <= 2 ){
 				$(el).slick('unslick');
 			}
 		});
-		$('#slideRelease').slick('slickSetOption',{
-			arrows:false
-		},true);
+		var slickFn = function(){
+			var $slides = $('#slideRelease'),
+				$slidesM = $('#slideM');
+			if(!mCheck()){
+				if(!$slides.hasClass('slick-initialized')){
+					$slides.slick({
+						dots:true,
+						arrows:false,
+						autoplay:true,
+						autoplaySpeed:5000,
+						pauseOnDotsHover:true,
+						dotsClass:'slick-dots pos_center h dis_f',
+						draggable:false
+					});
+					if($slides[0].slick.$slides.length==1){
+						$slides.slick('unslick');
+					}
+				};
+				if($slidesM.hasClass('slick-initialized')){
+					$slidesM.slick('unslick');
+				};
+			}else{
+				if($slides.hasClass('slick-initialized')){
+					$slides.slick('unslick');
+				};
+				if(!$slidesM.hasClass('slick-initialized')){
+					$slidesM.slick({
+						dots:true,
+						arrows:false,
+						autoplay:true,
+						autoplaySpeed:5000,
+						pauseOnDotsHover:true,
+						dotsClass:'slick-dots pos_center h dis_f',
+						draggable:true
+					});
+					if($slidesM[0].slick.$slides.length==1){
+						$slidesM.slick('unslick');
+					}
+				};
+			}
+		};
+		$(window).on({
+			'resize.main':slickFn,
+			'load.main':slickFn
+		});
 	</script>
 </body>
 </html>
