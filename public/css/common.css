@@ -63,6 +63,7 @@ input::-ms-clear{display:none}
 .hide{display:none!important}
 .light[class*=btn_],
 .list_tab .active a,
+.list_tab .active button,
 .list_tab .active>strong,
 .lnb .list_lnb,
 .pages .link,[class*=tit_]{color:#333}
@@ -194,6 +195,7 @@ input::placeholder{color:#bbb}
 .lc_3_a:after,
 .lc_3_b:before,
 .list_tab .active a,
+.list_tab .active button,
 .list_tab .active>strong,
 .my_orders .order_detail th.lc_3,
 .order_form .sel_payment input:checked+label,
@@ -271,6 +273,7 @@ input::placeholder{color:#bbb}
 .bg_f,
 .input_radio label:before,
 .list_tab a,
+.list_tab button,
 .list_tab li>strong,
 .timeattack .slides .slick-dots .slick-active button{background-color:#fff}
 .bg_8,
@@ -351,6 +354,7 @@ input::placeholder{color:#bbb}
 .list_tab{width:100%;position:relative}
 .list_tab:after{content:'';position:absolute;width:100%;height:2px;left:0;bottom:0;z-index:1}
 .list_tab a,
+.list_tab button,
 .list_tab li>strong{width:100%;border-width:1px 1px 0;line-height:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-weight:500}
 .list_tab li{position:relative}
 .list_tab li+li{margin-left:-1px}

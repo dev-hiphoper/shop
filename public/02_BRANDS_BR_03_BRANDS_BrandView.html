@@ -11,13 +11,6 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
-	<style>
-		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
-		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
-		@media (max-width:425px){
-			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
-		}
-	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -27,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">VERYNINEFLUX</h2><!-- 모바일 UI -->
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -195,6 +189,13 @@
 	<main class="site_main brand_view">
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
+				<style>
+					/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+					.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+					@media (max-width:425px){
+						.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+					}
+				</style>
 				<div class="slides brand_view black">
 					<!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
 					<div class="item topvisual1"> <!-- 흰색일 경우 white -->
@@ -230,8 +231,20 @@
 			<div class="cont">
 				<h3 class="s_out">상품목록</h3>
 				<ul class="func tc_3">
-					<li><button type="button" class="sort" data-type="opensort"><span class="s_out">정렬옵션 : </span><span class="text">신상품 순</span></button></li>
+					<li>
+						<button type="button" class="sort on_w" data-type="opensort"><span class="s_out">정렬옵션 : </span><span class="text">신상품 순</span></button>
+						<select class="sort_m on_m" data-type="autowidth">
+							<option value="">신상품 순</option>
+							<option value="">상품명 순</option>
+							<option value="">판매 많은 순</option>
+							<option value="">평점 높은 순</option>
+							<option value="">후기 많은 순</option>
+							<option value="">높은 가격 순</option>
+							<option value="">낮은 가격 순</option>
+						</select>
+					</li>
 					<li><button type="button" class="filter" data-type="openfilter">FILTER</button></li>
+					<li class="on_m"><button type="button" class="view_change spr_after pos_center_after" data-type="changelistview"><span class="s_out">리스트 뷰 바꾸기</span></button></li> <!-- 모바일 UI 별도 -->
 				</ul>
 				<div class="sort_layer lc_b hide" id="sortLayer">
 					<!-- 리스트를 바꿔 호출한 후 sortChange() 호출 -->
@@ -553,6 +566,102 @@
 			</div>
 		</div>
 	</footer>
+	<!-- 모바일 UI 별도 -->
+	<div class="dim_layer w640 hide">
+		<div class="wrap_layer mfilter_layer lc_b" id="mFilterLayer">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+			<div class="layer_tit tc_3 lc_d0">FILTER</div>
+			<div class="layer_cont">
+				<div class="accordion">
+					<div class="item color">
+						<div class="top dis_f ai_c">
+							<strong class="tc_3">컬러</strong>
+							<div class="summary dis_f ai_c">
+								<span class="select_check"><span class="lc_d0 b spr_after pos_center_after">화이트</span></span>
+								<span class="select_check"><span class="spr_after pos_center_after" style="background-color:#000">블랙</span></span>
+								<span class="select_check"><span class="spr_after pos_center_after" style="background-color:#8d8d8e">차콜</span></span>
+								<span class="select_check"><span class="spr_after pos_center_after" style="background-color:#e80416">레드</span></span>
+								<span class="select_check"><span class="spr_before w spr_after pos_center_after pos_center_before">모든컬러</span></span>
+								<p class="more">+2개</p>
+							</div>
+							<button type="button" class="open" data-type="mfilterfold"><span class="s_out">펼쳐보기</span></button>
+						</div>
+						<div class="folded set_transition">
+							<div class="inner dis_f fw_wrap">
+								<span class="select_check"><input type="checkbox" name="" id="colorM1" class="pos_center"><label for="colorM1" class="lc_d0 b spr_after pos_center_after">화이트</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM2" class="pos_center"><label for="colorM2" class="w spr_after pos_center_after" style="background-color:#000">블랙</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM3" class="pos_center"><label for="colorM3" class="w spr_after pos_center_after" style="background-color:#8d8d8e">차콜</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM4" class="pos_center"><label for="colorM4" class="w spr_after pos_center_after" style="background-color:#e80416">레드</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM5" class="pos_center"><label for="colorM5" class="w spr_after pos_center_after" style="background-color:#ff9900">오렌지</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM6" class="pos_center"><label for="colorM6" class="b spr_after pos_center_after" style="background-color:#ffc0cb">핑크</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM7" class="pos_center"><label for="colorM7" class="b spr_after pos_center_after" style="background-color:#fbea2b">레몬</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM8" class="pos_center"><label for="colorM8" class="w spr_after pos_center_after" style="background-color:#2aac14">그린</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM9" class="pos_center"><label for="colorM9" class="w spr_after pos_center_after" style="background-color:#241efc">블루</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM10" class="pos_center"><label for="colorM10" class="w spr_after pos_center_after" style="background-color:#000080">네이비</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM11" class="pos_center"><label for="colorM11" class="w spr_after pos_center_after" style="background-color:#54076e">퍼플</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM12" class="pos_center"><label for="colorM12" class="b spr_after pos_center_after" style="background-color:#f5f5dc">베이지</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM13" class="pos_center"><label for="colorM13" class="w spr_after pos_center_after" style="background-color:#531d12">브라운</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM14" class="pos_center"><label for="colorM14" class="w spr_after pos_center_after" style="background-color:#c0c0c0">그레이</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM15" class="pos_center"><label for="colorM15" class="b spr_after pos_center_after" style="background-color:#ffd700">옐로우</label></span>
+								<span class="select_check"><input type="checkbox" name="" id="colorM16" class="pos_center"><label for="colorM16" class="spr_before w spr_after pos_center_after pos_center_before">모든컬러</label></span>
+							</div>
+						</div>
+					</div>
+					<div class="item square">
+						<div class="top dis_f ai_c">
+							<strong class="tc_3">소재</strong>
+							<div class="summary dis_f ai_c">
+								<p class="desc">코튼, 데님, 스웨이드</p>
+								<p class="more">+2개</p>
+							</div>
+							<button type="button" class="open" data-type="mfilterfold"><span class="s_out">펼쳐보기</span></button>
+						</div>
+						<div class="folded set_transition">
+							<div class="inner dis_f fw_wrap">
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM1" class="pos_center"><label for="materialM1" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">코튼</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM2" class="pos_center"><label for="materialM2" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">린넨</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM3" class="pos_center"><label for="materialM3" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">데님</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM4" class="pos_center"><label for="materialM4" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">아크릴</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM5" class="pos_center"><label for="materialM5" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">나일론</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM6" class="pos_center"><label for="materialM6" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">레이온</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM7" class="pos_center"><label for="materialM7" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">폴리</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM8" class="pos_center"><label for="materialM8" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">울</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM9" class="pos_center"><label for="materialM9" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">캐시<br>미어</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM10" class="pos_center"><label for="materialM10" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">레더</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM11" class="pos_center"><label for="materialM11" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">스웨<br>이드</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM12" class="pos_center"><label for="materialM12" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">모피</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="materialM13" class="pos_center"><label for="materialM13" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">벨크로</label></span>
+							</div>
+						</div>
+					</div>
+					<div class="item square">
+						<div class="top dis_f ai_c">
+							<strong class="tc_3">패턴</strong>
+							<div class="summary dis_f ai_c">
+								<p class="desc">스트라이프, 체크</p>
+							</div>
+							<button type="button" class="open" data-type="mfilterfold"><span class="s_out">펼쳐보기</span></button>
+						</div>
+						<div class="folded set_transition">
+							<div class="inner dis_f fw_wrap">
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM1" class="pos_center"><label for="patternM1" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">단색</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM2" class="pos_center"><label for="patternM2" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">스트라<br>이프</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM3" class="pos_center"><label for="patternM3" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">체크</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM4" class="pos_center"><label for="patternM4" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">도트</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM5" class="pos_center"><label for="patternM5" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">카모</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM6" class="pos_center"><label for="patternM6" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">애니멀</label></span>
+								<span class="select_check dis_f ai_c jc_c"><input type="checkbox" name="" id="patternM7" class="pos_center"><label for="patternM7" class="dis_if ai_c jc_c lc_e5_b lc_3_a tc_3">기타</label></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btns dis_f">
+					<button type="button" class="btn_reset dark">전체 초기화</button>
+					<button type="button" class="btn_apply dark">선택 적용</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="./js/common.js"></script>
 	<script>
 		function likeCallback(e){//좋아요 콜백

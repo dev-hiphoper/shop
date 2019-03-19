@@ -39,7 +39,44 @@
 .mypage_summary.mini .func .btn_change{margin-left:0}
 .mypage_summary.mini .func .btn_change:after{width:2px;height:19px;background-color:#fff}
 
+.myorder_search {position:relative;}
+.myorder_search .box {overflow:hidden;padding:24px 0 20px;}
+.myorder_search .box .input_checkbox, .myorder_search .box .btn_search {display:none;}
+.myorder_search .box .input_date {display:inline-block;width:50%;text-align:center;}
+.myorder_search .box .input_date + .line:before {width:8px;height:1px;left:-3px;}
+.myorder_search .box .input_date * {display:inline-block;}
+.myorder_search .desc {display:none;}
+.myorder_search .btn_date {width:24px;height:24px;margin-right:10px;padding:0;border:0 none;}
+.myorder_search .btn_date:before {width:17px;height:17px;background-position:-183px -49px;}
+.myorder_search .text_date {width:70px;font-size:17px;}
 
+.wrap_layer.cal_layer .box {margin-bottom:12px;padding:15px 0;border:1px solid #e5e5e5;}
+.wrap_layer.cal_layer .desc {display:block;margin-bottom:18px;}
+.wrap_layer.cal_layer .btns {display:flex;margin-bottom:20px;}
+.wrap_layer.cal_layer .btns .btn_range {display:flex;flex:1;height:35px;border:0 none;font-size:12px;background-color:#f0f0f0;color:#555;}
+.wrap_layer.cal_layer .btns .btn_range:first-child {margin-right:4px;}
+.wrap_layer.cal_layer .btns .btn_range:last-child {margin-left:4px;}
+.wrap_layer.cal_layer .cont_cal {padding:25px;margin:0 -25px;border-top:1px solid #e5e5e5;}
+.wrap_layer.cal_layer .layer_tit {margin-bottom:30px;}
+.wrap_layer.cal_layer > .btn_close{position:absolute;right:14px;top:14px;background-color:rgba(0,0,0,0);width:24px;height:24px;min-width:24px;z-index:1}
+.wrap_layer.cal_layer > .btn_close:after, .cal_layer > .btn_close:before{content:'';width:2px;height:18px}
+.wrap_layer.cal_layer{width:100%;max-width:none;padding:38px 23px 31px;position:absolute;top:50px;left:0;}
+.wrap_layer.cal_layer.from{margin-left:6px}
+.wrap_layer.cal_layer .cal_yearmonth{margin-bottom:34px}
+.wrap_layer.cal_layer .cal_yearmonth .btn_arrow{border-width:0;padding:0;min-width:20px;width:20px;height:20px;position:relative}
+.wrap_layer.cal_layer .cal_yearmonth .btn_arrow:after{width:6px;height:6px;border-width:1px 1px 0 0;border-style:solid;-webkit-transform:translate(-75%,-50%) rotateZ(45deg);-ms-transform:translate(-75%,-50%) rotateZ(45deg);-o-transform:translate(-75%,-50%) rotateZ(45deg);transform:translate(-75%,-50%) rotateZ(45deg)}
+.wrap_layer.cal_layer .cal_yearmonth .btn_arrow.prev{-webkit-transform:rotateZ(-180deg);-ms-transform:rotateZ(-180deg);-o-transform:rotateZ(-180deg);transform:rotateZ(-180deg)}
+.wrap_layer.cal_layer .cal_yearmonth .text{height:20px;width:34px;text-align:center;font-size:21px;line-height:20px}
+.wrap_layer.cal_layer .cal_yearmonth .item:first-child .text{width:60px}
+.wrap_layer.cal_layer .cal_yearmonth .item+.item{margin-left:6px}
+.wrap_layer.cal_layer .cal_table {width:100%;margin:0 auto}
+.wrap_layer.cal_layer .cal_table td,
+.wrap_layer.cal_layer .cal_table th{text-align:center}
+.wrap_layer.cal_layer .cal_table th{font-size:13px;width:39px;height:29px;vertical-align:top}
+.wrap_layer.cal_layer .cal_table td{font-size:15px;height:40px}
+.wrap_layer.cal_layer .cal_table td button{display:block;width:32px;height:32px;margin:0 auto}
+.wrap_layer.cal_layer .cal_table .today{color:#fff;background-color:#000;border-radius:50%}
+.wrap_layer.cal_layer .btn_search {display:block;position:absolute;bottom:0;left:0;right:0;width:100%;margin:0;background-color:#111;color:#fff;}
 
 .mypage .table_st, .mypage .table_st tbody, .mypage .table_st tr, .mypage .table_st th, .mypage .table_st td {display:block}
 .mypage .table_st th {visibility:hidden;padding:0;height:0;min-height:0;font-size:0;line-height:0;}
@@ -82,7 +119,7 @@
 .mypage .my_orders .list_product.small .name {margin-bottom:7px;}
 .mypage .my_orders .list_product .option {margin-top:6px;}
 .mypage .my_orders .order_price {margin-top:6px;padding-left:90px;font-weight:bold;font-size:20px;}
-.mypage .pages.on_m {display:flex;margin-top:35px;}
+.mypage .pages.on_m {display:flex;margin:35px 0 70px;}
 
 .mypage .wrap_mynotice {margin-top:40px;padding:0 16px;}
 .mypage .wrap_mynotice .tit {font-weight:600;font-size:16px;}
@@ -109,4 +146,17 @@
 .mypage .mynotice_list.reentry .list_product .img {top:15px;width:80px;height:80px;margin-right:12px;}
 .mypage .mynotice_list.reentry .list_product .link {height:auto;padding-left:92px;}
 .mypage .mynotice_list.reentry .list_product .price {margin-bottom:8px;}
+.mypage .myorder_list .noresult{height:200px;margin-bottom:46px;border-width:1px 0;border-style:solid;}
+
+.mypage .info_step {padding:0 15px;}
+.mypage .info_step > .tit {margin-bottom:15px;font-weight:bold;font-size:16px;}
+.mypage .step_list {display:block;border:1px solid #e5e5e5;}
+.mypage .step_list li {display:block;position:relative;width:100%;padding:20px 0 20px 100px;}
+.mypage .step_list li:before {left:35px;width:30px;height:28px;background-position:0 -159px;transform:translate(0,-50%);}
+.mypage .step_list li:nth-child(2):before {background-position:-35px -159px;}
+.mypage .step_list li:nth-child(3):before {background-position:-70px -159px;}
+.mypage .step_list li:nth-child(4):before {background-position:-105px -159px;}
+.mypage .step_list li:last-child:before {background-position:-140px -159px;}
+.mypage .step_list li .btn_tooltip {display:none;}
+.mypage .step_list li .desc {font-size:13px;}
 

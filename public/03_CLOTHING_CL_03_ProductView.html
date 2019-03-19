@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">PROJECT624</h2> <!-- 모바일 UI 별도 -->
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -188,7 +189,7 @@
 	<main class="site_main view miw1180">
 		<section class="viewdetail clear">
 			<h3 class="s_out">상품상세정보</h3>
-			<div class="imgs">
+			<div class="imgs on_w">
 				<div class="visual">
 					<a href="#largeviewLayer" class="custom_cursor" data-type="largeviewlayer"><img src="./img/temp_productview.jpg" alt="임시이미지" data-type="visual" class="pos_center"></a>
 				</div>
@@ -199,6 +200,23 @@
 					<a href="./img/temp_productview.jpg" data-type="thumbnail"><img src="./img/temp_productview.jpg" alt="임시이미지" class="pos_center"></a>
 					<a href="./img/temp_feed.jpg" data-type="thumbnail"><img src="./img/temp_feed.jpg" alt="임시이미지" class="pos_center"></a>
 					<a href="./img/temp_magazine1.jpg" data-type="thumbnail"><img src="./img/temp_magazine1.jpg" alt="임시이미지" class="pos_center"></a>
+				</div>
+			</div>
+			<div class="slides slides_m on_m" id="mProductSlides">
+				<div class="item">
+					<a href="">
+						<img src="./img/m/@temp12.jpg" alt="">
+					</a>
+				</div>
+				<div class="item">
+					<a href="">
+						<img src="./img/m/@temp12.jpg" alt="">
+					</a>
+				</div>
+				<div class="item">
+					<a href="">
+						<img src="./img/m/@temp12.jpg" alt="">
+					</a>
 				</div>
 			</div>
 			<div class="info">
@@ -241,9 +259,9 @@
 						<span class="sale tc_poi">+10%</span>
 						<strong class="now tc_3">51,800</strong>
 					</dd>
-					<dt class="benefits">추가 혜택</dt>
+					<dt class="benefits on_w">추가 혜택</dt>
 					<dd>
-						<div class="slides" id="benefits">
+						<div class="slides on_w" id="benefits">
 							<div class="item clear">
 								<p>
 									<strong>2019년 1월 신용카드 무이자 행사</strong>
@@ -264,270 +282,473 @@
 								</p>
 							</div>
 						</div>
+						<button type="button" class="view_benefits on_m">추가 혜택</button>
 					</dd>
 				</dl>
-				<div class="options clear">
-					<span class="input_select lc_d0 tc_b">
-						<select name="" id="" class="tc_3_h">
-							<option disabled selected>TOP</option>
-							<option value="">블랙</option>
-							<option value="">화이트</option>
-							<option value="">레드</option>
-							<option value="">그레이</option>
-						</select>
-					</span>
-					<span class="input_select lc_d0 tc_b">
-						<select name="" id="" class="tc_3_h">
-							<option disabled selected>BOTTOM</option>
-							<option value="">블랙</option>
-							<option value="">화이트</option>
-							<option disabled value="">레드(일시품절)</option>
-							<option value="">그레이</option>
-						</select>
-					</span>
-				</div>
-				<div class="option_cale">
-					<ul class="option_list">
-						<li class="dis_f ai_c jc_e lc_e5">
-							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
-							<span class="input_number clear">
-								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
-								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
-								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
-							</span>
-							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
-						</li>
-						<li class="dis_f ai_c jc_e lc_e5">
-							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
-							<span class="input_number clear">
-								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
-								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
-								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
-							</span>
-							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
-						</li>
-					</ul>
-					<p class="tc_3 dis_f ai_c jc_e">총 상품 금액 <strong>113,400</strong></p>
-				</div>
-				<div class="btns clear">
-					<button type="button" class="btn_add large" onclick="openLayer(this,'#bagMess');">ADD TO BAG</button>
-					<button type="button" class="btn_buy dark large">BUY NOW</button>
-				</div>
-				<ul class="links tc_8">
-					<li><a href="#productInfo" onclick="openLayer(event,this)">상품정보고시</a></li>
-					<li><a href="#productSize" onclick="openLayer(event,this)">사이즈 표</a></li>
-					<li><a href="#productDelivery" onclick="openLayer(event,this)">배송 정보</a><span class="flag tag tc_8">해외 배송</span></li>
-				</ul>
-				<div class="etc_info">
-					<div class="wrap_layer lc_b hide" id="productInfo">
-						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-						<div class="layer_tit tc_3 lc_d0">상품정보고시</div>
-						<div class="layer_cont">
-							<table class="product_info lc_3">
-								<colgroup>
-									<col style="width:120px">
-									<col>
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="lc_d0">상품 코드</th>
-										<td class="tc_3 lc_d0">YH224686</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">제품 소재</th>
-										<td class="tc_3 lc_d0">면 100%</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">색상</th>
-										<td class="tc_3 lc_d0">multi</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">사이즈</th>
-										<td class="tc_3 lc_d0">M, L</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">제조자</th>
-										<td class="tc_3 lc_d0">와이에이치컴퍼니</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">제조 국가</th>
-										<td class="tc_3 lc_d0">대한민국</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">제조 년월</th>
-										<td class="tc_3 lc_d0">2018.08</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">세탁 방법 및 취급시 주의 사항</th>
-										<td class="tc_3 lc_d0">손세탁 가능</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">품질 보증 기준</th>
-										<td class="tc_3 lc_d0">상품페이지 참고</td>
-									</tr>
-									<tr>
-										<th class="lc_d0">A/S 책임자와 전화번호</th>
-										<td class="tc_3 lc_d0">힙합퍼 고객센터 1599-7616</td>
-									</tr>
-								</tbody>
-							</table>
+				<div class="banner_m on_m">
+					<div class="slides" id="bannerM">
+						<div class="item">
+							<a href=""><img src="./img/m/@temp_banner.jpg" alt=""></a>
+						</div>
+						<div class="item">
+							<a href=""><img src="./img/m/@temp_banner.jpg" alt=""></a>
+						</div>
+						<div class="item">
+							<a href=""><img src="./img/m/@temp_banner.jpg" alt=""></a>
+						</div>
+						<div class="item">
+							<a href=""><img src="./img/m/@temp_banner.jpg" alt=""></a>
 						</div>
 					</div>
-					<div class="wrap_layer lc_b hide" id="productSize">
-						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-						<header class="layer_tit tc_3 lc_d0">사이즈 표</header>
-						<main class="layer_cont">
-							<div class="product_size">
-								<strong class="tit tc_3">의류 상의</strong>
-								<table class="lc_3">
-									<colgroup>
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:20%">
-									</colgroup>
-									<thead>
-										<tr>
-											<th class="lc_d0">사이즈 명(cm)</th>
-											<th class="lc_d0">어깨</th>
-											<th class="lc_d0">가슴</th>
-											<th class="lc_d0">팔</th>
-											<th class="lc_d0">총장</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="lc_e5 tc_3">XS</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-										<tr>
-											<td class="lc_e5 tc_3">S</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-										<tr>
-											<td class="lc_e5 tc_3">M</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-										<tr>
-											<td class="lc_e5 tc_3">L</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="product_size">
-								<strong class="tit tc_3">의류 하의</strong>
-								<table class="lc_3">
-									<colgroup>
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:20%">
-										<col style="width:20%">
-									</colgroup>
-									<thead>
-										<tr>
-											<th class="lc_d0">사이즈명(cm)</th>
-											<th class="lc_d0">어깨</th>
-											<th class="lc_d0">가슴</th>
-											<th class="lc_d0">팔</th>
-											<th class="lc_d0">총장</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class="lc_e5 tc_3">XS</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-										<tr>
-											<td class="lc_e5 tc_3">S</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-										<tr>
-											<td class="lc_e5 tc_3">M</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-										<tr>
-											<td class="lc_e5 tc_3">L</td>
-											<td class="lc_e5 tc_3">32</td>
-											<td class="lc_e5 tc_3">54</td>
-											<td class="lc_e5 tc_3">71</td>
-											<td class="lc_e5 tc_3">60</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</main>
+				</div>
+				<div class="on_w">
+					<div class="options clear">
+						<span class="input_select lc_d0 tc_b">
+							<select name="" id="" class="tc_3_h">
+								<option disabled selected>TOP</option>
+								<option value="">블랙</option>
+								<option value="">화이트</option>
+								<option value="">레드</option>
+								<option value="">그레이</option>
+							</select>
+						</span>
+						<span class="input_select lc_d0 tc_b">
+							<select name="" id="" class="tc_3_h">
+								<option disabled selected>BOTTOM</option>
+								<option value="">블랙</option>
+								<option value="">화이트</option>
+								<option disabled value="">레드(일시품절)</option>
+								<option value="">그레이</option>
+							</select>
+						</span>
 					</div>
-					<div class="wrap_layer lc_b hide" id="productDelivery">
-						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
-						<div class="layer_tit tc_3 lc_d0">배송 정보</div>
-						<div class="layer_cont">
-							<table class="product_delivery lc_3">
-								<colgroup>
-									<col style="width:120px">
-									<col>
-								</colgroup>
-								<tbody>
-									<tr>
-										<th class="lc_e5">배송 정보</th>
-										<td class="lc_e5 tc_3">
-											<ul class="dot_list">
-												<li>배송비의 경우 업체의 배송기준에 따라 배송비 차이가 있습니다.</li>
-												<li>해외 발송 상품의 경우 개별 배송비가 추가됩니다. 각 상품 별 배송비 확인은 주문서에서 확인 가능합니다.</li>
-												<li>예약 배송, 배송 지연이 표기 되어있는 상품은 배송이 3~10일 지연 될 수 있습니다.</li>
-												<li>수제화와 같은 제작 상품은 상품 설명의 제작 기간을 숙지해주시기 바랍니다.</li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<th class="lc_e5">교환/환불/AS안내</th>
-										<td class="lc_e5 tc_3">
-											<ul class="dot_list">
-												<li>상품 수령일로부터 7일 이내 반품/환불 가능합니다.</li>
-												<li>단순변심 반품의 경우 왕복 배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.</li>
-												<li>상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.</li>
-												<li>출고 이후 환불 요청 시 상품 회수 후 처리됩니다.</li>
-												<li>주문 제작 상품/카메라/밀봉 포장 상품 등은 변심에 따른 반품/환불이 불가합니다.</li>
-												<li>일부 완제품으로 수입된 상품의 경우 A/S가 불가합니다.</li>
-												<li>특정 브랜드의 상품 설명에 별도로 기입된 교환/환불/AS 기준이 우선합니다.</li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<th class="lc_e5">교환/반송지 정보</th>
-										<td class="lc_e5 tc_3">
-											<ul class="dot_list">
-												<li>상호 : 프로젝트624</li>
-												<li>교환/반품 주소 : 서울특별시 마포구 포은로39, 2층 2호 프로젝트624</li>
-												<li>전화 : 010-4341-4343</li>
-											</ul>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+					<div class="option_cale">
+						<ul class="option_list">
+							<li class="dis_f ai_c jc_e lc_e5">
+								<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+								<span class="input_number clear">
+									<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+									<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+									<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+								</span>
+								<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+							</li>
+							<li class="dis_f ai_c jc_e lc_e5">
+								<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+								<span class="input_number clear">
+									<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+									<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+									<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+								</span>
+								<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+							</li>
+						</ul>
+						<p class="tc_3 dis_f ai_c jc_e">총 상품 금액 <strong>113,400</strong></p>
+					</div>
+					<div class="btns clear">
+						<button type="button" class="btn_add large" onclick="openLayer(this,'#bagMess');">ADD TO BAG</button>
+						<button type="button" class="btn_buy dark large">BUY NOW</button>
+					</div>
+					<ul class="links tc_8">
+						<li><a href="#productInfo" onclick="openLayer(event,this)">상품정보고시</a></li>
+						<li><a href="#productSize" onclick="openLayer(event,this)">사이즈 표</a></li>
+						<li><a href="#productDelivery" onclick="openLayer(event,this)">배송 정보</a><span class="flag tag tc_8">해외 배송</span></li>
+					</ul>
+					<div class="etc_info">
+						<div class="wrap_layer lc_b hide" id="productInfo">
+							<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+							<div class="layer_tit tc_3 lc_d0">상품정보고시</div>
+							<div class="layer_cont">
+								<table class="product_info lc_3">
+									<colgroup>
+										<col style="width:120px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="lc_d0">상품 코드</th>
+											<td class="tc_3 lc_d0">YH224686</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">제품 소재</th>
+											<td class="tc_3 lc_d0">면 100%</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">색상</th>
+											<td class="tc_3 lc_d0">multi</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">사이즈</th>
+											<td class="tc_3 lc_d0">M, L</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">제조자</th>
+											<td class="tc_3 lc_d0">와이에이치컴퍼니</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">제조 국가</th>
+											<td class="tc_3 lc_d0">대한민국</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">제조 년월</th>
+											<td class="tc_3 lc_d0">2018.08</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">세탁 방법 및 취급시 주의 사항</th>
+											<td class="tc_3 lc_d0">손세탁 가능</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">품질 보증 기준</th>
+											<td class="tc_3 lc_d0">상품페이지 참고</td>
+										</tr>
+										<tr>
+											<th class="lc_d0">A/S 책임자와 전화번호</th>
+											<td class="tc_3 lc_d0">힙합퍼 고객센터 1599-7616</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="wrap_layer lc_b hide" id="productSize">
+							<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+							<header class="layer_tit tc_3 lc_d0">사이즈 표</header>
+							<main class="layer_cont">
+								<div class="product_size">
+									<strong class="tit tc_3">의류 상의</strong>
+									<table class="lc_3">
+										<colgroup>
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="lc_d0">사이즈 명(cm)</th>
+												<th class="lc_d0">어깨</th>
+												<th class="lc_d0">가슴</th>
+												<th class="lc_d0">팔</th>
+												<th class="lc_d0">총장</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="lc_e5 tc_3">XS</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+											<tr>
+												<td class="lc_e5 tc_3">S</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+											<tr>
+												<td class="lc_e5 tc_3">M</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+											<tr>
+												<td class="lc_e5 tc_3">L</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="product_size">
+									<strong class="tit tc_3">의류 하의</strong>
+									<table class="lc_3">
+										<colgroup>
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+											<col style="width:20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="lc_d0">사이즈명(cm)</th>
+												<th class="lc_d0">어깨</th>
+												<th class="lc_d0">가슴</th>
+												<th class="lc_d0">팔</th>
+												<th class="lc_d0">총장</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="lc_e5 tc_3">XS</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+											<tr>
+												<td class="lc_e5 tc_3">S</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+											<tr>
+												<td class="lc_e5 tc_3">M</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+											<tr>
+												<td class="lc_e5 tc_3">L</td>
+												<td class="lc_e5 tc_3">32</td>
+												<td class="lc_e5 tc_3">54</td>
+												<td class="lc_e5 tc_3">71</td>
+												<td class="lc_e5 tc_3">60</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</main>
+						</div>
+						<div class="wrap_layer lc_b hide" id="productDelivery">
+							<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+							<div class="layer_tit tc_3 lc_d0">배송 정보</div>
+							<div class="layer_cont">
+								<table class="product_delivery lc_3">
+									<colgroup>
+										<col style="width:120px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th class="lc_e5">배송 정보</th>
+											<td class="lc_e5 tc_3">
+												<ul class="dot_list">
+													<li>배송비의 경우 업체의 배송기준에 따라 배송비 차이가 있습니다.</li>
+													<li>해외 발송 상품의 경우 개별 배송비가 추가됩니다. 각 상품 별 배송비 확인은 주문서에서 확인 가능합니다.</li>
+													<li>예약 배송, 배송 지연이 표기 되어있는 상품은 배송이 3~10일 지연 될 수 있습니다.</li>
+													<li>수제화와 같은 제작 상품은 상품 설명의 제작 기간을 숙지해주시기 바랍니다.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_e5">교환/환불/AS안내</th>
+											<td class="lc_e5 tc_3">
+												<ul class="dot_list">
+													<li>상품 수령일로부터 7일 이내 반품/환불 가능합니다.</li>
+													<li>단순변심 반품의 경우 왕복 배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.</li>
+													<li>상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.</li>
+													<li>출고 이후 환불 요청 시 상품 회수 후 처리됩니다.</li>
+													<li>주문 제작 상품/카메라/밀봉 포장 상품 등은 변심에 따른 반품/환불이 불가합니다.</li>
+													<li>일부 완제품으로 수입된 상품의 경우 A/S가 불가합니다.</li>
+													<li>특정 브랜드의 상품 설명에 별도로 기입된 교환/환불/AS 기준이 우선합니다.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<th class="lc_e5">교환/반송지 정보</th>
+											<td class="lc_e5 tc_3">
+												<ul class="dot_list">
+													<li>상호 : 프로젝트624</li>
+													<li>교환/반품 주소 : 서울특별시 마포구 포은로39, 2층 2호 프로젝트624</li>
+													<li>전화 : 010-4341-4343</li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="on_m">
+					<div class="accordion" id="mProductInfo">
+						<div class="item">
+							<div class="top dis_f ai_c">
+								<strong class="tc_3">상품정보고시</strong>
+								<button type="button" class="open" data-type="mfilterfold"><span class="s_out">펼쳐보기</span></button>
+							</div>
+							<div class="folded set_transition">
+								<div class="inner">
+									<table>
+										<colgroup>
+											<col style="width:100px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>상품 코드</th>
+												<td>YH224686</td>
+											</tr>
+											<tr>
+												<th>제품 소재</th>
+												<td>면100%</td>
+											</tr>
+											<tr>
+												<th>색상</th>
+												<td>multi</td>
+											</tr>
+											<tr>
+												<th>사이즈</th>
+												<td>M, L</td>
+											</tr>
+											<tr>
+												<th>제조자</th>
+												<td>와이에이치컴퍼니</td>
+											</tr>
+											<tr>
+												<th>제조 국가</th>
+												<td>대한민국</td>
+											</tr>
+											<tr>
+												<th>제조 년월</th>
+												<td>2018.08</td>
+											</tr>
+											<tr>
+												<th>세탁 방법 및 취급시 주의 사항</th>
+												<td>손세탁 가능</td>
+											</tr>
+											<tr>
+												<th>품질 보증 기준</th>
+												<td>상품페이지 참고</td>
+											</tr>
+											<tr>
+												<th>A/S 책임자와 전화번호</th>
+												<td>힙합퍼 고객센터 1599-7616</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="top dis_f ai_c">
+								<strong class="tc_3">사이즈 표</strong>
+								<button type="button" class="open" data-type="mfilterfold"><span class="s_out">펼쳐보기</span></button>
+							</div>
+							<div class="folded set_transition">
+								<div class="inner">
+									<div class="size">
+										<strong>의류 상의</strong>
+										<table>
+											<thead>
+												<tr>
+													<th>사이즈 명(cm)</th>
+													<th>어깨</th>
+													<th>가슴</th>
+													<th>팔</th>
+													<th>총장</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>XS</td>
+													<td>32</td>
+													<td>54</td>
+													<td>71</td>
+													<td>71</td>
+												</tr>
+												<tr>
+													<td>M</td>
+													<td>32</td>
+													<td>54</td>
+													<td>71</td>
+													<td>71</td>
+												</tr>
+											</tbody>
+										</table>
+										<strong>의류 하의</strong>
+										<table>
+											<thead>
+												<tr>
+													<th>사이즈 명(cm)</th>
+													<th>어깨</th>
+													<th>가슴</th>
+													<th>팔</th>
+													<th>총장</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>XS</td>
+													<td>32</td>
+													<td>54</td>
+													<td>71</td>
+													<td>71</td>
+												</tr>
+												<tr>
+													<td>M</td>
+													<td>32</td>
+													<td>54</td>
+													<td>71</td>
+													<td>71</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="top dis_f ai_c">
+								<strong class="tc_3">배송 정보</strong>
+								<span class="flag tag tc_8">해외배송</span>
+								<button type="button" class="open" data-type="mfilterfold"><span class="s_out">펼쳐보기</span></button>
+							</div>
+							<div class="folded set_transition">
+								<div class="inner">
+									<table>
+										<colgroup>
+											<col style="width:100px">
+											<col>
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>배송 정보</th>
+												<td>
+													<ul class="dot_list">
+														<li>배송비의 경우 업체의 배송기준에 따라 배송비 차이가 있습니다.</li>
+														<li>해외 발송 상품의 경우 개별 배송비가 추가됩니다. 각 상품 별 배송비 확인은 주문서에서 확인 가능합니다.</li>
+														<li>예약 배송, 배송 지연이 표기 되어있는 상품은 배송이 3~10일 지연 될 수 있습니다.</li>
+														<li>수제화와 같은 제작 상품은 상품 설명의 제작 기간을 숙지해주시기 바랍니다.</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>교환/환불/AS 안내</th>
+												<td>
+													<ul class="dot_list">
+														<li>상품 수령일로부터 7일 이내 반품/환불 가능합니다.</li>
+														<li>단순변심 반품의 경우 왕복 배송비를 차감한 금액이 환불되며, 제품 및 포장 상태가 재판매 가능하여야 합니다.</li>
+														<li>상품 불량인 경우는 배송비를 포함한 전액이 환불됩니다.</li>
+														<li>출고 이후 환불 요청 시 상품 회수 후 처리됩니다.</li>
+														<li>주문 제작 상품/카메라/밀봉 포장 상품 등은 변심에 따른 반품/환불이 불가합니다.</li>
+														<li>일부 완제품으로 수입된 상품의 경우 A/S가 불가합니다.</li>
+														<li>특정 브랜드의 상품 설명에 별도로 기입된 교환/환불/AS 기준이 우선합니다.</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<th>교환/반송지 정보</th>
+												<td>
+													<ul class="dot_list">
+														<li>상호 : 프로젝트624</li>
+														<li>교환/반품 주소 : 서울특별시 마포구 포은로39, 2층 2호 프로젝트624</li>
+														<li>전화 : 010-4341-4343</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -636,7 +857,12 @@
 				</li>
 			</ul>
 		</section>
-		<article class="cont_product lc_e5">
+		<ul class="list_tab dis_f length3 on_m">
+			<li class="dis_if active"><button type="button" class="tc_8 dis_f ai_c lc_b jc_c" data-type="tapproduct">상품 상세</button></li>
+			<li class="dis_if"><button type="button" class="tc_8 dis_f ai_c lc_b jc_c" data-type="tapproduct">구매 후기(27)</button></li>
+			<li class="dis_if"><button type="button" class="tc_8 dis_f ai_c lc_b jc_c" data-type="tapproduct">Q&A(80)</button></li>
+		</ul>
+		<article class="cont_product lc_e5 view">
 			<img src="./img/temp_productview4.jpg" alt="임시이미지">
 		</article>
 		<section class="reviewer">
@@ -1076,21 +1302,6 @@
 	</div>
 	<script src="./js/common.js"></script>
 	<script>
-		$('#benefits').slick({
-			dots:true,
-			dotsClass:'slick-dots small',
-			arrows:false,
-			fade:true
-		});
-		$('#associated').slick({
-			dots:false,
-			infinite:false,
-			slidesToShow:3,
-			slidesToScroll:1,
-			variableWidth:true,
-			prevArrow:'<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button>',
-			nextArrow:'<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>'
-		});
 		$('#largeviewThum').slick({
 			dots:false,
 			infinite:false,
@@ -1132,6 +1343,25 @@
 					$(slick.$slides[i]).addClass('active').find('>a').trigger('click');
 				}
 			}
+			if( $this.is('button[data-type=tapproduct]') ){
+				$this.closest('.list_tab').find('li').removeClass('active');
+				$this.closest('li').addClass('active');
+				var t = $this.closest('.site_main'),
+					i = $this.closest('li').index(),
+					claaaName;
+				t.find('>.view').removeClass('view');
+				if(i==0){
+					claaaName = 'view_product';
+					t.find('>.cont_product').addClass('view');
+				}else if(i==1){
+					claaaName = 'view_reviewer';
+					t.find('>.reviewer').addClass('view');
+				}else{
+					claaaName = 'view_board';
+					t.find('>.wrap_board').addClass('view');
+				};
+				t.removeClass('view_product view_reviewer view_board').addClass(claaaName);
+			}
 		});
 
 
@@ -1142,15 +1372,90 @@
 			$('.custom_cursor').changeCursor('img/img_cursor.png',12,12,1);
 		});
 
-		/*$('.slides').slick({
-			dots:true,
-			prevArrow:'<button type="button" class="slick-prev pos_center_after pos_center v"><span class="s_out">이전</span></button>',
-			nextArrow:'<button type="button" class="slick-next pos_center_after pos_center v"><span class="s_out">다음</span></button>',
-			autoplay:true,
-			autoplaySpeed:2000,
-			pauseOnDotsHover:true,
-			dotsClass:'slick-dots pos_center h dis_f'
-		});*/
+		var slickFn = function(){
+			var $slides = $('#mProductSlides'),
+				$benefits = $('#benefits'),
+				$bannerM = $('#bannerM'),
+				$associated = $('#associated');
+			if(mCheck()){
+				if(!$slides.hasClass('slick-initialized')){
+					$slides.slick({
+						dots:true,
+						arrows:false,
+						autoplay:true,
+						autoplaySpeed:5000,
+						pauseOnDotsHover:true,
+						dotsClass:'slick-dots pos_center h dis_f',
+						draggable:false
+					});
+					if($slides[0].slick.$slides.length==1){
+						$slides.slick('unslick');
+					}
+				};
+				if($benefits.hasClass('slick-initialized')){
+					$benefits.slick('unslick');
+				};
+				if(!$bannerM.hasClass('slick-initialized')){
+					$bannerM.slick({
+						dots:true,
+						arrows:false,
+						autoplay:true,
+						autoplaySpeed:5000,
+						pauseOnDotsHover:true,
+						dotsClass:'slick-dots pos_center h dis_f',
+						draggable:false
+					});
+					if($bannerM[0].slick.$slides.length==1){
+						$bannerM.slick('unslick');
+					}
+				};
+				if($associated.hasClass('slick-initialized')){
+					$associated.slick('unslick');
+				};
+			}else{
+				if($slides.hasClass('slick-initialized')){
+					$slides.slick('unslick');
+				};
+				if(!$benefits.hasClass('slick-initialized')){
+					$benefits.slick({
+						dots:true,
+						dotsClass:'slick-dots small',
+						arrows:false,
+						fade:true
+					});
+					if($benefits[0].slick.$slides.length==1){
+						$benefits.slick('unslick');
+					}
+				};
+				if($bannerM.hasClass('slick-initialized')){
+					$bannerM.slick('unslick');
+				};
+				if(!$associated.hasClass('slick-initialized')){
+					$associated.slick({
+						dots:false,
+						infinite:false,
+						slidesToShow:3,
+						slidesToScroll:1,
+						variableWidth:true,
+						prevArrow:'<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button>',
+						nextArrow:'<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>'
+					});
+					if($associated[0].slick.$slides.length==1){
+						$associated.slick('unslick');
+					}
+				};
+			}
+		};
+		$(window).on({
+			'resize.main':slickFn,
+			'load.main':function(e){
+				slickFn();
+				$('#mProductInfo').find('.folded').each(function(index, el) {
+					$(el).removeAttr('style').removeClass('close').height($(el).height()).addClass('close').closest('.item').removeClass('open');
+				});
+			}
+		});
+		$('.list_tab button:eq(2)').trigger('click');
 	</script>
 </body>
 </html>

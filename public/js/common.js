@@ -714,6 +714,19 @@ $(document).ready(function(){
 			variableWidth:true
 		},true);
 	}
+	$(".btn_date.to").click(function(){
+		$("#calFormMobile").removeClass("show");
+		$("#calFormMobile").addClass("hide");
+		$("#calToMobile").removeClass("hide");
+		$("#calToMobile").addClass("show");
+	});
+	$(".btn_date.form").click(function(){
+		$("#calToMobile").removeClass("show");
+		$("#calToMobile").addClass("hide");
+		$("#calFormMobile").removeClass("hide");
+		$("#calFormMobile").addClass("show");
+
+	});
 });
 
 
