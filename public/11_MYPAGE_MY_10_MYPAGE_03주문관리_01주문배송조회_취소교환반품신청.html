@@ -237,7 +237,16 @@
 			</nav>
 			<div class="cont cont_mypage order_discontent">
 				<h3 class="tit tc_1">취소/교환/반품 신청</h3>
-				<div class="wrap_radio order_discontent_type lc_d0 dis_f ai_c jc_c">
+				<div class="wrap_sel on_m">
+					<span id="discontentType" class="input_select lc_d0 w180 tc_b">
+						<select name="" id="" class="tc_3_h">
+							<option value="0" selected>취소신청</option>
+							<option value="1">교환신청</option>
+							<option value="2">반품신청</option>
+						</select>
+					</span>
+				</div>
+				<div class="wrap_radio order_discontent_type lc_d0 dis_f ai_c jc_c on_w">
 					<span class="input_radio">
 						<input type="radio" name="myrequest" id="requestCancel"><label for="requestCancel" class="tc_3">취소 신청</label>
 					</span>
@@ -248,7 +257,7 @@
 						<input type="radio" name="myrequest" id="requestReturn"><label for="requestReturn" class="tc_3">반품 신청</label>
 					</span>
 				</div>
-				<form action="" class="order_detail_view cancel hide">
+				<form action="" class="order_detail_view cancel">
 					<fieldset>
 						<legend>취소 신청 양식</legend>
 						<dl class="order_info dis_f tc_3">
@@ -294,8 +303,10 @@
 											</li>
 										</ul>
 									</td>
-									<td>398,000</td>
-									<td>입금 전</td>
+									<td class="order_price">398,000</td>
+									<td class="al_left order_state">
+										<strong class="state tc_3">입금 전</strong>
+									</td>
 									<td>
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h">
@@ -331,8 +342,10 @@
 											</li>
 										</ul>
 									</td>
-									<td>398,000</td>
-									<td>출고 전</td>
+									<td class="order_price">398,000</td>
+									<td class="al_left order_state">
+										<strong class="state tc_3">출고 전</strong>
+									</td>
 									<td>
 										<span class="input_select lc_d0 w180 tc_b">
 											<select name="" id="" class="tc_3_h">
@@ -351,6 +364,18 @@
 						</table>
 						<article class="my_order_payment">
 							<h3 class="tit tc_3">주문 취소 결제 정보</h3>
+							<dl class="detail on_m">
+									<dt>주문 금액</dt>
+									<dd class="tc_3">843,800</dd>
+									<dt class="add pos_center_before pos_center_after v bg_3_a bg_3_b">배송비</dt>
+									<dd class="tc_3">2,500</dd>
+									<dt class="pos_center_before v bg_3_b">쿠폰 할인</dt>
+									<dd class="tc_3">10,000</dd>
+									<dt class="pos_center_before v bg_3_b">마일리지 사용</dt>
+									<dd class="tc_3">2,000</dd>
+									<dt class="billing pos_center_before pos_center_after v bg_3_a bg_3_b">총 환불 금액</dt>
+									<dd class="tc_3">834,300</dd>
+								</dl>
 							<div class="box lc_d0">
 								<dl class="info lc_d0 tc_3 dis_f ai_c">
 									<dt>환불 수단</dt>
@@ -372,7 +397,7 @@
 									<dt>환불 수단</dt>
 									<dd>페이코</dd>
 								</dl>
-								<dl class="detail">
+								<dl class="detail on_w">
 									<dt>주문 금액</dt>
 									<dd class="tc_3">843,800</dd>
 									<dt class="add pos_center_before pos_center_after v bg_3_a bg_3_b">배송비</dt>
@@ -392,7 +417,7 @@
 						</div>
 					</fieldset>
 				</form>
-				<form action="" class="order_detail_view change hide">
+				<form action="" class="order_detail_view change">
 					<fieldset>
 						<legend>교환 신청 양식</legend>
 						<dl class="order_info dis_f tc_3">
@@ -623,7 +648,7 @@
 						</div>
 					</fieldset>
 				</form>
-				<form action="" class="order_detail_view return hide">
+				<form action="" class="order_detail_view return">
 					<fieldset>
 						<legend>반품 신청 양식</legend>
 						<dl class="order_info dis_f tc_3">
@@ -673,12 +698,12 @@
 											</li>
 										</ul>
 									</td>
-									<td>398,000</td>	
+									<td class="order_price">398,000</td>	
 									<td>
 										<div class="option dis_f ai_c">
 											<span class="input_select lc_d0 tc_b disabled">
 												<select name="" id="" class="tc_3_h tc_3" disabled>
-													<option value="">1</option>
+													<option value="">1 <span class="on_m">(72,000)</span></option>
 												</select>
 											</span>
 											<em class="price">72,000</em>
@@ -721,12 +746,12 @@
 											</li>
 										</ul>
 									</td>
-									<td>398,000</td>	
+									<td class="order_price">398,000</td>	
 									<td>
 										<div class="option dis_f ai_c">
 											<span class="input_select lc_d0 tc_b">
 												<select name="" id="" class="tc_3_h tc_3">
-													<option value="">1</option>
+													<option value="">1 <span class="on_m">(72,000)</span></option>
 												</select>
 											</span>
 											<em class="price">72,000</em>
@@ -769,12 +794,12 @@
 											</li>
 										</ul>
 									</td>
-									<td>398,000</td>	
+									<td class="order_price">398,000</td>	
 									<td>
 										<div class="option dis_f ai_c">
 											<span class="input_select lc_d0 tc_b disabled">
 												<select name="" id="" class="tc_3_h tc_3" disabled>
-													<option value="">1</option>
+													<option value="">1 <span class="on_m">(72,000)</span></option>
 												</select>
 											</span>
 											<em class="price">72,000</em>
@@ -816,6 +841,20 @@
 						</div>
 						<article class="my_order_payment">
 							<h3 class="tit tc_3">반품 결제 정보</h3>
+							<dl class="detail on_m">
+									<dt>주문 금액</dt>
+									<dd class="tc_3">843,800</dd>
+									<dt class="add pos_center_before pos_center_after v bg_3_a bg_3_b">배송비</dt>
+									<dd class="tc_3">2,500</dd>
+									<dt class="pos_center_before v bg_3_b">쿠폰 할인</dt>
+									<dd class="tc_3">10,000</dd>
+									<dt class="pos_center_before v bg_3_b">마일리지 사용</dt>
+									<dd class="tc_3">2,000</dd>
+									<dt class="pos_center_before v bg_3_b">반품 배송비</dt>
+									<dd class="tc_3">0</dd>
+									<dt class="billing pos_center_before pos_center_after v bg_3_a bg_3_b">총 환불 금액</dt>
+									<dd class="tc_3">834,300</dd>
+								</dl>
 							<div class="box lc_d0">
 								<dl class="info lc_d0 tc_3 dis_f ai_c">
 									<dt>환불 수단</dt>
@@ -837,7 +876,7 @@
 									<dt>환불 수단</dt>
 									<dd>페이코</dd>
 								</dl>
-								<dl class="detail">
+								<dl class="detail on_w">
 									<dt>주문 금액</dt>
 									<dd class="tc_3">843,800</dd>
 									<dt class="add pos_center_before pos_center_after v bg_3_a bg_3_b">배송비</dt>

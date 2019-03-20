@@ -1842,6 +1842,10 @@ p.error{color:#f32323!important}
 .order_discontent>.return .detail dt:nth-of-type(5){left:calc(66.6666666668% + 12px)}
 .order_discontent>.return .detail dd:nth-of-type(6),
 .order_discontent>.return .detail dt:nth-of-type(6){left:calc(83.3333333335% + 15px)}
+
+.order_discontent .order_state {text-align:center;}
+.order_discontent .order_state .state{font-size:14px;line-height:22px;display:block;margin-bottom:6px}
+
 .order_return_info{margin-top:54px;border-width:0 0 1px;padding-bottom:54px}
 .order_return_info .box{height:140px}
 .order_return_info .input_radio+.input_radio{margin-left:40px}

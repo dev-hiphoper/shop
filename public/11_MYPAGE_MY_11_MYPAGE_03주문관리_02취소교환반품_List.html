@@ -236,33 +236,208 @@
 				</ul>
 			</nav>
 			<div class="cont cont_mypage">
-				<h3 class="tit tc_1">취소/교환/반품</h3>
+				<h3 class="tit tc_1 on_w">취소/교환/반품</h3>
 				<form action="" class="myorder_search">
 					<fieldset>
-						<legend>내 취소/교환/반품 내역 조회</legend>
-						<h4 class="s_out">내 취소/교환/반품 조회</h4>
+						<legend>내 주문 내역 조회</legend>
+						<h4 class="s_out">내 주문 조회</h4>
 						<div class="box lc_d0 dis_f jc_c ai_c">
-							<span class="input_checkbox">
+							<span class="input_checkbox on_w">
 								<input type="checkbox" name="checkbox1" id="range1m">
 								<label for="range1m" class="tc_3 spr_after">최근 1개월</label>
 							</span>
-							<span class="input_checkbox">
+							<span class="input_checkbox on_w">
 								<input type="checkbox" name="checkbox1" id="range3m">
 								<label for="range3m" class="tc_3 spr_after">최근 3개월</label>
 							</span>
 							<span class="input_date dis_if">
-								<button type="button" class="btn_date spr_before" onclick="closeLayer('#calTo');openLayer(event,'#calFrom',this)"><span class="s_out">달력보기</span></button>
+								<button type="button" class="btn_date spr_before on_w" onclick="closeLayer('#calTo');openLayer(event,'#calFrom',this)"><span class="s_out">달력보기</span></button>
+								<button type="button" class="btn_date spr_before on_m" onclick="openLayer(event,'#calendarLayer',this)"><span class="s_out">달력보기</span></button>
 								<input type="text" class="text_date tc_3" readonly value="2017.11.01">
 							</span>
 							<span class="line bg_3_b pos_center_before v"></span>
 							<span class="input_date dis_if">
-								<button type="button" class="btn_date spr_before" onclick="closeLayer('#calFrom');openLayer(event,'#calTo',this)"><span class="s_out">달력보기</span></button>
+								<button type="button" class="btn_date spr_before on_w" onclick="closeLayer('#calFrom');openLayer(event,'#calTo',this)"><span class="s_out">달력보기</span></button>
+								<button type="button" class="btn_date spr_before on_m" onclick="openLayer(event,'#calendarLayer',this)"><span class="s_out">달력보기</span></button>
 								<input type="text" class="text_date tc_3" readonly value="2017.11.01">
 							</span>
-							<button type="button" class="btn_search large fix">조회</button>
+							<button type="button" class="btn_search large fix on_w">조회</button>
 						</div>
 						<p class="desc tc_8">최근 1년간의 내역을 조회 할 수 있습니다. (2017년 이후 부터 조회 가능)</p>
-						<div class="wrap_layer cal_layer lc_b form hide" id="calFrom">
+						<div class="dim_layer w640 hide">
+							<div class="wrap_layer cal_layer lc_b" id="calendarLayer" >
+								<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+								<div class="layer_tit tc_3 lc_d0">조회 기간</div>
+								<div class="layer_cont">
+									<p class="desc tc_8">최근 1년간의 내역을 조회 할 수 있습니다. (2017년 이후 부터 조회 가능)</p>
+									<div class="box lc_d0 dis_f jc_c ai_c">
+										<span class="input_date dis_if">
+											<button type="button" class="btn_date to spr_before" onclick="openLayer(event,'#calToMobile',this)"><span class="s_out">달력보기</span></button>
+											<input type="text" class="text_date tc_3" readonly value="2017.11.01">
+										</span>
+										<span class="line bg_3_b pos_center_before v"></span>
+										<span class="input_date dis_if">
+											<button type="button" class="btn_date form spr_before" onclick="openLayer(event,'#calFormMobile',this)"><span class="s_out">달력보기</span></button>
+											<input type="text" class="text_date tc_3" readonly value="2017.11.01">
+										</span>
+									</div>
+									<div class="btns">
+										<button type="button" id="range1Month" class="btn_range">최근 1개월</button>
+										<button type="button" id="range3Month" class="btn_range">최근 3개</button>
+									</div>
+									<div class="cont_cal lc_b to hide" id="calToMobile">
+										<div class="cal_yearmonth dis_f">
+											<div class="item dis_if">
+												<button type="button" class="btn_arrow prev pos_center_after lc_b_a"><span class="s_out">지난 해</span></button>
+												<input type="text" class="text tc_3" readonly value="2018">
+												<button type="button" class="btn_arrow next pos_center_after lc_b_a"><span class="s_out">다음 해</span></button>
+											</div>
+											<div class="item dis_if">
+												<button type="button" class="btn_arrow prev pos_center_after lc_b_a"><span class="s_out">지난 해</span></button>
+												<input type="text" class="text tc_3" readonly value="11">
+												<button type="button" class="btn_arrow next pos_center_after lc_b_a"><span class="s_out">다음 해</span></button>
+											</div>
+										</div>
+										<table class="cal_table tc_3">
+											<thead>
+												<tr>
+													<th class="tc_8">SUN</th>
+													<th class="tc_8">MON</th>
+													<th class="tc_8">TUE</th>
+													<th class="tc_8">WED</th>
+													<th class="tc_8">THU</th>
+													<th class="tc_8">FRI</th>
+													<th class="tc_8">SAT</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="tc_b"><button type="button">27</button></td>
+													<td class="tc_b"><button type="button">28</button></td>
+													<td class="tc_b"><button type="button">29</button></td>
+													<td class="tc_b"><button type="button">30</button></td>
+													<td class="tc_b"><button type="button">31</button></td>
+													<td><button type="button">1</button></td>
+													<td><button type="button">2</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">3</button></td>
+													<td><button type="button">4</button></td>
+													<td><button type="button">5</button></td>
+													<td><button type="button">6</button></td>
+													<td><button type="button">7</button></td>
+													<td><button type="button">8</button></td>
+													<td><button type="button">9</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">10</button></td>
+													<td><button type="button">11</button></td>
+													<td><button type="button">12</button></td>
+													<td><button type="button">13</button></td>
+													<td><button type="button">14</button></td>
+													<td><button type="button">15</button></td>
+													<td><button type="button">16</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">17</button></td>
+													<td><button type="button">18</button></td>
+													<td><button type="button">19</button></td>
+													<td><button type="button">20</button></td>
+													<td><button type="button">21</button></td>
+													<td><button type="button" class="today" onclick="closeLayer('#calFrom');">22</button></td>
+													<td><button type="button">23</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">24</button></td>
+													<td><button type="button">25</button></td>
+													<td><button type="button">26</button></td>
+													<td><button type="button">27</button></td>
+													<td><button type="button">28</button></td>
+													<td class="tc_b"><button type="button">1</button></td>
+													<td class="tc_b"><button type="button">2</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="cont_cal lc_b form hide" id="calFormMobile">
+										<div class="cal_yearmonth dis_f">
+											<div class="item dis_if">
+												<button type="button" class="btn_arrow prev pos_center_after lc_b_a"><span class="s_out">지난 해</span></button>
+												<input type="text" class="text tc_3" readonly value="2018">
+												<button type="button" class="btn_arrow next pos_center_after lc_b_a"><span class="s_out">다음 해</span></button>
+											</div>
+											<div class="item dis_if">
+												<button type="button" class="btn_arrow prev pos_center_after lc_b_a"><span class="s_out">지난 해</span></button>
+												<input type="text" class="text tc_3" readonly value="11">
+												<button type="button" class="btn_arrow next pos_center_after lc_b_a"><span class="s_out">다음 해</span></button>
+											</div>
+										</div>
+										<table class="cal_table tc_3">
+											<thead>
+												<tr>
+													<th class="tc_8">SUN</th>
+													<th class="tc_8">MON</th>
+													<th class="tc_8">TUE</th>
+													<th class="tc_8">WED</th>
+													<th class="tc_8">THU</th>
+													<th class="tc_8">FRI</th>
+													<th class="tc_8">SAT</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="tc_b"><button type="button">27</button></td>
+													<td class="tc_b"><button type="button">28</button></td>
+													<td class="tc_b"><button type="button">29</button></td>
+													<td class="tc_b"><button type="button">30</button></td>
+													<td class="tc_b"><button type="button">31</button></td>
+													<td><button type="button">1</button></td>
+													<td><button type="button">2</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">3</button></td>
+													<td><button type="button">4</button></td>
+													<td><button type="button">5</button></td>
+													<td><button type="button">6</button></td>
+													<td><button type="button">7</button></td>
+													<td><button type="button">8</button></td>
+													<td><button type="button">9</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">10</button></td>
+													<td><button type="button">11</button></td>
+													<td><button type="button">12</button></td>
+													<td><button type="button">13</button></td>
+													<td><button type="button">14</button></td>
+													<td><button type="button">15</button></td>
+													<td><button type="button">16</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">17</button></td>
+													<td><button type="button">18</button></td>
+													<td><button type="button">19</button></td>
+													<td><button type="button">20</button></td>
+													<td><button type="button">21</button></td>
+													<td><button type="button" class="today" onclick="closeLayer('#calFrom');">22</button></td>
+													<td><button type="button">23</button></td>
+												</tr>
+												<tr>
+													<td><button type="button">24</button></td>
+													<td><button type="button">25</button></td>
+													<td><button type="button">26</button></td>
+													<td><button type="button">27</button></td>
+													<td><button type="button">28</button></td>
+													<td class="tc_b"><button type="button">1</button></td>
+													<td class="tc_b"><button type="button">2</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<button type="button" class="btn_search large fix">조회하기</button>
+							</div>
+						</div>
+						<div class="wrap_layer cal_layer lc_b form hide on_w" id="calFrom">
 							<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
 							<div class="cal_yearmonth dis_f">
 								<div class="item dis_if">
@@ -337,7 +512,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="wrap_layer cal_layer lc_b to hide" id="calTo">
+						<div class="wrap_layer cal_layer lc_b to hide on_w" id="calTo">
 							<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
 							<div class="cal_yearmonth dis_f">
 								<div class="item dis_if">
@@ -423,8 +598,8 @@
 								<dd class="eng">2018.02.15</dd>
 								<dt class="bg_d0_a pos_center_after v">주문 번호</dt>
 								<dd class="eng">2018021577572</dd>
-								<dt class="bg_d0_a pos_center_after v">교환 상품</dt>
-								<dd><span class="eng">10</span>개</dd>
+								<dt class="bg_d0_a pos_center_after v on_w">교환 상품</dt>
+								<dd class="on_w"><span class="eng">10</span>개</dd>
 							</dl>
 							<table class="table_st order_detail">
 								<colgroup>
@@ -461,7 +636,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">교환 처리 중</strong>
 											<p class="desc tc_3">로젠택배 <a href="" class="go_tracking eng">93315151576</a></p>
@@ -488,7 +663,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">교환 접수</strong>
 										</td>
@@ -514,7 +689,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">교환 완료</strong>
 										</td>
@@ -565,7 +740,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">취소 접수</strong>
 										</td>
@@ -591,7 +766,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">취소 완료</strong>
 										</td>
@@ -642,7 +817,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">반품 접수</strong>
 										</td>
@@ -668,7 +843,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">반품 처리 중</strong>
 											<p class="desc tc_3">로젠택배 <a href="" class="go_tracking eng">93315151576</a></p>
@@ -720,7 +895,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 										<td class="al_left order_state">
 											<strong class="state tc_3">반품 완료</strong>
 											<p class="desc tc_3">로젠택배 <a href="" class="go_tracking eng">93315151576</a></p>
@@ -731,7 +906,7 @@
 							<a href="" class="go_detail pos_center_after v spr_after">상세 내역</a>
 						</li>
 					</ul>
-					<div class="pages">
+					<div class="pages on_w">
 						<em class="link">1</em>
 						<a href="" class="link">2</a>
 						<a href="" class="link">3</a>
@@ -744,6 +919,14 @@
 						<a href="" class="link">10</a>
 						<a href="" class="link last">132</a>
 						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
+					</div>
+					<div class="pages on_m">
+						<em class="link">1</em>
+						<a href="" class="link">2</a>
+						<a href="" class="link">3</a>
+						<a href="" class="link">4</a>
+						<a href="" class="link">5</a>
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>
@@ -776,18 +959,18 @@
 						</li>
 					</ol>
 					<div class="step_notice lc_d0">
-						<strong class="tit tc_3">취소 안내</strong>
-						<ul class="dot_list">
+						<strong class="tit tc_3">취소 안내<button type="button" class="btn_change pos_center_after pos_center_before mini on_m"><span class="s_out">작게보기</span></button></strong>
+						<ul class="dot_list" style="display:block">
 							<li>배송 전 취소는 입금 전, 출고 전, 출고 준비 중 상태에서만 가능합니다. 출고 준비중의 경우 고객 센터로 직접 연락 하셔야 취소가 가능합니다.</li>
 						</ul>
-						<strong class="tit tc_3">교환 안내</strong>
-						<ul class="dot_list">
+						<strong class="tit tc_3">교환 안내<button type="button" class="btn_change pos_center_after pos_center_before mini on_m"><span class="s_out">작게보기</span></button></strong>
+						<ul class="dot_list" style="display:block">
 							<li>고객 변심에 의한 상품 교환은 출고일로부터 7일 이후(평일 기준)에는 불가합니다. 고객 변심에 의한 상품 교환 시 반품 배송비 및 교환 배송비를 지불해야 합니다.</li>
 							<li>다수 주문 건의 일부 상품 교환 시에도 반품 배송비 및 교환 배송비를 지불해야 합니다.</li>
 							<li>불량 상품에 의한 상품 교환 시에는 반드시 최초 배송 택배사를 이용한 반품 접수 후 착불 배송을 해야 별도의 배송비를 지불하지 않습니다.</li>
 						</ul>
-						<strong class="tit tc_3">반품 안내</strong>
-						<ul class="dot_list">
+						<strong class="tit tc_3">반품 안내<button type="button" class="btn_change pos_center_after pos_center_before  mini on_m"><span class="s_out">작게보기</span></button></strong>
+						<ul class="dot_list" style="display:block">
 							<li>고객 변심에 의한 상품 반품은 출고일로부터 7일 이후 (평일 기준)에는 불가합니다. 고객 변심에 의한 상품 반품 시 최초 배송비를 차감한 금액으로 환불합니다.</li>
 							<li>다수 주문 건의 일부 상품 시에는 업체 묶음 배송에 따라 최초 배송비 차감 기준이 다릅니다.</li>
 						</ul>

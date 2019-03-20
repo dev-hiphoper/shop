@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>힙합퍼</title>
 	<link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
@@ -204,19 +204,13 @@
 			</div>
 			<div class="slides slides_m on_m" id="mProductSlides">
 				<div class="item">
-					<a href="">
-						<img src="./img/m/@temp12.jpg" alt="">
-					</a>
+					<img src="./img/m/@temp12.jpg" alt="">
 				</div>
 				<div class="item">
-					<a href="">
-						<img src="./img/m/@temp12.jpg" alt="">
-					</a>
+					<img src="./img/m/@temp12.jpg" alt="">
 				</div>
 				<div class="item">
-					<a href="">
-						<img src="./img/m/@temp12.jpg" alt="">
-					</a>
+					<img src="./img/m/@temp12.jpg" alt="">
 				</div>
 			</div>
 			<div class="info">
@@ -282,10 +276,10 @@
 								</p>
 							</div>
 						</div>
-						<button type="button" class="view_benefits on_m">추가 혜택</button>
+						<button type="button" class="view_benefits on_m" onclick="openLayer(event,'#benefitsDetailM',this)">추가 혜택</button>
 					</dd>
 				</dl>
-				<div class="banner_m on_m">
+				<div class="banner_m on_m"><!-- 모바일 UI -->
 					<div class="slides" id="bannerM">
 						<div class="item">
 							<a href=""><img src="./img/m/@temp_banner.jpg" alt=""></a>
@@ -783,12 +777,12 @@
 				</div>
 			</div>
 		</section>
-		<!-- 배너 한개일 경우 -->
-		<div class="banner_view clear">
+		<!-- pc 배너 한개일 경우 -->
+		<div class="banner_view clear on_w">
 			<a href=""><img src="./img/temp_banner_view.jpg" alt="임시이미지"></a>
 		</div>
-		<!-- 배너 두개일 경우 -->
-		<div class="banner_view clear">
+		<!-- pc 배너 두개일 경우 -->
+		<div class="banner_view clear on_w">
 			<a href=""><img src="./img/temp_banner_view1.jpg" alt="임시이미지"></a>
 			<a href=""><img src="./img/temp_banner_view2.jpg" alt="임시이미지"></a>
 		</div>
@@ -857,7 +851,7 @@
 				</li>
 			</ul>
 		</section>
-		<ul class="list_tab dis_f length3 on_m">
+		<ul class="list_tab dis_f length3 on_m"><!-- 모바일 UI -->
 			<li class="dis_if active"><button type="button" class="tc_8 dis_f ai_c lc_b jc_c" data-type="tapproduct">상품 상세</button></li>
 			<li class="dis_if"><button type="button" class="tc_8 dis_f ai_c lc_b jc_c" data-type="tapproduct">구매 후기(27)</button></li>
 			<li class="dis_if"><button type="button" class="tc_8 dis_f ai_c lc_b jc_c" data-type="tapproduct">Q&A(80)</button></li>
@@ -1007,7 +1001,8 @@
 		</section>
 		<section class="wrap_board">
 			<h3 class="tit tc_3">Q&amp;A</h3>
-			<ul class="sort dis_f">
+			<!-- 모바일 UI 별도 -->
+			<ul class="sort dis_f on_w">
 				<li class="dis_if"><button type="button" class="tc_3">ALL <span>(129)</span></button></li>
 				<li class="dis_if"><button type="button">상품 문의 <span>(84)</span></button></li>
 				<li class="dis_if"><button type="button">재입고 문의 <span>(10)</span></button></li>
@@ -1015,6 +1010,16 @@
 				<li class="dis_if"><button type="button">배송 문의 <span>(27)</span></button></li>
 				<li class="dis_if"><button type="button">기타 <span>(3)</span></button></li>
 			</ul>
+			<span class="input_select event_sort_m on_m">
+				<select name="" id="" class="tc_3_h" data-type="autowidth">
+					<option value="" selected="">ALL(129)</option>
+					<option value="">상품 문의(129)</option>
+					<option value="">재입고 문의(129)</option>
+					<option value="">사이즈 문의(129)</option>
+					<option value="">배송 문의(129)</option>
+					<option value="">기타(129)</option>
+				</select>
+			</span>
 			<div class="group lc_1">
 				<div class="item lc_e5"><!-- 열릴때는 class에 view 추가 -->
 					<dl class="info">
@@ -1054,6 +1059,19 @@
 							<!-- 비밀글에는 data-type="qnaview secret" 추가, 비밀글 관련 코드를 실행 한 후 qnaViewFn(this) 추가, this는 button 버튼 -->
 							<button type="button" class="view" data-type="qnaview secret" onclick="qnaViewFn(this)"><span class="s_out">상세보기</span></button>
 						</div>
+					</div>
+					<div class="ans secret">
+						<form action="">
+							<fieldset>
+								<legend>비밀번호 입력</legend>
+								<span class="input_text clear">
+									<input type="password" class="lc_d0 tc_3" placeholder="글 작성 시 등록한 비밀번호">
+									<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+									<p class="error tc_poi">비밀번호가 틀렸습니다.</p>
+								</span>
+								<button type="button" class="btn_confirm bg_f">확인</button>
+							</fieldset>
+						</form>
 					</div>
 				</div>
 				<div class="item lc_e5">
@@ -1203,7 +1221,7 @@
 			</div>
 		</div>
 	</footer>
-	<!-- 혜택 상세보기 레이어 -->
+	<!-- pc 혜택 상세보기 레이어 -->
 	<div class="dim_layer w640 hide">
 		<div class="wrap_layer lc_b" id="benefitsDetail">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">본문으로 돌아가기</span></button>
@@ -1261,7 +1279,7 @@
 			</div>
 		</div>	
 	</div>
-	<!-- 이미지 확대 보기 레이어 -->
+	<!-- pc 이미지 확대 보기 레이어 -->
 	<div class="dim_layer hide">
 		<div class="wrap_layer largeview_layer lc_b" id="largeviewLayer">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">본문으로 돌아가기</span></button>
@@ -1292,12 +1310,198 @@
 			</div>
 		</div>
 	</div>
-	<!-- 쇼핑백에 담김 팝업 -->
+	<!-- pc / mobile 쇼핑백에 담김 팝업 -->
 	<div class="alert_layer lc_b pos_center hide" id="bagMess">
+		<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>
 		<p class="message tc_3">쇼핑백에 2개의 상품이 담겼습니다.</p>
 		<div class="btns lc_e5 clear">
-			<button type="button" class="btn_cancel lc_e5 tc_8" onclick="closeLayer('#bagMess');">취소</button>
+			<button type="button" class="btn_cancel lc_e5 tc_8 on_w" onclick="closeLayer('#bagMess');">취소</button>
 			<a href="" class="btn_confirm lc_e5">쇼핑백으로 이동</a>
+		</div>
+	</div>
+	<!-- mobile 혜택 상세보기 레이어 -->
+	<div class="dim_layer w640 hide">
+		<div class="wrap_layer layer_mbenefits lc_b" id="benefitsDetailM">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">본문으로 돌아가기</span></button>
+			<div class="slides benefit_slide" id="benefitsSlidesM">
+				<div class="item">
+					<div class="rbox">
+						<div class="info">
+							<strong class="tit">PAYCO 결제시<br>2,000원 할인</strong>
+							<p class="desc">1만원이상 생애 첫 결제시, 2천원 할인(전 카드사)</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="rbox">
+						<div class="info">
+							<strong class="tit">2019년 1월<br>신용카드 무이자행사</strong>
+							<p class="desc">5만원이상 신용카드 결제 고객</p>
+						</div>
+						<button type="button" class="view_more" data-type="viewbenefitdetail"><span class="s_out">더보기</span></button>
+						<div class="more">
+							<div class="inner">
+								<div class="message">
+									<p class="desc">어느덧 2019년 새해가 밝았습니다.<br>
+									황금돼지처럼 반짝반짝 빛나는 한 해의 시작을 응원하며 신용카드 무이자 이벤트를 준비했습니다!<br>
+									1월 쇼핑에 도움을 드리고자 '19년 1월 신용카드 무이자 행사' 소식을 전해 드립니다.구매 시 많은 이용 부탁드립니다.​</p>
+									<em class="notice">※ 대상 : 5만원 이상 신용카드 결제 고객</em>
+								</div>
+								<ul class="list_benefit">
+									<li>
+										<strong>신한카드</strong>
+										<p>5만원 이상 결제시 : 2~6개월 무이자</p>
+									</li>
+									<li>
+										<strong>하나카드</strong>
+										<p>5만원 이상 결제시 : 2~3개월 무이자</p>
+									</li>
+									<li>
+										<strong>하나카드 (외환)</strong>
+										<p>5만원 이상 결제시 : 2~3개월 무이자</p>
+									</li>
+									<li>
+										<strong>현대카드</strong>
+										<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+									</li>
+									<li>
+										<strong>KB국민카드</strong>
+										<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+									</li>
+									<li>
+										<strong>삼성카드</strong>
+										<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+									</li>
+									<li>
+										<strong>BC카드</strong>
+										<p>전체 무이자 : 2~5개월 무이자</p>
+									</li>
+									<li>
+										<strong>NH농협카드</strong>
+										<p>5만원 이상 결제시 : 2~5개월 무이자</p>
+									</li>
+								</ul>
+								<div class="benefit_notice">
+									<strong class="tit tc_3">유의 사항</strong>
+									<ul class="dot_list">
+										<li>공공기관 및 오프라인 제외</li>
+										<li>법인/개인 사업자 기업 카드/선불/하이브리드/은행 계열 카드 제외</li>
+										<li>결제창에 '무'표시가 되어 있어도 제외 카드는 무이자 할부 미적용</li>
+										<li>직가맹점, 상점 부담 무이자 가맹점, 특별 제휴 가맹점, 전용 가맹점 제외</li>
+										<li>무이자건은 포인트/마일리지/할인 서비스 등 다른 혜택과 중복 미적용</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- mobile 탭바 -->
+	<div class="tabbar on_m">
+		<div class="menu dis_f ai_c">
+			<div class="share">
+				<div class="wrap_share dis_if">
+					<button type="button" class="btn_share spr_before" data-type="copyurl"><span class="s_out">공유하기</span></button>
+				</div>
+				<button type="button" class="btn_like spr_before" data-type="like" data-callback="likeCallback" data-count="153"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153</span></button>
+				<a href="" class="btn_reply spr_before"><span class="s_out">댓글수 : </span><span class="count pos_center h tc_3">153</span></a>
+			</div>
+			<button type="button" class="view_detail" onclick="openLayer(event,'#optionsM',this)">BUY NOW</button>
+		</div>
+	</div>
+	<!-- mobile 공유 완료 알럿 -->
+	<div class="alert_layer lc_b pos_center hide" id="copyAlert">
+		<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>
+		<p class="message tc_3"></p>
+		<div class="btns lc_e5 clear">
+			<button type="button" class="btn_confirm lc_e5" onclick="closeLayer('#copyAlert');">확인</button>
+		</div>
+	</div>
+	<!-- mobile 주문 옵셥 -->
+	<div class="dim_layer w640 hide">
+		<div class="wrap_layer options_layer lc_b" id="optionsM">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+			<div class="layer_cont">
+				<div class="options">
+					<div class="opt_step1 dis_f fw_wrap">
+						<span class="input_select lc_d0 tc_b">
+							<select name="" id="" class="tc_3_h">
+								<option disabled="" selected="">TOP</option>
+								<option value="">블랙</option>
+								<option value="">화이트</option>
+								<option value="">레드</option>
+								<option value="">그레이</option>
+							</select>
+						</span>
+						<span class="input_select lc_d0 tc_b">
+							<select name="" id="" class="tc_3_h">
+								<option disabled="" selected="">BOTTOM</option>
+								<option value="">블랙</option>
+								<option value="">화이트</option>
+								<option disabled="" value="">레드(일시품절)</option>
+								<option value="">그레이</option>
+							</select>
+						</span>
+						<span class="input_select lc_d0 tc_b">
+							<select name="" id="" class="tc_3_h">
+								<option disabled="" selected="">BOTTOM</option>
+								<option value="">블랙</option>
+								<option value="">화이트</option>
+								<option disabled="" value="">레드(일시품절)</option>
+								<option value="">그레이</option>
+							</select>
+						</span>
+					</div>
+					<div class="opt_step2">
+						<div class="dis_f ai_c jc_s lc_e5 fw_wrap">
+							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+							<span class="input_number clear">
+								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+							</span>
+							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+						</div>
+						<div class="dis_f ai_c jc_s lc_e5 fw_wrap">
+							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+							<span class="input_number clear">
+								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+							</span>
+							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+						</div>
+						<div class="dis_f ai_c jc_s lc_e5 fw_wrap">
+							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+							<span class="input_number clear">
+								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+							</span>
+							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+						</div>
+						<div class="dis_f ai_c jc_s lc_e5 fw_wrap">
+							<p class="tc_3">TOP : WHITE / 90  |  BOTTOM : 29</p>
+							<span class="input_number clear">
+								<button type="button" class="btn_minus lc_d0 pos_center_before" data-type="minus">빼기</button>
+								<input type="number" class="text_number lc_d0 tc_3" value="1" min="1">
+								<button type="button" class="btn_plus lc_d0 pos_center_before pos_center_after" data-type="plus">더하기</button>
+							</span>
+							<button type="button" class="btn_del dis_f lc_d0 spr_before pos_center_before"><span class="s_out">삭제</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="total dis_f jc_e ai_c">
+					총 상품 금액
+					<strong>54,500</strong>
+				</div>
+				<div class="btns dis_f jc_c">
+					<a href="" class="btn_link fix">SHOPPING BAG</a>
+					<button type="button" class="btn_buy dark fix">BUY NOW</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="./js/common.js"></script>
@@ -1362,8 +1566,60 @@
 				};
 				t.removeClass('view_product view_reviewer view_board').addClass(claaaName);
 			}
+			if( $this.is('button[data-type=viewbenefitdetail]') ){
+				if( $this.closest('.item').hasClass('expend') ){
+					slideContract($this);
+				}else{
+					slideExpend($this);
+				}
+			}
+			if( $this.is('button.view_benefits') ){
+				var $benefitsM = $('#benefitsSlidesM');
+				$benefitsM.slick({
+					dots:true,
+					infinite:false,
+					arrows:false,
+					centerMode:true,
+					centerPadding:'15px',
+					pauseOnDotsHover:true,
+					dotsClass:'slick-dots pos_center h dis_f'
+				});
+				if($benefitsM[0].slick.$slides.length==1){
+					$benefitsM.slick('unslick');
+				};
+				$benefitsM.on('beforeChange',function(evnet, slick, currentSlide, nextSlide){
+					if( !!$(slick.$slides[currentSlide]).find('.view_more')[0] ){
+						slideContract($(slick.$slides[currentSlide]).find('.view_more'))
+					}
+				});
+			}
+			if( $this.is('button.btn_close') && $this.closest('.layer_mbenefits')[0] ){
+				$('#benefitsSlidesM').slick('unslick');
+			}
+			if( $this.is('button[data-type=copyurl]') ){
+				function copySelectionText(){
+					var copysuccess;
+					try{
+						copysuccess = document.execCommand("copy");
+					} catch(e){
+						copysuccess = false;
+					}
+					return copysuccess;
+				}
+				$('body').append('<input value="'+window.location.href+'" id="copyurl" style="position:fixed;z-index:-1;left:0;top:-50px" />')
+				$('#copyurl').focus();
+				$('#copyurl')[0].setSelectionRange(0, $('#copyurl').val().length);
+				var copysuccess = copySelectionText();
+				if (copysuccess){
+					var mess = '공유를 위한 URL이 복사 되었습니다.';
+				}else{
+					var mess = 'URL 복사가 되지 않았습니다.';
+				};
+				$('#copyurl').remove();
+				$('#copyAlert .message').html(mess);
+				openLayer(window.event,'#copyAlert');
+			}
 		});
-
 
 		function likeCallback(e){//좋아요 콜백
 			console.log('this는 좋아요 버튼',this);
@@ -1373,89 +1629,102 @@
 		});
 
 		var slickFn = function(){
-			var $slides = $('#mProductSlides'),
-				$benefits = $('#benefits'),
-				$bannerM = $('#bannerM'),
-				$associated = $('#associated');
-			if(mCheck()){
-				if(!$slides.hasClass('slick-initialized')){
-					$slides.slick({
-						dots:true,
-						arrows:false,
-						autoplay:true,
-						autoplaySpeed:5000,
-						pauseOnDotsHover:true,
-						dotsClass:'slick-dots pos_center h dis_f',
-						draggable:false
-					});
-					if($slides[0].slick.$slides.length==1){
-						$slides.slick('unslick');
-					}
-				};
-				if($benefits.hasClass('slick-initialized')){
-					$benefits.slick('unslick');
-				};
-				if(!$bannerM.hasClass('slick-initialized')){
-					$bannerM.slick({
-						dots:true,
-						arrows:false,
-						autoplay:true,
-						autoplaySpeed:5000,
-						pauseOnDotsHover:true,
-						dotsClass:'slick-dots pos_center h dis_f',
-						draggable:false
-					});
-					if($bannerM[0].slick.$slides.length==1){
-						$bannerM.slick('unslick');
-					}
-				};
-				if($associated.hasClass('slick-initialized')){
-					$associated.slick('unslick');
-				};
-			}else{
-				if($slides.hasClass('slick-initialized')){
-					$slides.slick('unslick');
-				};
-				if(!$benefits.hasClass('slick-initialized')){
-					$benefits.slick({
-						dots:true,
-						dotsClass:'slick-dots small',
-						arrows:false,
-						fade:true
-					});
-					if($benefits[0].slick.$slides.length==1){
+				var $slides = $('#mProductSlides'),
+					$benefits = $('#benefits'),
+					$bannerM = $('#bannerM'),
+					$associated = $('#associated');
+				if(mCheck()){
+					if(!$slides.hasClass('slick-initialized')){
+						$slides.slick({
+							dots:true,
+							arrows:false,
+							autoplay:true,
+							autoplaySpeed:5000,
+							pauseOnDotsHover:true,
+							dotsClass:'slick-dots pos_center h dis_f',
+							draggable:false
+						});
+						if($slides[0].slick.$slides.length==1){
+							$slides.slick('unslick');
+						}
+					};
+					if($benefits.hasClass('slick-initialized')){
 						$benefits.slick('unslick');
-					}
-				};
-				if($bannerM.hasClass('slick-initialized')){
-					$bannerM.slick('unslick');
-				};
-				if(!$associated.hasClass('slick-initialized')){
-					$associated.slick({
-						dots:false,
-						infinite:false,
-						slidesToShow:3,
-						slidesToScroll:1,
-						variableWidth:true,
-						prevArrow:'<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button>',
-						nextArrow:'<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>'
-					});
-					if($associated[0].slick.$slides.length==1){
+					};
+					if(!$bannerM.hasClass('slick-initialized')){
+						$bannerM.slick({
+							dots:true,
+							arrows:false,
+							autoplay:true,
+							autoplaySpeed:5000,
+							pauseOnDotsHover:true,
+							dotsClass:'slick-dots pos_center h dis_f'
+						});
+						if($bannerM[0].slick.$slides.length==1){
+							$bannerM.slick('unslick');
+						}
+					};
+					if($associated.hasClass('slick-initialized')){
 						$associated.slick('unslick');
-					}
-				};
-			}
-		};
+					};
+				}else{
+					if($slides.hasClass('slick-initialized')){
+						$slides.slick('unslick');
+					};
+					if(!$benefits.hasClass('slick-initialized')){
+						$benefits.slick({
+							dots:true,
+							dotsClass:'slick-dots small',
+							arrows:false,
+							fade:true
+						});
+						if($benefits[0].slick.$slides.length==1){
+							$benefits.slick('unslick');
+						}
+					};
+					if($bannerM.hasClass('slick-initialized')){
+						$bannerM.slick('unslick');
+					};
+					if(!$associated.hasClass('slick-initialized')){
+						$associated.slick({
+							dots:false,
+							infinite:false,
+							slidesToShow:3,
+							slidesToScroll:1,
+							variableWidth:true,
+							prevArrow:'<button type="button" class="btn_arr small prev spr_before light"><span class="s_out">이전</span></button>',
+							nextArrow:'<button type="button" class="btn_arr small next spr_before light"><span class="s_out">다음</span></button>'
+						});
+						if($associated[0].slick.$slides.length==1){
+							$associated.slick('unslick');
+						}
+					};
+				}
+			},
+			slideExpend = function(obj){
+				var $item = obj.closest('.item'),
+					h = $item.find('.more .inner').outerHeight(),
+					$slide = obj.closest('.benefit_slide');
+				$item.find('.more').height(h);
+				$item.addClass('expend');
+				$slide.addClass('expend');
+			},
+			slideContract = function(obj){
+				var $item = obj.closest('.item'),
+					$slide = obj.closest('.benefit_slide');
+				$item.find('.more').removeAttr('style');
+				$item.removeClass('expend');
+				$slide.removeClass('expend');
+			};
 		$(window).on({
 			'resize.main':slickFn,
 			'load.main':function(e){
 				slickFn();
 				$('#mProductInfo').find('.folded').each(function(index, el) {
-					$(el).removeAttr('style').removeClass('close').height($(el).height()).addClass('close').closest('.item').removeClass('open');
+					$(el).addClass('close');
 				});
 			}
 		});
-		$('.list_tab button:eq(2)').trigger('click');
 	</script>
 </body>
 </html>

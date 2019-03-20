@@ -49,9 +49,16 @@ $.validator.setDefaults({
 		}
 	}
 });
-var mSize = 426,
+var mSize = 426, // 813
 	mCheck = function(e){
-		return $(window).width() < mSize;
+		var check = false;
+		if($(window).width() < mSize){
+			check = true;
+			if($.browser.desktop){
+				check = false;
+			}
+		}
+		return check;
 	},
 	likeBtnFn = function(obj){//좋아요버튼
 		var $this = obj,
@@ -154,12 +161,15 @@ var mSize = 426,
 		};
 		if($tar.hasClass('alert_layer')){
 			if(event){
-				$tar.find('.btn_cancel').on('click',function(e){
+				$tar.find('.btn_cancel, .btn_close').on('click',function(e){
 					$tar.data('off',$(this));
 					closeLayer('#'+closeID);
 				});
 			}
 			$tar.removeClass('hide').find('.btn_confirm').focus();
+			if(mCheck()){
+				$('body').append('<div id="dimM" />');
+			}
 		}else{
 			$tar.removeClass('hide').find('.btn_close').on('click',function(e){
 				$tar.data('off',$(this));
@@ -197,6 +207,9 @@ var mSize = 426,
 			$tar.remove();
 		}
 		$('body').removeAttr('style');
+		if(mCheck()){
+			$('#dimM').remove();
+		}
 	},
 	showAlert = function(name,message,type,callback){
 		var btns = type==0?'<button type="button" class="btn_cancel lc_e5 tc_8">취소</button><button type="button" class="btn_confirm lc_e5">확인</button>':'<button type="button" class="btn_confirm lc_e5">확인</button>',
@@ -297,9 +310,11 @@ var mSize = 426,
 	transitionendEvent = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
 	autoWidthSelect = function(obj){
 		var t = $(obj),
+			pd = t.css('padding-right').replace(/[^0-9]/g,'')*1,
 			si = t[0].selectedIndex,
 			text = t[0].selectedOptions[0].innerText,
-			tempCode = $('<select id="tempSelect" style="position:fixed;z-index:-1;left:0;top:0;font-size:14px;border:0;opacity:0"><option id="tempOption"></option></select>');
+			style = !pd?'position:fixed;z-index:-1;left:0;top:0;font-size:14px;border:0;opacity:0':'position:fixed;z-index:-1;left:0;top:0;font-size:18px;border:0;opacity:0;font-weight:700;padding-right:25px',
+			tempCode = $('<select id="tempSelect" style="'+style+'"><option id="tempOption"></option></select>');
 		$('body').append(tempCode);
 		$('#tempOption').html(text);
 		t.width($('#tempSelect').width());
@@ -389,17 +404,13 @@ $(window).on({
 		}
 		if( $this.is('button[data-type=mfilterfold]') ){
 			var $item = $this.closest('.item');
+			$item.find('.folded').height($item.find('.folded .inner').outerHeight());
 			if($item.hasClass('open')){
 				$item.removeClass('open').find('.folded').addClass('close');
 			}else{
 				$item.closest('.accordion').find('.item.open').removeClass('open').find('.folded').addClass('close');
 				$item.addClass('open').find('.folded').removeClass('close');
 			}
-			// if( $item.hasClass('open') ){
-			// 	$item.removeClass('open').find('.folded').addClass('close');
-			// }else{
-			// 	$item.addClass('open').find('.folded').removeClass('close');
-			// }
 		}
 		if( $this.closest('button').is('[data-type=opensort]') ){
 			var $sl = $('#sortLayer');
@@ -714,6 +725,7 @@ $(document).ready(function(){
 			variableWidth:true
 		},true);
 	}
+
 	$(".btn_date.to").click(function(){
 		$("#calFormMobile").removeClass("show");
 		$("#calFormMobile").addClass("hide");
@@ -727,6 +739,25 @@ $(document).ready(function(){
 		$("#calFormMobile").addClass("show");
 
 	});
+	$(".btn_change").click(function(){
+		$(this).toggleClass("mini");
+		$(this).parent(".tit").next().toggle();
+	})
+	$("#discontentType").change(function() {
+	    $("#discontentType option:selected").each(function() {
+	      str = $(this).val();
+	    });
+		if(str == 0) {
+			$(".order_detail_view").addClass("hide");
+			$(".order_detail_view.cancel").removeClass("hide");
+		}else if(str == 1){
+			$(".order_detail_view").addClass("hide");
+			$(".order_detail_view.change").removeClass("hide");
+		}else if(str == 2){
+			$(".order_detail_view").addClass("hide");
+			$(".order_detail_view.return").removeClass("hide");
+		}
+	}).change();
 });
 
 
