@@ -1451,10 +1451,13 @@ p.error{color:#f32323!important}
 .main_items .list_product .func{left:100px;bottom:18px}
 .main_items .list_product .flags{display:none}
 .main_items .list_product.small.vertical>li{margin-top:0!important}
-.main_items .split .list_product{float:left;width:50%}
+.main_items .split .list_product{padding:0 0 21px;}
+.main_items .split .list_product>li{float:left;width:calc(50% - 64px);margin:0 32px!important;}
+.main_items .split .list_product>li:nth-child(1),
+.main_items .split .list_product>li:nth-child(2){border-top:0;}
 .main_items .quarter:last-child .out_pic{padding-bottom:27px}
 .main_items:nth-child(3) .half:first-child{padding-bottom:292px}
-.main_items:nth-child(3) .quarter:nth-child(2) .list_product{bottom:136px}
+.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:136px}
 .main_items:nth-child(3)>div{position:relative}
 .main_items:nth-child(3)>div>.list_product,
 .main_items:nth-child(3)>div>.split{position:absolute;left:0;bottom:0;width:100%}
@@ -1539,7 +1542,7 @@ p.error{color:#f32323!important}
 .cont.mynotice>.pages{margin-top:40px}
 .mynotice_list{margin-top:40px;border-width:1px 0 0}
 .mynotice_list td>.link{overflow:hidden;vertical-align:top}
-.mynotice_list td>.link .img{position:relative;width:80px;height:80px;margin-right:20px}
+.mynotice_list td>.link .img{position:relative;width:80px;height:80px;margin-right:20px;-webkit-flex:none;-moz-flex:none;-ms-flex:none;-o-flex:none;flex:none;}
 .mynotice_list td>.link .img+.desc{width:calc(100% - 100px)}
 .mynotice_list td>.link img{width:auto;height:80px}
 .mynotice_list td{padding-top:24px;padding-bottom:24px}

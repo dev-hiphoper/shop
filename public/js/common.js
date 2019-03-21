@@ -689,41 +689,85 @@ $(document).ready(function(){
 	if( $('[data-type=autowidth]')[0] ){
 		autoWidthSelect($('[data-type=autowidth]')[0]);
 	};
-	if( $('#timeattack')[0] ){
-		$('#timeattack').find('.txt_timeattack').each(function(i,el) {
-			var time = $(el).attr('data-time'),
-				set = $(el).closest('.before')[0]?'%H:%M:%S':'%D DAY %H:%M:%S';
-			$(el).countdown(time, function(event) {
-				$(this).text(event.strftime(set));
+	if( $('#timeattack')[0] || $('#mTimeattack')[0] ){
+		if(mCheck()){
+			var tt = function(obj){
+				var time = $(obj).attr('data-time'),
+					set = $(obj).closest('.before')[0]?'%H:%M:%S':'%D DAY %H:%M:%S';
+				$(obj).countdown(time, function(event) {
+					$(this).text(event.strftime(set));
+				});
+			}
+			$('#mTimeattack').find('.txt_timeattack').each(function(i,el) {
+				tt(el);
 			});
-			if($(el).closest('.after')[0]){
-				$(el).countdown('stop');
-			}
-		});
-		var $taSlides = $('#timeattack').find('.slides');
-		$taSlides.on({
-			'beforeChange':function(e,slick,currentSlide,nextSlide){
-				$(slick.$slides[nextSlide]).find('.txt_timeattack').countdown('start');
-			},
-			'afterChange':function(e,slick,currentSlide){
-				var num;
-				if(currentSlide==0){
-					num = slick.$slides.length-1;
-				}else{
-					num = currentSlide-1;
+			$('#mTimeattack').on({
+				'beforeChange':function(e,slick,currentSlide,nextSlide){
+					$(slick.$slides[nextSlide]).find('.txt_timeattack').countdown('start');
+				},
+				'afterChange':function(e,slick,currentSlide){
+					var num;
+					if(currentSlide==0){
+						num = slick.$slides.length-1;
+					}else{
+						num = currentSlide-1;
+					}
+					$(slick.$slides[num]).find('.txt_timeattack').countdown('stop');
 				}
-				$(slick.$slides[num]).find('.txt_timeattack').countdown('stop');
-			}
-		}).slick('slickSetOption',{
-			dots:true,
-			arrows:false,
-			autoplay:false,
-			autoplaySpeed:2000,
-			pauseOnDotsHover:true,
-			dotsClass:'slick-dots pos_center h dis_f',
-			draggable:false,
-			variableWidth:true
-		},true);
+			}).slick({
+				dots:true,
+				arrows:false,
+				dotsClass:'slick-dots pos_center h dis_f',
+				variableWidth:true
+			});
+			if($('#mTimeattack')[0].slick.$slides.length==1){
+				$('#mTimeattack').slick('unslick');
+			};
+			$.each($('#mTimeattack')[0].slick.$slides, function(index, val) {
+				if(index>0){
+					$(val).find('.txt_timeattack').countdown('stop');
+				}
+			});
+		}else{
+			$('#timeattack').find('.txt_timeattack').each(function(i,el) {
+				var time = $(el).attr('data-time'),
+					set = $(el).closest('.before')[0]?'%H:%M:%S':'%D DAY %H:%M:%S';
+				$(el).countdown(time, function(event) {
+					$(this).text(event.strftime(set));
+				});
+				if($(el).closest('.after')[0]){
+					$(el).countdown('stop');
+				}
+			});
+			var $taSlides = $('#timeattack').find('.slides');
+			$taSlides.on({
+				'beforeChange':function(e,slick,currentSlide,nextSlide){
+					$(slick.$slides[nextSlide]).find('.txt_timeattack').countdown('start');
+				},
+				'afterChange':function(e,slick,currentSlide){
+					var num;
+					if(currentSlide==0){
+						num = slick.$slides.length-1;
+					}else{
+						num = currentSlide-1;
+					}
+					$(slick.$slides[num]).find('.txt_timeattack').countdown('stop');
+				}
+			}).slick({
+				dots:true,
+				arrows:false,
+				autoplay:false,
+				autoplaySpeed:2000,
+				pauseOnDotsHover:true,
+				dotsClass:'slick-dots pos_center h dis_f',
+				draggable:false,
+				variableWidth:true
+			}).each(function(index, el){
+				if( $(el)[0].slick.slideCount == 1 ){
+					$(el).slick('unslick');
+				}
+			});
+		}
 	}
 
 	$(".btn_date.to").click(function(){
