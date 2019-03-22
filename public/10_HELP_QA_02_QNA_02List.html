@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0"> <!-- 서브페이지인 경우 sub_header 클래스 추가 -->
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">HELP</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -213,7 +214,7 @@
 				</ul>
 				<section class="wrap_board qna">
 					<h2 class="s_out">Q&amp;A</h2>
-					<ul class="sort dis_f">
+					<ul class="sort dis_f on_w">
 						<li class="dis_if"><button type="button" class="tc_3">ALL</button></li>
 						<li class="dis_if"><button type="button">상품 문의</button></li>
 						<li class="dis_if"><button type="button">주문/배송 문의</button></li>
@@ -222,13 +223,25 @@
 						<li class="dis_if"><button type="button">사이트 이용 문의</button></li>
 						<li class="dis_if"><button type="button">기타 문의</button></li>
 					</ul>
+					<span class="input_select event_sort_m on_m">
+						<select name="" id="" class="tc_3_h" data-type="autowidth">
+							<option value="" selected="">ALL(129)</option>
+							<option value="">상품 문의(129)</option>
+							<option value="">주문/배송 문의(129)</option>
+							<option value="">교환/환불 문의(129)</option>
+							<option value="">회원 문의(129)</option>
+							<option value="">사이트 이용 문의(129)</option>
+							<option value="">기타 문의<(129)</option>
+						</select>
+					</span>
 					<ul class="group lc_e5">
 						<li class="item lc_e5"><!-- 열릴때는 class에 view 추가 -->
 							<dl class="info">
 								<dt class="s_out">게시글번호</dt>
 								<dd class="number">11502</dd>
 								<dt class="s_out">상태</dt>
-								<dd class="flag new"><span class="s_out">새글</span></dd>
+								<dd class="flag new on_w"><span class="s_out">새글</span></dd>
+								<dd class="flag kor no tc_b on_m"><span class="s_out">답변 대기</span></dd>
 								<dt class="s_out">구분</dt>
 								<dd class="category tc_b">상품 문의</dd>
 								<dt class="s_out">작성자</dt>
@@ -239,7 +252,7 @@
 							<div class="que tc_5 clear">
 								<span class="s_out">문의내용 : </span>
 								<div class="cont clear">
-									<p>안녕하세요.<br>
+									<p>안녕하세요.<span class="flag new on_m"><span class="s_out">새 글</span></span><br>
 									지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
 									95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
 									지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
@@ -275,6 +288,10 @@
 									<p>안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?<br>
 									안녕하세요? 주문했는데 배송은 보통 얼마나 걸리나요?</p>
 									<button type="button" class="view" data-type="qnaview"><span class="s_out">답변보기</span></button>
+								<div class="admin">
+									<button type="button" class="text_link">수정</button>
+									<button type="button" class="text_link">삭제</button>
+								</div>
 								</div>
 							</div>
 							<div class="ans">
@@ -553,7 +570,7 @@
 							</div>
 						</li>
 					</ul>
-					<div class="pages">
+					<div class="pages on_w">
 						<em class="link">1</em>
 						<a href="" class="link">2</a>
 						<a href="" class="link">3</a>
@@ -566,6 +583,15 @@
 						<a href="" class="link">10</a>
 						<a href="" class="link last">132</a>
 						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
+					</div>
+					<div class="pages on_m">
+						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<em class="link">1</em>
+						<a href="" class="link">2</a>
+						<a href="" class="link">3</a>
+						<a href="" class="link">4</a>
+						<a href="" class="link">5</a>
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 					<a href="" class="btn_write dark large fix">문의</a>

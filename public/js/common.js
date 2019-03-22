@@ -319,6 +319,39 @@ var mSize = 426, // 813
 		$('#tempOption').html(text);
 		t.width($('#tempSelect').width());
 		$('#tempSelect').remove();
+	},
+	shareM = function(){
+		function copySelectionText(){
+			var copysuccess;
+			try{
+				copysuccess = document.execCommand("copy");
+			} catch(e){
+				copysuccess = false;
+			}
+			return copysuccess;
+		}
+		var layerCode = `<div class="alert_layer lc_b pos_center hide" id="copyAlert">
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>
+			<p class="message tc_3"></p>
+			<div class="btns lc_e5 clear">
+				<button type="button" class="btn_confirm lc_e5" onclick="closeLayer('#copyAlert');">확인</button>
+			</div>
+		</div>`;
+		$('body').append('<input value="'+window.location.href+'" id="copyurl" style="position:fixed;z-index:-1;left:0;top:-50px" />')
+		$('#copyurl').focus();
+		$('#copyurl')[0].setSelectionRange(0, $('#copyurl').val().length);
+		var copysuccess = copySelectionText();
+		if (copysuccess){
+			var mess = '공유를 위한 URL이 복사 되었습니다.';
+		}else{
+			var mess = 'URL 복사가 되지 않았습니다.';
+		};
+		$('#copyurl').remove();
+		if(!$('#copyAlert')[0]){
+			$('body').append(layerCode);
+		}
+		$('#copyAlert .message').html(mess);
+		openLayer(window.event,'#copyAlert');
 	};
 
 $(window).on({
@@ -342,15 +375,22 @@ $(window).on({
 		if( $this.is('[data-type=minus]') ){//input 숫자 빼기
 			setNumber('minus',$this);
 		}
+		if( $this.is('button[data-type=copyurl]') ){
+			shareM();
+		}
 		if( $this.is('a[data-type=tooltip]') ){//툴팁
 			e.preventDefault();
-			var $tar = $($this.attr('href'));
-			if($tar.hasClass('hide')){//툴팁 보이기
-				$tar.removeClass('hide').on('mouseleave',function(e){//툴팁 가리기
-					$tar.addClass('hide').off('mouseleave');
-				});
-			}else{//툴팁 가리기
-				$tar.addClass('hide');
+			if( $this.is('[href=#shareLayer]') && mCheck() ){
+				shareM();
+			}else{
+				var $tar = $($this.attr('href'));
+				if($tar.hasClass('hide')){//툴팁 보이기
+					$tar.removeClass('hide').on('mouseleave',function(e){//툴팁 가리기
+						$tar.addClass('hide').off('mouseleave');
+					});
+				}else{//툴팁 가리기
+					$tar.addClass('hide');
+				}
 			}
 		}else{
 			$('.tootip_layer').addClass('hide');

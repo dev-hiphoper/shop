@@ -1309,7 +1309,8 @@ p.error{color:#f32323!important}
 .qnq_write .input_textarea{width:880px}
 .qnq_write .input_textarea textarea{height:250px}
 .qnq_write .file+.file{margin-top:12px}
-.qnq_write .file+.notice{margin-top:13px}
+.qnq_write .file+.notice,
+.qnq_write .file_wrapper+.notice{margin-top:13px}
 .qnq_write .file button{padding:0;width:40px;min-width:40px;margin-left:3px}
 .qnq_write .file button:before{width:14px;height:2px}
 .qnq_write .file button:after{width:2px;height:14px}
@@ -1542,6 +1543,7 @@ p.error{color:#f32323!important}
 .cont.mynotice>.pages{margin-top:40px}
 .mynotice_list{margin-top:40px;border-width:1px 0 0}
 .mynotice_list td>.link{overflow:hidden;vertical-align:top}
+.mynotice_list td>.link .noti_info {overflow:hidden;width:100%;}
 .mynotice_list td>.link .img{position:relative;width:80px;height:80px;margin-right:20px;-webkit-flex:none;-moz-flex:none;-ms-flex:none;-o-flex:none;flex:none;}
 .mynotice_list td>.link .img+.desc{width:calc(100% - 100px)}
 .mynotice_list td>.link img{width:auto;height:80px}

@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0"> <!-- 서브페이지인 경우 sub_header 클래스 추가 -->
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">HELP</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -188,7 +189,7 @@
 	<main class="site_main help">
 		<div class="miw1180">
 			<div class="help_list">
-				<ul class="list_tab dis_f length3">
+				<ul class="list_tab dis_f length3 on_w">
 					<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">FAQ (30)</a></li>
 					<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">Q&amp;A</strong></li>
 					<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">NOTICE (0)</a></li>
@@ -202,7 +203,7 @@
 								<col>
 							</colgroup>
 							<tbody>
-								<tr>
+								<tr class="order_top">
 									<th>분류</th>
 									<td>
 										<span class="input_select lc_d0 tc_b"><!-- 애러일 경우 class에 error 추가 -->
@@ -238,7 +239,7 @@
 										<p class="text">010 - 1234 - 4567</p>
 									</td>
 								</tr>
-								<tr>
+								<tr class="order_top">
 									<th>제목</th>
 									<td>
 										<div class="title dis_f ai_c">
@@ -247,13 +248,13 @@
 												<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 												<p class="error tc_poi">제목을 입력해주세요.</p>
 											</span>
-											<span class="input_checkbox">
+											<span class="input_checkbox secret">
 												<input type="checkbox" name="" id="checkSecret"><label for="checkSecret" class="tc_3 spr_after">비밀글 설정</label>
 											</span>
 										</div>
 									</td>
 								</tr>
-								<tr>
+								<tr class="order_top">
 									<th>내용</th>
 									<td>
 										<span class="input_textarea">
@@ -265,41 +266,51 @@
 								<tr>
 									<th>파일 첨부</th>
 									<td>
-										<div class="file">
-											<span class="input_file">
-												<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
-												<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file1">
-												<label for="file1" class="btn_select fix">파일 선택</label>
-												<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
-											</span>
-											<button type="button" class="btn_add bg_b_b bg_b_a pos_center_before pos_center_after" data-type="fileadd"><span class="s_out">파일 추가</span></button>
-										</div>
-										<div class="file hide">
-											<span class="input_file">
-												<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
-												<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file2">
-												<label for="file2" class="btn_select fix">파일 선택</label>
-												<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
-											</span>
-											<button type="button" class="btn_del bg_b_b pos_center_before" data-type="filedel"><span class="s_out">파일 삭제</span></button>
-										</div>
-										<div class="file hide">
-											<span class="input_file">
-												<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
-												<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file3">
-												<label for="file3" class="btn_select fix">파일 선택</label>
-												<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
-											</span>
-											<button type="button" class="btn_del bg_b_b pos_center_before" data-type="filedel"><span class="s_out">파일 삭제</span></button>
-										</div>
-										<div class="file hide">
-											<span class="input_file">
-												<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
-												<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file4">
-												<label for="file4" class="btn_select fix">파일 선택</label>
-												<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
-											</span>
-											<button type="button" class="btn_del bg_b_b pos_center_before" data-type="filedel"><span class="s_out">파일 삭제</span></button>
+										<div class="file_wrapper">
+											<!-- 모바일 레이아웃을 위해 파일이 첨부된 경우 attached 클래스 추가해주세요. -->
+											<div class="file attached">
+												<span class="input_file">
+													<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
+													<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file1">
+													<label for="file1" class="btn_select fix">파일 선택</label>
+													<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
+													<span class="attached_image on_m">
+														<img src="./img/temp1.jpg" alt="">
+													</span>
+												</span>
+												<button type="button" class="btn_add bg_b_b bg_b_a pos_center_before pos_center_after" data-type="fileadd"><span class="s_out">파일 추가</span></button>
+												<button type="button" class="btn_attach_remove bg_b_b pos_center_before on_m" data-type="filedel"><span class="s_out">첨부된 파일 삭제</span></button>
+											</div>
+											<div class="file hide">
+												<span class="input_file">
+													<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
+													<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file2">
+													<label for="file2" class="btn_select fix">파일 선택</label>
+													<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
+												</span>
+												<button type="button" class="btn_del bg_b_b pos_center_before" data-type="filedel"><span class="s_out">파일 삭제</span></button>
+												<button type="button" class="btn_attach_remove bg_b_b pos_center_before on_m" data-type="filedel"><span class="s_out">첨부된 파일 삭제</span></button>
+											</div>
+											<div class="file hide">
+												<span class="input_file">
+													<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
+													<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file3">
+													<label for="file3" class="btn_select fix">파일 선택</label>
+													<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
+												</span>
+												<button type="button" class="btn_del bg_b_b pos_center_before" data-type="filedel"><span class="s_out">파일 삭제</span></button>
+											</div>
+											<div class="file hide">
+												<span class="input_file">
+													<input type="text" class="name lc_d0 tc_3" readonly tabindex="-1">
+													<input type="file" name="" accept="image/gif,image/jpeg,image/png" data-max-size="10" id="file4">
+													<label for="file4" class="btn_select fix">파일 선택</label>
+													<p class="error tc_poi">파일은 최대 10MB까지 가능합니다.</p>
+												</span>
+												<button type="button" class="btn_del bg_b_b pos_center_before" data-type="filedel"><span class="s_out">파일 삭제</span></button>
+											</div>
+											<!-- 모바일 레이아웃을 위한 error msg입니다. -->
+											<p class="error tc_poi on_m">파일은 최대 10MB까지 가능합니다.</p>
 										</div>
 										<ul class="notice tc_8">
 											<li>- 상품 불량 및 오배송의 경우, 해당 제품 사진을 등록 부탁드립니다.</li>

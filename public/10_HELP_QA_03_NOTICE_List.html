@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0"> <!-- 서브페이지인 경우 sub_header 클래스 추가 -->
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">HELP</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -213,7 +214,7 @@
 				</ul>
 				<section class="wrap_board notice">
 					<h2 class="s_out">NOTICE</h2>
-					<ul class="sort dis_f">
+					<ul class="sort dis_f on_w">
 						<li class="dis_if"><button type="button" class="tc_3">ALL</button></li>
 						<li class="dis_if"><button type="button">배송 공지</button></li>
 						<li class="dis_if"><button type="button">업체 공지</button></li>
@@ -222,6 +223,17 @@
 						<li class="dis_if"><button type="button">사이트 이용 공지</button></li>
 						<li class="dis_if"><button type="button">회원 공지</button></li>
 					</ul>
+					<span class="input_select event_sort_m on_m">
+						<select name="" id="" class="tc_3_h" data-type="autowidth">
+							<option value="" selected="">ALL(129)</option>
+							<option value="">배송 공지(129)</option>
+							<option value="">업체 공지(129)</option>
+							<option value="">휴무 공지(129)</option>
+							<option value="">이벤트 공지(129)</option>
+							<option value="">사이트 이용 공지(129)</option>
+							<option value="">회원 공지<(129)</option>
+						</select>
+					</span>
 					<ul class="group lc_e5">
 						<li class="item lc_e5"><!-- 열릴때는 class에 view 추가 -->
 							<dl class="info">
@@ -474,7 +486,7 @@
 							</div>
 						</li>
 					</ul>
-					<div class="pages">
+					<div class="pages on_w">
 						<em class="link">1</em>
 						<a href="" class="link">2</a>
 						<a href="" class="link">3</a>
@@ -487,6 +499,15 @@
 						<a href="" class="link">10</a>
 						<a href="" class="link last">132</a>
 						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
+					</div>
+					<div class="pages on_m">
+						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<em class="link">1</em>
+						<a href="" class="link">2</a>
+						<a href="" class="link">3</a>
+						<a href="" class="link">4</a>
+						<a href="" class="link">5</a>
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>
