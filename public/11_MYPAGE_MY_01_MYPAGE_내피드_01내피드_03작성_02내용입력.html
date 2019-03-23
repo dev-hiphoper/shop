@@ -185,7 +185,7 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main mypage miw1180">
+	<main class="site_main mypage my_feed miw1180">
 		<article class="mypage_summary bg_3 tc_f clear mini">
 			<div class="profile">
 				<div class="img"><img src="img/temp_CategoryMain3.jpg" alt="임시이미지" class="pos_center"></div>
@@ -292,13 +292,13 @@
 									<div class="preview hide"></div>
 									<button type="button" class="reset pos_center_after pos_center_before bg_3 hide"><span class="s_out">삭제</span></button>
 								</div>
-								<div class="item hide">
+								<div class="item hide on_w">
 									<input type="file" name="" id="feedimg9" accept="image/gif,image/jpeg,image/png" class="pos_center">
 									<label for="feedimg9" class="btn bg_f0 pos_center_after pos_center_before bg_d0_a bg_d0_b"><span class="s_out">이미지 선택</span></label>
 									<div class="preview hide"></div>
 									<button type="button" class="reset pos_center_after pos_center_before bg_3 hide"><span class="s_out">삭제</span></button>
 								</div>
-								<div class="item hide">
+								<div class="item hide on_w">
 									<input type="file" name="" id="feedimg10" accept="image/gif,image/jpeg,image/png" class="pos_center">
 									<label for="feedimg10" class="btn bg_f0 pos_center_after pos_center_before bg_d0_a bg_d0_b"><span class="s_out">이미지 선택</span></label>
 									<div class="preview hide"></div>
@@ -316,7 +316,7 @@
 								</span>
 							</div>
 							<div class="myfeed_tags">
-								<p class="desc tc_8"># 해시태그 없이 내용만 입력해 주세요. 태그 등록은 1개 이상 필수로 등록 해야 하며 띄어 쓰기 없이 등록 해야 합니다.</p>
+								<p class="desc tc_8"><span># 해시태그 없이 내용만 입력해 주세요.</span> 태그 등록은 1개 이상 필수로 등록 해야 하며 띄어 쓰기 없이 등록 해야 합니다.</p>
 								<div class="tags clear">
 									<span class="input_text clear"><input type="text" class="lc_d0 tc_3"></span>
 									<span class="input_text clear"><input type="text" class="lc_d0 tc_3"></span>
@@ -324,10 +324,10 @@
 									<span class="input_text clear"><input type="text" class="lc_d0 tc_3"></span>
 									<span class="input_text clear"><input type="text" class="lc_d0 tc_3"></span>
 									<span class="input_text clear hide"><input type="text" class="lc_d0 tc_3"></span>
-									<span class="input_text clear hide"><input type="text" class="lc_d0 tc_3"></span>
-									<span class="input_text clear hide"><input type="text" class="lc_d0 tc_3"></span>
-									<span class="input_text clear hide"><input type="text" class="lc_d0 tc_3"></span>
-									<span class="input_text clear hide"><input type="text" class="lc_d0 tc_3"></span>
+									<span class="input_text clear hide on_w"><input type="text" class="lc_d0 tc_3"></span>
+									<span class="input_text clear hide on_w"><input type="text" class="lc_d0 tc_3"></span>
+									<span class="input_text clear hide on_w"><input type="text" class="lc_d0 tc_3"></span>
+									<span class="input_text clear hide on_w"><input type="text" class="lc_d0 tc_3"></span>
 								</div>
 								<button type="button" class="btn_more bg_b_a bg_b_b pos_center_after pos_center_before" data-type="moretag"><span class="s_out">태그 5개 더 입력하기</span></button>
 							</div>
@@ -368,7 +368,18 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		var inputFileFn = function(obj){
+		var mSize = 426,
+			mCheck = function(e){
+				var check = false;
+				if($(window).width() < mSize){
+					check = true;
+					if($.browser.desktop){
+						check = false;
+					}
+				}
+				return check;
+			},
+			inputFileFn = function(obj){
 				var item = obj.closest('.item'),
 					$preview = item.find('.preview'),
 					$reset = item.find('.reset'),
@@ -442,6 +453,10 @@
 					var $closest = $this.closest('.more'),
 						$tar = $closest.prev();
 					$tar.find('.item.hide').removeClass('hide');
+					if(mCheck()){
+						$tar.find('.item.hide').removeClass('hide');
+						$tar.find('.item:nth-child(n+5)').show();
+					}
 					$closest.remove();
 				}
 				if( $this.is('button[data-type=moretag]') ){
@@ -457,6 +472,10 @@
 					}else{
 						$this.addClass('minus');
 						$tar.find('span.hide').removeClass('hide');
+						if(mCheck()){
+							$tar.find('span.hide').removeClass('hide');
+							$tar.find('span:nth-child(n+4)').show();
+						}
 					}
 				}
 			}

@@ -1621,7 +1621,7 @@ p.error{color:#f32323!important}
 .myfeed_write .feed_list .check,
 .myfeed_write .feed_list .img{position:relative;width:100%;height:0;padding-top:100%}
 .myfeed_write .feed_list .img{margin-bottom:16px}
-.myfeed_write .feed_list .img img{width:auto;height:100%;min-width:none}
+.myfeed_write .feed_list .img img{width:auto;height:100%;min-width:0}
 .myfeed_write .feed_list .brand{float:left;font-size:15px;line-height:22px}
 .myfeed_write .feed_list .name{float:left;width:100%;font-size:14px;line-height:22px;height:44px;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .myfeed_write .feed_list .check{position:absolute;left:0;top:0}
@@ -2374,9 +2374,9 @@ ol.privacy_list>li:nth-child(10)>.tit:before,
 	.main_items .quarter:last-child .out_pic{padding-bottom:30px}
 	.main_items .quarter:last-child .out_pic .desc{display:block!important;max-height:20px;white-space:nowrap}
 	.main_items:nth-child(2) .out_pic+.list_product li:first-child{border-width:1px 0 0!important}
-	.main_items:nth-child(2) .half:first-child{padding-bottom:384px}
-	.main_items:nth-child(2) .quarter:nth-child(2) .list_product{bottom:182px}
-	.main_items:nth-child(3) .quarter:nth-child(3){margin-top:-182px}
+	.main_items:nth-child(3) .half:first-child{padding-bottom:384px}
+	.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:182px}
+	.main_items:nth-child(4) .quarter:nth-child(3){margin-top:-182px}
 	.slides.next_lnb .info{margin-left:-120px!important}
 	.site_main.brand_best .slides.brand_view .info{width:700px;margin-left:-40px!important}
 	.myfeed_list>li{width:calc(25% - 24px)}

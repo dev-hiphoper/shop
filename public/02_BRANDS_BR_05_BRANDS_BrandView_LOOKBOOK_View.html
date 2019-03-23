@@ -192,7 +192,7 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main brand_view">
+	<main class="site_main brand_view lookbook">
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
 				<div class="slides brand_view">
@@ -229,6 +229,7 @@
 			</nav>
 			<div class="cont">
 				<article class="lookbook_view lc_3">
+					<div class="img"><img src="./img/temp_lookbook1.jpg" alt=""></div>
 					<div class="lookbook_info">
 						<strong class="brand tc_3">PROJECT624</strong>
 						<h1 class="tit tc_1">PROJECT624 2018 WINTER</h1>
@@ -247,6 +248,7 @@
 								<div class="copy_url lc_e5 clear"><input type="text" value="http://www.hiphoper.com/shop/item.php?it_id=KA645745" class="url tc_8 bg_f7" data-type="copyTarget" readonly><button type="button" class="btn_copy tc_8 bg_f lc_e5" data-type="copyButton">URL복사</button></div>
 							</div>
 						</div>
+						<button type="button" class="btn_like spr_before on_m" data-type="like" data-callback="likeCallback" data-count="153000"><span class="s_out">좋아요수 : </span><span class="count pos_center h tc_3">153,000</span></button>
 						<a href="#reply" class="btn_reply spr_before"><span class="s_out">댓글수 : </span><span class="count pos_center h tc_3">153</span></a>
 					</div>
 					<div class="lookbook_cont">
@@ -488,15 +490,6 @@
 		</div>
 	</footer>
 	<script src="./js/common.js"></script>
-	<script>
-		function openReply(obj){//댓글열기닫기
-			var $this = $(obj);
-			if( $this.hasClass('close') ){
-				$this.removeClass('close').closest('.func').next('.on_reply').addClass('hide');
-			}else{
-				$this.addClass('close').closest('.func').next('.on_reply').removeClass('hide');
-			}
-		}
-	</script>
+	<script></script>
 </body>
 </html>

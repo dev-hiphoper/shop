@@ -352,6 +352,14 @@ var mSize = 426, // 813
 		}
 		$('#copyAlert .message').html(mess);
 		openLayer(window.event,'#copyAlert');
+	},
+	openReply = function(obj){//댓글열기닫기
+		var $this = $(obj);
+		if( $this.hasClass('close') ){
+			$this.removeClass('close').closest('.func').next('.on_reply').addClass('hide');
+		}else{
+			$this.addClass('close').closest('.func').next('.on_reply').removeClass('hide');
+		}
 	};
 
 $(window).on({

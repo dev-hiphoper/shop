@@ -147,9 +147,9 @@
 		</div>
 	</header>
 	<!-- 검색 레이어 -->
-	<div class="dim_layer search_layer hide">
+	<div class="dim_layer search_layer  hide">
 		<div class="wrap_layer dis_f" id="searchLayer">
-			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_w"><span class="s_out">레이어 닫기</span></button>
 			<div class="searchtotal_top">
 				<div class="searchtotal_form">
 					<form action="">
@@ -158,11 +158,12 @@
 							<strong class="tit tc_1">고객님<br>무엇을 찾으세요?</strong>
 							<div class="search_box lc_3 dis_f ai_c">
 								<input type="text" class="input_search tc_1" onkeypress="tempFn()" onfocusout="tempFn2()" placeholder="상품, 매거진, 피드를 찾아보세요.">
+								<button type="button" class="btn_del spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 								<button type="submit" class="btn_submit spr_before pos_center_before"><span class="s_out">검색하기</span></button>
 							</div>
 						</fieldset>
 					</form>
-					<ul class="searchtotal_autocomplete hide" id="searchAutocomplete">
+					<ul class="searchtotal_autocomplete area_suggest hide" id="searchAutocomplete">
 						<li><a href="" class="text_link tc_d0"><span class="tc_3">아</span>우터</a></li>
 						<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터</span>패딩</a></li>
 						<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
@@ -202,7 +203,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="searchtotal_bottom ai_e">
+			<div class="searchtotal_bottom ai_e on_w">
 				<div class="cert_cont">
 					<div class="banner clear">
 						<a href="">
@@ -224,8 +225,64 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main miw1180">
-		상단 검색하기 버튼 클릭
+	<main class="site_main help srh_view"> <!-- 통합검색 클래스 srh_view 추가 -->
+		<div class="miw1180">
+			<form action="">
+				<fieldset class="search_form site_search lc_3 clear">
+					<legend>검색하기</legend>
+					<h3 class="s_out">통합검색</h3>
+					<span class="input_text large clear">
+						<input type="text" class="lc_d0 tc_3" id="siteSearchInput" onkeypress="tempFnM()" onfocusout="tempFnM2()" placeholder="검색어를 입력해 주세요." value="아무거나abcd">
+						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
+					</span>
+					<button type="submit" class="btn_search spr_before pos_center_before dis_f"><span class="s_out">검색하기</span></button>
+				</fieldset>
+			</form>
+			<ul class="searchtotal_autocomplete area_suggest hide" id="searchAutocompleteM">
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아</span>우터</a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터</span>패딩</a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
+			</ul>
+			<ul class="list_tab dis_f length3">
+				<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">ITEM<br class="on_m"> (0)</strong></li>
+				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">MAGAZINE<br class="on_m"> (0)</a></li>
+				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">FEED<br class="on_m"> (0)</a></li>
+			</ul>
+			<p class="no_result site_noresult dis_f ai_c jc_c">
+				"@#$%^&" 대한 검색 결과가 없습니다.<br>
+				인기/추천 검색어를 이용해 보세요.
+			</p>
+			<div class="recommend_keyword lc_e5 dis_f jc_c fw_wrap">
+				<div class="item dis_f">
+					<strong class="tit tc_3">인기 검색어</strong>
+					<ol class="list dis_if fw_wrap">
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터</a></li>
+						<li><a href="">#패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+					</ol>
+				</div>
+				<div class="item dis_f">
+					<strong class="tit tc_3">추천 검색어</strong>
+					<ul class="list dis_if fw_wrap">
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터패딩</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer class="site_footer layout_full lc_d">
 		<div class="inner miw1180">
@@ -247,6 +304,19 @@
 			$('#searchAutocomplete').addClass('hide')
 		}
 		openLayer(window.event,'#searchLayer');//바로 통합검색 레이어 열기
+
+
+		function tempFnM(){
+			$('#searchAutocompleteM').removeClass('hide')
+		}
+		function tempFnM2(){
+			$('#searchAutocompleteM').addClass('hide')
+		}
+
+		$(document).ready(function() {
+            var suggestHeight = $(window).height()-120;
+			$('.area_suggest').css('min-height', suggestHeight);
+        });
 	</script>
 </body>
 </html>

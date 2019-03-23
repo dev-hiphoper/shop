@@ -11,17 +11,6 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
-	<style>
-		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
-		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
-		.topvisual2{background-image:url(./img/temp_CategoryMain_1920.jpg);}
-		.topvisual3{background-image:url(./img/temp_CategoryMain_1920.jpg);}
-		@media (max-width:425px){
-			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
-			.topvisual2{background-image:url(./img/m/@temp3.jpg)}
-			.topvisual3{background-image:url(./img/m/@temp3.jpg)}
-		}
-	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -31,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">BRANDS</h2> <!-- 모바일 UI 별도 -->
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -197,8 +187,27 @@
 		</div>
 	</div>
 	<main class="site_main brand">
+		<nav class="snb magazine on_m"><!-- 모바일 UI -->
+			<h3 class="s_out">브랜드 메뉴</h3>
+			<ul class="clear tc_b">
+				<li><a href="">EXCLUSIVE</a></li>
+				<li><a href="">BEST</a></li>
+				<li><a href="">LOOKBOOK</a></li>
+			</ul>
+		</nav>
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
+				<style>
+					/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+					.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+					.topvisual2{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+					.topvisual3{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+					@media (max-width:425px){
+						.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+						.topvisual2{background-image:url(./img/m/@temp3.jpg)}
+						.topvisual3{background-image:url(./img/m/@temp3.jpg)}
+					}
+				</style>
 				<div class="slides next_lnb black">
 					<div class="item">
 						<a href="" class="topvisual1">
@@ -246,7 +255,84 @@
 		</article>
 		<section class="brand_list miw1180">
 			<h3 class="tit tc_3">BEST</h3>
-			<ol class="list clear lc_d0 bg_d0_b tc_3">
+			<div class="slides brandlist_slides on_m"><!-- 모바일 UI -->
+				<div class="item">
+					<!-- 한 item에 최대 4개씩 출력 -->
+					<ol class="list">
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+					</ol>
+				</div>
+				<div class="item">
+					<!-- 한 item에 최대 4개씩 출력 -->
+					<ol class="list">
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+					</ol>
+				</div>
+				<div class="item">
+					<!-- 한 item에 최대 4개씩 출력 -->
+					<ol class="list">
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+						<li class="lc_d0">
+							<a href="">
+								<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
+								슈프림
+							</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<ol class="list clear lc_d0 bg_d0_b tc_3 on_w"><!-- PC용 -->
 				<li class="lc_d0">
 					<a href="">
 						<img src="./img/temp_brand1.jpg" alt="" class="pos_center">
@@ -309,9 +395,13 @@
 				</li>
 			</ol>
 		</section>
-		<section class="brand_find tc_b">
+		<section class="brand_find tc_b view_eng">
 			<h3 class="s_out">브랜드 찾아보기</h3>
 			<div class="layout_full btns bg_f" id="brandBtns">
+				<div class="brand_tab dis_f on_m"><!-- 모바일 UI -->
+					<button type="button" class="eng active" data-type="tabBrand">A ~ Z</button>
+					<button type="button" class="kor" data-type="tabBrand">ㄱ ~ ㅎ</button>
+				</div>
 				<div class="inner miw1180 bg_3_b pos_center_before h">
 					<button type="button" class="btn_eng all tc_3" data-type="findBrand">All</button>
 					<div class="eng clear">
@@ -360,8 +450,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="items miw1180" id="brandList">
-				<div class="item" id="brandA">
+			<div class="items miw1180 all" id="brandList">
+				<div class="item eng" id="brandA">
 					<strong class="tit eng tc_1">A</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
@@ -377,158 +467,184 @@
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandB">
+				<div class="item eng" id="brandB">
 					<strong class="tit eng tc_1">B</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandC">
+				<div class="item eng" id="brandC">
 					<strong class="tit eng tc_1">C</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandD">
+				<div class="item eng" id="brandD">
 					<strong class="tit eng tc_1">D</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandE">
+				<div class="item eng" id="brandE">
 					<strong class="tit eng tc_1">E</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandF">
+				<div class="item eng" id="brandF">
 					<strong class="tit eng tc_1">F</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandG">
+				<div class="item eng" id="brandG">
 					<strong class="tit eng tc_1">G</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandH">
+				<div class="item eng" id="brandH">
 					<strong class="tit eng tc_1">H</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandI">
+				<div class="item eng" id="brandI">
 					<strong class="tit eng tc_1">I</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandJ">
+				<div class="item eng" id="brandJ">
 					<strong class="tit eng tc_1">J</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandK">
+				<div class="item eng" id="brandK">
 					<strong class="tit eng tc_1">K</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandL">
+				<div class="item eng" id="brandL">
 					<strong class="tit eng tc_1">L</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandM">
+				<div class="item eng" id="brandM">
 					<strong class="tit eng tc_1">M</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandN">
+				<div class="item eng" id="brandN">
 					<strong class="tit eng tc_1">N</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandO">
+				<div class="item eng" id="brandO">
 					<strong class="tit eng tc_1">O</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandP">
+				<div class="item eng" id="brandP">
 					<strong class="tit eng tc_1">P</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandQ">
+				<div class="item eng" id="brandQ">
 					<strong class="tit eng tc_1">Q</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandR">
+				<div class="item eng" id="brandR">
 					<strong class="tit eng tc_1">R</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandS">
+				<div class="item eng" id="brandS">
 					<strong class="tit eng tc_1">S</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandT">
+				<div class="item eng" id="brandT">
 					<strong class="tit eng tc_1">T</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandU">
+				<div class="item eng" id="brandU">
 					<strong class="tit eng tc_1">U</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandV">
+				<div class="item eng" id="brandV">
 					<strong class="tit eng tc_1">V</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandW">
+				<div class="item eng" id="brandW">
 					<strong class="tit eng tc_1">W</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandX">
+				<div class="item eng" id="brandX">
 					<strong class="tit eng tc_1">X</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandY">
+				<div class="item eng" id="brandY">
 					<strong class="tit eng tc_1">Y</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandZ">
+				<div class="item eng" id="brandZ">
 					<strong class="tit eng tc_1">Z</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">A BY A</strong><em class="tc_8">에이바이에이</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandGA">
+				<div class="item kor" id="brandGA">
 					<strong class="tit kor tc_1">가</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
@@ -538,84 +654,98 @@
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandNA">
+				<div class="item kor" id="brandNA">
 					<strong class="tit kor tc_1">나</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandDA">
+				<div class="item kor" id="brandDA">
 					<strong class="tit kor tc_1">다</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandLA">
+				<div class="item kor" id="brandLA">
 					<strong class="tit kor tc_1">라</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandMA">
+				<div class="item kor" id="brandMA">
 					<strong class="tit kor tc_1">마</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandBA">
+				<div class="item kor" id="brandBA">
 					<strong class="tit kor tc_1">바</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandSA">
+				<div class="item kor" id="brandSA">
 					<strong class="tit kor tc_1">사</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandAA">
+				<div class="item kor" id="brandAA">
 					<strong class="tit kor tc_1">아</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandJA">
+				<div class="item kor" id="brandJA">
 					<strong class="tit kor tc_1">자</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandCA">
+				<div class="item kor" id="brandCA">
 					<strong class="tit kor tc_1">차</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandKA">
+				<div class="item kor" id="brandKA">
 					<strong class="tit kor tc_1">카</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandTA">
+				<div class="item kor" id="brandTA">
 					<strong class="tit kor tc_1">타</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandPA">
+				<div class="item kor" id="brandPA">
 					<strong class="tit kor tc_1">파</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
-				<div class="item" id="brandHA">
+				<div class="item kor" id="brandHA">
 					<strong class="tit kor tc_1">하</strong>
 					<ul class="list clear">
 						<li><a href=""><strong class="tc_3">에이바이에이</strong><em class="tc_8">A BY A</em></a></li>
 					</ul>
+					<button type="button" class="view_more on_m">더보기</button><!-- 모바일 UI -->
 				</div>
 			</div>
 		</section>
@@ -647,7 +777,7 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		$('.slides').slick({
+		$('.top_visual .slides').slick({
 			dots:true,
 			dotsClass:'slick-dots pos_center h dis_f',
 			//arrows:false,
@@ -673,39 +803,118 @@
 			$btns = $('#brandBtns'),
 			$items = $btns.find('a[class^="btn_"]');
 		function brandScrollFn(){
-			var tarTop = $tar.offset().top,
-				ws = $(window).scrollTop(),
-				wx = $(window).scrollLeft();
-			if(ws<=tarTop){
-				$btns.removeClass('fix');
-				$btns.find('.tc_3').removeClass('tc_3');
-				$btns.find('.all').addClass('tc_3');
-			}else{
-				$btns.addClass('fix');
-				$tar.find('>.item').each(function(index, el) {
-					var ot = $(el).offset().top,
-						ws = $(window).scrollTop();
-					if(ot<ws+104+50){
-						$btns.find('.tc_3').removeClass('tc_3');
-						$btns.find('a[href="#'+el.id+'"]').addClass('tc_3')
-					}
-				});
+			if(!mCheck()){
+				var tarTop = $tar.offset().top,
+					ws = $(window).scrollTop(),
+					wx = $(window).scrollLeft();
+				if(ws<=tarTop){
+					$btns.removeClass('fix');
+					$btns.find('.tc_3').removeClass('tc_3');
+					$btns.find('.all').addClass('tc_3');
+				}else{
+					$btns.addClass('fix');
+					$tar.find('>.item').each(function(index, el) {
+						var ot = $(el).offset().top,
+							ws = $(window).scrollTop();
+						if(ot<ws+104+50){
+							$btns.find('.tc_3').removeClass('tc_3');
+							$btns.find('a[href="#'+el.id+'"]').addClass('tc_3')
+						}
+					});
+				}
+				if($btns.hasClass('fix')){
+					$btns.css('transform','translateX(-'+wx+'px)');
+				}
 			}
-			if($btns.hasClass('fix')){
-				$btns.css('transform','translateX(-'+wx+'px)');
-			}
-		}
+		};
+		var slickFn = function(){
+				var $slides = $('.brandlist_slides');
+				if(mCheck()){
+					if(!$slides.hasClass('slick-initialized')){
+						$slides.slick({
+							dots:false,
+							prevArrow:'<button type="button" class="btn_arr prev spr_before"><span class="s_out">이전</span></button>',
+							nextArrow:'<button type="button" class="btn_arr next spr_before"><span class="s_out">다음</span></button>',
+							infinite:false
+						});
+						if($slides[0].slick.$slides.length==1){
+							$slides.slick('unslick');
+						}
+					};
+				}else{
+					if($slides.hasClass('slick-initialized')){
+						$slides.slick('unslick');
+					};
+				}
+			};
 		$(window).on({
+			'resize.brand':slickFn,
 			'scroll.brand':brandScrollFn,
-			'load.brand':brandScrollFn,
+			'load.brand':function(e){
+				brandScrollFn();
+				slickFn();
+			},
 			'click.brand':function(e){
 				var $this = $(e.target);
 				if($this.closest('[class^="btn_"]').is('[data-type="findBrand"]')){
 					if($this.is('a')){
 						e.preventDefault();
 					}
-					var val = $this.closest('[class^="btn_"]').is('a')?$($this.closest('[class^="btn_"]').attr('href')).offset().top-104-20:$tar.offset().top;
-					$(window).scrollTop(val);
+					if(!mCheck()){
+						var val = $this.closest('[class^="btn_"]').is('a')?$($this.closest('[class^="btn_"]').attr('href')).offset().top-104-20:$tar.offset().top;
+						$(window).scrollTop(val);
+					}else{
+						var $brandList = $('#brandList'),
+							$brandBtns = $('#brandBtns');
+						if( $this.hasClass('all') ){
+							$brandList.addClass('all');
+							$brandBtns.find('.tc_3').removeClass('tc_3');
+							$brandBtns.find('.all').removeClass('tc_b');
+							if( $this.closest('.brand_find').hasClass('view_eng') ){
+								$brandList.find('.eng').removeClass('hid');
+							}else{
+								$brandList.find('.kor').removeClass('hid');
+							}
+						}else if( $this.hasClass('btn_eng') ){
+							$brandBtns.find('.btn_eng').removeClass('tc_3');
+							$brandBtns.find('.all').removeClass('tc_3').addClass('tc_b');
+							$brandList.removeClass('all').find('.item.eng').addClass('hid');
+							$this.addClass('tc_3');
+							$($this.attr('href')).removeClass('hid');
+						}else{
+							$brandBtns.find('.btn_kor').removeClass('tc_3');
+							$brandBtns.find('.all').removeClass('tc_3').addClass('tc_b');
+							$brandList.removeClass('all').find('.item.kor').addClass('hid');
+							$this.addClass('tc_3');
+							$($this.attr('href')).removeClass('hid');
+						}
+					}
+				}
+				if($this.is('button[data-type=tabBrand]')){
+					$this.closest('.brand_tab').find('button').removeClass('active');
+					$this.addClass('active');
+					var c = !$this.index()?'view_eng':'view_kor',
+						t = $this.closest('.brand_find'),
+						$brandList = $('#brandList'),
+						$brandBtns = $('#brandBtns');
+					t.removeClass('view_eng view_kor').addClass(c);
+					if(!$this.index()){
+						// 영문
+						if( $brandList.find('.item.eng:not(.hid)').length > 1 ){
+							$brandBtns.find('.all').removeClass('tc_b').addClass('tc_3');
+						}else{
+							$brandBtns.find('.all').removeClass('tc_3').addClass('tc_b');
+							$brandBtns.find('a[href="#'+$brandList.find('.item.eng:not(.hid)')[0].id+'"]').addClass('tc_3');
+						}
+					}else{
+						// 국문
+						if( $brandList.find('.item.kor:not(.hid)').length > 1 ){
+							$brandBtns.find('.all').removeClass('tc_b').addClass('tc_3');
+						}else{
+							$brandBtns.find('.all').removeClass('tc_3').addClass('tc_b');
+							$brandBtns.find('a[href="#'+$brandList.find('.item.kor:not(.hid)')[0].id+'"]').addClass('tc_3');
+						}
+					}
 				}
 			}
 		});

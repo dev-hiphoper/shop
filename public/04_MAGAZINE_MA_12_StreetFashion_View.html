@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">MAGAZINE</h2> <!-- 모바일 UI 별도 -->
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -238,7 +239,7 @@
 							<dd class="tc_3"><a href="" class="text_link tc_3">인스타그램</a></dd>
 						</dl>
 					</div>
-					<ul class="related_list length3 lc_e5 clear">
+					<ul class="related_list length3 lc_e5 clear slides">
 						<li>
 							<div class="detail"><img src="./img/temp_street4.jpg" alt=""></div>
 							<ul class="list_product mini vertical">
@@ -560,24 +561,31 @@
 	</footer>
 	<script src="./js/common.js"></script>
 	<script>
-		$('.slides').slick({
-			dots:true,
-			arrows:false,
-			adaptiveHeight:true,
-			dotsClass:'slick-dots dis_f'
-		}).each(function(index, el){
-			if( $(el)[0].slick.slideCount == 1 ){
-				$(el).slick('unslick');
-			}
+		var slickFn = function(){
+				var $slides = $('.related_list.slides');
+				if(mCheck()){
+					if(!$slides.hasClass('slick-initialized')){
+						$slides.slick({
+							dots:true,
+							arrows:false,
+							adaptiveHeight:true,
+							dotsClass:'slick-dots dis_f'
+						});
+						if($slides[0].slick.$slides.length==1){
+							$slides.slick('unslick');
+						}
+					};
+				}else{
+					if($slides.hasClass('slick-initialized')){
+						$slides.slick('unslick');
+					};
+				}
+			};
+		$(window).on({
+			'resize.street':slickFn,
+			'load.street':slickFn
 		});
-		function openReply(obj){//댓글열기닫기
-			var $this = $(obj);
-			if( $this.hasClass('close') ){
-				$this.removeClass('close').closest('.func').next('.on_reply').addClass('hide');
-			}else{
-				$this.addClass('close').closest('.func').next('.on_reply').removeClass('hide');
-			}
-		}
+
 	</script>
 </body>
 </html>

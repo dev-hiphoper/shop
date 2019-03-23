@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0"> <!-- 서브페이지인 경우 sub_header 클래스 추가 -->
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">나의 문의 내역</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -236,7 +237,7 @@
 				</ul>
 			</nav>
 			<div class="cont cont_mypage my_que">
-				<h3 class="tit tc_1">나의 문의 내역</h3>
+				<h3 class="tit tc_1 on_w">나의 문의 내역</h3>
 				<form action="" class="myorder_search">
 					<fieldset>
 						<legend>나의 문의 내역 조회</legend>
@@ -426,7 +427,8 @@
 								<dt class="s_out">게시글번호</dt>
 								<dd class="number">11502</dd>
 								<dt class="s_out">상태</dt>
-								<dd class="flag new"><span class="s_out">새글</span></dd>
+								<dd class="flag new on_w"><span class="s_out">새글</span></dd>
+								<dd class="flag kor no tc_b on_m"><span class="s_out">답변 대기</span></dd>
 								<dt class="s_out">구분</dt>
 								<dd class="category tc_b">상품 문의</dd>
 								<dt class="s_out">작성자</dt>
@@ -437,7 +439,10 @@
 							<div class="que tc_5 clear">
 								<span class="s_out">문의내용 : </span>
 								<div class="cont clear">
-									<p>안녕하세요.<br>
+									<p>
+									<!-- 모바일 새 글 flag 레이아웃을 위해 제목 영역 분리하였습니다. -->
+									<span class="subject">안녕하세요.</span><span class="flag new on_m"><span class="s_out">새 글</span></span>
+									<br>
 									지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
 									95보다 더 먼저 주문한 차콜 105는 언제 오는건가요?
 									지난주 토요일에 다른아이디로2개 이걸로 1개 총 3개 주문해서 다른아이디로 주문한 와인 100, 차콜 95는 받았는데,
@@ -775,7 +780,7 @@
 							</div>
 						</li>
 					</ul>
-					<div class="pages">
+					<div class="pages on_w">
 						<em class="link">1</em>
 						<a href="" class="link">2</a>
 						<a href="" class="link">3</a>
@@ -788,6 +793,15 @@
 						<a href="" class="link">10</a>
 						<a href="" class="link last">132</a>
 						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
+					</div>
+					<div class="pages on_m">
+						<a href="" class="btn_arr prev spr_before disabled"><span class="s_out">이전</span></a>
+						<em class="link">1</em>
+						<a href="" class="link">2</a>
+						<a href="" class="link">3</a>
+						<a href="" class="link">4</a>
+						<a href="" class="link">5</a>
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>

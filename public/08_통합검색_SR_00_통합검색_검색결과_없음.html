@@ -185,23 +185,30 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main help">
+	<main class="site_main help srh_view"> <!-- 통합검색 클래스 srh_view 추가 -->
 		<div class="miw1180">
 			<form action="">
 				<fieldset class="search_form site_search lc_3 clear">
 					<legend>검색하기</legend>
 					<h3 class="s_out">통합검색</h3>
 					<span class="input_text large clear">
-						<input type="text" class="lc_d0 tc_3" id="siteSearchInput" placeholder="검색어를 입력해 주세요." value="아무거나abcd">
+						<input type="text" class="lc_d0 tc_3" id="siteSearchInput" onkeypress="tempFnM()" onfocusout="tempFnM2()" placeholder="검색어를 입력해 주세요." value="아무거나abcd">
 						<button type="button" class="spr_before" data-type="inputreset"><span class="s_out">입력 삭제</span></button>
 					</span>
 					<button type="submit" class="btn_search spr_before pos_center_before dis_f"><span class="s_out">검색하기</span></button>
 				</fieldset>
 			</form>
+			<ul class="searchtotal_autocomplete area_suggest hide" id="searchAutocompleteM">
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아</span>우터</a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터</span>패딩</a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
+				<li><a href="" class="text_link tc_d0"><span class="tc_3">아우터코트</span></a></li>
+			</ul>
 			<ul class="list_tab dis_f length3">
-				<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">ITEM (0)</strong></li>
-				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">MAGAZINE (0)</a></li>
-				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">FEED (0)</a></li>
+				<li class="dis_if active"><strong class="tc_8 dis_f ai_c lc_b jc_c">ITEM<br class="on_m"> (0)</strong></li>
+				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">MAGAZINE<br class="on_m"> (0)</a></li>
+				<li class="dis_if"><a href="" class="tc_8 dis_f ai_c lc_b jc_c">FEED<br class="on_m"> (0)</a></li>
 			</ul>
 			<p class="no_result site_noresult dis_f ai_c jc_c">
 				"@#$%^&" 대한 검색 결과가 없습니다.<br>
@@ -213,8 +220,8 @@
 					<ol class="list dis_if fw_wrap">
 						<li><a href="">#아우터패딩</a></li>
 						<li><a href="">#아우터패딩</a></li>
-						<li><a href="">#아우터패딩</a></li>
-						<li><a href="">#아우터패딩</a></li>
+						<li><a href="">#아우터</a></li>
+						<li><a href="">#패딩</a></li>
 						<li><a href="">#아우터패딩</a></li>
 						<li><a href="">#아우터패딩</a></li>
 						<li><a href="">#아우터패딩</a></li>
@@ -297,6 +304,18 @@
 		$(document).ready(function() {
 			checkSearched();//에이젝스로 검색결과만 바꿀 경우에는 해당 함수 실행해야 함
 		});
+
+		function tempFnM(){
+			$('#searchAutocompleteM').removeClass('hide')
+		}
+		function tempFnM2(){
+			$('#searchAutocompleteM').addClass('hide')
+		}
+
+		$(document).ready(function() {
+            var suggestHeight = $(window).height()-120;
+			$('.area_suggest').css('min-height', suggestHeight);
+        });
 	</script>
 </body>
 </html>

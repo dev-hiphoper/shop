@@ -186,7 +186,7 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main brand_view">
+	<main class="site_main brand_view view_main"> <!-- 모바일인 경우 view_main 추가 -->
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
 				<style>
@@ -671,6 +671,19 @@
 			var $this = $('#sortLayer input:checked');
 			$('button[data-type=opensort] .text').html($('label[for='+$this[0].id+']').text());
 		}
+		$(window).on({
+			'click.product':function(e){
+				var $this = $(e.target);
+				if( $this.is('[data-type=changelistview]') ){
+					if( $this.hasClass('list') ){
+						$this.removeClass('list').closest('.cont').find('.list_product').removeClass('typelist');
+					}else{
+						$this.addClass('list').closest('.cont').find('.list_product').addClass('typelist');
+
+					}
+				}
+			}
+		})
 	</script>
 </body>
 </html>
