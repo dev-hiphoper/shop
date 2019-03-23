@@ -194,7 +194,7 @@
 		<section class="cert_cont miw1180">
 			<div class="inner order_form dis_f ai_s">
 				<article class="order_info" id="orderInfo">
-					<section class="item">
+					<section class="item prod_info">
 						<h3 class="tit tc_3">상품 정보</h3>
 						<button type="button" class="btn_expand bg_3_a bg_3_b pos_center_after pos_center_before" onclick="expand(this)"><span class="s_out">열기</span></button>
 						<div class="expand_wrap">
@@ -231,7 +231,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 									</tr>
 									<tr class="al_center tc_3">
 										<td class="al_left">
@@ -254,7 +254,7 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 									</tr>
 									<tr class="al_center tc_3">
 										<td class="al_left">
@@ -277,14 +277,14 @@
 												</li>
 											</ul>
 										</td>
-										<td>129,600</td>
+										<td class="order_price">129,600</td>
 									</tr>
 								</tbody>
 							</table>
 							<div class="expand_summary tc_3">총 <span>3</span>개</div>
 						</div>
 					</section>
-					<section class="item">
+					<section class="item disc_info">
 						<h3 class="tit tc_3">할인 정보</h3>
 						<button type="button" class="btn_expand bg_3_a bg_3_b pos_center_after pos_center_before" onclick="expand(this)"><span class="s_out">열기</span></button>
 						<div class="expand_wrap">
@@ -352,7 +352,7 @@
 							<div class="expand_summary tc_3"><span>- 135,800</span></div>
 						</div>
 					</section>
-					<section class="item">
+					<section class="item orderer_info">
 						<h3 class="tit tc_3">주문하시는 분</h3>
 						<button type="button" class="btn_expand bg_3_a bg_3_b pos_center_after pos_center_before" onclick="expand(this)"><span class="s_out">열기</span></button>
 						<div class="expand_wrap">
@@ -421,7 +421,7 @@
 							<div class="expand_summary tc_3">홍길동 <span>010-1234-5678</span></div>
 						</div>
 					</section>
-					<section class="item">
+					<section class="item orderer_info">
 						<h3 class="tit tc_3">받으시는 분</h3>
 						<button type="button" class="btn_expand bg_3_a bg_3_b pos_center_after pos_center_before" onclick="expand(this)"><span class="s_out">열기</span></button>
 						<div class="expand_wrap">
@@ -534,8 +534,8 @@
 					</section>
 					<section class="item payment">
 						<h3 class="tit tc_3">결제 정보</h3>
-						<a href="#payInfo" class="btn_info pos_center_before spr_before" onclick="openLayer(event,this)"><span class="s_out">안내보기</span></a>
-						<div class="wrap_layer payinfo_layer lc_b hide" id="payInfo">
+						<a href="#payInfo" class="btn_info pos_center_before spr_before on_w" onclick="openLayer(event,this)"><span class="s_out">안내보기</span></a>
+						<div class="wrap_layer payinfo_layer lc_b on_w hide" id="payInfo">
 							<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
 							<div class="layer_tit tc_3 lc_d0">결제 정보 안내</div>
 							<div class="layer_cont">
@@ -551,18 +551,106 @@
 								</ul>
 							</div>
 						</div>
-						<article class="sel_payment clear">
-							<input type="radio" name="payment" id="payCard"><label for="payCard" class="card lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">신용카드</span></label>
-							<input type="radio" name="payment" id="payDeposit"><label for="payDeposit" class="deposit lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">무통장 입금</span></label>
-							<input type="radio" name="payment" id="payTransfer"><label for="payTransfer" class="transfer lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">실시간 계좌이체</span></label>
-							<input type="radio" name="payment" id="paySamsung"><label for="paySamsung" class="sumsung lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">삼성페이</span></label>
-							<input type="radio" name="payment" id="payPayco"><label for="payPayco" class="payco lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">페이코</span></label>
-						</article>
-						<div class="check_default">
-							<span class="input_checkbox">
-								<input type="checkbox" name="" id="checkDefaultPay"><label for="checkDefaultPay" class="tc_3 spr_after">지금 선택한 결제 수단을 다음에도 사용</label>
-							</span>
+						<a href="#payInfo2" class="btn_info pos_center_before spr_before on_m" onclick="openLayer(event,this)"><span class="s_out">안내보기</span></a>
+						<div class="dim_layer w640 scroll hide on_m" id="payInfoMobile">
+							<div class="wrap_layer lc_b" id="payInfo2">
+								<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+								<div class="layer_tit tc_3 lc_d0">결제 정보 안내</div>
+								<div class="layer_cont">
+									<ul class="dot_list">
+										<li>무통장 입금 주문건 3일 이내 미입금 시, 자동 취소처리가 진행됩니다.</li>
+										<li>신용카드 결제 시 화면 우측 '주문 및 결제' 버튼을 클릭하시면 신용카드 결제 창이 나타납니다. 신용카드 결제 창을 통해 입력되는 고객님의 카드 정보는 128bit로 안전하게 암호화되어 전송되며 승인 처리 후 카드 정보는 승인 성공/ 실패 여부에 상관없이 자동 으로 폐기되므로, 안전합니다.</li>
+										<li>신용카드 결제 신청 시 승인 진행에 다소 시간이 소요될 수 있으므로 '중지', '새로고침'을 누르지 마시고 결과 화면이 나타날때까지 기다려 주십시오.</li>
+										<li>신용카드/ 실시간 이체는 결제 후, 무통장입금은 입금확인 후 배송이 이루어집니다.</li>
+										<li>국내 모든 카드 사용이 가능하며 해외에서 발행된 카드는 이용하실 수 없습니다.</li>
+										<li>PAYCO 간편 결제는 온/오프라인 쇼핑은 물론 송금, 멤버십 적립까지 가능한 통합 서비스입니다.</li>
+										<li>PAYCO 간편 결제 시 휴대폰과 카드 명의자가 동일해야 결제 가능하며, 결제 금액 제한은 없습니다.(지원 카드: 모든 국내 신용/체크카드)</li>
+										<li>HIPHOPER는 구매 안전 서비스로 전자 보증 서비스에 가입되어 있습니다.</li>
+									</ul>
+								</div>
+							</div>	
 						</div>
+						<button type="button" class="btn_expand bg_3_a bg_3_b pos_center_after pos_center_before" onclick="expand(this)"><span class="s_out">열기</span></button>
+						<div class="expand_wrap">
+							<article class="sel_payment clear">
+								<input type="radio" name="payment" id="payCard"><label for="payCard" class="card lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">신용카드</span></label>
+								<input type="radio" name="payment" id="payDeposit"><label for="payDeposit" class="deposit lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">무통장 입금</span></label>
+								<input type="radio" name="payment" id="payTransfer"><label for="payTransfer" class="transfer lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">실시간 계좌이체</span></label>
+								<input type="radio" name="payment" id="paySamsung"><label for="paySamsung" class="sumsung lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">삼성페이</span></label>
+								<input type="radio" name="payment" id="payPayco"><label for="payPayco" class="payco lc_d0 tc_8 bg_f spr_before pos_center_before"><span class="pos_center">페이코</span></label>
+							</article>
+							<div class="check_default">
+								<span class="input_checkbox">
+									<input type="checkbox" name="" id="checkDefaultPay"><label for="checkDefaultPay" class="tc_3 spr_after">지금 선택한 결제 수단을 다음에도 사용</label>
+								</span>
+							</div>
+						</div>
+					</section>
+					<section class="item agree on_m">
+						<ul class="pay_agree">
+							<li class="lc_d0">
+								<span class="input_checkbox">
+									<input type="checkbox" name="" id="agree1" required><label for="agree1" class="spr_after">주문 상품 정보에 동의(필수)</label>
+								</span>
+							</li>
+							<li>
+								<span class="input_checkbox">
+									<input type="checkbox" name="" id="agree2" required><label for="agree2" class="spr_after">결제 대행 서비스 이용을 위한 개인 정보 제3자 제공 및 위탁 동의(필수)</label>
+								</span>
+								<a href="#infoProvision" class="btn_detail small fix pos_center v on_w" onclick="openLayer(event,this)">내용 확인</a>
+								<div class="wrap_layer infoprovision_layer lc_b hide on_w" id="infoProvision">
+									<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+									<div class="layer_tit tc_3 lc_d0">결제 대행 서비스 이용 동의</div>
+									<div class="layer_cont">
+										<p>힙합퍼의 결제 서비스 이행을 위해 개인정보를 제3자에게 제공하는 경우는 다음과 같습니다.</p>
+										<ul class="dot_list">
+											<li>제공받는자 : (주)NHN한국사이버결제</li>
+											<li>목적 : 신용카드 결제, 계좌이체 결제, 가상계좌 결제</li>
+											<li>제공정보 : 거래정보</li>
+										</ul>
+										<ul class="dot_list">
+											<li>제공받는자 : SAMSUNG PAY</li>
+											<li>목적 : 신용카드 결제</li>
+											<li>제공정보 : 거래정보</li>
+										</ul>
+										<ul class="dot_list">
+											<li>제공받는자 : (주)엔에이치엔페이코</li>
+											<li>목적 : PAYCO 결제</li>
+											<li>제공정보 : 거래정보</li>
+										</ul>
+										<p>이용자는 개인정보 수집 및 이용 동의를 거부할 수 있습니다. 단, 동의를 거부 하는 경우 서비스 결제가 정상적으로 완료 될 수 없음을 알려 드립니다.</p>
+										<p class="tc_8">개인정보의 처리와 관련된 사항은 개인정보처리방침(통합결제창 하단에서 확인할 수 있습니다)에 따릅니다.</p>
+									</div>
+								</div>
+								<a href="#infoProvision2" class="btn_detail small fix pos_center v on_m" onclick="openLayer(event,this)">내용 확인</a>
+								<div class="dim_layer w640 scroll hide on_m">
+									<div class="wrap_layer lc_b" id="infoProvision2">
+										<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+										<div class="layer_tit tc_3 lc_d0">결제 정보 안내</div>
+										<div class="layer_cont">
+											<p>힙합퍼의 결제 서비스 이행을 위해 개인정보를 제3자에게 제공하는 경우는 다음과 같습니다.</p>
+											<ul class="dot_list">
+												<li>제공받는자 : (주)NHN한국사이버결제</li>
+												<li>목적 : 신용카드 결제, 계좌이체 결제, 가상계좌 결제</li>
+												<li>제공정보 : 거래정보</li>
+											</ul>
+											<ul class="dot_list">
+												<li>제공받는자 : SAMSUNG PAY</li>
+												<li>목적 : 신용카드 결제</li>
+												<li>제공정보 : 거래정보</li>
+											</ul>
+											<ul class="dot_list">
+												<li>제공받는자 : (주)엔에이치엔페이코</li>
+												<li>목적 : PAYCO 결제</li>
+												<li>제공정보 : 거래정보</li>
+											</ul>
+											<p>이용자는 개인정보 수집 및 이용 동의를 거부할 수 있습니다. 단, 동의를 거부 하는 경우 서비스 결제가 정상적으로 완료 될 수 없음을 알려 드립니다.</p>
+											<p class="tc_8">개인정보의 처리와 관련된 사항은 개인정보처리방침(통합결제창 하단에서 확인할 수 있습니다)에 따릅니다.</p>
+										</div>
+									</div>	
+								</div>
+							</li>
+						</ul>
 					</section>
 				</article>
 				<section class="order_payment" id="orderPayment">
@@ -646,8 +734,29 @@
 			</div>
 		</div>
 	</footer>
+	<div class="bag_tabnav dif_f on_m">
+		<div class="left">
+			<p>총 합계  <span>232,700</span></p>
+			<a href="#bagInfo" class="info spr_after" data-type="baginfo"><span class="s_out">안내보기</span></a>
+			<div class="wrap_layer bag_tabnav_layer lc_b hide" id="bagInfo">
+				<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+				<div class="layer_tit tc_3 lc_d0">총 합계 내역</div>
+				<div class="layer_cont">
+					<dl class="clear">
+						<dt>상품 합계</dt>
+						<dd>292,900</dd>
+						<dt>배송비</dt>
+						<dd>2,500</dd>
+						<dt>할인 합계</dt>
+						<dd>- 62,700</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="buy right">주문</button>
+	</div>
 	<!-- 최근 주소지 레이어 -->
-	<div class="dim_layer w640 hide">
+	<div class="dim_layer w640">
 		<div class="wrap_layer lastaddress_layer lc_b" id="lastAddress">
 			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
 			<div class="layer_tit tc_3 lc_d0">최근 주소지</div>
@@ -752,6 +861,23 @@
 			load:function(e){
 				setScroll();
 				orderPaymentScroll();
+			},
+			'click.editoption':function(e){
+				var $this = $(e.target);
+				// if( $this.is('a[data-type=editoption]') ){
+				// 	e.preventDefault();
+				// 	openLayer(e,$this[0]);
+				// 	var pos = $this.closest('ul').position(),
+				// 		t = pos.top+1,
+				// 		$tar = $($this.attr('href'));
+				// 	$tar.css({
+				// 		top:t
+				// 	})
+				// }
+				if($this.is('a[data-type=baginfo]')){
+					e.preventDefault();
+					openLayer(window.event,'#bagInfo');
+				}
 			}
 		})
 	</script>

@@ -11,13 +11,6 @@
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
 	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
-	<style>
-		/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
-		.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
-		@media (max-width:425px){
-			.topvisual1{background-image:url(./img/m/@temp3.jpg)}
-		}
-	</style>
 	<script src="./js/plugin.js"></script>
 </head>
 <body>
@@ -27,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">VERYNINEFLUX</h2><!-- 모바일 UI -->
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -193,8 +187,22 @@
 		</div>
 	</div>
 	<main class="site_main brand_view lookbook">
+		<nav class="snb magazine on_m"><!-- 모바일 UI -->
+			<h3 class="s_out">브랜드 메뉴</h3>
+			<ul class="clear tc_b">
+				<li><a href="">BRAND HOME</a></li>
+				<li><a href="" class="tc_3">LOOKBOOK</a></li>
+			</ul>
+		</nav>
 		<article class="layout_full top_visual" style="background-color:#cdcbcc">
 			<div class="inner">
+				<style>
+					/* 하단의 class와 같은 값으로 코드상에 들어가야 합니다. */
+					.topvisual1{background-image:url(./img/temp_CategoryMain_1920.jpg);}
+					@media (max-width:425px){
+						.topvisual1{background-image:url(./img/m/@temp3.jpg)}
+					}
+				</style>
 				<div class="slides brand_view">
 					<!-- class는 고유값으로 들어올수 있도록 처리해주세요. -->
 					<div class="item topvisual1"> <!-- 흰색일 경우 white -->

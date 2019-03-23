@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">쇼핑백(12)</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -185,7 +186,7 @@
 			</div>
 		</div>
 	</div>
-	<main class="site_main cart">
+	<main class="site_main cart bag">
 		<div class="site_step miw1280">
 			<span><span class="step tc_b tc_3">01 쇼핑백</span></span>
 			<span><span class="step tc_b">02 주문 결제</span></span>
@@ -193,7 +194,7 @@
 		</div>
 		<section class="cert_cont miw1180">
 			<h3 class="tit tc_3">쇼핑백</h3>
-			<table class="table_st">
+			<table class="table_st noresult">
 				<colgroup>
 					<col style="width:62px">
 					<col>
@@ -203,7 +204,7 @@
 				</colgroup>
 				<thead>
 					<tr>
-						<th><span class="input_checkbox"><input type="checkbox" name="checkAll" id="checkAll" data-type="checkAll" disabled><label for="checkAll" class="tc_3 spr_after">전체선택</label></span></th>
+						<th><span class="input_checkbox"><input type="checkbox" name="checkAll" id="checkAll" data-type="checkAll"><label for="checkAll" class="tc_3 spr_after">전체선택</label></span></th>
 						<th>상품 정보</th>
 						<th>수량</th>
 						<th>주문 금액</th>
@@ -211,13 +212,33 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="al_center tc_3">
+					<tr>
 						<td colspan="5">
 							<p class="noresult dis_f ai_c jc_c">쇼핑백에 담은 상품이 없습니다.</p>
 						</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="btns dis_f">
+				<!-- <button type="button" class="btn_del">선택 상품 삭제</button> 삭제 -->
+				<p class="notice dis_if ai_c tc_8 on_w">쇼핑백은 접속 종료 후 60일 동안 보관됩니다.</p>
+				<ul class="dot_list on_m">
+					<li>쇼핑백은 접속 종료 후 60일 동안 보관됩니다.</li>
+					<li>배송비가 표기되지 않은 상품은 무료배송입니다.</li>
+				</ul>
+			</div>
+			<div class="calc dis_f lc_3 tc_3 jc_c ai_c">
+				<span class="item dis_if">상품 합계<span class="num">289,000</span></span>
+				<span class="dis dis_if pos_center_before pos_center_after bg_3_a bg_3_b">+</span>
+				<span class="item dis_if">배송비<span class="num">2,500</span></span>
+				<span class="dis dis_if pos_center_before bg_3_b">-</span>
+				<span class="item dis_if">할인 합계<span class="num">2,500</span></span>
+				<span class="dis dis_if equal pos_center_before pos_center_after bg_3_a bg_3_b">=</span>
+				<span class="item total tc_1">총 합계<span class="num">277,100</span></span>
+			</div>
+			<div class="btns dis_f jc_c">
+				<button type="button" class="btn_buy dark large fix">구매</button>
+			</div>
 			<div class="banner clear">
 				<a href="">
 					<img src="./img/temp_cert1.jpg" alt="임시이미지">

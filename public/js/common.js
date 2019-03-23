@@ -167,7 +167,7 @@ var mSize = 426, // 813
 				});
 			}
 			$tar.removeClass('hide').find('.btn_confirm').focus();
-			if(mCheck()){
+			if(mCheck() && !$('#dimM')[0]){
 				$('body').append('<div id="dimM" />');
 			}
 		}else{
