@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">결제 완료</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -301,6 +302,24 @@
 						</tr>
 					</tbody>
 				</table>
+				<div class="total_amount on_m">
+					<a href="#none" class="link spr_after">주문 전체 상품 확인</a>
+					<span class="txt_total">총 결제 금액 <em class="num">217,700</em><a href="#bagInfo" class="btn_info pos_center_before spr_before" onclick="openLayer(event,this)"><span class="s_out">안내보기</span></a></span>
+					<div class="wrap_layer bag_tabnav_layer lc_b hide" id="bagInfo">
+						<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after"><span class="s_out">레이어 닫기</span></button>
+						<div class="layer_tit tc_3 lc_d0">총 합계 내역</div>
+						<div class="layer_cont">
+							<dl class="clear">
+								<dt>상품 합계</dt>
+								<dd>292,900</dd>
+								<dt>배송비</dt>
+								<dd>2,500</dd>
+								<dt>할인 합계</dt>
+								<dd>- 62,700</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
 				<div class="calc dis_f lc_3 tc_3 jc_c ai_c">
 					<span class="item dis_if">상품 합계<span class="num">289,000</span></span>
 					<span class="dis dis_if pos_center_before pos_center_after bg_3_a bg_3_b">+</span>
@@ -339,6 +358,28 @@
 		</div>
 	</footer>
 	<script src="./js/common.js"></script>
-	<script></script>
+	<script>
+		<script>
+		$(window).on({
+		'click.editoption':function(e){
+			var $this = $(e.target);
+			if( $this.is('a[data-type=editoption]') ){
+				e.preventDefault();
+				openLayer(e,$this[0]);
+				var pos = $this.closest('ul').position(),
+					t = pos.top+1,
+					$tar = $($this.attr('href'));
+				$tar.css({
+					top:t
+				})
+			}
+			if($this.is('a[data-type=baginfo]')){
+				e.preventDefault();
+				openLayer(window.event,'#bagInfo');
+			}
+		}
+	})
+	</script>
+	</script>
 </body>
 </html>

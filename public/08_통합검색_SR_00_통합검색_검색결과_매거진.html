@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">통합검색</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -213,14 +214,14 @@
 			<div class="site_searchresult search_item">
 				<div class="area_select on_m">
 					<span class="input_select event_sort_m">
-						<select name="" id="" class="tc_3_h tc_3" data-type="autowidth" style="width: 94px;">
-							<option value="" selected="">MAGAZINE (129)</option>
-							<option value="">TV (129)</option>
-							<option value="">STREET FASHION (129)</option>
+						<select name="" id="sortM" class="tc_3_h tc_3" data-type="autowidth">
+							<option value="magazine" selected="">MAGAZINE (129)</option>
+							<option value="tv">TV (129)</option>
+							<option value="street">STREET FASHION (129)</option>
 						</select>
 					</span>
 				</div>
-				<div class="item lc_e5 on">
+				<div class="item lc_e5 on" id="resultMagazine">
 					<section class="magazine_cont magazine_list">
 						<h4 class="searchresult_tit tc_3 on_w on_w">MAGAZINE (40)</h4>
 						<ul class="magazine_thum_list clear">
@@ -372,7 +373,7 @@
 						</div>
 					</section>
 				</div>
-				<div class="item lc_e5">
+				<div class="item lc_e5" id="resultTv">
 					<section class="magazine_cont tv_list">
 						<h4 class="searchresult_tit tc_3 on_w on_w">TV (27)</h4>
 						<ul class="magazine_thum_list clear">
@@ -524,7 +525,7 @@
 						</div>
 					</section>
 				</div>
-				<div class="item lc_e5">
+				<div class="item lc_e5" id="resultStreet">
 					<section class="magazine_cont street_list">
 						<h4 class="searchresult_tit tc_3 on_w">STREET FASHION (16)</h4>
 						<ul class="magazine_thum_list clear">
@@ -721,6 +722,35 @@
 		});
 		$(document).ready(function() {
 			checkSearched();//에이젝스로 검색결과만 바꿀 경우에는 해당 함수 실행해야 함
+		});
+
+		// select 상단고정
+		var ot = $('.area_select').offset().top-35,
+			scFn = function(e){
+				var height = $(document).scrollTop();
+				if(height > ot){
+					$('.search_item').addClass('fixed_on');
+				}else{
+					$('.search_item').removeClass('fixed_on');
+				}
+			};
+		$(window).on({
+			scroll:scFn,
+			load:scFn,
+			change:function(e){
+				var $this = $(e.target);
+				if($this.is('#sortM')){
+					var items = $('.site_searchresult').find('.item');
+						val = $this.val();
+					items.each(function(index, el) {
+						if(el.id.toLowerCase().indexOf(val) > 0){
+							$(el).addClass('on');
+						}else{
+							$(el).removeClass('on');
+						}
+					});
+				}
+			}
 		});
 
 		function tempFnM(){

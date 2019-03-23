@@ -20,9 +20,10 @@
 			<a href=""><img src="./img/temp_banner_top.jpg" alt="배너이미지설명입력"></a>
 		</div>
 	</div>
-	<header class="site_header layout_full lc_d0">
+	<header class="site_header sub_header layout_full lc_d0">
 		<div class="inner miw1180">
 			<h1 class="logo"><a href="./" class="link spr_before"><span class="s_out">힙합퍼</span></a></h1>
+			<h2 class="tit_sub on_m">통합검색</h2>
 			<nav class="gnb" id="gnb">
 				<h2 class="s_out">힙합퍼 메뉴</h2>
 				<ul class="dis_f jc_c ai_s tc_3">
@@ -213,16 +214,16 @@
 			<div class="site_searchresult search_item">
 				<div class="area_select on_m">
 					<span class="input_select event_sort_m">
-						<select name="" id="" class="tc_3_h tc_3" data-type="autowidth" style="width: 94px;">
-							<option value="" selected="">ITEM (129)</option>
-							<option value="">SHOES (129)</option>
-							<option value="">ACC (129)</option>
-							<option value="">LIFE (129)</option>
-							<option value="">SELECT SHOP (129)</option>
+						<select name="" id="sortM" class="tc_3_h tc_3" data-type="autowidth">
+							<option value="item" selected>ITEM (120)</option>
+							<option value="shoes">SHOES (83)</option>
+							<option value="acc">ACC (129)</option>
+							<option value="life">LIFE (29)</option>
+							<option value="shop">SELECT SHOP (129)</option>
 						</select>
 					</span>
 				</div>
-				<section class="item lc_e5 on">
+				<section class="item lc_e5 on" id="resultItem">
 					<h4 class="searchresult_tit tc_3 on_w">ITEM (120)</h4>
 					<ul class="list_product fix5">
 						<li>
@@ -482,7 +483,7 @@
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>
-				<section class="item lc_e5">
+				<section class="item lc_e5" id="resultShoes">
 					<h4 class="searchresult_tit tc_3 on_w">SHOES (83)</h4>
 					<ul class="list_product fix5">
 						<li>
@@ -742,7 +743,7 @@
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>
-				<section class="item lc_e5">
+				<section class="item lc_e5" id="resultAcc">
 					<h4 class="searchresult_tit tc_3 on_w">ACC (7)</h4>
 					<ul class="list_product fix5">
 						<li>
@@ -1002,7 +1003,7 @@
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>
-				<section class="item lc_e5">
+				<section class="item lc_e5" id="resultLife">
 					<h4 class="searchresult_tit tc_3 on_w">LIFE (29)</h4>
 					<ul class="list_product fix5">
 						<li>
@@ -1262,7 +1263,7 @@
 						<a href="" class="btn_arr next spr_before"><span class="s_out">다음</span></a>
 					</div>
 				</section>
-				<section class="item lc_e5">
+				<section class="item lc_e5" id="resultShop">
 					<h4 class="searchresult_tit tc_3 on_w">SELECT SHOP (36)</h4>
 					<ul class="list_product fix5">
 						<li>
@@ -1590,12 +1591,31 @@
 		});
 
 		// select 상단고정
-		$(window).scroll(function(){
-			var height = $(document).scrollTop();
-			if(height > 160){
-				$('.search_item').addClass('fixed_on');
-			}else if(height == 0){
-				$('.search_item').removeClass('fixed_on');
+		var ot = $('.area_select').offset().top-35,
+			scFn = function(e){
+				var height = $(document).scrollTop();
+				if(height > ot){
+					$('.search_item').addClass('fixed_on');
+				}else{
+					$('.search_item').removeClass('fixed_on');
+				}
+			};
+		$(window).on({
+			scroll:scFn,
+			load:scFn,
+			change:function(e){
+				var $this = $(e.target);
+				if($this.is('#sortM')){
+					var items = $('.site_searchresult').find('.item');
+						val = $this.val();
+					items.each(function(index, el) {
+						if(el.id.toLowerCase().indexOf(val) > 0){
+							$(el).addClass('on');
+						}else{
+							$(el).removeClass('on');
+						}
+					});
+				}
 			}
 		});
 

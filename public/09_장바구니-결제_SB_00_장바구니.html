@@ -595,29 +595,6 @@
 	</div>
 	<script src="./js/common.js"></script>
 	<script>
-	$(window).on({
-		'click.editoption':function(e){
-			var $this = $(e.target);
-			if( $this.is('a[data-type=editoption]') ){
-				e.preventDefault();
-				openLayer(e,$this[0]);
-				var pos = $this.closest('ul').position(),
-					t = pos.top+1,
-					$tar = $($this.attr('href'));
-				$tar.css({
-					top:t
-				})
-			}
-			if( $this.is('a[data-type=editoptionM]') ){
-				e.preventDefault();
-				openLayer(e,$this[0]);
-			}
-			if($this.is('a[data-type=baginfo]')){
-				e.preventDefault();
-				openLayer(window.event,'#bagInfo');
-			}
-		}
-	})
 	</script>
 </body>
 </html>
