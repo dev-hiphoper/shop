@@ -330,13 +330,7 @@ var mSize = 426, // 813
 			}
 			return copysuccess;
 		}
-		var layerCode = `<div class="alert_layer lc_b pos_center hide" id="copyAlert">
-			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>
-			<p class="message tc_3"></p>
-			<div class="btns lc_e5 clear">
-				<button type="button" class="btn_confirm lc_e5" onclick="closeLayer('#copyAlert');">확인</button>
-			</div>
-		</div>`;
+		var layerCode = '<div class="alert_layer lc_b pos_center hide" id="copyAlert"><button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button><p class="message tc_3"></p><div class="btns lc_e5 clear"><button type="button" class="btn_confirm lc_e5" onclick="closeLayer("#copyAlert");">확인</button></div></div>';
 		$('body').append('<input value="'+window.location.href+'" id="copyurl" style="position:fixed;z-index:-1;left:0;top:-50px" />')
 		$('#copyurl').focus();
 		$('#copyurl')[0].setSelectionRange(0, $('#copyurl').val().length);
@@ -495,19 +489,29 @@ $(window).on({
 			}
 			if( $this.is('.tab_cate a')){
 				e.preventDefault();
+				var $gnb = $('#gnb');
 				if(!$this.closest('li').hasClass('on')){
-					$('#gnb').removeClass('hide');
-					$('#gnb').css('height','100%');
-					$this.closest('li').addClass('on')
+					$gnb.removeClass('hide');
+					$gnb.css('height','100%');
+					$this.closest('li').addClass('on');
 				}else{
-					$('#gnb').addClass('hide');
-					$('#gnb').css('height','0');
-					$this.closest('li').removeClass('on')
+					$('.site_main').removeClass('hide');
+					if(!$('#allmenu').hasClass('hide')){
+						$('#allmenu').addClass('hide');
+					};
+					if(!$('#brandmenu').hasClass('hide')){
+						$('#brandmenu').addClass('hide');
+					};
+					$gnb.css('height','0').on(transitionendEvent,function(e){
+						$(this).off(transitionendEvent);
+						$gnb.addClass('hide');
+					});
+					$this.closest('li').removeClass('on');
 				}
 			}
 			if( $this.is('#gnb, #gnb ul') && !$this.is('#gnb a')){
 				$('#gnb').css('height','0');
-				$('.tab_cate').removeClass('on')
+				$('.tab_cate').removeClass('on');
 			}
 			if( $this.is('.clothing') && $this.closest('nav').hasClass('gnb') ){
 				e.preventDefault();
@@ -529,11 +533,8 @@ $(window).on({
 			if( $this.closest('div').hasClass('item') || $this.is('.btn_prev') ){
 				if( !$this.is('label') && !$this.is('input') ){
 					e.preventDefault();
-					$('#gnb').addClass('hide');
-					$('#gnb').css('height','0');
 					$('#allmenu').addClass('hide');
 					$('#brandmenu').addClass('hide');
-					$('.tab_cate').removeClass('on')
 					$('.site_main').removeClass('hide');
 				}
 			}
@@ -541,7 +542,7 @@ $(window).on({
 				$('#allmenu').addClass('hide');
 				$('#brandmenu').addClass('hide');
 			}
-			if( $this.is('.sub_menu a') || $this.children('ul').hasClass('list_3depth')){
+			if( $this.is('.sub_menu a') && $this.closest('.sub_menu').next('ul').hasClass('list_3depth')){
 				e.preventDefault();
 				if( $this.closest('li').hasClass('on')){
 					$this.parents('li').find(".list_3depth").hide();

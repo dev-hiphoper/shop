@@ -418,7 +418,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .site_header .logo.sub a {margin:0;}
 .site_header .logo.sub a:before {width:22px;height:22px;background-position:-130px 0;}
 .site_header .tit_sub {display:none;padding-top:17px;font-weight:bold;font-size:16px;text-align:center;}
-.site_header .gnb {overflow:hidden;position:fixed;top:0;right:0;bottom:50px;left:0;z-index:10;width:100%;height:0;background-color:rgba(255,255,255,0.9);transition:0.5s;}
+.site_header .gnb {overflow:hidden;position:fixed;top:0;right:0;bottom:50px;left:0;z-index:10;width:100%;height:0;background-color:rgba(255,255,255,0.9);transition-property:height}
 .site_header .gnb ul {flex:1;flex-direction:column;padding:30px;transition:0.3s;}
 .site_header .gnb li:nth-child(7) {margin-bottom:30px;}
 .site_header .gnb li:nth-child(n+8) a {font-weight:normal;}
@@ -461,7 +461,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .sub_header .logo a:before {width:22px;height:22px;background-position:-130px 0;}
 .sub_header .tit_sub {display:block;}
 
-.allmenu {overflow-x:hidden;overflow-y:auto;position:fixed;top:0;right:0;bottom:50px;left:0;z-index:10;background-color:#fff;-webkit-transform:translate(0,0);transform:translate(0,0);transition:0.3s;-webkit-overflow-scrolling:touch;}
+.allmenu {overflow-x:hidden;overflow-y:auto;position:fixed;top:0;right:0;bottom:50px;left:0;z-index:10;background-color:#fff;-webkit-transform:translate(0,0);transform:translate(0,0);-webkit-overflow-scrolling:touch;-webkit-transition-property:-webkit-transform;-o-transition-property:-o-transform;transition-property:transform;}
 .allmenu.hide {display:block !important;-webkit-transform:translate(100%,0);transform:translate(100%,0);}
 .allmenu.hide .inner {display:none;}
 .allmenu .inner {display:block;padding:16px;}
@@ -476,6 +476,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .allmenu .item .links .sub_menu {font-size:18px;line-height:45px;}
 .allmenu .item .links .sub_menu a {margin-right:6px;color:#111;}
 .allmenu .item .links .prod_count {font-size:13px;color:#bbb;}
+.allmenu .item .links .prod_count.on_m{display:inline}
 .allmenu .item + .item {padding:24px 42px;border:1px solid #e5e5e5;}
 .allmenu .item + .item .tit {display:block;height:40px;font-weight:bold;font-size:20px;line-height:40px;color:#888;}
 .allmenu .item + .item .links li {height:40px;font-size:16px;line-height:40px;}
