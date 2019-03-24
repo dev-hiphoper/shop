@@ -49,7 +49,7 @@ $.validator.setDefaults({
 		}
 	}
 });
-var mSize = 426, // 813
+var mSize = 813, // 426
 	mCheck = function(e){
 		var check = false;
 		if($(window).width() < mSize){
