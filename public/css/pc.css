@@ -1469,6 +1469,7 @@ p.error{color:#f32323!important}
 .main_items:nth-child(4) .quarter:first-child .in_pic,
 .main_release .item .in_pic,
 .main_video .img img{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0) scale(1.005,1.005);-ms-transform:translateZ(0) scale(1.005,1.005);-o-transform:translateZ(0) scale(1.005,1.005);transform:translateZ(0) scale(1.005,1.005)}
+.main_video .img img{vertical-align: baseline}
 .site_main.main .slides.seasonissue{margin-bottom:92px}
 .main_reviewer{min-width:1280px;max-width:1920px;margin:0 auto;padding-bottom:41px;padding-top:72px}
 .main_reviewer .tit{font-size:50px;text-align:center;line-height:52px;font-weight:500;margin-bottom:31px}
