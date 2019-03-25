@@ -690,9 +690,9 @@ button.text_link:before{bottom:0}
 .reviewer .feedback [class*=btn_]{margin:0 6px!important}
 .reviewer .pages{margin-top:30px}
 .site_main.magazine{padding-bottom:120px;overflow:hidden}
-.snb.magazine li{position:relative;float:left;width:33.3%}
+.snb.magazine li{position:relative;float:left;width:50%}
 .snb.magazine li+li:before{content:'';position:absolute;top:50%;width:1px;height:20px}
-.snb.magazine li:nth-child(2){width:33.4%}
+.snb.magazine li:nth-child(2){/*width:33.4%*/}
 .snb.magazine li a{display:block;height:68px;text-align:center;font-size:21px;font-weight:700;line-height:70px}
 .site_main.magazine>.layout_full.lc_d0{border-width:0 0 1px}
 .site_main.magazine .magazine_cont{padding-top:40px}
@@ -702,6 +702,7 @@ button.text_link:before{bottom:0}
 .magazine_thum_list>li{float:left;width:calc(50% - 10px);margin-left:20px;position:relative;height:255px;padding:8px 60px 0 287px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin-bottom:60px}
 .magazine_thum_list>li:nth-child(2n-1){margin-left:0}
 .magazine_thum_list>li>a{display:block}
+.magazine_thum_list>li>a>div.img_wrap{position:relative;overflow:hidden;width:100%;height:100%}
 .magazine_thum_list>li>.img{position:absolute;left:0;top:0;width:255px;height:255px}
 .magazine_thum_list>li>.img img{width:auto;max-width:none;height:100%}
 .magazine_thum_list>li>.category{display:inline-block;font-size:15px;line-height:22px;font-weight:700;vertical-align:top;margin-bottom:2px}
@@ -720,7 +721,7 @@ button.text_link:before{bottom:0}
 .magazine_list .magazine_thum_list .large>.img,
 .magazine_list .magazine_thum_list .medium>.img,
 .street_list .magazine_thum_list>li>.img,
-.tv_list .magazine_thum_list .large>.img{position:relative;left:auto;top:auto;width:100%;height:0;padding-top:100%}
+.tv_list .magazine_thum_list .large>.img{position:relative;left:auto;top:auto;width:100%;height:0;padding-top:100%;overflow-x:hidden}
 .magazine_list .magazine_thum_list .large,
 .tv_list .magazine_thum_list .large{position:absolute;left:0;top:0;width:calc(50% - 10px);height:auto}
 .magazine_list .magazine_thum_list .large>.img{margin-bottom:34px}
