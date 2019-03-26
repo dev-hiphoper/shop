@@ -612,12 +612,23 @@ $(window).on({
 			$this.closest('button').prev().addClass('over')
 		}
 		if(!mCheck()) {
-			if( $this.is('li') || $this.is('a') && $this.closest('nav').hasClass('gnb') ){
-				if( $this.closest('.wrap_layer').length == 0 ){
+			if( $this.is('li > a[id]') || $this.is('a') && $this.closest('nav').hasClass('gnb') ){
+                if( $this.closest('.wrap_layer').length == 0 ){
 					$('#allmenu').removeClass('hide');
 					$('.alram_layer,.cart_layer').addClass('hide');
-				}
-			}
+                }
+
+                $('#allmenu').find(".inner").addClass("hide");
+
+                if (typeof $this.attr("id") != 'undefined') {
+                    $('#allmenu').removeClass("hide");
+
+                    $('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
+                } else {
+                    $('#allmenu').addClass("hide");
+                }
+            }
+
 			if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
 				$('#allmenu').addClass('hide');
 			}
