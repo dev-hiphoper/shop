@@ -489,6 +489,8 @@ a.btn_arr[class*=btn_].disabled:before,
 .allmenu .bnr_ad {margin:0 -16px -16px;}
 
 .site_footer {position:relative;padding:55px 16px 50px;}
+.site_main.view + .site_footer,
+.site_main.bag + .site_footer{padding-bottom:85px;}
 .site_footer .left {margin-bottom:24px;padding-top:28px;font-size:11px;}
 .site_footer .tel {font-weight:bold;font-size:18px;color:#888;}
 .site_footer .time {margin:4px 0 22px;}
@@ -507,9 +509,9 @@ a.btn_arr[class*=btn_].disabled:before,
 .site_footer .outlink a:after {width:15px;height:15px;}
 .site_footer .outlink .fb:after {width:8px;background-position:0 -50px;}
 .site_footer .outlink .ig:after {background-position:-10px -50px;}
-.site_footer .outlink .pin:after {background-position:-30px -50px;}
-.site_footer .outlink .blog:after {background-position:-45px -50px;}
-.site_footer .outlink .yt:after {background-position:-70px -50px;}
+.site_footer .outlink .pin:after {background-position:-30px -50px;width:12px;}
+.site_footer .outlink .blog:after {background-position:-45px -53px;width:20px;height:9px;}
+.site_footer .outlink .yt:after {background-position:-70px -51px;width:17px;height:13px;}
 
 .btn_close{position:absolute;width:40px;height:40px;min-width:40px;border:0;padding:0}
 .btn_close:after,
@@ -2407,7 +2409,6 @@ ol.privacy_list>li:nth-child(10)>.tit:before,
 .site_main.bag tbody .buy{position:absolute;right:0;bottom:-49px;width:109px;height:35px;background-color:#f0f0f0;font-size:12px;color:#555;}
 .site_main.bag tbody .link{min-height:80px;height:auto;}
 .site_main.bag tbody .order_price{margin-top:23px;}
-.site_main.bag + .site_footer{padding-bottom:85px;}
 .bag_tabnav{position:fixed;left:0;bottom:0;width:100%;height:65px;background-color:#111;}
 .bag_tabnav.on_m{display:-ms-flexbox;display:flex}
 .bag_tabnav .right{margin-left:auto;}
