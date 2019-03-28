@@ -409,9 +409,11 @@ $(window).on({
 		}
 		if(!mCheck()){
 			if( !$this.closest('div').hasClass('alram_layer') && !$this.closest('a').hasClass('alram') ){
+				e.preventDefault();
 				$('#alramLayer').addClass('hide');
 			}
 			if( !$this.closest('div').hasClass('cart_layer') && !$this.closest('a').hasClass('cart') ){
+				e.preventDefault();
 				$('#cartLayer').addClass('hide');
 			}
 		}
@@ -469,18 +471,7 @@ $(window).on({
 				e.preventDefault();
 			}
 		}
-		if( $this.closest('a').hasClass('cart') ){
-			if( $this.closest('a').is('[href=#cartLayer]') ){
-				e.preventDefault();
-			}
-		}
 		if(mCheck()){
-			if( $this.closest('.wrap_cart')[0]){
-				e.preventDefault();
-				$('#cartLayer').removeClass('hide');
-			}else{
-				$('#cartLayer').addClass('hide');
-			}
 			if( $this.closest('.wrap_alram')[0]){
 				e.preventDefault();
 				$('#alramLayer').removeClass('hide');
