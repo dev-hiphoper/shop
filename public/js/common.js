@@ -498,11 +498,33 @@ $(window).on({
 				if(!$this.closest('li').hasClass('on')){
 					$('#gnb').removeClass('hide');
 					$('#gnb').css('height','100%');
-					$this.closest('li').addClass('on')
+                    $this.closest('li').addClass('on')
+                    
+                    var _pathname = location.pathname.replace(location.hash,"");
+                    var $gnb1depth = $('#gnb ul li > a');
+                    if (_pathname.match(/^\/(brand)/) != null) {
+                        $gnb1depth.filter('.brands').trigger("click");
+                    } else if (_pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/) != null) {
+                        var regex = _pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/);
+                        $gnb1depth.filter('[id="'+regex[1]+'"]').trigger("click");
+
+                        var _search = location.search;
+                        if (_search != "") {
+                            var _link = _search.substring(0, _search.indexOf("&"));
+                            $('#allmenu').find('ul.links > li').removeClass('on');
+                            $('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
+                            $('#allmenu').find('.inner:not(.hide) .sub_menu > a[href$="'+(_pathname+_link)+'"]').trigger("click");
+                        }
+                    }
 				}else{
 					$('#gnb').addClass('hide');
-					$('#gnb').css('height','0');
-					$this.closest('li').removeClass('on')
+                    $('#gnb').css('height','0');
+                    $('#allmenu').addClass('hide');
+                    $('#allmenu').find('.inner ul.list_3depth').hide();
+                    $('#brandmenu').addClass('hide');
+                    $('.tab_cate').removeClass('on')
+                    $('.site_main').removeClass('hide');
+                    $this.closest('li').removeClass('on');
 				}
 			}
 			if( $this.is('#gnb, #gnb ul') && !$this.is('#gnb a')){
@@ -539,29 +561,38 @@ $(window).on({
 			if( $this.closest('div').hasClass('item') || $this.is('.btn_prev') ){
 				if( !$this.is('label') && !$this.is('input') ){
 					e.preventDefault();
-					$('#gnb').addClass('hide');
-					$('#gnb').css('height','0');
-					$('#allmenu').addClass('hide');
-					$('#brandmenu').addClass('hide');
-					$('.tab_cate').removeClass('on')
-					$('.site_main').removeClass('hide');
+					if (!($('#allmenu').hasClass("hide") || $('#brandmenu').hasClass("hide"))) {
+                        $('#gnb').addClass('hide');
+                        $('#gnb').css('height','0');
+                        $('.tab_cate').removeClass('on')
+                        $('.site_main').removeClass('hide');
+                        $('#allmenu').find('ul.links > li').removeClass('on');
+                        $('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
+                    }
+                    $('#allmenu').addClass('hide');
+                    $('#brandmenu').addClass('hide');
 				}
 			}
 			if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
 				$('#allmenu').addClass('hide');
 				$('#brandmenu').addClass('hide');
 			}
-			if( $this.is('.sub_menu a')){ //|| $this.children('ul').hasClass('list_3depth')){
-				e.preventDefault();
-				if( $this.closest('li').hasClass('on')){
-					$this.parents('li').find(".list_3depth").hide();
-					$this.parents('li').removeClass('on');
-				}else{
-					$this.parents('li').find(".list_3depth").show();
-					$this.parents('li').addClass('on');
-				}
+			if( $this.is('.sub_menu a') || $this.children('ul').hasClass('list_3depth')){
+                e.preventDefault();
+
+				if ($this.parent().next().hasClass('list_3depth')) {
+                    if( $this.closest('li').hasClass('on')){
+                        $this.parents('li').find(".list_3depth").hide();
+                        $this.parents('li').removeClass('on');
+                    }else{
+                        $this.parents('li').find(".list_3depth").show();
+                        $this.parents('li').addClass('on');
+                    }
+                } else {
+                    location.href = $this.attr("href");
+                }
             }
-            if( $this.is('ul.list_3depth a') || $this.is('ul.links.brand a') ){
+            if( $this.is('ul.list_3depth a') || $this.is('ul.links.brand a') || $this.is('strong.tit a') ){
                 e.preventDefault();
                 location.href = $this.attr("href");
             }
