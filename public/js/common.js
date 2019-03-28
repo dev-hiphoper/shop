@@ -509,14 +509,24 @@ $(window).on({
 				$('#gnb').css('height','0');
 				$('.tab_cate').removeClass('on')
 			}
-			if( $this.is('.clothing') && $this.closest('nav').hasClass('gnb') ){
-				e.preventDefault();
-				if( $this.closest('.wrap_layer').length == 0 ){
-					$('#allmenu').removeClass('hide');
-					$('.alram_layer,.cart_layer').addClass('hide');
-					$('.site_main').addClass('hide');
-				}
-			}
+			if( $this.is('li > a[id]') && $this.closest('nav').hasClass('gnb') ){
+                e.preventDefault();
+                if( $this.closest('.wrap_layer').length == 0 ){
+                    $('#allmenu').removeClass('hide');
+                    $('.alram_layer,.cart_layer').addClass('hide');
+                    $('.site_main').addClass('hide');
+                }
+
+                $('#allmenu').find(".inner").addClass("hide");
+
+                if (typeof $this.attr("id") != 'undefined') {
+                    $('#allmenu').removeClass("hide");
+
+                    $('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
+                } else {
+                    $('#allmenu').addClass("hide");
+                }
+            }
 			if( $this.is('.brands') && $this.closest('nav').hasClass('gnb') ){
 				e.preventDefault();
 				if( $this.closest('.wrap_layer').length == 0 ){
@@ -541,7 +551,7 @@ $(window).on({
 				$('#allmenu').addClass('hide');
 				$('#brandmenu').addClass('hide');
 			}
-			if( $this.is('.sub_menu a') || $this.children('ul').hasClass('list_3depth')){
+			if( $this.is('.sub_menu a')){ //|| $this.children('ul').hasClass('list_3depth')){
 				e.preventDefault();
 				if( $this.closest('li').hasClass('on')){
 					$this.parents('li').find(".list_3depth").hide();
@@ -550,7 +560,11 @@ $(window).on({
 					$this.parents('li').find(".list_3depth").show();
 					$this.parents('li').addClass('on');
 				}
-			}
+            }
+            if( $this.is('ul.list_3depth a') || $this.is('ul.links.brand a') ){
+                e.preventDefault();
+                location.href = $this.attr("href");
+            }
 		}
 	},
 	change:function(e){
