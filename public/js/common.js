@@ -501,13 +501,19 @@ $(window).on({
                     $this.closest('li').addClass('on')
                     
                     var _pathname = location.pathname.replace(location.hash,"");
+                    var _containPath = false;
+
                     var $gnb1depth = $('#gnb ul li > a');
                     if (_pathname.match(/^\/(brand)/) != null) {
                         $gnb1depth.filter('.brands').trigger("click");
+                        _containPath = true;
                     } else if (_pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/) != null) {
                         var regex = _pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/);
                         $gnb1depth.filter('[id="'+regex[1]+'"]').trigger("click");
+                        _containPath = true;
+                    }
 
+                    if (_containPath) {
                         var _search = location.search;
                         if (_search != "") {
                             var _link = _search.substring(0, _search.indexOf("&"));
@@ -577,7 +583,7 @@ $(window).on({
 				$('#allmenu').addClass('hide');
 				$('#brandmenu').addClass('hide');
 			}
-			if( $this.is('.sub_menu a') || $this.children('ul').hasClass('list_3depth')){
+			if( $this.is('.sub_menu a')) { // || $this.children('ul').hasClass('list_3depth')){
                 e.preventDefault();
 
 				if ($this.parent().next().hasClass('list_3depth')) {
