@@ -628,7 +628,9 @@ button.text_link:before{bottom:0}
 .viewdetail .info .price .item .btn_show{width:100px;height:40px;font-size:14px;line-height:39px;margin:2px 0 0 18px}
 .viewdetail .info .price .slides{margin-bottom:0}
 .viewdetail .info .options{margin-top:42px}
-.viewdetail .info .options .input_select{display:block;margin-bottom:12px}
+.viewdetail .info .options .input_select{display:block;margin-bottom:12px;color:gray}
+.viewdetail .info .options .input_select option {color:black}
+.viewdetail .info .options .input_select option[default] {display:none}
 .viewdetail .info .option_cale{margin-top:-12px}
 .viewdetail .info .option_cale >p{height:80px}
 .viewdetail .info .option_cale >p strong{font-size:30px;font-weight:700;margin-left:20px}
