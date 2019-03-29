@@ -1465,7 +1465,7 @@ p.error{color:#f32323!important}
 /*.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:136px}*/
 .main_items:nth-child(3)>div{position:relative}
 .main_items:nth-child(3)>div>.list_product,
-.main_items:nth-child(3)>div>.split{position:absolute;left:0;bottom:0;width:100%}
+.main_items:nth-child(3)>div>.split{position:absolute;left:0;/*bottom:0;*/width:100%}
 .main_items:nth-child(4) .quarter:nth-child(3){margin-top:-136px}
 .main_items:nth-child(4) .quarter{margin-bottom:18px}
 .main_items:nth-child(4) .quarter:first-child{margin-bottom:60px}
