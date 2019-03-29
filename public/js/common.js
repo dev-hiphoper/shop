@@ -404,11 +404,7 @@ $(window).on({
 			$('.tootip_layer').addClass('hide');
         }
 
-        $this.find('ul.share_list li button').click(function () {
-            alert('준비중입니다');
-        });
-
-		if( $this.is('button[data-type=copyButton]') ){//카피버튼
+        if( $this.is('button[data-type=copyButton]') ){//카피버튼
 			var copyTargetVal = $('#shareLayer').find('input.url').val()
             var browserInfo = navigator.userAgent;
             if( !(browserInfo.match(/(iPhone|iPod)/i)) || ((browserInfo.indexOf('Safari') !== -1) && (browserInfo.indexOf('Chrome') === -1)) ) {
@@ -417,6 +413,7 @@ $(window).on({
                     event.preventDefault();
                 }
                 document.execCommand('Copy', false, null);
+                showAlert('copyResult','주소가 복사 되었습니다.',1);
             }
 		}
 		if(!mCheck()){
