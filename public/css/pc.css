@@ -503,7 +503,7 @@ button.text_link:before{bottom:0}
 .event_view_banner .item,
 .slides.brand_view .item,
 .top_visual .item>a{-webkit-background-size:cover;background-size:cover;background-position:50% 50%}
-.top_visual .item .info{/*margin-left:-220px*/}
+.top_visual .item .info{margin-left:-220px}
 .top_visual .item .info .inner{width:100%}
 .slides.brandissue{margin:0 auto 40px;min-width:1280px;max-width:1920px;height:500px}
 .slides.brandissue .brand,
@@ -1151,10 +1151,10 @@ p.error{color:#f32323!important}
 .brand_find .tit.kor+.list li strong{font-size:16px}
 .brand_find .tit.kor+.list li em{font-size:16px}
 .site_main.brand_view{padding-bottom:120px}
-.site_main.brand_view .slides.brand_view .info{position:absolute;height:480px;left:120px;margin-left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%)}
+.site_main.brand_view .slides.brand_view .info{height:480px;left:120px;margin-left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%)}
 .slides.brand_view{margin-bottom:0}
 .slides.brand_view>.item{position:relative}
-.slides.brand_view .info{margin-top:54px;height:480px/*;margin-left:-270px*/}
+.slides.brand_view .info{height:480px;margin-left:-270px}
 .slides.brand_view .name{display:block}
 .slides.brand_view .eng{font-size:56px;line-height:72px;font-weight:700;text-transform:uppercase;word-break:break-word;margin-top:54px}
 .slides.brand_view .kor{font-size:26px;line-height:30px;margin-top:40px}
