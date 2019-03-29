@@ -498,7 +498,7 @@ button.text_link:before{bottom:0}
 .slides .item .desc{font-size:18px;line-height:24px}
 .top_visual{height:600px}
 .top_visual>.inner{max-width:100%}
-.top_visual .item{max-height:600px;position:relative;}
+.top_visual .item{height:600px;position:relative;}
 .top_visual .item>a{height:100%}
 .event_view_banner .item,
 .slides.brand_view .item,
@@ -510,7 +510,7 @@ button.text_link:before{bottom:0}
 .slides.brandissue .desc{display:block;width:100%;text-align:center}
 .slides.brandissue .brand{font-size:44px;line-height:58px;margin-bottom:6px}
 .slides.brandissue .desc{font-size:22px;line-height:30px}
-.slides.brandissue .item>a{max-height:500px;width:1280px;margin:0 auto}
+.slides.brandissue .item>a{height:500px;width:1280px;margin:0 auto}
 .slides.brandissue .item img{margin:0 auto}
 .slides.seasonissue{min-width:1280px;max-width:1920px;margin:0 auto}
 .slides.seasonissue >.item{width:50%;float:left}
