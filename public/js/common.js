@@ -402,16 +402,22 @@ $(window).on({
 			}
 		}else{
 			$('.tootip_layer').addClass('hide');
-		}
+        }
+
+        $this.find('ul.share_list li button').click(function () {
+            alert('준비중입니다');
+        });
+
 		if( $this.is('button[data-type=copyButton]') ){//카피버튼
-			var tar = $('input[data-type=copyTarget]');
-			tar.select();
-			var successful = document.execCommand('copy');
-			if(successful){
-				showAlert('copyResult','주소가 복사 되었습니다.',1);
-			}else{
-				showAlert('copyResult','주소 복사에 실패했습니다.',1);
-			}
+			var copyTargetVal = $('#shareLayer').find('input.url').val()
+            var browserInfo = navigator.userAgent;
+            if( !(browserInfo.match(/(iPhone|iPod)/i)) || ((browserInfo.indexOf('Safari') !== -1) && (browserInfo.indexOf('Chrome') === -1)) ) {
+                document.oncopy = function (event) {
+                    event.clipboardData.setData('Text', copyTargetVal);
+                    event.preventDefault();
+                }
+                document.execCommand('Copy', false, null);
+            }
 		}
 		if(!mCheck()){
 			if( !$this.closest('div').hasClass('alram_layer') && !$this.closest('a').hasClass('alram') ){
