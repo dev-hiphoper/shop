@@ -498,19 +498,19 @@ button.text_link:before{bottom:0}
 .slides .item .desc{font-size:18px;line-height:24px}
 .top_visual{height:600px}
 .top_visual>.inner{max-width:100%}
-.top_visual .item{height:600px;position:relative;}
+.top_visual .item{max-height:600px;position:relative;}
 .top_visual .item>a{height:100%}
 .event_view_banner .item,
 .slides.brand_view .item,
 .top_visual .item>a{-webkit-background-size:cover;background-size:cover;background-position:50% 50%}
-.top_visual .item .info{margin-left:-220px}
+.top_visual .item .info{/*margin-left:-220px*/}
 .top_visual .item .info .inner{width:100%}
 .slides.brandissue{margin:0 auto 40px;min-width:1280px;max-width:1920px;height:500px}
 .slides.brandissue .brand,
 .slides.brandissue .desc{display:block;width:100%;text-align:center}
 .slides.brandissue .brand{font-size:44px;line-height:58px;margin-bottom:6px}
 .slides.brandissue .desc{font-size:22px;line-height:30px}
-.slides.brandissue .item>a{height:500px;width:1280px;margin:0 auto}
+.slides.brandissue .item>a{max-height:500px;width:1280px;margin:0 auto}
 .slides.brandissue .item img{margin:0 auto}
 .slides.seasonissue{min-width:1280px;max-width:1920px;margin:0 auto}
 .slides.seasonissue >.item{width:50%;float:left}
@@ -1151,10 +1151,10 @@ p.error{color:#f32323!important}
 .brand_find .tit.kor+.list li strong{font-size:16px}
 .brand_find .tit.kor+.list li em{font-size:16px}
 .site_main.brand_view{padding-bottom:120px}
-.site_main.brand_view .slides.brand_view .info{height:480px;left:120px;margin-left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%)}
+.site_main.brand_view .slides.brand_view .info{position:absolute;height:480px;left:120px;margin-left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%)}
 .slides.brand_view{margin-bottom:0}
 .slides.brand_view>.item{position:relative}
-.slides.brand_view .info{height:480px;margin-left:-270px}
+.slides.brand_view .info{margin-top:54px;height:480px/*;margin-left:-270px*/}
 .slides.brand_view .name{display:block}
 .slides.brand_view .eng{font-size:56px;line-height:72px;font-weight:700;text-transform:uppercase;word-break:break-word;margin-top:54px}
 .slides.brand_view .kor{font-size:26px;line-height:30px;margin-top:40px}
@@ -1429,7 +1429,7 @@ p.error{color:#f32323!important}
 .out_pic{padding-bottom:11px;display:block}
 .out_pic>.info{text-align:center;padding:0 50px}
 .out_pic>.info>.brand{font-size:22px;line-height:30px;font-weight:700;max-height:60px;display:-webkit-box;margin-top:36px}
-.out_pic>.info>.desc{font-size:14px;line-height:20px;max-height:40px;display:none;margin-top:7px}
+.out_pic>.info>.desc{font-size:14px;line-height:20px;max-height:40px;margin-top:7px}
 .out_pic>.info>.brand,
 .out_pic>.info>.desc{overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;white-space:normal}
 .slide_main_release{margin-bottom:0}
@@ -1459,7 +1459,7 @@ p.error{color:#f32323!important}
 .main_items .split .list_product>li:nth-child(2){border-top:0;}
 .main_items .quarter:last-child .out_pic{padding-bottom:27px}
 .main_items:nth-child(3) .half:first-child{padding-bottom:292px}
-.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:136px}
+/*.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:136px}*/
 .main_items:nth-child(3)>div{position:relative}
 .main_items:nth-child(3)>div>.list_product,
 .main_items:nth-child(3)>div>.split{position:absolute;left:0;bottom:0;width:100%}
@@ -2377,10 +2377,10 @@ ol.privacy_list>li:nth-child(10)>.tit:before,
 	.main_items .quarter:last-child .out_pic .desc{display:block!important;max-height:20px;white-space:nowrap}
 	.main_items:nth-child(2) .out_pic+.list_product li:first-child{border-width:1px 0 0!important}
 	.main_items:nth-child(3) .half:first-child{padding-bottom:384px}
-	.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:182px}
+	/*.main_items:nth-child(3) .quarter:nth-child(3) .list_product{bottom:182px}*/
 	.main_items:nth-child(4) .quarter:nth-child(3){margin-top:-182px}
 	.slides.next_lnb .info{margin-left:-120px!important}
-	.site_main.brand_best .slides.brand_view .info{width:700px;margin-left:-40px!important}
+	.site_main.brand_best .slides.brand_view .info{width:700px/*;margin-left:-40px!important*/}
 	.myfeed_list>li{width:calc(25% - 24px)}
 	.myfeed_list>li+li{margin-left:32px}
 }
