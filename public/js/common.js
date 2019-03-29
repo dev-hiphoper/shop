@@ -330,13 +330,13 @@ var mSize = 426, // 813
 			}
 			return copysuccess;
 		}
-		var layerCode = `<div class="alert_layer lc_b pos_center hide" id="copyAlert">
-			<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>
-			<p class="message tc_3"></p>
-			<div class="btns lc_e5 clear">
-				<button type="button" class="btn_confirm lc_e5" onclick="closeLayer('#copyAlert');">확인</button>
-			</div>
-		</div>`;
+		var layerCode = '<div class="alert_layer lc_b pos_center hide" id="copyAlert">'
+			+ '<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>'
+			+ '<p class="message tc_3"></p>'
+			+ '<div class="btns lc_e5 clear">'
+			+	'<button type="button" class="btn_confirm lc_e5" onclick="closeLayer(\'#copyAlert\');">확인</button>'
+			+ '</div>'
+		+ '</div>';
 		$('body').append('<input value="'+window.location.href+'" id="copyurl" style="position:fixed;z-index:-1;left:0;top:-50px" />')
 		$('#copyurl').focus();
 		$('#copyurl')[0].setSelectionRange(0, $('#copyurl').val().length);
