@@ -22,6 +22,22 @@
 ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
   border-color: #bbbbbb transparent transparent transparent;
 }*/
+input.tc_3:hover::-webkit-input-placeholder{color:#333!important}
+input.tc_3:hover::-moz-placeholder{color:#333!important}
+input.tc_3:hover:-ms-input-placeholder{color:#333!important}
+input.tc_3:hover::placeholder{color:#333!important}
+textarea.tc_3:hover::-webkit-input-placeholder{color:#333!important}
+textarea.tc_3:hover::-moz-placeholder{color:#333!important}
+textarea.tc_3:hover:-ms-input-placeholder{color:#333!important}
+textarea.tc_3:hover::placeholder{color:#333!important}
+.magazine_tags .flag:hover{color:#fff!important}
+.input_text input:not([readonly]):hover,
+.input_textarea textarea:hover{border-color:#333}
+.magazine_tags .flag:hover{border-color:#555}
+.input_text button:hover,
+.input_text input:hover+button{display:block}
+
+
 .spr,
 .spr_after:after,
 .spr_before:before{background-image:url(../img/spr1x.png)}

@@ -402,19 +402,19 @@ $(window).on({
 			}
 		}else{
 			$('.tootip_layer').addClass('hide');
-        }
+		}
 
-        if( $this.is('button[data-type=copyButton]') ){//카피버튼
+		if( $this.is('button[data-type=copyButton]') ){//카피버튼
 			var copyTargetVal = $('#shareLayer').find('input.url').val()
-            var browserInfo = navigator.userAgent;
-            if( !(browserInfo.match(/(iPhone|iPod)/i)) || ((browserInfo.indexOf('Safari') !== -1) && (browserInfo.indexOf('Chrome') === -1)) ) {
-                document.oncopy = function (event) {
-                    event.clipboardData.setData('Text', copyTargetVal);
-                    event.preventDefault();
-                }
-                document.execCommand('Copy', false, null);
-                showAlert('copyResult','주소가 복사 되었습니다.',1);
-            }
+			var browserInfo = navigator.userAgent;
+			if( !(browserInfo.match(/(iPhone|iPod)/i)) || ((browserInfo.indexOf('Safari') !== -1) && (browserInfo.indexOf('Chrome') === -1)) ) {
+				document.oncopy = function (event) {
+					event.clipboardData.setData('Text', copyTargetVal);
+					event.preventDefault();
+				}
+				document.execCommand('Copy', false, null);
+				showAlert('copyResult','주소가 복사 되었습니다.',1);
+			}
 		}
 		if(!mCheck()){
 			if( !$this.closest('div').hasClass('alram_layer') && !$this.closest('a').hasClass('alram') ){
@@ -493,39 +493,39 @@ $(window).on({
 				if(!$this.closest('li').hasClass('on')){
 					$('#gnb').removeClass('hide');
 					$('#gnb').css('height','100%');
-                    $this.closest('li').addClass('on')
-                    
-                    var _pathname = location.pathname.replace(location.hash,"");
-                    var _containPath = false;
+					$this.closest('li').addClass('on')
+					
+					var _pathname = location.pathname.replace(location.hash,"");
+					var _containPath = false;
 
-                    var $gnb1depth = $('#gnb ul li > a');
-                    if (_pathname.match(/^\/(brand)/) != null) {
-                        $gnb1depth.filter('.brands').trigger("click");
-                        _containPath = true;
-                    } else if (_pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/) != null) {
-                        var regex = _pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/);
-                        $gnb1depth.filter('[id="'+regex[1]+'"]').trigger("click");
-                        _containPath = true;
-                    }
+					var $gnb1depth = $('#gnb ul li > a');
+					if (_pathname.match(/^\/(brand)/) != null) {
+						$gnb1depth.filter('.brands').trigger("click");
+						_containPath = true;
+					} else if (_pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/) != null) {
+						var regex = _pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/);
+						$gnb1depth.filter('[id="'+regex[1]+'"]').trigger("click");
+						_containPath = true;
+					}
 
-                    if (_containPath) {
-                        var _search = location.search;
-                        if (_search != "") {
-                            var _link = _search.substring(0, _search.indexOf("&"));
-                            $('#allmenu').find('ul.links > li').removeClass('on');
-                            $('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
-                            $('#allmenu').find('.inner:not(.hide) .sub_menu > a[href$="'+(_pathname+_link)+'"]').trigger("click");
-                        }
-                    }
+					if (_containPath) {
+						var _search = location.search;
+						if (_search != "") {
+							var _link = _search.substring(0, _search.indexOf("&"));
+							$('#allmenu').find('ul.links > li').removeClass('on');
+							$('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
+							$('#allmenu').find('.inner:not(.hide) .sub_menu > a[href$="'+(_pathname+_link)+'"]').trigger("click");
+						}
+					}
 				}else{
 					$('#gnb').addClass('hide');
-                    $('#gnb').css('height','0');
-                    $('#allmenu').addClass('hide');
-                    $('#allmenu').find('.inner ul.list_3depth').hide();
-                    $('#brandmenu').addClass('hide');
-                    $('.tab_cate').removeClass('on')
-                    $('.site_main').removeClass('hide');
-                    $this.closest('li').removeClass('on');
+					$('#gnb').css('height','0');
+					$('#allmenu').addClass('hide');
+					$('#allmenu').find('.inner ul.list_3depth').hide();
+					$('#brandmenu').addClass('hide');
+					$('.tab_cate').removeClass('on')
+					$('.site_main').removeClass('hide');
+					$this.closest('li').removeClass('on');
 				}
 			}
 			if( $this.is('#gnb, #gnb ul') && !$this.is('#gnb a')){
@@ -533,23 +533,23 @@ $(window).on({
 				$('.tab_cate').removeClass('on');
 			}
 			if( $this.is('li > a[id]') && $this.closest('nav').hasClass('gnb') ){
-                e.preventDefault();
-                if( $this.closest('.wrap_layer').length == 0 ){
-                    $('#allmenu').removeClass('hide');
-                    $('.alram_layer,.cart_layer').addClass('hide');
-                    $('.site_main').addClass('hide');
-                }
+				e.preventDefault();
+				if( $this.closest('.wrap_layer').length == 0 ){
+					$('#allmenu').removeClass('hide');
+					$('.alram_layer,.cart_layer').addClass('hide');
+					$('.site_main').addClass('hide');
+				}
 
-                $('#allmenu').find(".inner").addClass("hide");
+				$('#allmenu').find(".inner").addClass("hide");
 
-                if (typeof $this.attr("id") != 'undefined') {
-                    $('#allmenu').removeClass("hide");
+				if (typeof $this.attr("id") != 'undefined') {
+					$('#allmenu').removeClass("hide");
 
-                    $('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
-                } else {
-                    $('#allmenu').addClass("hide");
-                }
-            }
+					$('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
+				} else {
+					$('#allmenu').addClass("hide");
+				}
+			}
 			if( $this.is('.brands') && $this.closest('nav').hasClass('gnb') ){
 				e.preventDefault();
 				if( $this.closest('.wrap_layer').length == 0 ){
@@ -563,15 +563,15 @@ $(window).on({
 				if( !$this.is('label') && !$this.is('input') ){
 					e.preventDefault();
 					if (!($('#allmenu').hasClass("hide") || $('#brandmenu').hasClass("hide"))) {
-                        $('#gnb').addClass('hide');
-                        $('#gnb').css('height','0');
-                        $('.tab_cate').removeClass('on')
-                        $('.site_main').removeClass('hide');
-                        $('#allmenu').find('ul.links > li').removeClass('on');
-                        $('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
-                    }
-                    $('#allmenu').addClass('hide');
-                    $('#brandmenu').addClass('hide');
+						$('#gnb').addClass('hide');
+						$('#gnb').css('height','0');
+						$('.tab_cate').removeClass('on')
+						$('.site_main').removeClass('hide');
+						$('#allmenu').find('ul.links > li').removeClass('on');
+						$('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
+					}
+					$('#allmenu').addClass('hide');
+					$('#brandmenu').addClass('hide');
 				}
 			}
 			if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
@@ -579,24 +579,24 @@ $(window).on({
 				$('#brandmenu').addClass('hide');
 			}
 			if( $this.is('.sub_menu a')) { // || $this.children('ul').hasClass('list_3depth')){
-                e.preventDefault();
+				e.preventDefault();
 
 				if ($this.parent().next().hasClass('list_3depth')) {
-                    if( $this.closest('li').hasClass('on')){
-                        $this.parents('li').find(".list_3depth").hide();
-                        $this.parents('li').removeClass('on');
-                    }else{
-                        $this.parents('li').find(".list_3depth").show();
-                        $this.parents('li').addClass('on');
-                    }
-                } else {
-                    location.href = $this.attr("href");
-                }
-            }
-            if( $this.is('ul.list_3depth a') || $this.is('ul.links.brand a') || $this.is('strong.tit a') ){
-                e.preventDefault();
-                location.href = $this.attr("href");
-            }
+					if( $this.closest('li').hasClass('on')){
+						$this.parents('li').find(".list_3depth").hide();
+						$this.parents('li').removeClass('on');
+					}else{
+						$this.parents('li').find(".list_3depth").show();
+						$this.parents('li').addClass('on');
+					}
+				} else {
+					location.href = $this.attr("href");
+				}
+			}
+			if( $this.is('ul.list_3depth a') || $this.is('ul.links.brand a') || $this.is('strong.tit a') ){
+				e.preventDefault();
+				location.href = $this.attr("href");
+			}
 		}
 	},
 	change:function(e){
@@ -659,21 +659,21 @@ $(window).on({
 		}
 		if(!mCheck()) {
 			if( $this.is('li > a[id]') || $this.is('a') && $this.closest('nav').hasClass('gnb') ){
-                if( $this.closest('.wrap_layer').length == 0 ){
+				if( $this.closest('.wrap_layer').length == 0 ){
 					$('#allmenu').removeClass('hide');
 					$('.alram_layer,.cart_layer').addClass('hide');
-                }
+				}
 
-                $('#allmenu').find(".inner").addClass("hide");
+				$('#allmenu').find(".inner").addClass("hide");
 
-                if (typeof $this.attr("id") != 'undefined') {
-                    $('#allmenu').removeClass("hide");
+				if (typeof $this.attr("id") != 'undefined') {
+					$('#allmenu').removeClass("hide");
 
-                    $('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
-                } else {
-                    $('#allmenu').addClass("hide");
-                }
-            }
+					$('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
+				} else {
+					$('#allmenu').addClass("hide");
+				}
+			}
 
 			if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
 				$('#allmenu').addClass('hide');
@@ -893,9 +893,9 @@ $(document).ready(function(){
 		$(this).parent(".tit").next().toggle();
 	})
 	$("#discontentType").change(function() {
-	    $("#discontentType option:selected").each(function() {
-	      str = $(this).val();
-	    });
+		$("#discontentType option:selected").each(function() {
+		  str = $(this).val();
+		});
 		if(str == 0) {
 			$(".order_detail_view").addClass("hide");
 			$(".order_detail_view.cancel").removeClass("hide");
@@ -908,24 +908,3 @@ $(document).ready(function(){
 		}
 	}).change();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

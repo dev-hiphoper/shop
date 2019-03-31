@@ -23,7 +23,7 @@ a[class*=btn_]{-ms-flex-align:center;align-items:center}
 /* bg #fff, font #333, line #bbb 스타일 버튼은 수동 추가 */
 /*{border:1px solid #bbb;height:35px;padding:0 19px;font-size:14px;}*/
 .qnq_write .phone:nth-child(3) p.error, .site_main.join .birthday .input_select:nth-child(3) p.error, .site_main.join .phone .input_text:nth-child(3) p.error {display:none;}
-.order_form .sel_payment input:checked+label, .order_form .sel_payment input:focus+label, .tc_3, .tc_3_h:focus, .tc_3_h:hover {color:#333;}
+.order_form .sel_payment input:checked+label, .order_form .sel_payment input:focus+label, .tc_3, .tc_3_h:focus{color:#333;}
 .qnq_write .phone:nth-child(2) p.error, .site_main.join .birthday .input_select:nth-child(2) p.error, .site_main.join .phone .input_text:nth-child(2) p.error {left:0;}
 
 .btn_share[class*=btn_],
@@ -89,6 +89,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .input_text button{position:absolute;left:auto;right:13px;top:50%;width:22px;height:22px;background-color:#f0f0f0;border-radius:50%;display:none;}
 .input_text button:before{width:9px;height:9px;background-position:0 -67px;}
 .input_select select{border-color:#d0d0d0;height:45px;font-size:14px;padding:0 42px 0 15px;color:#bbb;}
+.input_select select.tc_3{color:#333;border-color:#333;}
 .input_select:before{content:'';position:absolute;right:14px;top:50%;left:auto;width:0;height:0;border-style:solid;border-width:4px 3.5px 0 3.5px}
 .input_checkbox, .input_radio, .input_radio_check {display:block;position:relative;}
 .input_checkbox input, .input_radio input, .input_radio_check input {position:absolute;left:3px;top:3px;opacity:0}
@@ -555,7 +556,9 @@ a.btn_arr[class*=btn_].disabled:before,
 .site_main.join .cert button{width:calc(50% - 5px);padding:0;}
 .site_main.join .cert button + button{margin-left:10px;}
 .site_main.join .phone, .site_main.join .birthday {position:relative;margin:0 -4px;}
-.site_main.join .phone span, .site_main.join .birthday span {position:static;flex:1;margin:0 4px;padding:0;}
+.site_main.join .phone span,
+.site_main.join .birthday span {position:static;flex:1;margin:0 4px;padding:0;}
+.site_main.join .birthday span.input_select{position:relative;}
 .site_main.join .phone input {padding-right:5px;}
 .site_main.join .email {display:block;position:relative;}
 .site_main.join .email .input_text {width:100%;margin-bottom:10px;}
@@ -2000,7 +2003,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .search_layer .search_box .btn_submit:before{width:20px;height:20px;background-position:-50px -25px}
 .search_layer .search_box .btn_del{display:none;right:30px;width:22px;height:22px;border-radius:50%;background-color:#f0f0f0}
 .search_layer .search_box .btn_del:before{width:9px;height:9px;margin-top:6px;background-position:0 -67px}
-.search_layer .search_box input:focus + .btn_del, .search_layer .search_box input:hover + .btn_del{display:block}
+.search_layer .search_box input:focus + .btn_del{display:block}
 .search_layer .area_suggest{top:180px}
 .searchtotal_words{display:block;width:100%;padding:25px 30px 17px}
 .searchtotal_words .item{padding-bottom:15px}
