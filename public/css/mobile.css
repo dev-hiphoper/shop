@@ -1036,12 +1036,25 @@ a.btn_arr[class*=btn_].disabled:before,
 .wrap_brandissue .list_brand .list_product.small>li>.func{left:auto;right:0;height:40px;bottom:auto;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);margin-top:3px;}
 .main_items .list_product.small>li>.func .btn_reply,
 .wrap_brandissue .list_brand .list_product.small>li>.func .btn_reply{margin-left:0;}
-
-.out_pic>.info{padding:21px 16px 25px;}
+.out_pic>.info,
+.main_items:nth-child(4) .quarter:nth-child(3) .in_pic>.info,
+.main_items:nth-child(4) .quarter:nth-child(4) .in_pic>.info{padding:21px 16px 25px;position:relative;bottom:auto}
+.main_items:nth-child(4) .quarter:nth-child(3) .in_pic>.info,
+.main_items:nth-child(4) .quarter:nth-child(4) .in_pic>.info{padding-bottom:5px;}
 .out_pic>.info>.brand,
-.out_pic>.info>.desc{display:block;white-space:normal;}
-.out_pic>.info>.brand{font-size:22px;line-height:29px;font-weight:700;color:#111;margin-bottom:8px;}
-.out_pic>.info>.desc{line-height:20px;}
+.out_pic>.info>.desc,
+.main_items:nth-child(4) .quarter:nth-child(3) .in_pic>.info>.brand,
+.main_items:nth-child(4) .quarter:nth-child(3) .in_pic>.info>.desc,
+.main_items:nth-child(4) .quarter:nth-child(4) .in_pic>.info>.brand,
+.main_items:nth-child(4) .quarter:nth-child(4) .in_pic>.info>.desc{display:block;white-space:normal;color:#333!important;}
+.out_pic>.info>.brand,
+.main_items:nth-child(4) .quarter:nth-child(3) .in_pic>.info>.brand,
+.main_items:nth-child(4) .quarter:nth-child(4) .in_pic>.info>.brand{font-size:22px;line-height:29px;font-weight:700;color:#111;margin-bottom:8px;}
+.out_pic>.info>.desc,
+.main_items:nth-child(4) .quarter:nth-child(3) .in_pic>.info>.desc,
+.main_items:nth-child(4) .quarter:nth-child(4) .in_pic>.info>.desc{line-height:20px;}
+
+
 .in_pic + .list_product.small,
 .in_pic + .split .list_product.small{width:100%;overflow-y:hidden;overflow-x:auto;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;padding-top:20px;}
 .in_pic + .list_product.small>li,
