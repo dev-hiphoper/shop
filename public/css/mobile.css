@@ -410,7 +410,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .slides .slick-dots li{padding:0 3px;}
 .slides .slick-dots button{overflow:hidden;text-indent:-24px;font-size:1px;width:6px;height:6px;border-radius:50%;background-color:#e5e5e5;}
 
-.site_header {position:fixed;top:0;right:0;left:0;z-index:10;min-width:320px;background-color:#fff;}
+.site_header {position:fixed;top:0;right:0;left:0;z-index:10;min-width:320px;background-color:#fff}
 .site_header .inner {height:55px;}
 .site_header .logo {height:100%;text-align:center;}
 .site_header .logo a {display:inline-block;margin:16px auto 0;}
@@ -443,18 +443,18 @@ a.btn_arr[class*=btn_].disabled:before,
 .site_header .wrap_cart .length {overflow:hidden;position:absolute;top:-7px;right:-8px;width:20px;height:20px;border-radius:50%;font-size:11px;line-height:22px;text-align:center;color:#fff;white-space:nowrap;text-overflow:ellipsis;}
 .site_header .wrap_cart .list_product .link {overflow:hidden;position:relative;}
 .site_header .wrap_cart .btn_gocart{margin:20px auto 0;border-color:#bbb;width:100%}
-.site_header .bar_tabnav {position:fixed;right:0;bottom:0;left:0;z-index:50;width:100%;height:50px;padding:0;padding-bottom:constant(safe-area-inset-bottom);padding-bottom:env(safe-area-inset-bottom);background-color:#fff;}
-.site_header .bar_tabnav li {flex:1;text-align:center;}
-.site_header .bar_tabnav .list_tab:after {display:none;}
-.site_header .bar_tabnav .list_tab li {border-top:1px solid #e5e5e5;}
-.site_header .bar_tabnav .list_tab .on {border-color:#333;}
-.site_header .bar_tabnav .list_tab a {display:block;overflow:hidden;height:50px;padding:0;border:0 none;font-size:10px;line-height:1;color:#333;}
-.site_header .bar_tabnav .list_tab a:before {display:block;width:20px;height:20px;margin:8px auto 6px;}
-.site_header .bar_tabnav .tab_cate a:before {background-position:-135px -25px;}
-.site_header .bar_tabnav .tab_search a:before {background-position:-50px -25px;}
-.site_header .bar_tabnav .tab_home a:before {background-position:-70px -25px;}
-.site_header .bar_tabnav .tab_my a:before {background-position:-95px -25px;}
-.site_header .bar_tabnav .tab_latest a:before {background-position:-120px -25px;}
+.bar_tabnav {position:fixed;bottom:0;left:0;z-index:50;width:100%;height:50px;background-color:#fff;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;padding:0;padding-bottom:constant(safe-area-inset-bottom);padding-bottom:env(safe-area-inset-bottom);-webkit-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
+.bar_tabnav li {flex:1;text-align:center;}
+.bar_tabnav .list_tab:after {display:none;}
+.bar_tabnav .list_tab li {border-top:1px solid #e5e5e5;}
+.bar_tabnav .list_tab .on {border-color:#333;}
+.bar_tabnav .list_tab a {display:block;overflow:hidden;height:50px;padding:0;border:0 none;font-size:10px;line-height:1;color:#333;}
+.bar_tabnav .list_tab a:before {display:block;width:20px;height:20px;margin:8px auto 6px;}
+.bar_tabnav .tab_cate a:before {background-position:-135px -25px;}
+.bar_tabnav .tab_search a:before {background-position:-50px -25px;}
+.bar_tabnav .tab_home a:before {background-position:-70px -25px;}
+.bar_tabnav .tab_my a:before {background-position:-95px -25px;}
+.bar_tabnav .tab_latest a:before {background-position:-120px -25px;}
 
 .sub_header {border-bottom:1px solid #e5e5e5;}
 .sub_header .logo {position:absolute;top:16px;left:16px;width:22px;height:22px;}
@@ -489,7 +489,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .allmenu .ad {display:none;}
 .allmenu .bnr_ad {margin:0 -16px -16px;}
 
-.site_footer {position:relative;padding:55px 16px 50px;}
+.site_footer {position:relative;padding:55px 16px 60px;}
 .site_main.view + .site_footer,
 .site_main.bag + .site_footer{padding-bottom:85px;}
 .site_footer .left {margin-bottom:24px;padding-top:28px;font-size:11px;}
@@ -1575,7 +1575,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .order_discontent > .tit {display:none;}
 .order_discontent .wrap_sel {border-bottom:1px solid #e5e5e5;}
 .order_discontent .wrap_sel .input_select {width: calc(100% - 32px);margin:0 16px 20px;}
-.order_discontent .wrap_sel .input_select select {color:#333;}
+.order_discontent .wrap_sel .input_select select {color:#333;border-color:#333;}
 .order_discontent .order_detail .list_product .link {position:relative;height:auto;padding-left:90px;}
 .order_discontent .order_detail .list_product .link .img {width:80px;height:80px;}
 .order_discontent .order_detail .list_product .link .img img {width:100%;height:auto;}
