@@ -330,7 +330,13 @@ var mSize = 813, // 426
 			}
 			return copysuccess;
 		}
-		var layerCode = '<div class="alert_layer lc_b pos_center hide" id="copyAlert"><button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button><p class="message tc_3"></p><div class="btns lc_e5 clear"><button type="button" class="btn_confirm lc_e5" onclick="closeLayer("#copyAlert");">확인</button></div></div>';
+		var layerCode = '<div class="alert_layer lc_b pos_center hide" id="copyAlert">'
+			+ '<button type="button" class="btn_close bg_3_a bg_3_b pos_center_before pos_center_after on_m"><span class="s_out">본문으로 돌아가기</span></button>'
+			+ '<p class="message tc_3"></p>'
+			+ '<div class="btns lc_e5 clear">'
+			+	'<button type="button" class="btn_confirm lc_e5" onclick="closeLayer(\'#copyAlert\');">확인</button>'
+			+ '</div>'
+		+ '</div>';
 		$('body').append('<input value="'+window.location.href+'" id="copyurl" style="position:fixed;z-index:-1;left:0;top:-50px" />')
 		$('#copyurl').focus();
 		$('#copyurl')[0].setSelectionRange(0, $('#copyurl').val().length);
@@ -396,16 +402,19 @@ $(window).on({
 			}
 		}else{
 			$('.tootip_layer').addClass('hide');
-		}
-		if( $this.is('button[data-type=copyButton]') ){//카피버튼
-			var tar = $('input[data-type=copyTarget]');
-			tar.select();
-			var successful = document.execCommand('copy');
-			if(successful){
-				showAlert('copyResult','주소가 복사 되었습니다.',1);
-			}else{
-				showAlert('copyResult','주소 복사에 실패했습니다.',1);
-			}
+        }
+
+        if( $this.is('button[data-type=copyButton]') ){//카피버튼
+			var copyTargetVal = $('#shareLayer').find('input.url').val()
+            var browserInfo = navigator.userAgent;
+            if( !(browserInfo.match(/(iPhone|iPod)/i)) || ((browserInfo.indexOf('Safari') !== -1) && (browserInfo.indexOf('Chrome') === -1)) ) {
+                document.oncopy = function (event) {
+                    event.clipboardData.setData('Text', copyTargetVal);
+                    event.preventDefault();
+                }
+                document.execCommand('Copy', false, null);
+                showAlert('copyResult','주소가 복사 되었습니다.',1);
+            }
 		}
 		if(!mCheck()){
 			if( !$this.closest('div').hasClass('alram_layer') && !$this.closest('a').hasClass('alram') ){
@@ -482,36 +491,65 @@ $(window).on({
 				e.preventDefault();
 				var $gnb = $('#gnb');
 				if(!$this.closest('li').hasClass('on')){
-					$gnb.removeClass('hide');
-					$gnb.css('height','100%');
-					$this.closest('li').addClass('on');
+					$('#gnb').removeClass('hide');
+					$('#gnb').css('height','100%');
+                    $this.closest('li').addClass('on')
+                    
+                    var _pathname = location.pathname.replace(location.hash,"");
+                    var _containPath = false;
+
+                    var $gnb1depth = $('#gnb ul li > a');
+                    if (_pathname.match(/^\/(brand)/) != null) {
+                        $gnb1depth.filter('.brands').trigger("click");
+                        _containPath = true;
+                    } else if (_pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/) != null) {
+                        var regex = _pathname.match(/^\/(clothing|shoes|acc|life|selectshop)/);
+                        $gnb1depth.filter('[id="'+regex[1]+'"]').trigger("click");
+                        _containPath = true;
+                    }
+
+                    if (_containPath) {
+                        var _search = location.search;
+                        if (_search != "") {
+                            var _link = _search.substring(0, _search.indexOf("&"));
+                            $('#allmenu').find('ul.links > li').removeClass('on');
+                            $('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
+                            $('#allmenu').find('.inner:not(.hide) .sub_menu > a[href$="'+(_pathname+_link)+'"]').trigger("click");
+                        }
+                    }
 				}else{
-					$('.site_main').removeClass('hide');
-					if(!$('#allmenu').hasClass('hide')){
-						$('#allmenu').addClass('hide');
-					};
-					if(!$('#brandmenu').hasClass('hide')){
-						$('#brandmenu').addClass('hide');
-					};
-					$gnb.css('height','0').on(transitionendEvent,function(e){
-						$(this).off(transitionendEvent);
-						$gnb.addClass('hide');
-					});
-					$this.closest('li').removeClass('on');
+					$('#gnb').addClass('hide');
+                    $('#gnb').css('height','0');
+                    $('#allmenu').addClass('hide');
+                    $('#allmenu').find('.inner ul.list_3depth').hide();
+                    $('#brandmenu').addClass('hide');
+                    $('.tab_cate').removeClass('on')
+                    $('.site_main').removeClass('hide');
+                    $this.closest('li').removeClass('on');
 				}
 			}
 			if( $this.is('#gnb, #gnb ul') && !$this.is('#gnb a')){
 				$('#gnb').css('height','0');
 				$('.tab_cate').removeClass('on');
 			}
-			if( $this.is('.clothing') && $this.closest('nav').hasClass('gnb') ){
-				e.preventDefault();
-				if( $this.closest('.wrap_layer').length == 0 ){
-					$('#allmenu').removeClass('hide');
-					$('.alram_layer,.cart_layer').addClass('hide');
-					$('.site_main').addClass('hide');
-				}
-			}
+			if( $this.is('li > a[id]') && $this.closest('nav').hasClass('gnb') ){
+                e.preventDefault();
+                if( $this.closest('.wrap_layer').length == 0 ){
+                    $('#allmenu').removeClass('hide');
+                    $('.alram_layer,.cart_layer').addClass('hide');
+                    $('.site_main').addClass('hide');
+                }
+
+                $('#allmenu').find(".inner").addClass("hide");
+
+                if (typeof $this.attr("id") != 'undefined') {
+                    $('#allmenu').removeClass("hide");
+
+                    $('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
+                } else {
+                    $('#allmenu').addClass("hide");
+                }
+            }
 			if( $this.is('.brands') && $this.closest('nav').hasClass('gnb') ){
 				e.preventDefault();
 				if( $this.closest('.wrap_layer').length == 0 ){
@@ -524,25 +562,41 @@ $(window).on({
 			if( $this.closest('div').hasClass('item') || $this.is('.btn_prev') ){
 				if( !$this.is('label') && !$this.is('input') ){
 					e.preventDefault();
-					$('#allmenu').addClass('hide');
-					$('#brandmenu').addClass('hide');
-					$('.site_main').removeClass('hide');
+					if (!($('#allmenu').hasClass("hide") || $('#brandmenu').hasClass("hide"))) {
+                        $('#gnb').addClass('hide');
+                        $('#gnb').css('height','0');
+                        $('.tab_cate').removeClass('on')
+                        $('.site_main').removeClass('hide');
+                        $('#allmenu').find('ul.links > li').removeClass('on');
+                        $('#allmenu').find('.inner:not(.hide) .list_3depth').hide();
+                    }
+                    $('#allmenu').addClass('hide');
+                    $('#brandmenu').addClass('hide');
 				}
 			}
 			if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
 				$('#allmenu').addClass('hide');
 				$('#brandmenu').addClass('hide');
 			}
-			if( $this.is('.sub_menu a') && $this.closest('.sub_menu').next('ul').hasClass('list_3depth')){
-				e.preventDefault();
-				if( $this.closest('li').hasClass('on')){
-					$this.parents('li').find(".list_3depth").hide();
-					$this.parents('li').removeClass('on');
-				}else{
-					$this.parents('li').find(".list_3depth").show();
-					$this.parents('li').addClass('on');
-				}
-			}
+			if( $this.is('.sub_menu a')) { // || $this.children('ul').hasClass('list_3depth')){
+                e.preventDefault();
+
+				if ($this.parent().next().hasClass('list_3depth')) {
+                    if( $this.closest('li').hasClass('on')){
+                        $this.parents('li').find(".list_3depth").hide();
+                        $this.parents('li').removeClass('on');
+                    }else{
+                        $this.parents('li').find(".list_3depth").show();
+                        $this.parents('li').addClass('on');
+                    }
+                } else {
+                    location.href = $this.attr("href");
+                }
+            }
+            if( $this.is('ul.list_3depth a') || $this.is('ul.links.brand a') || $this.is('strong.tit a') ){
+                e.preventDefault();
+                location.href = $this.attr("href");
+            }
 		}
 	},
 	change:function(e){
@@ -604,12 +658,23 @@ $(window).on({
 			$this.closest('button').prev().addClass('over')
 		}
 		if(!mCheck()) {
-			if( $this.is('li') || $this.is('a') && $this.closest('nav').hasClass('gnb') ){
-				if( $this.closest('.wrap_layer').length == 0 ){
+			if( $this.is('li > a[id]') || $this.is('a') && $this.closest('nav').hasClass('gnb') ){
+                if( $this.closest('.wrap_layer').length == 0 ){
 					$('#allmenu').removeClass('hide');
 					$('.alram_layer,.cart_layer').addClass('hide');
-				}
-			}
+                }
+
+                $('#allmenu').find(".inner").addClass("hide");
+
+                if (typeof $this.attr("id") != 'undefined') {
+                    $('#allmenu').removeClass("hide");
+
+                    $('#allmenu').find(".inner."+$this.attr("id")).removeClass('hide');
+                } else {
+                    $('#allmenu').addClass("hide");
+                }
+            }
+
 			if( $this.closest('main').hasClass('site_main') || $this.closest('h1').hasClass('logo') || $this.closest('.header_links').length>0 ){
 				$('#allmenu').addClass('hide');
 			}
