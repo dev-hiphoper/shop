@@ -205,7 +205,7 @@
                 </ul>
             </div>
         </aside>        
-		<section class="wrap_listproduct miw1580">			
+		<section class="wrap_listproduct">			
             <div class="_ranking_header _update_time clear">
                 <dl class="clear _update_date">
                     <dt>UPDATE</dt>
@@ -638,12 +638,22 @@
                     $userAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
                 if($('.ranking').length){
                     if( !$userAgent ){
-                        $(window).on('scroll', function(){
-                            var _winTop = $(window).scrollTop();
+                        var _winTop = $(window).scrollTop();
+                        $(window).on('scroll', function(){                            
+                            _winTop = $(window).scrollTop();
                             console.log(_winTop);
                             if(_winTop > 260){
                                 $target.addClass('_fixed');
                             }else{
+                                $target.removeClass('_fixed');
+                            }
+                        });
+                        $(window).on('load', function () {
+                            _winTop = $(window).scrollTop();
+                            console.log(_winTop);
+                            if (_winTop > 260) {
+                                $target.addClass('_fixed');
+                            } else {
                                 $target.removeClass('_fixed');
                             }
                         });
