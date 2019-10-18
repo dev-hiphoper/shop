@@ -73,7 +73,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .flag.out{width:75px;height:24px;white-space:nowrap;font-size:12px;line-height:24px;text-align:center;font-weight:700;}
 
 .spr_after:after,
-.spr_before:before{background-image:url(../img/m/spr.png);-webkit-background-size:225px 225px;background-size:225px 225px;}
+.spr_before:before{background-image:url(../../img/m/spr.png);-webkit-background-size:225px 225px;background-size:225px 225px;}
 .wrap_layer {position:absolute;z-index:30;min-width:315px;padding:22px 16px;border:1px solid #ddd;border-radius:10px;background-color:#fff;}
 .wrap_layer > ul {overflow-x:hidden;overflow-y:auto;max-height:335px;padding:0 16px;margin:0 -16px;-webkit-overflow-scrolling:touch;}
 .banner_top {display:none;}
@@ -1044,7 +1044,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .options_layer .opt_step2 >div + div{border-top:1px solid #e5e5e5;}
 
 /* 메인 */
-.slides.slide_main_m{padding-bottom:0}
+.slides.slide_main_m{padding-bottom:0; padding-left:4%;}
 .slides.slide_main_m .item>a>.img{position:relative;width:100%;height:0;padding-top:100%;}
 .slides.slide_main_m .item>a>.img img{width:auto;max-width:none;height:100%;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
 .slides.slide_main_m .item>a.main_video>.img:after{width:45px;height:45px;background-position:0 -112px;}
@@ -1954,7 +1954,7 @@ a.btn_arr[class*=btn_].disabled:before,
 .benefits .membership_history.mileage .al_left em:before {display:inline-block;margin-right:5px;content:"/";}
 .benefits .membership_history.mileage td:nth-child(3) {font-weight:normal;font-size:13px;color:#888;}
 .benefits .membership_history.mileage td:last-child {display:block;position:absolute;top:50%;right:16px;left:unset;z-index:10;padding:0;font-weight:normal;font-size:16px;transform:translate(0, -50%);color:#333;}
-.benefits .membership_history.mileage .link:after {display:inline-block;width:5px;height:9px;margin-left:6px;color:#333;background-image:url(../img/m/spr.png);background-position:-200px -30px;-webkit-background-size:225px 225px;background-size:225px 225px;content:"";}
+.benefits .membership_history.mileage .link:after {display:inline-block;width:5px;height:9px;margin-left:6px;color:#333;background-image:url(../../img/m/spr.png);background-position:-200px -30px;-webkit-background-size:225px 225px;background-size:225px 225px;content:"";}
 
 .benefits .membership_history.mileage .cont_mileage .on_m {display:inline-block;margin-left:6px;}
 .benefits .membership_history.mileage .cont_mileage .on_m:after {width:19px;height:19px;margin:1px 0 0 4px;background-position:-120px -85px;left:0;top:0;-webkit-transform:none;-ms-transform:none;-o-transform:none;transform:none;}
