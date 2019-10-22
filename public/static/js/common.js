@@ -485,11 +485,13 @@ $(window).on({
 			}else{
 				$('#alramLayer').addClass('hide');
 			}
-			if( $this.is('.tab_cate a')){
+			if( $this.is('.tab_cate a')){                
 				e.preventDefault();
 				if(!$this.closest('li').hasClass('on')){
 					$('#gnb').removeClass('hide');
-					$('#gnb').css('height','100%');
+                    $('#gnb').css('height','100%');
+                    $('body').css({'overflow' : 'hidden'});
+                    $('.bar_tabnav').hide();
 					$this.closest('li').addClass('on')
 					
 					var _pathname = location.pathname.replace(location.hash,"");
@@ -512,6 +514,8 @@ $(window).on({
 						}
 					}
 				}else{
+                    $('body').css({ 'overflow': 'auto' });
+                    $('.bar_tabnav').show();
 					$('#gnb').addClass('hide');
 					$('#gnb').css('height','0');
 					$('#allmenu').addClass('hide');

@@ -497,7 +497,7 @@ $(window).on({
 				e.preventDefault();
 				if(!$this.closest('li').hasClass('on')){
 					$('#gnb').removeClass('hide');
-					$('#gnb').css('height','100%');
+                    $('#gnb').css('height','100%');                    
 					$this.closest('li').addClass('on')
 				}else{
 					$('#gnb').addClass('hide');
