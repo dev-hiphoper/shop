@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
 	<link rel="stylesheet" href="./css/common.css">
 	<link rel="stylesheet" media="(max-width: 425px)" href="./css/mobile.css" />
-	<link rel="stylesheet" media="(min-width: 426px)" href="./css/pc.css" />
+	<link rel="stylesheet" media="(min-width: 426px)" href="./static/css/pc_new.css" />
 	<link rel="stylesheet" href="./css/plugin.css">
 	<script src="./js/plugin.js"></script>
 </head>
@@ -538,8 +538,11 @@
 									<th>SNS 연결 정보</th>
 									<td colspan="3">
 										<div class="connect_sns">
-											<button type="button" class="btn_sns fb spr_before pos_center_before v">계정 연결</button>
-											<button type="button" class="btn_sns ig spr_before pos_center_before v">계정 연결</button>
+                                            <ul class="clear">
+                                                <li><img src="./static/img_new/ico_naver.jpg" alt=""><span>네이버</span><a href="" class="_connected"><span>연결 해제</span></a></li>
+                                                <li><img src="./static/img_new/ico_kakao.jpg" alt=""><span>카카오</span><a href=""><span>계정 연결</span></a></li>
+                                                <li><img src="./static/img_new/ico_facebook.jpg" alt=""><span>페이스북</span><a href=""><span>계정 연결</span></a></li>
+                                            </ul>											
 										</div>
 									</td>
 								</tr>

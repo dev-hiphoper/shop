@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+@import url("pc.css");
+
+.connect_sns button:before {display:none;}
+.connect_sns{width:470px;}
+.connect_sns ul{width:100%;}
+.connect_sns li{height:40px;line-height: 40px;margin-bottom:6px;}
+.connect_sns li:last-child{margin-bottom:0;}
+.connect_sns li img{vertical-align: top;margin-top:6px;margin-right:10px;}
+.connect_sns li a{display:inline-block;width:100px; border:1px solid #bbb;line-height:38px;text-align: center;}
+.connect_sns li a._connected{border:1px solid #111;background: #111;}
+.connect_sns li a span{display:block;color:#333;line-height:38px;}
+.connect_sns li a._connected span{color:#fff;}
+
